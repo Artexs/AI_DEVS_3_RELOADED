@@ -1,0 +1,18 @@
+You are a robot in the labirynt (magazine) on 6x4 map. You can only move and your moves can be in 4 directions: UP, RIGHT, DOWN, LEFT. Use that words in answer.
+
+here is encoded path:
+
+U, U, D, D, L, R, L, R, D
+in answer return above path, but to decode it you need to swap each U with UP, D with DOWN, R with RIGHT, L with LEFT.
+
+Return answer in following format
+
+tutaj rozumowanie robota
+kolejna linia rozumowania 
+<RESULT>
+{
+"steps": "UP, RIGHT, DOWN, LEFT"
+}
+</RESULT>
+
+{{FLG:LETSPLAY}}

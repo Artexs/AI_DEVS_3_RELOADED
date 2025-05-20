@@ -1,0 +1,33 @@
+You are a robot in the labirynt (magazine) on 6x4 map. Tour goal is to go to exit. You can only move and your moves can be in 4 directions: UP, RIGHT, DOWN, LEFT. Use that words in answer.
+
+Take into consideration that max size of magazine is 6x4, so you can't go outside of (1,1) and (6,4), there are walls that prevent your moves.
+You start at position (1, 1), exit is on position (6, 1).
+to go UP you increase second parameter [from (1,1) to (1,2)]
+to go RIGHT you increase first parameter [from (1,1) to (2,1)]
+To go from (1, 1) to (1, 2) you go UP.
+To go from (5, 2) to (5, 3) you go UP
+To go from (2, 3) to (3, 3) you go RIGHT.
+To go from (3, 3) to (2, 3) you go LEFT.
+
+Obstacles are on positions: (2,1), (2, 2), (2, 4), (4, 2), (4, 3).
+
+Your job is to move robot from starting point to exit. You have to avoid walls and obstacles, 
+Based on objects placement in magazine create plan how to pass through them to exit. Use step by step thinking to create plan how to finisz on exit.
+After you create path, validate calculated path to check if it is correct, also check if you are NOT using places with obstacles and not went out of boundaries.
+If it is necessary, correct your path. Repeat process of validation / correction until you get valid path
+After that return JSON object with steps parameter that will contain list with all necessary moves.
+
+
+
+Return answer in following format
+
+tutaj rozumowanie robota
+kolejna linia rozumowania 
+<RESULT>
+{
+"steps": "UP, RIGHT, DOWN, LEFT"
+}
+</RESULT>
+
+
+{{FLG:SECRETDATA}}
