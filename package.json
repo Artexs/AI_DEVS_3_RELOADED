@@ -1,17 +1,22 @@
 {
     "name": "ai_devs_3",
     "version": "1.0.0",
-    "description": "AI DEVS 3 project",
-    "main": "Prework.js",
+    "description": "AI Devs 3 Prompt Generator",
+    "main": "src/generate_prompt.ts",
     "scripts": {
-        "start": "bun src/s01e01.js",
-        "start3": "bun src/s01e03.js"
+        "build": "tsc",
+        "start": "bun src/generate_prompt.ts"
     },
     "dependencies": {
         "@mendable/firecrawl-js": "^1.6.1",
         "dotenv": "^16.4.5",
         "openai": "^4.71.0",
-        "adm-zip": "^0.5.11"
+        "adm-zip": "^0.5.11",
+        "@types/node": "^20.11.24",
+        "typescript": "^5.3.3"
+    },
+    "devDependencies": {
+        "bun-types": "latest"
     },
     "type": "commonjs"
 }

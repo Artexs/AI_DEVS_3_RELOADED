@@ -79,22 +79,27 @@ class Utils {
     async getAnswerFromLLM(
         question: string,
         context: string,
-        model: string = "gpt-4"
-    ): Promise<string> {
+        model: string = "gpt-4o"
+    ): Promise<string | { thoughts: string; answer: string }> {
         const response: LLMResponse = await this.openai.chat.completions.create({
             model,
             messages: [
                 { role: "system", content: context },
                 { role: "user", content: question }
-            ],
-            max_tokens: 100
+            ]
         });
 
         const content = response.choices[0].message.content;
         if (!content) {
             throw new Error('No response content received from LLM');
         }
-        return content.trim();
+
+        // Try to parse as JSON, if it fails return as string
+        try {
+            return JSON.parse(content).trim();
+        } catch {
+            return content.trim();
+        }
     }
 }
 
