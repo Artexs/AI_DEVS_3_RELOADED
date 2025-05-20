@@ -2,7 +2,7 @@ import { readdir, readFile } from 'fs/promises';
 import { join } from 'path';
 import Utils from '../utils';
 
-const directoryPath = join(__dirname, '/przesluchania');
+const directoryPath = join(__dirname, '../../data/S02/przesluchania');
 const utils = new Utils();
 
 /**
@@ -127,8 +127,8 @@ async function main() {
     console.log('Found street name:', streetName);
     
     // Send answer to Centrala
-    const response = await utils.poligonRequest("mp3", streetName);
-    console.log('Response from Centrala:', response);
+    // const response = await utils.poligonRequest("mp3", streetName);
+    // console.log('Response from Centrala:', response);
 
   } catch (error) {
     console.error('Error in main process:', error);
