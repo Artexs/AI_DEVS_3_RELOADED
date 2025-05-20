@@ -79,14 +79,18 @@ class Utils {
     async getAnswerFromLLM(
         question: string,
         context: string,
-        model: string = "gpt-4o"
+        options: {
+            model?: string;
+            temperature?: number;
+        } = {}
     ): Promise<string | { thoughts: string; answer: string }> {
         const response: LLMResponse = await this.openai.chat.completions.create({
-            model,
+            model: options.model ?? "gpt-4o",
             messages: [
                 { role: "system", content: context },
                 { role: "user", content: question }
-            ]
+            ],
+            temperature: options.temperature ?? 0.7
         });
 
         const content = response.choices[0].message.content;
