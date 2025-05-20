@@ -1,0 +1,103 @@
+Musisz przygotować system do cenzury danych agentów. Pobierz dane z pliku:
+
+https://c3ntrala.ag3nts.org/data/KLUCZ/cenzura.txt
+
+a następnie ocenzuruj imię i nazwisko, wiek, miasto i ulicę z numerem domu tak, aby zastąpić je słowem CENZURA. Odpowiedź wyślij do:
+
+https://c3ntrala.ag3nts.org/report 
+
+w formacie, który znasz już z poligonu. Jeśli potrzebujesz pomocy, zbadaj nagłówki HTTP wysyłane razem z plikiem TXT. Uwaga! Dane w pliku TXT zmieniają się co 60 sekund i mogą być różne dla każdego z agentów w tej samej chwili. Nazwa zadania w API to “CENZURA”. 
+
+
+
+Co trzeba zrobić w zadaniu?
+
+
+
+
+
+Pobierz dane z pliku `cenzura.txt`
+
+Plik znajduje się pod adresem: `https://c3ntrala.ag3nts.org/data/KLUCZ/cenzura.txt`. Pamiętaj, aby zamiast `KLUCZ` wstawić swój klucz API. Plik zawiera dane osobowe w formacie tekstowym (np. "Osoba podejrzana to Jan Nowak. Adres: Wrocław, ul. Szeroka 18. Wiek: 32 lata."). Dane w pliku zmieniają się co 60 sekund, więc pobieraj plik przed każdym wysłaniem odpowiedzi.
+
+
+
+Ocenzuruj dane osobowe
+
+Zamień następujące informacje na słowo "CENZURA":
+
+    *   Imię i nazwisko (razem, np. "Jan Nowak" -> "CENZURA").
+
+    *   Wiek (np. "32" -> "CENZURA").
+
+    *   Miasto (np. "Wrocław" -> "CENZURA").
+
+    *   Ulica i numer domu (razem, np. "ul. Szeroka 18" -> "ul. CENZURA").
+
+Zachowaj oryginalny format tekstu (kropki, przecinki, spacje). Nie wolno Ci przeredagowywać tekstu.
+
+
+
+Wyślij ocenzurowane dane do API
+
+Wyślij ocenzurowany tekst do API pod adresem: `https://c3ntrala.ag3nts.org/report` w formacie JSON jako POST. Przykładowy payload:
+
+{
+  "task": "CENZURA",
+  "apikey": "YOUR_API_KEY",
+  "answer": "Osoba podejrzana to CENZURA. Adres: CENZURA, ul. CENZURA. Wiek: CENZURA lata."
+}
+
+Pamiętaj, aby zamiast `YOUR_API_KEY` wstawić swój klucz API. Upewnij się że wysyłasz dane zakodowane w UTF-8.
+
+
+
+Wskazówki:
+
+
+
+
+
+Skup się na odpowiednim sformułowaniu promptu dla LLM. Model powinien cenzurować tylko wrażliwe dane i zachowywać oryginalny format tekstu.
+
+
+
+Uważaj na częste błędy:
+
+
+
+
+
+Cenzurowanie imienia i nazwiska oddzielnie (“CENZURA CENZURA” zamiast “CENZURA”).
+
+
+
+Cenzurowanie ulicy i numeru domu oddzielnie (“CENZURA CENZURA” zamiast “CENZURA”).
+
+
+
+Pamiętaj, że dane w pliku `cenzura.txt` zmieniają się co 60 sekund.
+
+
+
+Zwróć uwagę na nagłówki HTTP wysyłane razem z plikiem TXT jeśli potrzebujesz dodatkowych informacji.
+
+
+
+Jeśli masz problemy, spróbuj użyć mocniejszego modelu językowego (np. GPT-4.1).
+
+
+
+Nazwa zadania w API to `CENZURA`.
+
+
+
+Ważna uwaga praktyczna:
+
+Taki system cenzurowania danych zrealizowany na LLM-ie pracującym w chmurze nie ma oczywiście większego sensu (wysyłasz wrażliwe dane w celu ich zabezpieczenia = one już wyciekły!). Robimy to jedynie w celu przećwiczenia operacji anonimizacji danych. W realnych, produkcyjnych warunkach, Twój projekt będzie anonimizował dane za pomocą modelu lokalnego i pracował na nich w modelu chmurowym. Tutaj jednak na potrzeby nauki możesz wykonać całe zadanie np. na API od OpenAI.
+
+
+
+Dokumentacja Swagger:
+
+https://c3ntrala.ag3nts.org/swagger/?spec=S01E05-2349ioujfa278.json 
