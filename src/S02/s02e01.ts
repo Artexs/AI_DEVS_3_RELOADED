@@ -1,33 +1,10 @@
-import { readdir, readFile } from 'fs/promises';
 import { join } from 'path';
-import Utils from '../utils';
+import { OpenAIService, TranscribeProcessor, FileReader } from '../index';
 
 const directoryPath = join(__dirname, '../../data/S02/przesluchania');
-const utils = new Utils();
-
-/**
- * Reads all .txt files from a given directory and returns their contents.
- * @param dirPath The path to the directory containing the text files.
- * @returns A Promise that resolves with an array of strings, where each string is the content of a .txt file.
- */
-async function readTxtFiles(dirPath: string): Promise<string[]> {
-  try {
-    const files = await readdir(dirPath);
-    const txtFiles = files.filter(file => file.endsWith('.txt'));
-    const contents: string[] = [];
-
-    for (const file of txtFiles) {
-      const filePath = join(dirPath, file);
-      const content = await readFile(filePath, 'utf-8');
-      contents.push(content);
-    }
-
-    return contents;
-  } catch (error) {
-    console.error(`Error reading directory or files: ${error}`);
-    return []; // Return an empty array in case of error
-  }
-}
+const openAIService = new OpenAIService();
+const transcribeProcessor = new TranscribeProcessor();
+const fileReader = new FileReader();
 
 /**
  * Analyzes the transcriptions to find the street name where the institute is located.
@@ -110,7 +87,7 @@ AI:
 
   const question = "What is the exact street name where the institute is located? Please provide only the street name, nothing else.";
 
-  const answer = await utils.getAnswerFromLLM(question, systemPrompt + "\n\nContext:\n" + context);
+  const answer = await openAIService.processText(question, systemPrompt + "\n\nContext:\n" + context);
   return answer;
 }
 
@@ -119,16 +96,22 @@ AI:
  */
 async function main() {
   try {
-    // Read all transcriptions
-    const transcriptions = await readTxtFiles(directoryPath);
+    // Read all audio files
+    console.log('Reading audio files...');
+    const audioFiles = await fileReader.readFiles(directoryPath, 'audio');
+    
+    // Transcribe audio files
+    console.log('Transcribing audio files...');
+    const transcriptions = await transcribeProcessor.transcribe(audioFiles) as string[];
     
     // Analyze transcriptions to find the street name
+    console.log('Analyzing transcriptions...');
     const streetName = await analyzeTranscriptions(transcriptions);
     console.log('Found street name:', streetName);
     
     // Send answer to Centrala
-    // const response = await utils.poligonRequest("mp3", streetName);
-    // console.log('Response from Centrala:', response);
+    const response = await utils.poligonRequest("mp3", streetName);
+    console.log('Response from Centrala:', response);
 
   } catch (error) {
     console.error('Error in main process:', error);

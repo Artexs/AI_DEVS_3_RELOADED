@@ -1,54 +1,80 @@
-Musisz przygotować system do cenzury danych agentów. Pobierz dane z pliku:
+Zadanie: Zdobyliśmy dostęp do danych z fabryki, którą nam wskazałeś. Są to raporty dzienne kilku działających tam oddziałów. Część z nich to zwykłe raporty techniczne, a część to raporty związane z bezpieczeństwem. Pozyskane dane są w różnych formatach i nie wszystkie zawierają użyteczne dane. Wydobądź dla nas proszę tylko notatki zawierające informacje o schwytanych ludziach lub o śladach ich obecności oraz o naprawionych usterkach hardwarowych (pomiń te związane z softem oraz pomiń katalog z faktami). Raport wyślij do zadania “kategorie” w formie jak poniżej. Pliki powinny być posortowane alfabetycznie.
 
-https://c3ntrala.ag3nts.org/data/KLUCZ/cenzura.txt
-
-a następnie ocenzuruj imię i nazwisko, wiek, miasto i ulicę z numerem domu tak, aby zastąpić je słowem CENZURA. Odpowiedź wyślij do:
-
-https://c3ntrala.ag3nts.org/report 
-
-w formacie, który znasz już z poligonu. Jeśli potrzebujesz pomocy, zbadaj nagłówki HTTP wysyłane razem z plikiem TXT. Uwaga! Dane w pliku TXT zmieniają się co 60 sekund i mogą być różne dla każdego z agentów w tej samej chwili. Nazwa zadania w API to “CENZURA”. 
-
-
-
-Co trzeba zrobić w zadaniu?
-
-
-
-
-
-Pobierz dane z pliku `cenzura.txt`
-
-Plik znajduje się pod adresem: `https://c3ntrala.ag3nts.org/data/KLUCZ/cenzura.txt`. Pamiętaj, aby zamiast `KLUCZ` wstawić swój klucz API. Plik zawiera dane osobowe w formacie tekstowym (np. "Osoba podejrzana to Jan Nowak. Adres: Wrocław, ul. Szeroka 18. Wiek: 32 lata."). Dane w pliku zmieniają się co 60 sekund, więc pobieraj plik przed każdym wysłaniem odpowiedzi.
-
-
-
-Ocenzuruj dane osobowe
-
-Zamień następujące informacje na słowo "CENZURA":
-
-    *   Imię i nazwisko (razem, np. "Jan Nowak" -> "CENZURA").
-
-    *   Wiek (np. "32" -> "CENZURA").
-
-    *   Miasto (np. "Wrocław" -> "CENZURA").
-
-    *   Ulica i numer domu (razem, np. "ul. Szeroka 18" -> "ul. CENZURA").
-
-Zachowaj oryginalny format tekstu (kropki, przecinki, spacje). Nie wolno Ci przeredagowywać tekstu.
-
-
-
-Wyślij ocenzurowane dane do API
-
-Wyślij ocenzurowany tekst do API pod adresem: `https://c3ntrala.ag3nts.org/report` w formacie JSON jako POST. Przykładowy payload:
+Oto dane źródłowe: https://c3ntrala.ag3nts.org/dane/pliki_z_fabryki.zip
 
 {
-  "task": "CENZURA",
-  "apikey": "YOUR_API_KEY",
-  "answer": "Osoba podejrzana to CENZURA. Adres: CENZURA, ul. CENZURA. Wiek: CENZURA lata."
+  "people": ["plik1.txt", "plik2.mp3", "plikN.png"],
+  "hardware": ["plik4.txt", "plik5.png", "plik6.mp3"]
 }
 
-Pamiętaj, aby zamiast `YOUR_API_KEY` wstawić swój klucz API. Upewnij się że wysyłasz dane zakodowane w UTF-8.
+
+Co trzeba zrobić w zadaniu?
+
+Twoim zadaniem jest przeanalizowanie danych z fabryki (raporty dzienne w różnych formatach) i wyodrębnienie notatek zawierających informacje o schwytanych ludziach lub śladach ich obecności oraz o naprawionych usterkach hardwarowych. Pomiń raporty dotyczące oprogramowania oraz folder "facts". Wyniki prześlij w formacie JSON do centrali.
+
+Kroki do wykonania:
+
+
+
+
+
+Pobierz i rozpakuj dane: Pobierz archiwum ZIP z linku: https://c3ntrala.ag3nts.org/dane/pliki_z_fabryki.zip i rozpakuj je.
+
+
+
+Przejrzyj pliki: W archiwum znajdziesz pliki TXT, PNG i MP3. Pomiń folder "facts" oraz plik bez rozszerzenia (jest związany z inną flagą). Plik `weapons_tests.zip` również pomiń na tym etapie.
+
+
+
+Analiza zawartości:
+
+
+
+
+
+TXT: Odczytaj zawartość plików tekstowych.
+
+
+
+PNG: Wykorzystaj model multimodalny (np. `gpt-4o`, `gemini-2.0-flash-exp`, `claude sonet`) lub bibliotekę OCR do ekstrakcji tekstu z obrazów.
+
+
+
+MP3: Użyj modelu transkrypcji mowy (np. `whisper`) do konwersji dźwięku na tekst.
+
+
+
+Kategoryzacja: Na podstawie wyekstrahowanego tekstu (lub oryginalnej zawartości plików TXT) zdecyduj, czy dany plik zawiera informacje o:
+
+
+
+
+
+Ludziach: Uwzględniaj tylko notatki zawierające informacje o schwytanych ludziach lub o śladach ich obecności.
+
+
+
+Hardware: Usterki hardwarowe (nie software).
+Jeśli plik nie pasuje do żadnej z powyższych kategorii, pomiń go. Nie twórz żadnych dodatkowych kategorii.
+
+
+
+Format odpowiedzi: Przygotuj dane w formacie JSON, sortując alfabetycznie nazwy plików w każdej kategorii. Zastąp `YOUR_API_KEY` swoim kluczem API.
+
+{
+      "task": "kategorie",
+      "apikey": "YOUR_API_KEY",
+      "answer": {
+        "people": ["plik1.txt", "plik2.mp3", "plikN.png"],
+        "hardware": ["plik4.txt", "plik5.png", "plik6.mp3"]
+      }
+}
+
+
+
+
+
+Wysyłka: Wyślij dane JSON metodą POST na adres: `https://c3ntrala.ag3nts.org/report`. Upewnij się, że wysyłasz dane zakodowane w UTF-8.
 
 
 
@@ -58,46 +84,24 @@ Wskazówki:
 
 
 
-Skup się na odpowiednim sformułowaniu promptu dla LLM. Model powinien cenzurować tylko wrażliwe dane i zachowywać oryginalny format tekstu.
+Uważaj na nazwy plików: Upewnij się, że nazwy plików w JSON-ie są identyczne z nazwami w archiwum ZIP (wielkość liter ma znaczenie!). Ścieżki do plików nie są akceptowane, tylko same nazwy.
 
 
 
-Uważaj na częste błędy:
+Koszty: Analiza obrazów może być kosztowna. Używaj modeli multimodalnych (np. `gpt-4o`, `gpt-4.1-mini`) lub bibliotek OCR, aby wyciągnąć tekst z obrazów. Zapisz wyniki ekstrakcji do plików, aby uniknąć ponownego przetwarzania tych samych danych.
 
 
 
-
-
-Cenzurowanie imienia i nazwiska oddzielnie (“CENZURA CENZURA” zamiast “CENZURA”).
-
-
-
-Cenzurowanie ulicy i numeru domu oddzielnie (“CENZURA CENZURA” zamiast “CENZURA”).
+Limity OpenAI: Jeśli masz niski tier w OpenAI, możesz napotkać ograniczenia liczby zapytań na minutę (TPM). Rozważ spowolnienie wykonywania kodu lub użycie alternatywnych modeli/API (np. `openrouter.ai`).
 
 
 
-Pamiętaj, że dane w pliku `cenzura.txt` zmieniają się co 60 sekund.
+Promptowanie: Eksperymentuj z różnymi promptami, aby uzyskać jak najlepsze wyniki kategoryzacji. Rozważ dodanie przykładów do promptu. Pozwól modelowi "pomyśleć" (np. poprzez prośbę o uzasadnienie decyzji) przed podaniem ostatecznej odpowiedzi.
 
 
 
-Zwróć uwagę na nagłówki HTTP wysyłane razem z plikiem TXT jeśli potrzebujesz dodatkowych informacji.
-
-
-
-Jeśli masz problemy, spróbuj użyć mocniejszego modelu językowego (np. GPT-4.1).
-
-
-
-Nazwa zadania w API to `CENZURA`.
-
-
-
-Ważna uwaga praktyczna:
-
-Taki system cenzurowania danych zrealizowany na LLM-ie pracującym w chmurze nie ma oczywiście większego sensu (wysyłasz wrażliwe dane w celu ich zabezpieczenia = one już wyciekły!). Robimy to jedynie w celu przećwiczenia operacji anonimizacji danych. W realnych, produkcyjnych warunkach, Twój projekt będzie anonimizował dane za pomocą modelu lokalnego i pracował na nich w modelu chmurowym. Tutaj jednak na potrzeby nauki możesz wykonać całe zadanie np. na API od OpenAI.
+Debugowanie: Jeśli z API Centrali otrzymujesz błąd 400, sprawdź treść odpowiedzi (body), aby uzyskać wskazówki dotyczące problemu.
 
 
 
 Dokumentacja Swagger:
-
-https://c3ntrala.ag3nts.org/swagger/?spec=S01E05-2349ioujfa278.json 

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { writeFile } from 'fs/promises';
-import Utils from '../utils.ts';
+import { Utils } from '../index';
 
 const utils = new Utils();
 const CENTRALA_URL = process.env.CENTRALA_URL;

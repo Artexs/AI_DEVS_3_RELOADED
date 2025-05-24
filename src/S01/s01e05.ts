@@ -1,4 +1,4 @@
-import Utils from '../utils';
+import { Utils, OpenAIService } from '../index';
 
 const CENSORSHIP_SYSTEM_PROMPT = `You are a data censorship system. Your task is to censor personal information in text while maintaining the original format.
 Replace the following with the word "CENZURA":
@@ -12,6 +12,7 @@ Do not modify any other parts of the text.`;
 
 async function main() {
     const utils = new Utils();
+    const openaiService = new OpenAIService();
     const apiKey = process.env.POLIGON_API_KEY;
 
     if (!apiKey) {
@@ -21,13 +22,13 @@ async function main() {
     try {
         // Fetch data from the source
         const dataUrl = `https://c3ntrala.ag3nts.org/data/${apiKey}/cenzura.txt`;
-        const rawData = await utils.makeRequest(dataUrl);
+        const rawData = await utils.fetch(dataUrl);
 
         // Use LLM to censor the data
-        const censoredData = await utils.getAnswerFromLLM(
+        const censoredData = await openaiService.processText(
             rawData,
             CENSORSHIP_SYSTEM_PROMPT,
-            "gpt-4o-mini"
+            { model: "gpt-4o-mini" }
         );
 
         // Send the censored data to the API

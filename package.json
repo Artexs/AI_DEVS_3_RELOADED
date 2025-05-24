@@ -9,10 +9,14 @@
     },
     "dependencies": {
         "@mendable/firecrawl-js": "^1.6.1",
-        "dotenv": "^16.4.5",
-        "openai": "^4.71.0",
-        "adm-zip": "^0.5.11",
+        "@microsoft/tiktokenizer": "^1.0.10",
         "@types/node": "^20.11.24",
+        "adm-zip": "^0.5.11",
+        "dotenv": "^16.4.5",
+        "elevenlabs": "^1.59.0",
+        "groq-sdk": "^0.22.0",
+        "openai": "^4.28.0",
+        "sharp": "^0.33.2",
         "typescript": "^5.3.3"
     },
     "devDependencies": {
