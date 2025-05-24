@@ -1,10 +1,11 @@
 import { join } from 'path';
-import { OpenAIService, TranscribeProcessor, FileReader } from '../index';
+import { OpenAIService, TranscribeProcessor, FileReader, Utils } from '../index';
 
 const directoryPath = join(__dirname, '../../data/S02/przesluchania');
 const openAIService = new OpenAIService();
 const transcribeProcessor = new TranscribeProcessor();
 const fileReader = new FileReader();
+const utils = new Utils();
 
 /**
  * Analyzes the transcriptions to find the street name where the institute is located.

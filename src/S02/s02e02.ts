@@ -87,8 +87,3 @@ const main = async () => {
 };
 
 main();
-
-
-
-lub/niekontrolowane co sie dzieje
-ktorych/i te obowiazuja
