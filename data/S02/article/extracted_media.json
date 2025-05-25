@@ -1,0 +1,35 @@
+{
+  "_thinking": "Extracting all media elements including images and audio from the provided HTML content.",
+  "images": [
+    {
+      "url": "https://c3ntrala.ag3nts.org/dane/i/rynek.png",
+      "description": "Orygionalne zdjęcie. Widok na kościół od strony 'Adasia'"
+    },
+    {
+      "url": "https://c3ntrala.ag3nts.org/dane/i/rynek_glitch.png",
+      "description": "Uszkodzenia widoczne w odtworzonym pliku graficznym"
+    },
+    {
+      "url": "https://c3ntrala.ag3nts.org/dane/i/fruit01.png",
+      "description": "Owoc przed transportem w czasie"
+    },
+    {
+      "url": "https://c3ntrala.ag3nts.org/dane/i/fruit02.png",
+      "description": "Owoc pozbawiony pestek po transporcie"
+    },
+    {
+      "url": "https://c3ntrala.ag3nts.org/dane/i/strangefruit.png",
+      "description": "Fuzja kodu genetycznego dwóch transportowanych owoców"
+    },
+    {
+      "url": "https://c3ntrala.ag3nts.org/dane/i/resztki.png",
+      "description": "Resztki jedzenia znalezione w pobliżu komory temporalnej. Ciasto było jeszcze ciepłe i chrupiące. Nie dojadł jej do końca."
+    }
+  ],
+  "audio": [
+    {
+      "url": "https://c3ntrala.ag3nts.org/dane/i/rafal_dyktafon.mp3",
+      "description": "Dyktafon z jednym plikiem dźwiękowym. Nie wiemy dlaczego Bomba przygotowywał nagranie i kto miał być jego odbiorcą."
+    }
+  ]
+}

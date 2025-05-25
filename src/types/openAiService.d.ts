@@ -1,1 +1,1 @@
-export type LLMResponse = string | { thoughts: string; answer: string, city?: string }
+export type LLMResponse = { thoughts: string; answer: string, city?: string }

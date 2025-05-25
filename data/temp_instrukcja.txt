@@ -1,16 +1,24 @@
-Zadanie: Zdobyliśmy dostęp do danych z fabryki, którą nam wskazałeś. Są to raporty dzienne kilku działających tam oddziałów. Część z nich to zwykłe raporty techniczne, a część to raporty związane z bezpieczeństwem. Pozyskane dane są w różnych formatach i nie wszystkie zawierają użyteczne dane. Wydobądź dla nas proszę tylko notatki zawierające informacje o schwytanych ludziach lub o śladach ich obecności oraz o naprawionych usterkach hardwarowych (pomiń te związane z softem oraz pomiń katalog z faktami). Raport wyślij do zadania “kategorie” w formie jak poniżej. Pliki powinny być posortowane alfabetycznie.
+Zadanie: Z przechwyconych materiałów interesuje nas tylko jedna z publikacji profesora Maja. Nasza centrala chce pozyskać odpowiedzi na dostarczone przez nią pytania. Zwróć proszę uwagę, że podlinkowana notatka zawiera treści tekstowe, graficzne i dźwiękowe. Istnieje ogromne prawdopodobieństwo, że konieczne będzie wzięcie pod uwagę informacji podanych w każdym formacie. Zadanie, do którego raportujesz odpowiedź nazywa się “arxiv”.
 
-Oto dane źródłowe: https://c3ntrala.ag3nts.org/dane/pliki_z_fabryki.zip
+Link do artykułu: https://c3ntrala.ag3nts.org/dane/arxiv-draft.html
+
+Pytania centrali: https://c3ntrala.ag3nts.org/data/KLUCZ-API/arxiv.txt
+
+Oczekiwany format odpowiedzi:
 
 {
-  "people": ["plik1.txt", "plik2.mp3", "plikN.png"],
-  "hardware": ["plik4.txt", "plik5.png", "plik6.mp3"]
+    "ID-pytania-01": "krótka odpowiedź w 1 zdaniu",
+    "ID-pytania-02": "krótka odpowiedź w 1 zdaniu",
+    "ID-pytania-03": "krótka odpowiedź w 1 zdaniu",
+    "ID-pytania-NN": "krótka odpowiedź w 1 zdaniu"
 }
 
 
-Co trzeba zrobić w zadaniu?
 
-Twoim zadaniem jest przeanalizowanie danych z fabryki (raporty dzienne w różnych formatach) i wyodrębnienie notatek zawierających informacje o schwytanych ludziach lub śladach ich obecności oraz o naprawionych usterkach hardwarowych. Pomiń raporty dotyczące oprogramowania oraz folder "facts". Wyniki prześlij w formacie JSON do centrali.
+
+Co należy zrobić w zadaniu?
+
+Centrala przechwyciła materiały profesora Maja i potrzebuje odpowiedzi na kilka pytań. Twoim zadaniem jest zbadanie artykułu profesora, uwzględniając tekst, grafiki i dźwięki, a następnie odpowiedzenie na pytania centrali. Pamiętaj o kontekście!
 
 Kroki do wykonania:
 
@@ -18,65 +26,45 @@ Kroki do wykonania:
 
 
 
-Pobierz i rozpakuj dane: Pobierz archiwum ZIP z linku: https://c3ntrala.ag3nts.org/dane/pliki_z_fabryki.zip i rozpakuj je.
-
-
-
-Przejrzyj pliki: W archiwum znajdziesz pliki TXT, PNG i MP3. Pomiń folder "facts" oraz plik bez rozszerzenia (jest związany z inną flagą). Plik `weapons_tests.zip` również pomiń na tym etapie.
-
-
-
-Analiza zawartości:
+Pobierz dane:
 
 
 
 
 
-TXT: Odczytaj zawartość plików tekstowych.
+Artykuł profesora Maja: https://c3ntrala.ag3nts.org/dane/arxiv-draft.html
 
 
 
-PNG: Wykorzystaj model multimodalny (np. `gpt-4o`, `gemini-2.0-flash-exp`, `claude sonet`) lub bibliotekę OCR do ekstrakcji tekstu z obrazów.
+Pytania centrali (dostępne po podaniu klucza API): https://c3ntrala.ag3nts.org/data/KLUCZ-API/arxiv.txt  (zastąp `KLUCZ-API` swoim kluczem).
 
 
 
-MP3: Użyj modelu transkrypcji mowy (np. `whisper`) do konwersji dźwięku na tekst.
+Zindeksuj artykuł: 
+* Tekst: Przetwórz treść HTML - usuń zbędne tagi i formatowanie. Możesz użyć konwertera HTML do MD dostępnego w Twoim języku programowania. 
+* Grafiki: Pobierz obrazy. Użyj modelu LLM Vision do wygenerowania opisów obrazów. Pamiętaj o kontekście – uwzględnij np. podpisy pod zdjęciami.
+* Dźwięki: Pobierz pliki dźwiękowe (MP3). Użyj narzędzia do transkrypcji mowy na tekst (np. Whisper) aby przekonwertować dźwięk na tekst.
+* Zapisz wszystko w jednym pliku: Stwórz jeden plik (np. Markdown), który zawiera:
+    * Przetworzony tekst artykułu. 
+    * Opisy obrazów (zamiast samych obrazów). 
+    * Transkrypcje nagrań (zamiast plików dźwiękowych).
 
 
 
-Kategoryzacja: Na podstawie wyekstrahowanego tekstu (lub oryginalnej zawartości plików TXT) zdecyduj, czy dany plik zawiera informacje o:
+Odpowiedz na pytania: Użyj modelu LLM i przygotowanego pliku Markdown jako kontekstu. Wygeneruj krótkie, jednozdaniowe odpowiedzi na pytania centrali.
 
-
-
-
-
-Ludziach: Uwzględniaj tylko notatki zawierające informacje o schwytanych ludziach lub o śladach ich obecności.
-
-
-
-Hardware: Usterki hardwarowe (nie software).
-Jeśli plik nie pasuje do żadnej z powyższych kategorii, pomiń go. Nie twórz żadnych dodatkowych kategorii.
-
-
-
-Format odpowiedzi: Przygotuj dane w formacie JSON, sortując alfabetycznie nazwy plików w każdej kategorii. Zastąp `YOUR_API_KEY` swoim kluczem API.
+4. Wyślij odpowiedź: Wyślij odpowiedzi w formacie JSON. Format odpowiedzi:
 
 {
-      "task": "kategorie",
+      "task": "arxiv",
       "apikey": "YOUR_API_KEY",
       "answer": {
-        "people": ["plik1.txt", "plik2.mp3", "plikN.png"],
-        "hardware": ["plik4.txt", "plik5.png", "plik6.mp3"]
-      }
+        "01": "krótka odpowiedź w 1 zdaniu",
+        "02": "krótka odpowiedź w 1 zdaniu",
+        "03": "krótka odpowiedź w 1 zdaniu",
+        [...]
+    }
 }
-
-
-
-
-
-Wysyłka: Wyślij dane JSON metodą POST na adres: `https://c3ntrala.ag3nts.org/report`. Upewnij się, że wysyłasz dane zakodowane w UTF-8.
-
-
 
 Wskazówki:
 
@@ -84,24 +72,40 @@ Wskazówki:
 
 
 
-Uważaj na nazwy plików: Upewnij się, że nazwy plików w JSON-ie są identyczne z nazwami w archiwum ZIP (wielkość liter ma znaczenie!). Ścieżki do plików nie są akceptowane, tylko same nazwy.
+Kontekst jest kluczowy: Zwróć uwagę na kontekst, w jakim pojawiają się grafiki i dźwięki. Podpisy pod zdjęciami i otaczający tekst mogą zawierać istotne informacje.
 
 
 
-Koszty: Analiza obrazów może być kosztowna. Używaj modeli multimodalnych (np. `gpt-4o`, `gpt-4.1-mini`) lub bibliotek OCR, aby wyciągnąć tekst z obrazów. Zapisz wyniki ekstrakcji do plików, aby uniknąć ponownego przetwarzania tych samych danych.
+Limit tokenów: Upewnij się, że cały tekst (artykuł + opisy + transkrypcje) mieści się w limicie tokenów wybranego modelu LLM. Jeśli przekraczasz limit, skróć opisy lub transkrypcje. Możesz też podzielić artykuł na mniejsze części
 
 
 
-Limity OpenAI: Jeśli masz niski tier w OpenAI, możesz napotkać ograniczenia liczby zapytań na minutę (TPM). Rozważ spowolnienie wykonywania kodu lub użycie alternatywnych modeli/API (np. `openrouter.ai`).
+Cache: Zapisuj wyniki pośrednie (opisy obrazów, transkrypcje) w cache, aby nie generować ich za każdym razem od nowa. Cache to może być po prostu zestaw plików tekstowych.
 
 
 
-Promptowanie: Eksperymentuj z różnymi promptami, aby uzyskać jak najlepsze wyniki kategoryzacji. Rozważ dodanie przykładów do promptu. Pozwól modelowi "pomyśleć" (np. poprzez prośbę o uzasadnienie decyzji) przed podaniem ostatecznej odpowiedzi.
+Pętla zwrotna: Jeśli Centrala stwierdziła że odpowiedź na któreś pytanie jest nieprawidłowa, dodaj tą informację wraz z nieprawidłową odpowiedzią do kontekstu przy kolejnym zapytaniu. W ten sposób uniekniesz powtarzania tego samego błędu. 
 
 
 
-Debugowanie: Jeśli z API Centrali otrzymujesz błąd 400, sprawdź treść odpowiedzi (body), aby uzyskać wskazówki dotyczące problemu.
+Potencjalne problemy:
+
+
+
+
+
+Kod błędu -301: Sprawdź, czy wysyłasz obiekt JSON, a nie zakodowany string JSON.
+
+
+
+Kod błędu -302: Sprawdź, czy wysyłasz odpowiednią liczbę odpowiedzi.
+
+
+
+Niepoprawne odpowiedzi: Czasami model może się pomylić. Spróbuj doprecyzować prompt lub dodać informację o błędnej odpowiedzi jako kontekst w kolejnym zapytaniu.
 
 
 
 Dokumentacja Swagger:
+
+https://c3ntrala.ag3nts.org/swagger/?spec=S02E05-xcvbyuitafjkl.json 
