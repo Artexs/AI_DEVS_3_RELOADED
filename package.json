@@ -17,7 +17,9 @@
         "groq-sdk": "^0.22.0",
         "openai": "^4.28.0",
         "sharp": "^0.33.2",
-        "typescript": "^5.3.3"
+        "typescript": "^5.3.3",
+        "langfuse": "^2.0.0",
+        "langfuse-core": "^2.0.0"
     },
     "devDependencies": {
         "bun-types": "latest"
