@@ -4,6 +4,7 @@ export { TranscribeProcessor } from './utils/transcribeProcessor';
 export { FileReader } from './utils/readFiles';
 export { OpenAIService } from './utils/OpenAIService';
 export { LangfuseService } from './utils/LangfuseService';
+export { TextSplitter } from './utils/TextService';
 
 export type {
     ResizedImageMetadata,
