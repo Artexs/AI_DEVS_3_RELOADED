@@ -5,7 +5,7 @@
     "main": "src/generate_prompt.ts",
     "scripts": {
         "build": "tsc",
-        "start": "bun src/generate_prompt.ts"
+        "start": "bun src/test.ts"
     },
     "dependencies": {
         "@mendable/firecrawl-js": "^1.6.1",

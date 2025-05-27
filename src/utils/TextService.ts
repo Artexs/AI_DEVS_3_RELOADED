@@ -58,7 +58,7 @@ export class TextSplitter {
     return `<|im_start|>user\n${text}<|im_end|>\n<|im_start|>assistant<|im_end|>`;
   }
 
-  async split(text: string, limit: number): Promise<IDoc[]> {
+  private async split(text: string, limit: number): Promise<IDoc[]> {
     console.log(`Starting split process with limit: ${limit} tokens`);
     await this.initializeTokenizer();
     const chunks: IDoc[] = [];
@@ -243,7 +243,7 @@ export class TextSplitter {
    *     images: list of image URLs found
    *   }
    */
-  async processFile(filePath: string, maxTokens: number = 1000, fileSuffix: string = '.md'): Promise<ProcessFileResult> {
+  async splitFile(filePath: string, maxTokens: number = 1000, fileSuffix: string = '.md'): Promise<ProcessFileResult> {
     const text = fs.readFileSync(filePath, 'utf-8');
     const docs = await this.split(text, maxTokens);
     const jsonFilePath = path.join(path.dirname(filePath), `${path.basename(filePath, fileSuffix)}.json`);
