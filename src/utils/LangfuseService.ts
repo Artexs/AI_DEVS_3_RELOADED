@@ -1,11 +1,24 @@
 import { Langfuse, LangfuseTraceClient, LangfuseSpanClient, LangfuseGenerationClient } from 'langfuse';
 import type { LangfusePromptClient, TextPromptClient, ChatPromptClient, CreateChatPromptBody } from "langfuse-core";
+import { OpenAIService } from './OpenAIService';
 
 // Define a new type that's compatible with both Langfuse and OpenAI
 type CompatibleChatMessage = Omit<{ role: string; content: string }, "externalId" | "traceIdType">;
 
+export interface ProcessOptions {
+  model?: string;
+  temperature?: number;
+}
+
+export interface UsageStats {
+  promptTokens?: number;
+  completionTokens?: number;
+  totalTokens?: number;
+}
+
 export class LangfuseService {
   public langfuse: Langfuse;
+  private openai: OpenAIService;
 
   constructor() {
     this.langfuse = new Langfuse({
@@ -13,6 +26,7 @@ export class LangfuseService {
       publicKey: process.env.LANGFUSE_PUBLIC_KEY,
       baseUrl: process.env.LANGFUSE_HOST
     });
+    this.openai = new OpenAIService();
 
     this.langfuse.on("error", (error: Error) => {
       console.error("Langfuse error:", error);
@@ -119,5 +133,56 @@ export class LangfuseService {
 
   async preFetchPrompts(promptNames: string[]): Promise<void> {
     await Promise.all(promptNames.map(name => this.getPrompt(name)));
+  }
+
+  async processPrompt(
+    promptName: string,
+    userMessage: string = '',
+    options: ProcessOptions = { model: 'gpt-4o-mini' },
+    usage: UsageStats = { promptTokens: 0, completionTokens: 0, totalTokens: 0 }
+  ): Promise<string> {
+    let generation;
+    const trace = this.createTrace({
+      id: `${promptName}-${Date.now()}`,
+      name: promptName,
+      sessionId: `${promptName}-session`
+    });
+
+    try {
+      const prompt = await this.getPrompt(promptName);
+      const systemMessage = prompt.compile();
+      const thread = [systemMessage];
+
+      generation = this.createGeneration(
+        trace,
+        promptName,
+        thread,
+        prompt
+      );
+
+      const response = await this.openai.processText(userMessage, systemMessage, options);
+      
+      this.finalizeGeneration(
+        generation,
+        { role: 'assistant', content: response },
+        options.model!,
+        usage
+      );
+
+      await this.finalizeTrace(trace, thread, { response });
+      return response;
+    } catch (error) {
+      if (generation) {
+        this.finalizeGeneration(
+          generation,
+          { error: error instanceof Error ? error.message : String(error) },
+          'unknown'
+        );
+      }
+      console.error(`Error processing prompt ${promptName}:`, error);
+      throw error;
+    } finally {
+      await this.shutdownAsync();
+    }
   }
 }

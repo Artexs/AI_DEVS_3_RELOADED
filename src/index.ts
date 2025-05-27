@@ -1,8 +1,9 @@
-import Utils from './utils/utils';
-import { ImageProcessor } from './utils/imageProcessor';
-import TranscribeProcessor from './utils/transcribeProcessor';
-import { FileReader } from './utils/readFiles';
-import { OpenAIService } from './utils/OpenAIService';
+export { Utils } from './utils/utils';
+export { ImageProcessor } from './utils/imageProcessor';
+export { TranscribeProcessor } from './utils/transcribeProcessor';
+export { FileReader } from './utils/readFiles';
+export { OpenAIService } from './utils/OpenAIService';
+export { LangfuseService } from './utils/LangfuseService';
 
 export type {
     ResizedImageMetadata,
@@ -16,10 +17,7 @@ export type {
     LLMResponse
 } from './types/openAiService.d';
 
-export {
-    Utils,
-    ImageProcessor,
-    TranscribeProcessor,
-    FileReader,
-    OpenAIService
-};
+export type {
+    ProcessOptions,
+    UsageStats
+} from './utils/LangfuseService';

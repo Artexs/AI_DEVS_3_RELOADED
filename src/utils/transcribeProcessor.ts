@@ -1,6 +1,6 @@
 import OpenAI, { toFile } from "openai";
 
-export default class TranscribeProcessor {
+export class TranscribeProcessor {
   private openai: OpenAI;
 
   constructor() {

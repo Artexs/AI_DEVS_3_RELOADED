@@ -8,7 +8,7 @@ interface RequestOptions {
     body?: string;
 }
 
-class Utils {
+export class Utils {
     private openai: OpenAI;
     private firecrawlApp: FirecrawlApp;
 
@@ -75,5 +75,3 @@ class Utils {
         return this.sendToCentrala(task, answer);
     }
 }
-
-export default Utils; 
