@@ -5,6 +5,9 @@ export { FileReader } from './utils/readFiles';
 export { OpenAIService } from './utils/OpenAIService';
 export { LangfuseService } from './utils/LangfuseService';
 export { TextSplitter } from './utils/TextService';
+export { VectorService } from './utils/VectorService';
+
+export type { Report } from './utils/VectorService';
 
 export type {
     ResizedImageMetadata,
