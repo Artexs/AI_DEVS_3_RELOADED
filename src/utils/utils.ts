@@ -8,70 +8,63 @@ interface RequestOptions {
     body?: string;
 }
 
+interface DatabaseResponse {
+    data: any[];
+}
+
+interface CentralaRequest {
+    task: string;
+    apikey: string;
+    [key: string]: any;
+}
+
 export class Utils {
     private openai: OpenAI;
     private firecrawlApp: FirecrawlApp;
 
+    private readonly config = {
+        openaiApiKey: process.env.OPENAI_API_KEY ?? '',
+        firecrawlApiKey: process.env.FIRECRAWL_API_KEY ?? '',
+        centralaUrl: process.env.CENTRALA_URL ?? '',
+        poligonApiKey: process.env.POLIGON_API_KEY ?? '',
+        aiDevsApiKey: process.env.AI_DEVS_API_KEY ?? ''
+    };
+
     constructor() {
-        // Configuration
-        // this.CENTRALA_URL = process.env.CENTRALA_URL;
-        // this.POLIGON_API_KEY = process.env.POLIGON_API_KEY;
-        // this.ROBOT_URL = process.env.ROBOT_URL;
-        // this.USERNAME = 'tester';
-        // this.PASSWORD = '574e112a';
-
-        // Initialize OpenAI client
         this.openai = new OpenAI({
-            apiKey: process.env.OPENAI_API_KEY
+            apiKey: this.config.openaiApiKey
         });
 
-        // Initialize Firecrawl client
         this.firecrawlApp = new FirecrawlApp({
-            apiKey: process.env.FIRECRAWL_API_KEY
+            apiKey: this.config.firecrawlApiKey
         });
     }
 
-    // Generic fetch function
-    async fetch(url: string, data?: string, headers?: Record<string, string>): Promise<string> {
-        const defaultHeaders = {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        };
-
-        const options: RequestOptions = {
+    private async makeRequest(url: string, data?: object): Promise<string> {
+        const response = await fetch(url, {
             method: data ? 'POST' : 'GET',
-            headers: {
-                ...defaultHeaders,
-                ...(headers || {}) // Override defaults with any custom headers
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            ...(data && { body: JSON.stringify(data) })
+        });
+
+        if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+        
+        const text = await response.text();
+        return text ? JSON.parse(text) : null;
+    }
+
+    async sendToCentrala(task: string, answer: string): Promise<string> {
+        return this.sendToCentralaGlobal(task, {answer}, 'verify');
+    }
+
+    async sendToCentralaGlobal(task: string, param: Record<string, any>, suffix: string = 'verify'): Promise<string> {
+        return this.makeRequest(
+            `${this.config.centralaUrl}/${suffix}`,
+            {
+                task,
+                apikey: this.config.poligonApiKey,
+                ...param
             }
-        };
-
-        if (data) {
-            options.body = data;
-        }
-        
-        console.log('Request URL:', url);
-        console.log('Request Options:', JSON.stringify(options, null, 2));
-        
-        const response = await fetch(url, options);
-        return await response.text();
-    }
-
-    async sendToCentrala(task: string, answer: any, suffix: string = 'verify'): Promise<string> {
-        const payload = {
-            task,
-            apikey: process.env.POLIGON_API_KEY,
-            answer
-        };
-
-        return await this.fetch(
-            `${process.env.CENTRALA_URL}/${suffix}`,
-            JSON.stringify(payload)
         );
-    }
-
-    // Maintain backward compatibility
-    async poligonRequest(task: string, answer: any): Promise<string> {
-        return this.sendToCentrala(task, answer);
     }
 }
