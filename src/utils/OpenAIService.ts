@@ -2,7 +2,8 @@ import OpenAI from "openai";
 import type { ChatCompletion, ChatCompletionMessageParam } from "openai/resources/chat/completions";
 import { LLMResponse } from "../index"
 
-const DEFAULT_MODEL = "gpt-4o-mini";
+const DEFAULT_MODEL_MINI = "gpt-4o-mini";
+const DEFAULT_MODEL_4O = "gpt-4o";
 const DEFAULT_TEMPERATURE = 0.7;
 
 export class OpenAIService {
@@ -104,8 +105,13 @@ export class OpenAIService {
             temperature?: number;
         } = {}
     ): Promise<string> {
+        const model = {
+            mini: DEFAULT_MODEL_MINI,
+            '4o': DEFAULT_MODEL_4O
+        }[options.model ?? 'mini'] ?? DEFAULT_MODEL_MINI;
+
         const response: ChatCompletion = await this.openai.chat.completions.create({
-            model: options.model ?? DEFAULT_MODEL,
+            model,
             messages,
             temperature: options.temperature ?? DEFAULT_TEMPERATURE
         });

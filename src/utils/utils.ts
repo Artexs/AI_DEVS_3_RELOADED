@@ -47,7 +47,13 @@ export class Utils {
             ...(data && { body: JSON.stringify(data) })
         });
 
-        if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+        if (!response.ok) 
+        {
+            console.error(`Request failed: ${url}`)
+            console.error(data);
+            console.error(response);
+            // throw new Error();
+        }
         
         const text = await response.text();
         return text ? JSON.parse(text) : null;
@@ -61,7 +67,7 @@ export class Utils {
         return this.makeRequest(
             `${this.config.centralaUrl}/${suffix}`,
             {
-                task,
+                ...(task && { task }),
                 apikey: this.config.poligonApiKey,
                 ...param
             }
