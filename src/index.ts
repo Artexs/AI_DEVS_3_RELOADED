@@ -1,13 +1,15 @@
-export { Utils } from './utils/utils';
-export { ImageProcessor } from './utils/imageProcessor';
-export { TranscribeProcessor } from './utils/transcribeProcessor';
-export { FileReader } from './utils/readFiles';
-export { OpenAIService } from './utils/OpenAIService';
-export { LangfuseService } from './utils/LangfuseService';
-export { TextSplitter } from './utils/TextService';
-export { VectorService } from './utils/VectorService';
+export { Utils } from './functions/utils';
+export { ImageProcessor } from './functions/imageProcessor';
+export { TranscribeProcessor } from './functions/transcribeProcessor';
+export { FileReader } from './functions/readFiles';
+export { OpenAIService } from './functions/OpenAIService';
+export { LangfuseService } from './functions/LangfuseService';
+export { TextSplitter } from './functions/TextService';
+export { VectorService } from './functions/VectorService';
+export { MessageManager } from './functions/MessageManager';
+export { startApi } from './agent/api';
 
-export type { Report } from './utils/VectorService';
+export type { Report } from './functions/VectorService';
 
 export type {
     ResizedImageMetadata,
@@ -24,4 +26,15 @@ export type {
 export type {
     ProcessOptions,
     UsageStats
-} from './utils/LangfuseService';
+} from './functions/LangfuseService';
+
+export type {
+    Message,
+    MessageArray,
+    MessageRole,
+    ChatCompletionUserMessageParam,
+    ChatCompletionAssistantMessageParam,
+    ChatCompletionSystemMessageParam,
+    ChatCompletionContentPartImage,
+    ChatCompletionContentPartText
+} from './types/messages';
