@@ -1,6 +1,6 @@
-import { FileReader, FileContent } from '../utils/readFiles';
-import { ImageProcessor } from '../utils/imageProcessor';
-import TranscribeProcessor from '../utils/transcribeProcessor';
+import { FileReader, FileContent } from '../functions/readFiles';
+import { ImageProcessor } from '../functions/imageProcessor';
+import TranscribeProcessor from '../functions/transcribeProcessor';
 import { Utils, OpenAIService, LLMResponse as ServiceLLMResponse } from '../index';
 import { join } from 'path';
 import fetch from 'node-fetch';

@@ -5,23 +5,26 @@
     "main": "src/generate_prompt.ts",
     "scripts": {
         "build": "tsc",
-        "start": "bun src/test.ts"
+        "api": "bun src/agent/api.ts",
+        "start": "bun src/agent/logic.ts"
     },
     "dependencies": {
+        "@langchain/openai": "^0.0.14",
         "@mendable/firecrawl-js": "^1.6.1",
         "@microsoft/tiktokenizer": "^1.0.10",
+        "@qdrant/js-client-rest": "^1.7.0",
+        "@types/express": "^5.0.2",
         "@types/node": "^20.11.24",
         "adm-zip": "^0.5.11",
         "dotenv": "^16.4.5",
         "elevenlabs": "^1.59.0",
+        "express": "^5.1.0",
         "groq-sdk": "^0.22.0",
-        "openai": "^4.28.0",
-        "sharp": "^0.33.2",
-        "typescript": "^5.3.3",
         "langfuse": "^2.0.0",
         "langfuse-core": "^2.0.0",
-        "@qdrant/js-client-rest": "^1.7.0",
-        "@langchain/openai": "^0.0.14"
+        "openai": "^4.28.0",
+        "sharp": "^0.33.2",
+        "typescript": "^5.3.3"
     },
     "devDependencies": {
         "bun-types": "latest"
