@@ -113,34 +113,38 @@ class PhotoAnalyzer {
 
     private async processOnceImage(result: { imageUrl: string; centralaResponse: string }): Promise<{ imageUrl: string; centralaResponse: any; status: string }> {
         try {
-            await this.logger.log(`message message to: ${JSON.stringify(result)}`);
-            const filename = this.extractFilename(result.centralaResponse, result.imageUrl);
-            const localPath = join(this.imagesDir, filename);
-            await this.logger.log(`downloadFile downloadFile downloadFile: ${this.baseUrl + filename}`);
-
-            await this.fileReader.downloadFile(this.baseUrl + filename, localPath);
-
-            // Get LLM analysis for image quality
-            const analysis = await this.analyzeImageQuality(localPath, result.centralaResponse);
-            
-            // Send command to centrala
-            const command = `${analysis} ${filename}`;
-            await this.logger.log(`Sending command to centrala: ${command}`);
-            
-            const centralaResponse = await this.utils.sendToCentralaGlobal('photos', { answer: command }, 'verify');
-            await this.logger.log('Centrala response (command): ' + JSON.stringify(centralaResponse));
-            
-            const parsedResponse = typeof centralaResponse === 'string' ? JSON.parse(centralaResponse) : centralaResponse;
-            
-            return {
-                status: analysis,
-                imageUrl: filename,
-                centralaResponse: parsedResponse.message
-            };
+            const filename = await this.downloadAndLogImage(result);
+            const analysis = await this.analyzeImageQualityAndLog(filename, result.centralaResponse);
+            return await this.sendCommandToCentrala(filename, analysis);
         } catch (error) {
             await this.logger.error('Error in processOnceImage', error);
             throw error;
         }
+    }
+
+    private async downloadAndLogImage(result: { imageUrl: string; centralaResponse: string }): Promise<string> {
+        await this.logger.log(`Processing Image Info: ${JSON.stringify(result)}`);
+        const filename = this.extractFilename(result.centralaResponse, result.imageUrl);
+        await this.fileReader.downloadFile(`${this.baseUrl}${filename}`, join(this.imagesDir, filename));
+        return filename;
+    }
+
+    private async analyzeImageQualityAndLog(localPath: string, message: string): Promise<string> {
+        await this.logger.log(`Starting image quality analysis for: ${localPath}`);
+        const analysis = await this.analyzeImageQuality(localPath, message);
+        await this.logger.log(`Image quality analysis result: ${analysis}`);
+        return analysis;
+    }
+
+    private async sendCommandToCentrala(filename: string, analysis: string): Promise<{ imageUrl: string; centralaResponse: any; status: string }> {
+        await this.logger.log(`Sending command to Centrala: ${analysis} ${filename}`);
+        const centralaResponse = await this.utils.sendToCentralaGlobal('photos', { answer: `${analysis} ${filename}` }, 'verify');
+        const parsedResponse = JSON.parse(typeof centralaResponse === 'string' ? centralaResponse : JSON.stringify(centralaResponse));
+        return {
+            status: analysis,
+            imageUrl: filename,
+            centralaResponse: parsedResponse.message
+        };
     }
 
     private extractUrlsFromText(text: string): string[] {
@@ -162,38 +166,28 @@ class PhotoAnalyzer {
 
     private async analyzeImageQuality(imagePath: string, message: string): Promise<string> {
         try {
-            // Load and process image
             const processedImage = await this.imageProcessor.loadImage(imagePath);
-            
-            // Create new message manager for this analysis
-            const messageManager = new MessageManager();
-            
-            // Add image to message manager for LLM analysis
-            messageManager.addImageMessage(processedImage.imageBase64, message);
-                    
-            // Add system message for quality analysis
-            messageManager.addMessage('system', 
-                'You are an image quality analyzer. Your task is to classify the image into one of these states:\n' +
-                '- DARKEN: if the image is too bright/overexposed\n' +
-                '- BRIGHTEN: if the image is too dark/underexposed\n' +
-                '- REPAIR: if the image has glitches, noise, or other quality issues\n' +
-                '- OK: if the image quality is good and needs no adjustments\n\n' +
-                'You will receive an image and possibly a text message. The text message contains important context about the image quality - use it to make your decision.\n' +
-                'Respond with ONLY ONE of these words: DARKEN, BRIGHTEN, REPAIR, or OK.'
-            );
-
-            // Get LLM analysis
-            const analysis = await this.openAIService.processText(
-                messageManager.getMessages(),
-                'mini' // Use mini model for simple quality assessment
-            );
-
-            // await this.logger.log('LLM response (image quality): ' + analysis);
-            return analysis;
+            const messageManager = this.createImageQualityMessageManager(processedImage, message);
+            return await this.openAIService.processText(messageManager.getMessages(), 'mini');
         } catch (error) {
             await this.logger.error('Error in analyzeImageQuality', error);
             throw error;
         }
+    }
+
+    private createImageQualityMessageManager(processedImage: any, message: string): MessageManager {
+        const messageManager = new MessageManager();
+        messageManager.addImageMessage(processedImage.imageBase64, message);
+        messageManager.addMessage('system', 
+            'You are an image quality analyzer. Your task is to classify the image into one of these states:\n' +
+            '- DARKEN: if the image is too bright/overexposed\n' +
+            '- BRIGHTEN: if the image is too dark/underexposed\n' +
+            '- REPAIR: if the image has glitches, noise, or other quality issues\n' +
+            '- OK: if the image quality is good and needs no adjustments\n\n' +
+            'You will receive an image and possibly a text message. The text message contains important context about the image quality - use it to make your decision.\n' +
+            'Respond with ONLY ONE of these words: DARKEN, BRIGHTEN, REPAIR, or OK.'
+        );
+        return messageManager;
     }
 
     private async generateBarbaraDescription(imageNames: string[]): Promise<string> {
@@ -287,6 +281,7 @@ class PhotoAnalyzer {
     async startTask(): Promise<void> {
         try {
             // // Step 2: Start Task
+            // Uncomment lines if the task requires starting a new session
             // const response = await this.utils.sendToCentralaGlobal('photos', { answer: 'START' }, 'verify');
             // await this.logger.log('Centrala response (task start): ' + JSON.stringify(response));
 
@@ -300,16 +295,23 @@ class PhotoAnalyzer {
             // await this.saveValidImages(validImageNames);
             
             const loadedImageNames = await this.loadValidImages();
-            const barbaraDescription = await this.generateBarbaraDescription(loadedImageNames);
-            await this.logger.log('Barbara description: ' + barbaraDescription);
-
-            // Send final description to centrala
-            const finalResponse = await this.utils.sendToCentralaGlobal('photos', { answer: barbaraDescription }, 'verify');
-            await this.logger.log('Final response from centrala: ' + JSON.stringify(finalResponse));
+            const barbaraDescription = await this.generateBarbaraDescriptionAndLog(loadedImageNames);
+            await this.sendFinalDescriptionToCentrala(barbaraDescription);
         } catch (error) {
             await this.logger.error('Error in startTask', error);
             throw error;
         }
+    }
+
+    private async generateBarbaraDescriptionAndLog(loadedImageNames: string[]): Promise<string> {
+        const barbaraDescription = await this.generateBarbaraDescription(loadedImageNames);
+        await this.logger.log('Barbara description: ' + barbaraDescription);
+        return barbaraDescription;
+    }
+
+    private async sendFinalDescriptionToCentrala(barbaraDescription: string): Promise<void> {
+        const finalResponse = await this.utils.sendToCentralaGlobal('photos', { answer: barbaraDescription }, 'verify');
+        await this.logger.log('Final response from centrala: ' + JSON.stringify(finalResponse));
     }
 }
 
