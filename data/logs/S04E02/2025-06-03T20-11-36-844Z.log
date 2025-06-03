@@ -1,0 +1,58 @@
+Log file created at 2025-06-03T20:11:36.845Z
+--------------------------------------------
+[2025-06-03T20:11:36.848Z] Incorrect data: 8664
+
+[2025-06-03T20:11:36.848Z] Verify data: 01=kanto,saka,brunn
+02=kezka,barru,asal
+03=dwylo,blodau,cerdd
+04=kutsu,gato,madarak
+05=enamorar,bertan,tycio
+06=ezkutatu,rejt,ocultar
+07=selymes,sedoso,silkkinen
+08=kynsien,varvas,hiusten
+09=saudade,honvágy,kaipaus
+10=masnach,lledr,meddyg
+
+[2025-06-03T20:11:36.848Z] Processing line with ID: 01 --- kanto,saka,brunn
+
+[2025-06-03T20:11:37.828Z] Response for ID 01: 0
+
+[2025-06-03T20:11:37.828Z] Processing line with ID: 02 --- kezka,barru,asal
+
+[2025-06-03T20:11:38.447Z] Response for ID 02: 0
+
+[2025-06-03T20:11:38.447Z] Processing line with ID: 03 --- dwylo,blodau,cerdd
+
+[2025-06-03T20:11:40.694Z] Response for ID 03: 1
+
+[2025-06-03T20:11:40.694Z] Processing line with ID: 04 --- kutsu,gato,madarak
+
+[2025-06-03T20:11:41.511Z] Response for ID 04: 0
+
+[2025-06-03T20:11:41.511Z] Processing line with ID: 05 --- enamorar,bertan,tycio
+
+[2025-06-03T20:11:43.713Z] Response for ID 05: 0
+
+[2025-06-03T20:11:43.713Z] Processing line with ID: 06 --- ezkutatu,rejt,ocultar
+
+[2025-06-03T20:11:44.548Z] Response for ID 06: 0
+
+[2025-06-03T20:11:44.548Z] Processing line with ID: 07 --- selymes,sedoso,silkkinen
+
+[2025-06-03T20:11:45.218Z] Response for ID 07: 0
+
+[2025-06-03T20:11:45.219Z] Processing line with ID: 08 --- kynsien,varvas,hiusten
+
+[2025-06-03T20:11:51.221Z] Response for ID 08: 1
+
+[2025-06-03T20:11:51.221Z] Processing line with ID: 09 --- saudade,honvágy,kaipaus
+
+[2025-06-03T20:11:52.208Z] Response for ID 09: 0
+
+[2025-06-03T20:11:52.208Z] Processing line with ID: 10 --- masnach,lledr,meddyg
+
+[2025-06-03T20:11:53.176Z] Response for ID 10: 1
+
+[2025-06-03T20:11:53.177Z] Found 3 valid results: ["03","08","10"]
+
+[2025-06-03T20:11:53.322Z] Response from centrala: {"code":0,"message":"{{FLG:ITSVALID}}"}
