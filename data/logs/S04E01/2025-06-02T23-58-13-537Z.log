@@ -1,0 +1,85 @@
+Log file created at 2025-06-02T23:58:13.538Z
+--------------------------------------------
+[2025-06-02T23:58:13.538Z] Centrala response (loaded): "Słuchaj! mam dla Ciebie fotki o które prosiłeś. https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG. Pamiętaj, że zawsze mogę poprawić je dla Ciebie (polecenia: REPAIR/DARKEN/BRIGHTEN)."
+
+[2025-06-02T23:58:13.540Z] Processing attempt 1 for image: IMG_559.PNG
+
+[2025-06-02T23:58:13.540Z] message message to: IMG_559.PNG
+
+[2025-06-02T23:58:19.456Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:58:19.638Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:58:19.638Z] processOnceImage result: [object Object]
+
+[2025-06-02T23:58:19.638Z] 
+
+[2025-06-02T23:58:19.638Z] Processing attempt 2 for image: IMG_559.PNG
+
+[2025-06-02T23:58:19.638Z] message message to: Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG
+
+🚨 Error in analyzeImageQuality --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 841. Please try again in 252ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error in processOnceImage --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 841. Please try again in 252ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error processing image IMG_559.PNG: --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 841. Please try again in 252ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+[2025-06-02T23:58:23.859Z] Processing attempt 1 for image: IMG_1410.PNG
+
+[2025-06-02T23:58:23.859Z] message message to: IMG_1410.PNG
+
+🚨 Error in analyzeImageQuality --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 824. Please try again in 247ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error in processOnceImage --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 824. Please try again in 247ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error processing image IMG_1410.PNG: --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 824. Please try again in 247ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+[2025-06-02T23:58:25.769Z] Processing attempt 1 for image: IMG_1443.PNG
+
+[2025-06-02T23:58:25.769Z] message message to: IMG_1443.PNG
+
+[2025-06-02T23:58:29.938Z] Sending command to centrala: REPAIR IMG_1443.PNG
+
+[2025-06-02T23:58:30.019Z] Centrala response (command): {"code":0,"message":"Pyk, pyk, pyk, pytk jako tako i fajrant! Dałem z siebie całe 30% - proszę: IMG_1443_FT12.PNG"}
+
+[2025-06-02T23:58:30.019Z] processOnceImage result: [object Object]
+
+[2025-06-02T23:58:30.020Z] 
+
+[2025-06-02T23:58:30.020Z] Processing attempt 2 for image: IMG_1443.PNG
+
+[2025-06-02T23:58:30.020Z] message message to: Pyk, pyk, pyk, pytk jako tako i fajrant! Dałem z siebie całe 30% - proszę: IMG_1443_FT12.PNG
+
+🚨 Error in analyzeImageQuality --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 844. Please try again in 253ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error in processOnceImage --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 844. Please try again in 253ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error processing image IMG_1443.PNG: --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 844. Please try again in 253ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+[2025-06-02T23:58:34.709Z] Processing attempt 1 for image: IMG_1444.PNG
+
+[2025-06-02T23:58:34.709Z] message message to: IMG_1444.PNG
+
+[2025-06-02T23:58:43.143Z] Sending command to centrala: OK IMG_1444.PNG
+
+[2025-06-02T23:58:43.207Z] Centrala response (command): {"code":-345,"message":"Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc."}
+
+[2025-06-02T23:58:43.207Z] processOnceImage result: [object Object]
+
+[2025-06-02T23:58:43.207Z] 
+
+[2025-06-02T23:58:43.207Z] Processing attempt 2 for image: IMG_1444.PNG
+
+[2025-06-02T23:58:43.207Z] message message to: Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc.
+
+[2025-06-02T23:58:43.207Z] {"imageUrl":"IMG_1444.PNG","centralaResponse":"Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc."}
+
+🚨 No image filename found in message @!#@!#!@#!@#!@#, using IMG_1444.PNG
+
+🚨 Error in analyzeImageQuality --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 855. Please try again in 256ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error in processOnceImage --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 855. Please try again in 256ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error processing image IMG_1444.PNG: --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 855. Please try again in 256ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+[2025-06-02T23:58:49.457Z] Successfully processed images: []

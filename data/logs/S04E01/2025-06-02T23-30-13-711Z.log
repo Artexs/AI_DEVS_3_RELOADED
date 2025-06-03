@@ -1,0 +1,93 @@
+Log file created at 2025-06-02T23:30:13.711Z
+--------------------------------------------
+[2025-06-02T23:30:13.712Z] Centrala response (loaded): "Słuchaj! mam dla Ciebie fotki o które prosiłeś. https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG. Pamiętaj, że zawsze mogę poprawić je dla Ciebie (polecenia: REPAIR/DARKEN/BRIGHTEN)."
+
+[2025-06-02T23:30:13.714Z] Processing attempt 1 for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:30:13.714Z] message message to: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:30:13.903Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+[2025-06-02T23:30:16.991Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:30:16.991Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:30:17.091Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:30:17.091Z] Processing attempt 2 for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:30:17.091Z] message message to: Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG
+
+🚨 No image URL found in message @!#@!#!@#!@#!@#
+
+🚨 Error in processOnceImage --- null is not an object (evaluating 'matches[0]')
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG: --- null is not an object (evaluating 'matches[0]')
+
+[2025-06-02T23:30:17.091Z] Processing attempt 1 for image: https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG
+
+[2025-06-02T23:30:17.091Z] message message to: https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG
+
+[2025-06-02T23:30:17.164Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1410.PNG
+
+[2025-06-02T23:30:19.197Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:30:19.197Z] Sending command to centrala: REPAIR IMG_1410.PNG
+
+[2025-06-02T23:30:19.269Z] Centrala response (command): {"code":0,"message":"Co tu się... no nie... to nie wygląda dobrze. Spróbuj czegoś innego."}
+
+[2025-06-02T23:30:19.269Z] Processing attempt 2 for image: https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG
+
+[2025-06-02T23:30:19.269Z] message message to: Co tu się... no nie... to nie wygląda dobrze. Spróbuj czegoś innego.
+
+🚨 No image URL found in message @!#@!#!@#!@#!@#
+
+🚨 Error in processOnceImage --- null is not an object (evaluating 'matches[0]')
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG: --- null is not an object (evaluating 'matches[0]')
+
+[2025-06-02T23:30:19.269Z] Processing attempt 1 for image: https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG
+
+[2025-06-02T23:30:19.269Z] message message to: https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG
+
+[2025-06-02T23:30:19.665Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1443.PNG
+
+[2025-06-02T23:30:23.300Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:30:23.300Z] Sending command to centrala: REPAIR IMG_1443.PNG
+
+[2025-06-02T23:30:23.355Z] Centrala response (command): {"code":0,"message":"Pyk, pyk, pyk, pytk jako tako i fajrant! Dałem z siebie całe 30% - proszę: IMG_1443_FT12.PNG"}
+
+[2025-06-02T23:30:23.355Z] Processing attempt 2 for image: https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG
+
+[2025-06-02T23:30:23.355Z] message message to: Pyk, pyk, pyk, pytk jako tako i fajrant! Dałem z siebie całe 30% - proszę: IMG_1443_FT12.PNG
+
+🚨 No image URL found in message @!#@!#!@#!@#!@#
+
+🚨 Error in processOnceImage --- null is not an object (evaluating 'matches[0]')
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG: --- null is not an object (evaluating 'matches[0]')
+
+[2025-06-02T23:30:23.356Z] Processing attempt 1 for image: https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG
+
+[2025-06-02T23:30:23.356Z] message message to: https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG
+
+[2025-06-02T23:30:23.597Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1444.PNG
+
+[2025-06-02T23:30:28.001Z] LLM response (image quality): OK
+
+[2025-06-02T23:30:28.002Z] Sending command to centrala: OK IMG_1444.PNG
+
+[2025-06-02T23:30:28.053Z] Centrala response (command): {"code":-345,"message":"Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc."}
+
+[2025-06-02T23:30:28.053Z] Processing attempt 2 for image: https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG
+
+[2025-06-02T23:30:28.053Z] message message to: Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc.
+
+🚨 No image URL found in message @!#@!#!@#!@#!@#
+
+🚨 Error in processOnceImage --- null is not an object (evaluating 'matches[0]')
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG: --- null is not an object (evaluating 'matches[0]')
+
+[2025-06-02T23:30:28.053Z] Successfully processed images: []

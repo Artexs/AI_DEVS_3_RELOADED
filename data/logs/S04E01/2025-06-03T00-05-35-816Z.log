@@ -1,0 +1,185 @@
+Log file created at 2025-06-03T00:05:35.817Z
+--------------------------------------------
+[2025-06-03T00:05:35.817Z] Centrala response (loaded): "Słuchaj! mam dla Ciebie fotki o które prosiłeś. https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG. Pamiętaj, że zawsze mogę poprawić je dla Ciebie (polecenia: REPAIR/DARKEN/BRIGHTEN)."
+
+[2025-06-03T00:05:35.820Z] Processing attempt 1 for image: IMG_559.PNG
+
+[2025-06-03T00:05:35.820Z] message message to: IMG_559.PNG
+
+[2025-06-03T00:05:39.675Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-03T00:05:39.780Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-03T00:05:39.780Z] processOnceImage result: {"status":"REPAIR","imageUrl":"IMG_559.PNG","centralaResponse":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-03T00:05:39.780Z] 
+
+[2025-06-03T00:05:39.781Z] Processing attempt 2 for image: IMG_559.PNG
+
+[2025-06-03T00:05:39.781Z] message message to: Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG
+
+[2025-06-03T00:05:45.143Z] Sending command to centrala: REPAIR IMG_559_FGR4.PNG
+
+[2025-06-03T00:05:45.218Z] Centrala response (command): {"code":0,"message":"Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie"}
+
+[2025-06-03T00:05:45.218Z] processOnceImage result: {"status":"REPAIR","imageUrl":"IMG_559_FGR4.PNG","centralaResponse":"Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie"}
+
+[2025-06-03T00:05:45.218Z] 
+
+[2025-06-03T00:05:45.218Z] Processing attempt 3 for image: IMG_559_FGR4.PNG
+
+[2025-06-03T00:05:45.218Z] message message to: Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie
+
+[2025-06-03T00:05:45.218Z] {"status":"REPAIR","imageUrl":"IMG_559_FGR4.PNG","centralaResponse":"Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie"}
+
+🚨 No image filename found in message @!#@!#!@#!@#!@#, using IMG_559_FGR4.PNG
+
+[2025-06-03T00:05:47.695Z] Sending command to centrala: DARKEN IMG_559_FGR4.PNG
+
+[2025-06-03T00:05:47.769Z] Centrala response (command): {"code":0,"message":"Noooo! Teraz to wygląda naprawdę dobrze. Mamy ją! IMG_559_NRR7.PNG"}
+
+[2025-06-03T00:05:47.769Z] processOnceImage result: {"status":"DARKEN","imageUrl":"IMG_559_FGR4.PNG","centralaResponse":"Noooo! Teraz to wygląda naprawdę dobrze. Mamy ją! IMG_559_NRR7.PNG"}
+
+[2025-06-03T00:05:47.769Z] 
+
+[2025-06-03T00:05:47.769Z] Processing attempt 4 for image: IMG_559_FGR4.PNG
+
+[2025-06-03T00:05:47.769Z] message message to: Noooo! Teraz to wygląda naprawdę dobrze. Mamy ją! IMG_559_NRR7.PNG
+
+[2025-06-03T00:05:51.182Z] Sending command to centrala: OK IMG_559_NRR7.PNG
+
+[2025-06-03T00:05:51.248Z] Centrala response (command): {"code":-345,"message":"Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc."}
+
+[2025-06-03T00:05:51.249Z] processOnceImage result: {"status":"OK","imageUrl":"IMG_559_NRR7.PNG","centralaResponse":"Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc."}
+
+[2025-06-03T00:05:51.249Z] Successfully processed image: IMG_559_NRR7.PNG
+
+[2025-06-03T00:05:51.249Z] Processing attempt 1 for image: IMG_1410.PNG
+
+[2025-06-03T00:05:51.249Z] message message to: IMG_1410.PNG
+
+[2025-06-03T00:06:04.088Z] Sending command to centrala: REPAIR IMG_1410.PNG
+
+[2025-06-03T00:06:04.178Z] Centrala response (command): {"code":0,"message":"Ejjj... no weź... to wygląda jeszcze gorzej niż przed operacją. Weź spróbuj czegoś innego."}
+
+[2025-06-03T00:06:04.178Z] processOnceImage result: {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"Ejjj... no weź... to wygląda jeszcze gorzej niż przed operacją. Weź spróbuj czegoś innego."}
+
+[2025-06-03T00:06:04.178Z] 
+
+[2025-06-03T00:06:04.178Z] Processing attempt 2 for image: IMG_1410.PNG
+
+[2025-06-03T00:06:04.178Z] message message to: Ejjj... no weź... to wygląda jeszcze gorzej niż przed operacją. Weź spróbuj czegoś innego.
+
+[2025-06-03T00:06:04.178Z] {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"Ejjj... no weź... to wygląda jeszcze gorzej niż przed operacją. Weź spróbuj czegoś innego."}
+
+🚨 No image filename found in message @!#@!#!@#!@#!@#, using IMG_1410.PNG
+
+[2025-06-03T00:06:06.913Z] Sending command to centrala: REPAIR IMG_1410.PNG
+
+[2025-06-03T00:06:06.978Z] Centrala response (command): {"code":0,"message":"Co tu się... no nie... to nie wygląda dobrze. Spróbuj czegoś innego."}
+
+[2025-06-03T00:06:06.978Z] processOnceImage result: {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"Co tu się... no nie... to nie wygląda dobrze. Spróbuj czegoś innego."}
+
+[2025-06-03T00:06:06.978Z] 
+
+[2025-06-03T00:06:06.978Z] Processing attempt 3 for image: IMG_1410.PNG
+
+[2025-06-03T00:06:06.978Z] message message to: Co tu się... no nie... to nie wygląda dobrze. Spróbuj czegoś innego.
+
+[2025-06-03T00:06:06.978Z] {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"Co tu się... no nie... to nie wygląda dobrze. Spróbuj czegoś innego."}
+
+🚨 No image filename found in message @!#@!#!@#!@#!@#, using IMG_1410.PNG
+
+[2025-06-03T00:06:10.702Z] Sending command to centrala: REPAIR IMG_1410.PNG
+
+[2025-06-03T00:06:10.813Z] Centrala response (command): {"code":0,"message":"Ejjj... no weź... to wygląda jeszcze gorzej niż przed operacją. Weź spróbuj czegoś innego."}
+
+[2025-06-03T00:06:10.813Z] processOnceImage result: {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"Ejjj... no weź... to wygląda jeszcze gorzej niż przed operacją. Weź spróbuj czegoś innego."}
+
+[2025-06-03T00:06:10.813Z] 
+
+[2025-06-03T00:06:10.813Z] Processing attempt 4 for image: IMG_1410.PNG
+
+[2025-06-03T00:06:10.813Z] message message to: Ejjj... no weź... to wygląda jeszcze gorzej niż przed operacją. Weź spróbuj czegoś innego.
+
+[2025-06-03T00:06:10.814Z] {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"Ejjj... no weź... to wygląda jeszcze gorzej niż przed operacją. Weź spróbuj czegoś innego."}
+
+🚨 No image filename found in message @!#@!#!@#!@#!@#, using IMG_1410.PNG
+
+[2025-06-03T00:06:17.155Z] Sending command to centrala: REPAIR IMG_1410.PNG
+
+[2025-06-03T00:06:17.217Z] Centrala response (command): {"code":0,"message":"Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie"}
+
+[2025-06-03T00:06:17.217Z] processOnceImage result: {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie"}
+
+[2025-06-03T00:06:17.217Z] 
+
+[2025-06-03T00:06:17.217Z] Processing attempt 5 for image: IMG_1410.PNG
+
+[2025-06-03T00:06:17.217Z] message message to: Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie
+
+[2025-06-03T00:06:17.217Z] {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie"}
+
+🚨 No image filename found in message @!#@!#!@#!@#!@#, using IMG_1410.PNG
+
+[2025-06-03T00:06:19.778Z] Sending command to centrala: REPAIR IMG_1410.PNG
+
+[2025-06-03T00:06:19.838Z] Centrala response (command): {"code":0,"message":"Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie"}
+
+[2025-06-03T00:06:19.838Z] processOnceImage result: {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie"}
+
+[2025-06-03T00:06:19.838Z] 
+
+[2025-06-03T00:06:19.838Z] Processing attempt 6 for image: IMG_1410.PNG
+
+[2025-06-03T00:06:19.838Z] message message to: Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie
+
+[2025-06-03T00:06:19.838Z] {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"Jest źle. Bardzo źle. Ta operacja nic nam nie dała. Nie wydobyłą nowych szczegółów, a może nawet popsuła zdjęcie"}
+
+🚨 No image filename found in message @!#@!#!@#!@#!@#, using IMG_1410.PNG
+
+[2025-06-03T00:06:22.446Z] Sending command to centrala: REPAIR IMG_1410.PNG
+
+[2025-06-03T00:06:22.503Z] Centrala response (command): {"code":0,"message":"No ja nie wiem... tak patrzę na to foto i mi się nie wydaje, aby ta operacja miała sens. Może spróbujesz czegoś innego?"}
+
+[2025-06-03T00:06:22.503Z] processOnceImage result: {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"No ja nie wiem... tak patrzę na to foto i mi się nie wydaje, aby ta operacja miała sens. Może spróbujesz czegoś innego?"}
+
+[2025-06-03T00:06:22.503Z] 
+
+[2025-06-03T00:06:22.503Z] Processing attempt 7 for image: IMG_1410.PNG
+
+[2025-06-03T00:06:22.503Z] message message to: No ja nie wiem... tak patrzę na to foto i mi się nie wydaje, aby ta operacja miała sens. Może spróbujesz czegoś innego?
+
+[2025-06-03T00:06:22.503Z] {"status":"REPAIR","imageUrl":"IMG_1410.PNG","centralaResponse":"No ja nie wiem... tak patrzę na to foto i mi się nie wydaje, aby ta operacja miała sens. Może spróbujesz czegoś innego?"}
+
+🚨 No image filename found in message @!#@!#!@#!@#!@#, using IMG_1410.PNG
+
+🚨 Error in analyzeImageQuality --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 852. Please try again in 255ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error in processOnceImage --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 852. Please try again in 255ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error processing image IMG_1410.PNG: --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 852. Please try again in 255ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+[2025-06-03T00:06:24.883Z] Processing attempt 1 for image: IMG_1443.PNG
+
+[2025-06-03T00:06:24.883Z] message message to: IMG_1443.PNG
+
+[2025-06-03T00:06:35.308Z] Sending command to centrala: OK IMG_1443.PNG
+
+[2025-06-03T00:06:35.383Z] Centrala response (command): {"code":-345,"message":"Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc."}
+
+[2025-06-03T00:06:35.383Z] processOnceImage result: {"status":"OK","imageUrl":"IMG_1443.PNG","centralaResponse":"Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc."}
+
+[2025-06-03T00:06:35.383Z] Successfully processed image: IMG_1443.PNG
+
+[2025-06-03T00:06:35.383Z] Processing attempt 1 for image: IMG_1444.PNG
+
+[2025-06-03T00:06:35.383Z] message message to: IMG_1444.PNG
+
+🚨 Error in analyzeImageQuality --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 824. Please try again in 247ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error in processOnceImage --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 824. Please try again in 247ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error processing image IMG_1444.PNG: --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 824. Please try again in 247ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+[2025-06-03T00:06:40.763Z] Successfully processed images: ["Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc.","Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc."]

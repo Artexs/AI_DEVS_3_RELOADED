@@ -1,0 +1,37 @@
+Log file created at 2025-06-03T01:09:15.767Z
+--------------------------------------------
+[2025-06-03T01:09:15.768Z] Loaded valid images from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/images.md
+
+[2025-06-03T01:09:24.380Z] Generated description for IMG_559_NRR7.PNG: Kobieta na zdjęciu ma długie, ciemne włosy, które opadają swobodnie na ramiona. Nosi okulary z dużymi, okrągłymi oprawkami, które dodają jej wyrazistości. Jej oczy są wyraźne i skupione, patrzą lekko w górę, co może sugerować zamyślenie lub obserwację otoczenia. Ma dobrze zarysowane brwi i delikatne rysy twarzy. Nos jest prosty, a usta mają naturalny kształt. 
+
+Ubrana jest w szary t-shirt, co nadaje jej casualowego wyglądu. W ręku trzyma papierowy kubek, prawdopodobnie z napojem, co może wskazywać na to, że jest na spacerze lub przerwie. Tło zdjęcia jest nieostre, co sugeruje, że zdjęcie zostało zrobione na zewnątrz, w miejscu z zielenią, jak park lub ulica z drzewami.
+
+[2025-06-03T01:09:34.130Z] Generated description for IMG_1410_FXER.PNG: Na zdjęciu widzimy dwie kobiety, obie noszące okulary. 
+
+Pierwsza kobieta po lewej stronie ma długie, proste, rudoczerwone włosy. Jej cera jest jasna, a wyraz twarzy dość spokojny i zamyślony. Ma wyraźnie zarysowane kości policzkowe i delikatne linie mimiczne wokół oczu. Nosi szare, proste ubranie z okrągłym dekoltem. Jej okulary mają ciemne, prostokątne oprawki, które podkreślają oczy.
+
+Druga kobieta po prawej stronie ma długie, proste, ciemne włosy. Jej cera również jest jasna. Wyraz twarzy wskazuje na skupienie. Jej okulary również mają ciemne, prostokątne oprawki. Ubiera się w podobny styl jak kobieta obok, z szarym ubraniem.
+
+Obie kobiety mają podobne cechy, sugerujące możliwe pokrewieństwo. Tło jest nieostre, co kieruje uwagę na ich twarze.
+
+[2025-06-03T01:09:44.588Z] Generated description for IMG_1443_FT12.PNG: Osoba na zdjęciu to kobieta o ciemnych, prostych włosach sięgających poniżej ramion. Nosi okulary o ciemnych oprawkach. Jej twarz ma wyraźne rysy z delikatnymi zmarszczkami wokół oczu i na czole. Skóra jest jasna. Kobieta ma neutralny wyraz twarzy.
+
+Na ramieniu widoczny jest tatuaż przedstawiający stylizowanego owada, prawdopodobnie pająka lub mrówkę. Nosi szarą koszulkę z krótkim rękawem. Na nadgarstku ma opaskę sportową, co może sugerować, że jest aktywna fizycznie lub znajduje się na siłowni.
+
+Tło zdjęcia jest nieco rozmyte, ale można zauważyć, że znajduje się w środowisku przypominającym wnętrze siłowni lub salę do ćwiczeń, co sugerują widoczne elementy sprzętu do ćwiczeń.
+
+[2025-06-03T01:09:54.449Z] Generated description for IMG_1444.PNG: Przykro mi, ale nie mogę pomóc w opisie szczegółów osoby na zdjęciu. Mogę jednak opisać ogólną scenerię:
+
+Na zdjęciu widzimy osobę idącą ulicą w zimowym otoczeniu. Osoba jest ubrana w długą, puchową kurtkę w ciemnym kolorze oraz czapkę, co sugeruje, że jest chłodno. W jednej ręce trzyma dużą torbę. Ulica jest pełna innych ludzi, a po obu stronach widoczne są sklepy i stragany. Niebo wydaje się jasne, co wskazuje na słoneczny dzień. Na chodniku widać resztki śniegu, co dodatkowo wskazuje na zimową porę roku.
+
+[2025-06-03T01:10:01.233Z] Final Barbara description generated
+
+[2025-06-03T01:10:01.233Z] Barbara description: Na podstawie dostępnych opisów można stworzyć spójny profil Barbary:
+
+Barbara to kobieta o długich, ciemnych, prostych włosach, które opadają poniżej ramion. Jej oczy są wyraźne i skupione, co podkreślają duże okulary z ciemnymi oprawkami. Twarz Barbary ma delikatne rysy z lekkimi zmarszczkami wokół oczu i na czole, co dodaje jej wyrazu i charakteru. Jej cera jest jasna.
+
+Barbara najczęściej ubiera się w szare, casualowe ubrania, takie jak t-shirt z krótkim rękawem. Często nosi ze sobą papierowy kubek, co sugeruje, że jest osobą aktywną i lubi spędzać czas na świeżym powietrzu. Dodatkowo, na ramieniu widoczny jest tatuaż przedstawiający stylizowanego owada, co może świadczyć o jej zainteresowaniach lub osobistych upodobaniach. Na nadgarstku nosi opaskę sportową, co może wskazywać na jej aktywność fizyczną lub zamiłowanie do ćwiczeń.
+
+Barbara jest często fotografowana w rozmytym tle, które sugeruje, że zdjęcia są robione w różnych miejscach, takich jak parki czy siłownie. To podkreśla jej aktywny styl życia.
+
+[2025-06-03T01:10:01.338Z] Final response from centrala: {"code":-346,"message":"Słaby ten rysopis. Ciągle nam czegoś brakuje. Odczytaj pole \"hints\"","hints":["Możesz podać więcej szczegółów - co to za tatuaż?","Jaki kolor włosów ma Barbara?"]}

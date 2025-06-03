@@ -4,7 +4,8 @@ import { MessageArray } from "../index";
 
 const MODELS = {
     'mini': "gpt-4o-mini",
-    '4o': "gpt-4o"
+    '4o': "gpt-4o",
+    'fine-tuned-mini': 'gpt-4o-mini-2024-07-18:personal:ai-devs-3r-fine-tuning:BeNTB6Vw'
 } as const;
 
 const DEFAULT_TEMPERATURE = 0.7;

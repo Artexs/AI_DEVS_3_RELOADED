@@ -68,4 +68,4 @@ export const startApi = async () => {
     });
 };
 
-startApi().catch(console.error);
+// startApi().catch(console.error);

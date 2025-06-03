@@ -1,0 +1,61 @@
+Log file created at 2025-06-02T23:21:59.708Z
+--------------------------------------------
+[2025-06-02T23:21:59.708Z] Centrala response (loaded): "Słuchaj! mam dla Ciebie fotki o które prosiłeś. https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG. Pamiętaj, że zawsze mogę poprawić je dla Ciebie (polecenia: REPAIR/DARKEN/BRIGHTEN)."
+
+[2025-06-02T23:21:59.935Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+[2025-06-02T23:22:03.101Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:22:03.101Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:22:03.225Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:22:03.225Z] Processing attempt 1 for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+🚨 Error in processOnceImage --- message.match is not a function. (In 'message.match(urlRegex)', 'message.match' is undefined)
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG: --- message.match is not a function. (In 'message.match(urlRegex)', 'message.match' is undefined)
+
+[2025-06-02T23:22:03.276Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1410.PNG
+
+[2025-06-02T23:22:05.047Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:22:05.047Z] Sending command to centrala: REPAIR IMG_1410.PNG
+
+[2025-06-02T23:22:05.162Z] Centrala response (command): {"code":0,"message":"Ejjj... no weź... to wygląda jeszcze gorzej niż przed operacją. Weź spróbuj czegoś innego."}
+
+[2025-06-02T23:22:05.162Z] Processing attempt 1 for image: https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG
+
+🚨 Error in processOnceImage --- message.match is not a function. (In 'message.match(urlRegex)', 'message.match' is undefined)
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG: --- message.match is not a function. (In 'message.match(urlRegex)', 'message.match' is undefined)
+
+[2025-06-02T23:22:05.402Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1443.PNG
+
+[2025-06-02T23:22:10.924Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:22:10.924Z] Sending command to centrala: REPAIR IMG_1443.PNG
+
+[2025-06-02T23:22:10.987Z] Centrala response (command): {"code":0,"message":"Pyk, pyk, pyk, pytk jako tako i fajrant! Dałem z siebie całe 30% - proszę: IMG_1443_FT12.PNG"}
+
+[2025-06-02T23:22:10.987Z] Processing attempt 1 for image: https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG
+
+🚨 Error in processOnceImage --- message.match is not a function. (In 'message.match(urlRegex)', 'message.match' is undefined)
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG: --- message.match is not a function. (In 'message.match(urlRegex)', 'message.match' is undefined)
+
+[2025-06-02T23:22:11.262Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1444.PNG
+
+[2025-06-02T23:22:16.861Z] LLM response (image quality): OK
+
+[2025-06-02T23:22:16.861Z] Sending command to centrala: OK IMG_1444.PNG
+
+[2025-06-02T23:22:16.932Z] Centrala response (command): {"code":-345,"message":"Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc."}
+
+[2025-06-02T23:22:16.932Z] Processing attempt 1 for image: https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG
+
+🚨 Error in processOnceImage --- message.match is not a function. (In 'message.match(urlRegex)', 'message.match' is undefined)
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG: --- message.match is not a function. (In 'message.match(urlRegex)', 'message.match' is undefined)
+
+[2025-06-02T23:22:16.932Z] Successfully processed images: []

@@ -1,4 +1,4 @@
-import { readdir, readFile, stat } from 'fs/promises';
+import { readdir, readFile, stat, writeFile } from 'fs/promises';
 import { join } from 'path';
 import { createReadStream } from 'fs';
 
@@ -12,6 +12,29 @@ export class FileReader {
   private readonly supportedAudioFormats = ['.m4a', '.mp3', '.wav'];
   private readonly supportedImageFormats = ['.jpg', '.jpeg', '.png', '.gif'];
   private readonly supportedTextFormats = ['.txt', '.json', '.md'];
+
+  /**
+   * Downloads a file from URL and saves it to specified path
+   * @param url URL of the file to download
+   * @param savePath Path where to save the file
+   * @returns Promise with the path where file was saved
+   */
+  async downloadFile(url: string, savePath: string): Promise<string> {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to download file: ${response.statusText}`);
+      }
+      
+      const arrayBuffer = await response.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+      await writeFile(savePath, buffer);
+      return savePath;
+    } catch (error) {
+      console.error('Error downloading file:', error);
+      throw error;
+    }
+  }
 
   /**
    * Reads files of specified type from a directory

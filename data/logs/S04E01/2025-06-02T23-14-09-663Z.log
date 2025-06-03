@@ -1,0 +1,137 @@
+Log file created at 2025-06-02T23:14:09.663Z
+--------------------------------------------
+[2025-06-02T23:14:09.664Z] Centrala response (loaded): "Słuchaj! mam dla Ciebie fotki o które prosiłeś. https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG. Pamiętaj, że zawsze mogę poprawić je dla Ciebie (polecenia: REPAIR/DARKEN/BRIGHTEN)."
+
+[2025-06-02T23:14:09.867Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+[2025-06-02T23:14:12.818Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:14:12.818Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:14:12.969Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:14:12.969Z] Attempt 1 failed for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:14:13.086Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+[2025-06-02T23:14:16.155Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:14:16.155Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:14:16.266Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:14:16.266Z] Attempt 2 failed for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:14:16.435Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+[2025-06-02T23:14:19.123Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:14:19.123Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:14:19.178Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:14:19.178Z] Attempt 3 failed for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:14:19.289Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+[2025-06-02T23:14:21.662Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:14:21.662Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:14:21.737Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:14:21.737Z] Attempt 4 failed for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:14:21.866Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+[2025-06-02T23:14:24.745Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:14:24.745Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:14:24.811Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:14:24.811Z] Attempt 5 failed for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:14:24.987Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+[2025-06-02T23:14:27.689Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:14:27.689Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:14:27.749Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:14:27.749Z] Attempt 6 failed for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:14:27.854Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+[2025-06-02T23:14:31.028Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:14:31.028Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:14:31.138Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:14:31.138Z] Attempt 7 failed for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:14:31.246Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+[2025-06-02T23:14:33.712Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:14:33.712Z] Sending command to centrala: REPAIR IMG_559.PNG
+
+[2025-06-02T23:14:33.774Z] Centrala response (command): {"code":0,"message":"Się robi! Czekaj... czekaj... o! Usunąłem uszkodzenia. Proszę: IMG_559_FGR4.PNG"}
+
+[2025-06-02T23:14:33.774Z] Attempt 8 failed for image: https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG
+
+[2025-06-02T23:14:33.876Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_559.PNG
+
+🚨 Error in analyzeImageQuality --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error in processOnceImage --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_559.PNG: --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+[2025-06-02T23:14:37.813Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1410.PNG
+
+🚨 Error in analyzeImageQuality --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error in processOnceImage --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_1410.PNG: --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+[2025-06-02T23:14:40.245Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1443.PNG
+
+[2025-06-02T23:14:45.193Z] LLM response (image quality): REPAIR
+
+[2025-06-02T23:14:45.193Z] Sending command to centrala: REPAIR IMG_1443.PNG
+
+[2025-06-02T23:14:45.258Z] Centrala response (command): {"code":0,"message":"Pyk, pyk, pyk, pytk jako tako i fajrant! Dałem z siebie całe 30% - proszę: IMG_1443_FT12.PNG"}
+
+[2025-06-02T23:14:45.258Z] Attempt 1 failed for image: https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG
+
+[2025-06-02T23:14:45.487Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1443.PNG
+
+🚨 Error in analyzeImageQuality --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error in processOnceImage --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_1443.PNG: --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+[2025-06-02T23:14:50.536Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1444.PNG
+
+[2025-06-02T23:14:54.621Z] LLM response (image quality): OK
+
+[2025-06-02T23:14:54.621Z] Sending command to centrala: OK IMG_1444.PNG
+
+[2025-06-02T23:14:54.665Z] Centrala response (command): {"code":-345,"message":"Słuchaj... musisz mi dostarczyć rysopis Barbary, albo poprosić mnie o wykonanie operacji na zdjęciach. Inaczej nie dam rady pomóc."}
+
+[2025-06-02T23:14:54.666Z] Attempt 1 failed for image: https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG
+
+[2025-06-02T23:14:54.868Z] Downloaded image to: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/IMG_1444.PNG
+
+🚨 Error in analyzeImageQuality --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error in processOnceImage --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+🚨 Error processing image https://centrala.ag3nts.org/dane/barbara/IMG_1444.PNG: --- 429 Rate limit reached for gpt-4o-mini in organization org-2VhKzz6mmTMg9nK2xbvy9PRh on tokens per min (TPM): Limit 200000, Used 200000, Requested 834. Please try again in 250ms. Visit https://platform.openai.com/account/rate-limits to learn more.
+
+[2025-06-02T23:14:59.459Z] Successfully processed images: []

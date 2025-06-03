@@ -7,6 +7,7 @@ export { LangfuseService } from './functions/LangfuseService';
 export { TextSplitter } from './functions/TextService';
 export { VectorService } from './functions/VectorService';
 export { MessageManager } from './functions/MessageManager';
+export { Logger } from './functions/Logger';
 export { startApi } from './agent/api';
 
 export type { Report } from './functions/VectorService';

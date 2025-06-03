@@ -1,0 +1,27 @@
+Log file created at 2025-06-03T01:11:31.483Z
+--------------------------------------------
+[2025-06-03T01:11:31.483Z] Loaded valid images from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/images.md
+
+[2025-06-03T01:11:38.207Z] Generated description for IMG_559_NRR7.PNG: Osoba na zdjęciu to kobieta o ciemnych, prostych włosach sięgających poniżej ramion. Ma na sobie okulary z ciemnymi oprawkami. Jej cera jest jasna, a twarz ma delikatne rysy. Usta są wąskie i naturalnego koloru, a nos jest prosty. Oczy są ciemne, a brwi wyraźnie zarysowane. Kobieta ma na sobie szarą bluzkę z krótkim rękawem. Trzyma w dłoni papierowy kubek, co sugeruje, że może pić kawę lub inny napój. W tle widać rozmytą scenerię miejską oraz zieloną roślinność po lewej stronie.
+
+[2025-06-03T01:11:51.144Z] Generated description for IMG_1410_FXER.PNG: Zdjęcie przedstawia dwie kobiety siedzące obok siebie. Kobieta po lewej stronie ma proste, długie, rude włosy, które opadają swobodnie na ramiona. Nosi duże, prostokątne okulary z ciemnymi oprawkami, które podkreślają jej wyraziste oczy. Jej cera jest jasna, a na twarzy widoczne są delikatne zmarszczki, szczególnie wokół oczu i ust. Usta są wąskie, a nos prosty.
+
+Kobieta po prawej stronie ma długie, ciemne włosy i również nosi okulary o podobnym kształcie, jednak z nieco cieńszymi oprawkami. Jej twarz jest nieco mniej wyrazista ze względu na lekkie rozmycie obrazu, ale można zauważyć podobny kształt ust oraz prosty nos. Obie kobiety mają na sobie szare bluzki, co może sugerować, że są w podobnym stylu ubrania. Tło zdjęcia jest rozmyte, co skupia uwagę na postaciach.
+
+[2025-06-03T01:11:59.280Z] Generated description for IMG_1443_FT12.PNG: Na zdjęciu znajduje się kobieta o ciemnych, prostych włosach sięgających poniżej ramion. Jej twarz jest owalna z wyraźnie zaznaczonymi kośćmi policzkowymi. Nosi duże, prostokątne okulary o ciemnych oprawkach. 
+
+Jej cera jest jasna, a na ramieniu widoczny jest tatuaż przedstawiający czarnego pająka. Kobieta ubrana jest w szary t-shirt, a na nadgarstku ma założony ciemny zegarek lub opaskę fitness. 
+
+Jej wyraz twarzy jest skupiony, co może sugerować, że znajduje się w siłowni lub podobnym środowisku. W tle widać rozmyte elementy, które mogą być częścią wyposażenia siłowni.
+
+[2025-06-03T01:12:06.917Z] Generated description for IMG_1444.PNG: Przepraszam, ale nie mogę pomóc w opisaniu szczegółowych cech osoby na zdjęciu. Mogę jednak opisać ogólną scenę na zdjęciu.
+
+Na fotografii widzimy osobę idącą ulicą oświetloną ciepłym światłem słonecznym. Osoba ma na sobie długą, ciemną kurtkę puchową i czapkę, co sugeruje, że jest chłodno. Trzyma torbę w jednej ręce. W tle widać innych ludzi, którzy również spacerują po ulicy, a po lewej stronie są stoiska lub wózki, które mogą sugerować targ lub rynek. Scena jest typowa dla zimowego dnia w mieście.
+
+[2025-06-03T01:12:12.786Z] Final Barbara description generated
+
+[2025-06-03T01:12:12.786Z] Barbara description: Na podstawie trzech zgodnych opisów, Barbara jest kobietą o ciemnych, prostych włosach sięgających poniżej ramion. Nosi duże, prostokątne okulary z ciemnymi oprawkami, które podkreślają jej wyraziste oczy. Jej cera jest jasna, a twarz ma delikatne rysy z owalnym kształtem i wyraźnie zaznaczonymi kośćmi policzkowymi. Usta są wąskie, a nos prosty. Barbara często ubiera się w szare bluzki z krótkim rękawem, co sugeruje jej preferencję do prostych i stonowanych ubrań. Może być widziana z papierowym kubkiem w ręku, co sugeruje, że lubi napoje na wynos, jak kawa. Na jej ramieniu znajduje się tatuaż przedstawiający czarnego pająka, a na nadgarstku nosi ciemny zegarek lub opaskę fitness. Tło zdjęć, na których się znajduje, jest często rozmyte, z elementami miejskimi lub związanymi z siłownią, co wskazuje na jej aktywny styl życia. 
+
+Description 4 wydaje się być niezgodny z pozostałymi i może opisywać inną osobę lub być mniej związany z dokładnym profilem Barbary.
+
+[2025-06-03T01:12:12.989Z] Final response from centrala: {"code":0,"message":"{{FLG:USEFULCLUE}}"}
