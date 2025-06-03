@@ -1,0 +1,45 @@
+Log file created at 2025-06-03T20:00:44.192Z
+--------------------------------------------
+[2025-06-03T20:00:44.192Z] Processing line with ID: 01 --- kanto,saka,brunn
+
+[2025-06-03T20:00:50.307Z] Response for ID 01: 0
+
+[2025-06-03T20:00:50.307Z] Processing line with ID: 02 --- kezka,barru,asal
+
+[2025-06-03T20:00:56.330Z] Response for ID 02: 0
+
+[2025-06-03T20:00:56.330Z] Processing line with ID: 03 --- dwylo,blodau,cerdd
+
+[2025-06-03T20:01:02.354Z] Response for ID 03: 1
+
+[2025-06-03T20:01:02.355Z] Processing line with ID: 04 --- kutsu,gato,madarak
+
+[2025-06-03T20:01:07.165Z] Response for ID 04: 0
+
+[2025-06-03T20:01:07.165Z] Processing line with ID: 05 --- enamorar,bertan,tycio
+
+[2025-06-03T20:01:19.909Z] Response for ID 05: 0
+
+[2025-06-03T20:01:19.909Z] Processing line with ID: 06 --- ezkutatu,rejt,ocultar
+
+[2025-06-03T20:01:21.090Z] Response for ID 06: 0
+
+[2025-06-03T20:01:21.090Z] Processing line with ID: 07 --- selymes,sedoso,silkkinen
+
+[2025-06-03T20:01:23.950Z] Response for ID 07: 0
+
+[2025-06-03T20:01:23.950Z] Processing line with ID: 08 --- kynsien,varvas,hiusten
+
+[2025-06-03T20:01:26.392Z] Response for ID 08: 1
+
+[2025-06-03T20:01:26.392Z] Processing line with ID: 09 --- saudade,honvágy,kaipaus
+
+[2025-06-03T20:01:30.507Z] Response for ID 09: 0
+
+[2025-06-03T20:01:30.507Z] Processing line with ID: 10 --- masnach,lledr,meddyg
+
+[2025-06-03T20:01:40.445Z] Response for ID 10: 1
+
+[2025-06-03T20:01:40.445Z] Found 3 valid results: ["03","08","10"]
+
+[2025-06-03T20:01:40.599Z] Response from centrala: {"code":0,"message":"{{FLG:ITSVALID}}"}
