@@ -3,6 +3,7 @@ import { join } from 'path';
 
 export class Logger {
     private readonly logFilePath: string;
+    private readonly tempLogFilePath: string;
     private readonly separator = '--------------------------------------------';
     private readonly errorHeader = ' ERROR 🚨 ';
 
@@ -12,36 +13,45 @@ export class Logger {
         const baseLogsPath = join(process.cwd(), 'data', 'logs');
         const logsPath = directory ? join(baseLogsPath, directory) : baseLogsPath;
         this.logFilePath = join(logsPath, `${timestamp}.log`);
-        this.initializeLogFile(logsPath);
+        this.tempLogFilePath = join(baseLogsPath, 'temp.log');
+        this.initializeLogFiles(logsPath);
     }
 
-    private async initializeLogFile(logsPath: string): Promise<void> {
+    private async initializeLogFiles(logsPath: string): Promise<void> {
         try {
             await mkdir(logsPath, { recursive: true });
-            await writeFile(this.logFilePath, `Log file created at ${new Date().toISOString()}\n${this.separator}`);
+            const initialContent = `Log file created at ${new Date().toISOString()}\n${this.separator}`;
+            await writeFile(this.logFilePath, initialContent);
+            await writeFile(this.tempLogFilePath, initialContent);
         } catch (error) {
-            console.error('Failed to initialize log file:', error);
+            console.error('Failed to initialize log files:', error);
+        }
+    }
+
+    private async appendToBothFiles(content: string): Promise<void> {
+        try {
+            await appendFile(this.logFilePath, content);
+            await appendFile(this.tempLogFilePath, content);
+        } catch (error) {
+            console.error('Failed to append message to log files:', error);
         }
     }
 
     public async log(message: string): Promise<void> {
-        try {
-            const timestamp = new Date().toISOString();
-            let content = `\n[${timestamp}] ${message}\n`;
-            // content = `${content}\n${this.separator}\n`;
-            await appendFile(this.logFilePath, content);
-        } catch (error) {
-            console.error('Failed to append message to log file:', error);
-        }
+        const timestamp = new Date().toISOString();
+        const content = `\n[${timestamp}] ${message}\n`;
+        await this.appendToBothFiles(content);
     }
 
     public async error(message: string, error?: any): Promise<void> {
-        try {
-            const errorMessage = error ? `${message} --- ${error.message || error}` : message;
-            let content = `\n🚨 ${errorMessage}\n`;
-            await appendFile(this.logFilePath, content);
-        } catch (err) {
-            console.error('Failed to append error message to log file:', err);
-        }
+        const errorMessage = error ? `${message} --- ${error.message || error}` : message;
+        const content = `\n🚨 ${errorMessage}\n`;
+        await this.appendToBothFiles(content);
+    }
+
+    public async success(message: string, error?: any): Promise<void> {
+        const errorMessage = error ? `${message} --- ${error.message || error}` : message;
+        const content = `\n🔵 ${errorMessage}\n`;
+        await this.appendToBothFiles(content);
     }
 } 
