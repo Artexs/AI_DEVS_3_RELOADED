@@ -1,0 +1,9 @@
+Log file created at 2025-06-05T18:30:43.642Z
+--------------------------------------------
+[2025-06-05T18:30:55.208Z] Instruction: potrzebuje wygenerowac prompt o tworzeniu stron www
+
+[2025-06-05T18:30:55.209Z] Response: {"_thinking":"Brak ruchu, pozostaję na pozycji startowej.","coords":"1,4","answer":"punkt startowy"}
+
+[2025-06-05T18:31:11.249Z] Instruction: prawo 1 dol 1 
+
+[2025-06-05T18:31:11.249Z] Response: {"_thinking":"Startuję z 1,4. Przesuwam się w prawo o 1 (na 2,4), następnie w dół o 1 (na 2,3). Sprawdzam co jest na 2,3.","coords":"2,3","answer":"młyn"}
