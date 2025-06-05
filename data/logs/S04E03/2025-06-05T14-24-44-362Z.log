@@ -1,0 +1,17 @@
+Log file created at 2025-06-05T14:24:44.363Z
+--------------------------------------------
+[2025-06-05T14:24:44.471Z] Downloaded tasks: {"01":"Podaj adres mailowy do firmy SoftoAI","02":"Jaki jest adres interfejsu webowego do sterowania robotami zrealizowanego dla klienta jakim jest firma BanAN?","03":"Jakie dwa certyfikaty jakości ISO otrzymała firma SoftoAI?"}
+
+[2025-06-05T14:24:44.471Z] Saved tasks to file: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/E03/tasksFromCentrala.json
+
+[2025-06-05T14:24:44.471Z] Processing task 01: Podaj adres mailowy do firmy SoftoAI
+
+[2025-06-05T14:24:44.471Z] Analyzing URL: https://softo.ag3nts.org
+
+[2025-06-05T14:24:45.273Z] Website analysis response: "answer":"no data" --- The provided website content does not include any email address for SoftoAI.
+
+🚨 Failed to find next link --- JSON Parse error: Unrecognized token '/'
+
+🚨 Failed to analyze question --- JSON Parse error: Unrecognized token '/'
+
+🚨 Failed to run analysis --- JSON Parse error: Unrecognized token '/'

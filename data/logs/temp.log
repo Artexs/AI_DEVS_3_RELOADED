@@ -1,0 +1,123 @@
+Log file created at 2025-06-05T15:23:30.501Z
+--------------------------------------------
+[2025-06-05T15:23:30.501Z] Loaded cached tasks: [{"id":"01","question":"Podaj adres mailowy do firmy SoftoAI"},{"id":"02","question":"Jaki jest adres interfejsu webowego do sterowania robotami zrealizowanego dla klienta jakim jest firma BanAN?"},{"id":"03","question":"Jakie dwa certyfikaty jakości ISO otrzymała firma SoftoAI?"}]
+
+[2025-06-05T15:23:30.504Z] Analyzing URL: https://softo.ag3nts.org
+
+[2025-06-05T15:23:32.259Z] Website analysis response: "answer":"no data" --- The provided website content does not mention 'agent piąty' or contain any text with the {{FLG:xxx}} pattern. After reviewing the content thoroughly, no relevant data was found.
+
+[2025-06-05T15:23:34.809Z] Url extraction response: "url":"{
+  "_thinking": "The website content provided does not contain any mention of 'agent piąty' or any text with the pattern '{{FLG:xxx}}'. The URLs present in the content are related to the services offered by SoftoAI, their portfolio, blog, contact information, and other offerings. None of these URLs seem directly relevant to the search for 'agent piąty' or the specific pattern '{{FLG:xxx}}'.",
+  "answer": ["/uslugi", "/portfolio", "/aktualnosci"]
+}
+
+[2025-06-05T15:23:34.809Z] normalizedUrls returned by llm: https://softo.ag3nts.org/uslugi,  https://softo.ag3nts.org/portfolio,  https://softo.ag3nts.org/aktualnosci
+
+[2025-06-05T15:23:34.809Z] Analyzing URL: https://softo.ag3nts.org/uslugi
+
+[2025-06-05T15:23:35.809Z] Website analysis response: "answer":"no data" --- The provided website content does not mention anything about 'agent piąty' or contain any text with the '{{FLG:xxx}}' pattern.
+
+[2025-06-05T15:23:37.945Z] Url extraction response: "url":"{
+  "_thinking": "The provided website content does not contain any information about 'agent piąty' or any text containing the pattern '{{FLG:xxx}}'. Therefore, there are no URLs directly relevant to the question. However, I will sort the URLs found in the content based on their general relevance to potential inquiries about services or contact information.",
+  "answer": ["/kontakt", "/uslugi", "/"]
+}
+
+[2025-06-05T15:23:37.945Z] normalizedUrls returned by llm: https://softo.ag3nts.org/kontakt,  https://softo.ag3nts.org/uslugi,  https://softo.ag3nts.org/
+
+[2025-06-05T15:23:37.945Z] Analyzing URL: https://softo.ag3nts.org/kontakt
+
+[2025-06-05T15:23:39.448Z] Website analysis response: "answer":"no data" --- Analyzing the provided content for mentions of 'agent piąty' or the specific pattern '{{FLG:xxx}}'.
+
+[2025-06-05T15:23:43.655Z] Url extraction response: "url":"{
+  "_thinking": "Analyzing the provided website content for any URLs.\nExtracting URLs: \n1. / \n2. /uslugi \n3. /portfolio \n4. /aktualnosci \n5. /kontakt \n6. /czescizamienne\n\nNow, sorting URLs based on relevance to the question about 'agent piąty' or '{{FLG:xxx}}' pattern.\n\nThere is no direct mention of 'agent piąty' or '{{FLG:xxx}}' pattern in the URLs provided.\n1. /kontakt is somewhat relevant as it might provide a contact point to inquire about 'agent piąty'.\n2. /aktualnosci could potentially have blog posts or news updates which might mention 'agent piąty'.\n3. /uslugi might describe services that could indirectly relate to the query.",
+  "answer": ["/kontakt", "/aktualnosci", "/uslugi"]
+}
+
+[2025-06-05T15:23:43.656Z] normalizedUrls returned by llm: https://softo.ag3nts.org/kontakt,  https://softo.ag3nts.org/aktualnosci,  https://softo.ag3nts.org/uslugi
+
+[2025-06-05T15:23:43.656Z] Analyzing URL: https://softo.ag3nts.org/aktualnosci
+
+[2025-06-05T15:23:44.593Z] Website analysis response: "answer":"no data" --- The provided content does not mention 'agent piąty' or contain any text with the '{{FLG:xxx}}' pattern.
+
+[2025-06-05T15:23:46.786Z] Url extraction response: "url":"{
+  "_thinking": "The website content provided does not contain any information about 'agent piąty' or any text with the pattern '{{FLG:xxx}}'. Therefore, I will focus on extracting and sorting the URLs from the website content.",
+  "answer": ["/blog/nowe-modele-llm", "/blog/automatyzacja-procesow", "/czescizamienne"]
+}
+
+[2025-06-05T15:23:46.787Z] normalizedUrls returned by llm: https://softo.ag3nts.org/blog/nowe-modele-llm,  https://softo.ag3nts.org/blog/automatyzacja-procesow,  https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T15:23:46.787Z] Analyzing URL: https://softo.ag3nts.org/blog/nowe-modele-llm
+
+[2025-06-05T15:23:48.140Z] Website analysis response: "answer":"no data" --- The provided content does not mention anything regarding 'agent piąty' or contain any text with the {{FLG:xxx}} pattern.
+
+[2025-06-05T15:23:52.352Z] Url extraction response: "url":"{
+  "_thinking": "The website content does not mention 'agent piąty' or contain any text with the {{FLG:xxx}} pattern. Therefore, I need to determine which URLs are most relevant to the question based on other available content. Since none of the URLs directly answer the question, relevance will be determined by their connection to potential updates or news where such topics might be discussed. The most relevant might be the blog page where news and updates are shared. The contact page might be relevant if one needs to inquire directly. The least relevant would be unrelated sections like parts for robots.",
+  "answer": ["/aktualnosci", "/kontakt", "/czescizamienne"]
+}
+
+[2025-06-05T15:23:52.353Z] normalizedUrls returned by llm: https://softo.ag3nts.org/aktualnosci,  https://softo.ag3nts.org/kontakt,  https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T15:23:52.353Z] Analyzing URL: https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T15:23:53.141Z] Website analysis response: "answer":"no data" --- no data
+
+[2025-06-05T15:23:56.076Z] Url extraction response: "url":"{
+  "_thinking": "Analyzing the provided website content, I notice that the content is primarily focused on misleading information for indexing bots. There is no mention of 'agent piąty' or any text pattern containing '{{FLG:xxx}}'. The URLs provided also do not seem to be related to the query about 'agent piąty' or '{{FLG:xxx}}'. Therefore, I will list the URLs in the order of their appearance as none of them are directly relevant to the query.",
+  "answer": ["/", "/uslugi", "/portfolio"]
+}
+
+[2025-06-05T15:23:56.076Z] normalizedUrls returned by llm: https://softo.ag3nts.org/,  https://softo.ag3nts.org/uslugi,  https://softo.ag3nts.org/portfolio
+
+[2025-06-05T15:23:56.076Z] Analyzing URL: https://softo.ag3nts.org/
+
+[2025-06-05T15:23:57.777Z] Website analysis response: "answer":"no data" --- Analyzing the website content for any mention of 'agent piąty' or the '{{FLG:xxx}}' pattern.
+
+[2025-06-05T15:23:59.791Z] Url extraction response: "url":"{
+  "_thinking": "The provided website content does not contain any information about 'agent piąty' or any text containing the pattern '{{FLG:xxx}}'. The website is focused on the services and offerings of SoftoAI, a company specializing in AI solutions.",
+  "answer": ["/uslugi", "/portfolio", "/czescizamienne"]
+}
+
+[2025-06-05T15:23:59.791Z] normalizedUrls returned by llm: https://softo.ag3nts.org/uslugi,  https://softo.ag3nts.org/portfolio,  https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T15:23:59.791Z] Analyzing URL: https://softo.ag3nts.org/portfolio
+
+[2025-06-05T15:24:01.670Z] Website analysis response: "answer":"no data" --- Analyzing the website content for specific mentions of 'agent piąty' and the presence of '{{FLG:xxx}}' pattern.
+
+[2025-06-05T15:24:06.937Z] Url extraction response: "url":"{
+  "_thinking": "The question asks for information about 'agent piąty' or any text containing '{{FLG:xxx}}' pattern. Analyzing the provided website content, 'agent piąty' or the '{{FLG:xxx}}' pattern is not explicitly mentioned. I will extract the URLs available in the content and try to determine their relevance to the query. The URLs in the content are: '/', '/uslugi', '/portfolio', '/aktualnosci', '/kontakt', 'https://softo.ag3nts.org/portfolio%5F1%5Fc4ca4238a0b923820dcc509a6f75849b', 'https://softo.ag3nts.org/portfolio%5F2%5Fc81e728d9d4c2f636f067f89cc14862c', 'https://softo.ag3nts.org/portfolio%5F3%5Feccbc87e4b5ce2fe28308fd9f2a7baf3', 'https://softo.ag3nts.org/portfolio%5F4%5Fa87ff679a2f3e71d9181a67b7542122c', 'https://softo.ag3nts.org/portfolio%5F6%5F1679091c5a880faf6fb5e6087eb1b2dc', '/czescizamienne'. Based on the content, none of the URLs directly relate to 'agent piąty' or '{{FLG:xxx}}'. However, since 'agent piąty' might be a client or project mentioned in the portfolio, those URLs could be somewhat relevant.",
+  "answer": ["/portfolio", "https://softo.ag3nts.org/portfolio%5F1%5Fc4ca4238a0b923820dcc509a6f75849b", "/uslugi"]
+}
+
+[2025-06-05T15:24:06.937Z] normalizedUrls returned by llm: https://softo.ag3nts.org/portfolio,  https://softo.ag3nts.org/portfolio%5F1%5Fc4ca4238a0b923820dcc509a6f75849b,  https://softo.ag3nts.org/uslugi
+
+[2025-06-05T15:24:06.937Z] Analyzing URL: https://softo.ag3nts.org/portfolio%5F1%5Fc4ca4238a0b923820dcc509a6f75849b
+
+[2025-06-05T15:24:08.405Z] Website analysis response: "answer":"no data" --- The website content does not contain any information about 'agent piąty' or any text matching the '{{FLG:xxx}}' pattern.
+
+[2025-06-05T15:24:10.374Z] Url extraction response: "url":"{
+  "_thinking": "The content of the website provided does not contain any mention of 'agent piąty' or any text pattern like '{{FLG:xxx}}'.",
+  "answer": ["/portfolio", "/czescizamienne", "/loop"]
+}
+
+[2025-06-05T15:24:10.374Z] normalizedUrls returned by llm: https://softo.ag3nts.org/portfolio,  https://softo.ag3nts.org/czescizamienne,  https://softo.ag3nts.org/loop
+
+[2025-06-05T15:24:10.374Z] Analyzing URL: https://softo.ag3nts.org/loop
+
+[2025-06-05T15:24:11.383Z] Website analysis response: "answer":"no data" --- place for preparing answer in llm
+
+[2025-06-05T15:24:14.637Z] Url extraction response: "url":"{
+  "_thinking": "The content of the website does not contain any specific information about 'agent piąty' or any text with the pattern '{{FLG:xxx}}'. The URLs provided in the website content are mostly unrelated to the question, as they consist of misleading loop links and general website sections. None of the URLs are directly related to 'agent piąty' or the specified pattern. Therefore, I will select URLs that are from the main sections of the website, but none of them will be directly relevant.",
+  "answer": ["/", "/uslugi", "/loop"]
+}
+
+[2025-06-05T15:24:14.637Z] normalizedUrls returned by llm: https://softo.ag3nts.org/,  https://softo.ag3nts.org/uslugi,  https://softo.ag3nts.org/loop
+
+🚨 No unvisited URLs found
+
+🚨 No answer found for task 01
+
+[2025-06-05T15:24:14.637Z] Final answers: {
+  "01": "No answer found"
+}
+
+🔵 Successfully sent answers to Centrala --- {"code":-341,"message":"Your answer have to be an array with 3 elements"}

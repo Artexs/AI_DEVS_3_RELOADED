@@ -1,0 +1,45 @@
+Log file created at 2025-06-05T13:33:33.075Z
+--------------------------------------------
+[2025-06-05T13:33:33.243Z] Downloaded tasks: {"01":"Podaj adres mailowy do firmy SoftoAI","02":"Jaki jest adres interfejsu webowego do sterowania robotami zrealizowanego dla klienta jakim jest firma BanAN?","03":"Jakie dwa certyfikaty jakości ISO otrzymała firma SoftoAI?"}
+
+[2025-06-05T13:33:33.243Z] [{"id":"01","question":"Podaj adres mailowy do firmy SoftoAI"},{"id":"02","question":"Jaki jest adres interfejsu webowego do sterowania robotami zrealizowanego dla klienta jakim jest firma BanAN?"},{"id":"03","question":"Jakie dwa certyfikaty jakości ISO otrzymała firma SoftoAI?"}]
+
+[2025-06-05T13:33:33.243Z] Processing task 01: Podaj adres mailowy do firmy SoftoAI
+
+[2025-06-05T13:33:33.244Z] Analyzing URL: https://softo.ag3nts.org
+
+[2025-06-05T13:33:34.479Z] Website analysis response: "answer":"no data" --- The website content does not provide any email address for SoftoAI.
+
+[2025-06-05T13:33:36.015Z] Url extraction response: "url":"/kontakt" --- The website content does not provide a direct email address, but it suggests contacting the company through the 'Kontakt' page for inquiries.
+
+[2025-06-05T13:33:36.015Z] next url to check https://softo.ag3nts.org/kontakt
+
+[2025-06-05T13:33:36.015Z] Analyzing URL: https://softo.ag3nts.org/kontakt
+
+[2025-06-05T13:33:36.955Z] Website analysis response: "answer":"kontakt@softoai.whatever" --- The website content provides contact information for SoftoAI, including an email address.
+
+🔵 Found answer for task 01: kontakt@softoai.whatever
+
+[2025-06-05T13:33:36.956Z] Processing task 02: Jaki jest adres interfejsu webowego do sterowania robotami zrealizowanego dla klienta jakim jest firma BanAN?
+
+[2025-06-05T13:33:36.956Z] Analyzing URL: https://softo.ag3nts.org
+
+[2025-06-05T13:33:37.799Z] Website analysis response: "answer":"no data" --- The provided website content does not mention any specific client named BanAN or any web interface address for controlling robots.
+
+[2025-06-05T13:33:40.700Z] Url extraction response: "url":"/uslugi" --- The website content does not provide specific information about a web interface for controlling robots created for the client named BanAN. The most relevant section appears to be related to services offered, which may include automation and AI solutions, but there is no direct mention of such an interface or the client.
+
+[2025-06-05T13:33:40.700Z] next url to check https://softo.ag3nts.org/uslugi
+
+[2025-06-05T13:33:40.700Z] Analyzing URL: https://softo.ag3nts.org/uslugi
+
+[2025-06-05T13:33:41.892Z] Website analysis response: "answer":"no data" --- The website content does not provide any information about a web interface address or any specific project related to a client named BanAN.
+
+[2025-06-05T13:33:45.441Z] Url extraction response: "url":"/uslugi" --- The provided website content does not directly mention the web interface address for controlling robots for the client company BanAN. However, the most relevant link that may contain information about their services, including web interfaces for clients, is the 'Co oferujemy?' page, which outlines the solutions they provide.
+
+[2025-06-05T13:33:45.441Z] next url to check https://softo.ag3nts.org/uslugi
+
+🚨 Skipping already visited URL: https://softo.ag3nts.org/uslugi
+
+🚨 Failed to analyze question --- URL already visited
+
+🚨 Failed to run analysis --- URL already visited

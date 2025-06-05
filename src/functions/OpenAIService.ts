@@ -44,7 +44,7 @@ export class OpenAIService {
         const response = await this.processText(messages, model, temperature);
         const parsed = JSON.parse(response);
         if (typeof parsed !== 'object' || parsed === null) {
-            throw new Error('Response from LLM is not a valid JSON object');
+            throw new Error(`Response from LLM is not a valid JSON object --- object: ${response}`);
         }
         return parsed;
     }

@@ -1,0 +1,39 @@
+Log file created at 2025-06-05T14:47:02.876Z
+--------------------------------------------
+[2025-06-05T14:47:02.876Z] Loaded cached tasks: [{"id":"01","question":"Podaj adres mailowy do firmy SoftoAI"},{"id":"02","question":"Jaki jest adres interfejsu webowego do sterowania robotami zrealizowanego dla klienta jakim jest firma BanAN?"},{"id":"03","question":"Jakie dwa certyfikaty jakości ISO otrzymała firma SoftoAI?"}]
+
+[2025-06-05T14:47:02.880Z] Processing task 01: Podaj adres mailowy do firmy SoftoAI
+
+[2025-06-05T14:47:02.880Z] Analyzing URL: https://softo.ag3nts.org
+
+[2025-06-05T14:47:04.691Z] Website analysis response: "answer":"no data" --- The provided website content does not include any email address for SoftoAI.
+
+[2025-06-05T14:47:06.546Z] Url extraction response: "url":"/kontakt,/uslugi,/czescizamienne" --- The provided content does not contain any email address for SoftoAI. However, it mentions contacting the company through their contact page. I will extract the relevant URLs and sort them accordingly.
+
+[2025-06-05T14:47:06.546Z] normalizedUrls returned by llm: https://softo.ag3nts.org/kontakt,https://softo.ag3nts.org/uslugi,https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T14:47:06.546Z] Analyzing URL: https://softo.ag3nts.org/kontakt
+
+[2025-06-05T14:47:07.843Z] Website analysis response: "answer":"kontakt@softoai.whatever" --- place for preparing answer in llm
+
+🔵 Found answer for task 01: kontakt@softoai.whatever
+
+[2025-06-05T14:47:07.844Z] Processing task 02: Jaki jest adres interfejsu webowego do sterowania robotami zrealizowanego dla klienta jakim jest firma BanAN?
+
+[2025-06-05T14:47:07.844Z] Analyzing URL: https://softo.ag3nts.org
+
+[2025-06-05T14:47:08.826Z] Website analysis response: "answer":"no data" --- The website content does not mention any specific web interface for controlling robots or any client named BanAN.
+
+[2025-06-05T14:47:10.643Z] Url extraction response: "url":"/uslugi,/portfolio,/aktualnosci" --- The content provided does not mention any specific web interface for controlling robots, nor does it reference a client named BanAN. I will extract the URLs and sort them based on their relevance to the question regarding a web interface for robot control.
+
+[2025-06-05T14:47:10.643Z] normalizedUrls returned by llm: https://softo.ag3nts.org/uslugi,https://softo.ag3nts.org/portfolio,https://softo.ag3nts.org/aktualnosci
+
+[2025-06-05T14:47:10.643Z] Analyzing URL: https://softo.ag3nts.org/uslugi
+
+[2025-06-05T14:47:14.134Z] Website analysis response: "answer":"no data" --- The website content does not provide information about a web interface for controlling robots for a specific client such as BanAN.
+
+🚨 Failed to find next link --- JSON Parse error: Unrecognized token '/'
+
+🚨 Failed to analyze question --- JSON Parse error: Unrecognized token '/'
+
+🚨 Failed to run analysis --- JSON Parse error: Unrecognized token '/'

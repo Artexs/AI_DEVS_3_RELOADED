@@ -1,0 +1,17 @@
+Log file created at 2025-06-05T14:43:48.492Z
+--------------------------------------------
+[2025-06-05T14:43:48.492Z] Loaded cached tasks: [{"id":"01","question":"Podaj adres mailowy do firmy SoftoAI"},{"id":"02","question":"Jaki jest adres interfejsu webowego do sterowania robotami zrealizowanego dla klienta jakim jest firma BanAN?"},{"id":"03","question":"Jakie dwa certyfikaty jakości ISO otrzymała firma SoftoAI?"}]
+
+[2025-06-05T14:43:48.494Z] Processing task 01: Podaj adres mailowy do firmy SoftoAI
+
+[2025-06-05T14:43:48.495Z] Analyzing URL: https://softo.ag3nts.org
+
+[2025-06-05T14:43:50.039Z] Website analysis response: "answer":"no data" --- The website content does not provide any specific email address for SoftoAI.
+
+[2025-06-05T14:43:52.497Z] {"_thinking":"The provided website content does not contain a direct email address for SoftoAI. However, it suggests contacting them via their 'Kontakt' page. The most relevant URL for contacting the company would be the 'Kontakt' link, as it might lead to an email or contact form. Other URLs are less relevant to the request for an email address.","answer":["/kontakt","/uslugi","/czescizamienne"]}
+
+[2025-06-05T14:43:52.497Z] Url extraction response: "url":"/kontakt,/uslugi,/czescizamienne" --- The provided website content does not contain a direct email address for SoftoAI. However, it suggests contacting them via their 'Kontakt' page. The most relevant URL for contacting the company would be the 'Kontakt' link, as it might lead to an email or contact form. Other URLs are less relevant to the request for an email address.
+
+[2025-06-05T14:43:52.497Z] urls returned by llm: /kontakt,/uslugi,/czescizamienne
+
+[2025-06-05T14:43:52.498Z] Analyzing URL: https://softo.ag3nts.org/kontakt

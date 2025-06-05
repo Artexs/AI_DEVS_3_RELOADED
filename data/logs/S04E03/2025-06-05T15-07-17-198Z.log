@@ -1,0 +1,93 @@
+Log file created at 2025-06-05T15:07:17.199Z
+--------------------------------------------
+[2025-06-05T15:07:17.199Z] Loaded cached tasks: [{"id":"01","question":"Podaj adres mailowy do firmy SoftoAI"},{"id":"02","question":"Jaki jest adres interfejsu webowego do sterowania robotami zrealizowanego dla klienta jakim jest firma BanAN?"},{"id":"03","question":"Jakie dwa certyfikaty jakości ISO otrzymała firma SoftoAI?"}]
+
+[2025-06-05T15:07:17.202Z] Processing task 01: Podaj adres mailowy do firmy SoftoAI
+
+[2025-06-05T15:07:17.203Z] Analyzing URL: https://softo.ag3nts.org
+
+[2025-06-05T15:07:18.189Z] Website analysis response: "answer":"no data" --- The provided website content does not contain any email address for SoftoAI.
+
+[2025-06-05T15:07:20.512Z] Url extraction response: "url":"{
+  "_thinking": "The provided website content does not include any email address for SoftoAI. The relevant URLs extracted are focused on services, contact, and company information. The most relevant link would be the contact page where one might find further information, but no direct email is listed.",
+  "answer": ["/kontakt", "/uslugi", "/czescizamienne"]
+}
+
+[2025-06-05T15:07:20.513Z] normalizedUrls returned by llm: https://softo.ag3nts.org/kontakt,  https://softo.ag3nts.org/uslugi,  https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T15:07:20.513Z] Analyzing URL: https://softo.ag3nts.org/kontakt
+
+[2025-06-05T15:07:21.600Z] Website analysis response: "answer":"kontakt@softoai.whatever" --- The website content provides contact information including an email address for SoftoAI.
+
+🔵 Found answer for task 01: kontakt@softoai.whatever
+
+[2025-06-05T15:07:21.601Z] Processing task 02: Jaki jest adres interfejsu webowego do sterowania robotami zrealizowanego dla klienta jakim jest firma BanAN?
+
+[2025-06-05T15:07:21.601Z] Analyzing URL: https://softo.ag3nts.org
+
+[2025-06-05T15:07:22.896Z] Website analysis response: "answer":"no data" --- The provided website content does not contain any specific information about a web interface for controlling robots or related to the client company BanAN.
+
+[2025-06-05T15:07:24.709Z] Url extraction response: "url":"{
+  "_thinking": "The question is asking for a specific web interface address related to robots developed for a client named BanAN. The provided website content does not contain any direct reference to such a specific interface or client. However, it does mention services related to AI and automation, which could be somewhat relevant. I'll extract and sort the URLs accordingly.",
+  "answer": ["/uslugi", "/portfolio", "/czescizamienne"]
+}
+
+[2025-06-05T15:07:24.709Z] normalizedUrls returned by llm: https://softo.ag3nts.org/uslugi,  https://softo.ag3nts.org/portfolio,  https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T15:07:24.709Z] Analyzing URL: https://softo.ag3nts.org/uslugi
+
+[2025-06-05T15:07:26.416Z] Website analysis response: "answer":"no data" --- The website content does not provide any information regarding the web interface address for controlling robots for the client named BanAN.
+
+[2025-06-05T15:07:28.118Z] Url extraction response: "url":"{
+  "_thinking": "The question asks for the web interface address for controlling robots developed for the client BanAN. The provided website content does not contain specific information about a client named BanAN or a web interface address for robots. However, we can extract and categorize URLs from the content. The most relevant URL might pertain to the services offered that could relate to robotic management, while the least relevant URL might relate to general company information.",
+  "answer": ["/uslugi", "/portfolio", "/czescizamienne"]
+}
+
+[2025-06-05T15:07:28.119Z] normalizedUrls returned by llm: https://softo.ag3nts.org/uslugi,  https://softo.ag3nts.org/portfolio,  https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T15:07:28.119Z] Analyzing URL: https://softo.ag3nts.org/portfolio
+
+[2025-06-05T15:07:29.576Z] Website analysis response: "answer":"no data" --- The content does not provide any specific web interface address for the BanAN client.
+
+[2025-06-05T15:07:31.667Z] Url extraction response: "url":"{
+  "_thinking": "The question is about the web interface for controlling robots developed for the client BanAN Technologies Inc. The most relevant URL would be the one that directly links to their portfolio where this information may be found. Other URLs may include the main website sections or related clients, but they will be less relevant.",
+  "answer": ["https://softo.ag3nts.org/portfolio%5F1%5Fc4ca4238a0b923820dcc509a6f75849b", "/uslugi", "/czescizamienne"]
+}
+
+[2025-06-05T15:07:31.668Z] normalizedUrls returned by llm: https://softo.ag3nts.org/portfolio%5F1%5Fc4ca4238a0b923820dcc509a6f75849b,  https://softo.ag3nts.org/uslugi,  https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T15:07:31.668Z] Analyzing URL: https://softo.ag3nts.org/portfolio%5F1%5Fc4ca4238a0b923820dcc509a6f75849b
+
+[2025-06-05T15:07:33.137Z] Website analysis response: "answer":"https://banan.ag3nts.org" --- Interfejs do zdalnego programowania robotów przemysłowych został opisany w treści. Adres został podany jako link.
+
+🔵 Found answer for task 02: https://banan.ag3nts.org
+
+[2025-06-05T15:07:33.137Z] Processing task 03: Jakie dwa certyfikaty jakości ISO otrzymała firma SoftoAI?
+
+[2025-06-05T15:07:33.137Z] Analyzing URL: https://softo.ag3nts.org
+
+[2025-06-05T15:07:34.535Z] Website analysis response: "answer":"no data" --- The provided website content does not mention any ISO quality certificates received by SoftoAI.
+
+[2025-06-05T15:07:36.038Z] Url extraction response: "url":"{
+  "_thinking": "The provided content does not mention any ISO quality certifications received by SoftoAI. Therefore, any URL related to ISO certifications would be considered irrelevant. The most relevant URLs will be those that relate to SoftoAI's offerings. I will extract and categorize the URLs accordingly.",
+  "answer": ["/uslugi", "/kontakt", "/czescizamienne"]
+}
+
+[2025-06-05T15:07:36.038Z] normalizedUrls returned by llm: https://softo.ag3nts.org/uslugi,  https://softo.ag3nts.org/kontakt,  https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T15:07:36.039Z] Analyzing URL: https://softo.ag3nts.org/uslugi
+
+[2025-06-05T15:07:37.922Z] Website analysis response: "answer":"no data" --- The provided website content does not mention any ISO certifications received by SoftoAI.
+
+[2025-06-05T15:07:39.510Z] Url extraction response: "url":"{
+  "_thinking": "The question is about the ISO quality certifications received by SoftoAI. However, the provided website content does not contain any specific information regarding ISO certifications. Therefore, all extracted URLs will pertain to general information about the company and its offerings, but none will be directly relevant to the question.",
+  "answer": ["/Co oferujemy?", "/Blog", "/czescizamienne"]
+}
+
+[2025-06-05T15:07:39.510Z] normalizedUrls returned by llm: https://softo.ag3nts.org/Co oferujemy?,  https://softo.ag3nts.org/Blog,  https://softo.ag3nts.org/czescizamienne
+
+[2025-06-05T15:07:39.510Z] Analyzing URL: https://softo.ag3nts.org/Co oferujemy?
+
+🚨 Failed to analyze question --- Failed to process website https://softo.ag3nts.org/Co oferujemy?: Request failed with status code 404
+
+🚨 Failed to run analysis --- Failed to process website https://softo.ag3nts.org/Co oferujemy?: Request failed with status code 404

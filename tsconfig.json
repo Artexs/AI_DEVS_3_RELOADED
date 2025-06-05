@@ -10,6 +10,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "data/S04/E03/prompts/linkExtraction.ts"],
   "exclude": ["node_modules"]
 } 
