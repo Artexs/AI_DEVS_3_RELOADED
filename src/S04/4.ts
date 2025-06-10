@@ -83,6 +83,8 @@ app.post('', async (req: Request<{}, {}, DroneRequest>, res: Response) => {
         
         await logger.log(`Instruction: ${instruction}`);
         await logger.log(`Response: ${JSON.stringify(parsedResponse)}`);
+        console.log(`Instruction: ${instruction}`);
+        console.log(`Response: ${JSON.stringify(parsedResponse)}\n`);
         
         return res.send({ description: parsedResponse.answer });
     } catch (error) {
@@ -102,10 +104,30 @@ app.get('', async (req: Request<{}, {}, DroneRequest>, res: Response) => {
     }
 });
 
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//     console.log(`Server running on port ${PORT}`);
-// });
+const startServer = () => {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+};
 
-// Send URL immediately when server starts
-sendUrlToCentrala().catch(console.error);
+const registerWithCentrala = async () => {
+    try {
+        await sendUrlToCentrala();
+    } catch (error) {
+        console.error('Failed to register with centrala:', error);
+    }
+};
+
+// Check command line arguments
+const args = process.argv.slice(2);
+const mode = args[0];
+
+if (mode === 'server') {
+    startServer();
+} else if (mode === 'centrala') {
+    registerWithCentrala();
+} else {
+    console.log('Please specify mode: "server" or "centrala"');
+    console.log('Usage: bun src/S04/4.ts [server|centrala]');
+}
