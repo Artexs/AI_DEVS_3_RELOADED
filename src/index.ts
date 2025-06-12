@@ -8,6 +8,7 @@ export { TextSplitter } from './functions/TextService';
 export { VectorService } from './functions/VectorService';
 export { MessageManager } from './functions/MessageManager';
 export { Logger } from './functions/Logger';
+export { PdfProcessor } from './functions/PdfProcessor';
 export { startApi } from './agent/api';
 
 export type { Report } from './functions/VectorService';

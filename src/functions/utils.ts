@@ -1,6 +1,9 @@
 import 'dotenv/config';
 import { OpenAI } from 'openai';
 import FirecrawlApp from '@mendable/firecrawl-js';
+import { promises as fs } from 'fs';
+import { join } from 'path';
+import { existsSync } from 'fs';
 
 interface RequestOptions {
     method: 'GET' | 'POST';
@@ -72,5 +75,49 @@ export class Utils {
                 ...param
             }
         );
+    }
+
+    async getQuestionsFromCentrala(filename: string, fileLocation: string): Promise<any> {
+        const dataDir = join(process.cwd(), fileLocation);
+        const dataFile = join(dataDir, filename);
+
+        // Create directory if it doesn't exist
+        if (!existsSync(dataDir)) {
+            await fs.mkdir(dataDir, { recursive: true });
+        }
+
+        // Try to load from file first
+        if (existsSync(dataFile)) {
+            try {
+                const data = await fs.readFile(dataFile, 'utf-8');
+                return JSON.parse(data);
+            } catch (error) {
+                console.error('Failed to load data from file:', error);
+            }
+        }
+
+        // If file doesn't exist or loading failed, fetch from Centrala
+        try {
+            const apiKey = this.config.poligonApiKey;
+            if (!apiKey) {
+                throw new Error('API key not found in environment variables');
+            }
+
+            const url = `https://c3ntrala.ag3nts.org/data/${apiKey}/${filename}`;
+            const response = await fetch(url);
+            
+            if (!response.ok) {
+                throw new Error(`Failed to fetch data: ${response.statusText}`);
+            }
+
+            const data = await response.json();
+
+            // Save to file
+            await fs.writeFile(dataFile, JSON.stringify(data, null, 2));
+            return data;
+        } catch (error) {
+            console.error('Failed to fetch data from Centrala:', error);
+            throw error;
+        }
     }
 }
