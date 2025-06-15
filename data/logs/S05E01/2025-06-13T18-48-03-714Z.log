@@ -1,0 +1,216 @@
+Log file created at 2025-06-13T18:48:03.716Z
+--------------------------------------------
+[2025-06-13T18:48:03.719Z] Reading cached questions from /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S05/E01/phone_questions.json
+
+[2025-06-13T18:48:03.719Z] Analyzing conversation {
+  "rozmowa": [
+    "- Hej! Jak tam agentko? Jak się czujesz po rozmowie?",
+    "- No cześć. Trochę nieswojo, ale jakoś to będzie. On był w naprawdę kiepskim stanie. Trudno się z nim rozmawiało",
+    "- Ale zrozumiał coś z tego, co mu powiedziałaś?",
+    "- ten stan nawet ułatwiał, a nie utrudniał zadanie. Chłonął wiedzę jak gąbka. Myślę, że wszystko zrozumiał.",
+    "- To dobrze, że zrozumiał. A co z tymi dokumentami, o których rozmawialiśmy?",
+    "- dokumenty? Mówił, że wszystko ma w komputerze, ale gość nie miał przy sobie żadnego sprzętu. W tej norze nawet prądu nie było.",
+    "- To co teraz zrobimy? Trzeba ich szukać u niego w mieszkaniu, bo tam chyba zostawił sprzęt?",
+    "- pewnie tak, ale gdzie jest to jego mieszkanie? Obecnie to chyba ta jaskinia nazywana jest przez niego \"domem\" hahaha",
+    "- a zdalny dostęp do jego kompa wchodzi w grę jeśli nie możemy iść do mieszkania?",
+    "- myślę, że tak. Zdalnie sobie poradzimy. Goście z centrali kombinują coś z przeszukiwaniem całej puli adresów IP. Jak tylko coś znajdą, to dam Ci znać. Sama jestem ciekawa na ile on zabezpieczył swój sprzęt i co tam w miał w środku.",
+    "- no to czekam na informację jak już znajdą to IP, a on jest już z Tobą?",
+    "- nie ma go tutaj. Wiesz co... trochę się sprawy pokomplikowały. Niezupełnie to wszystko poszło zgodnie z planem.",
+    "- poszło niezgodnie z planem? uciekł Ci gość?",
+    "- nie uciekł. Gość nie żyje... Goście z centrali wysłali tam drona. Dowiedziałam się o wszystkim z raportu",
+    "- coooo? jak to możliwe? Rozmawiamy, a Ty jakby nigdy nic mówisz, że \"nie żyje\"? Kiedy miałaś zamiar mi powiedzieć? no i skąd oni wiedzieli gdzie szukać? To była przecież jaskinia na odludziu!",
+    "- czy to jest teraz ważne skąd?! Andrzej miał nadajnik GPS w samochodzie, to go namierzyli nawet na tym odludziu. No zawaliłam z tym. Wiem, ale ważniejsze jest teraz to, że gość nie żyje i nie mamy dostępu do jego komputera. To jest najważniejsze. Kurwa, wiesz [*niesłyszalne*], żal mi gościa... ",
+    "- żal Ci... żal... ale on nie wykonał zadania. Fuck!!!!",
+    "- no nie wykonał! i już raczej nie wykona w tym stanie... Andrzeja też już nie ma i nie wiadomo gdzie jest. Zwiał",
+    "- no to wyciągnij z centrali informację w którym kierunku pojechał Andrzej!",
+    "- problem w tym, że zostawił swój samochód, więc nie za bardzo \"pojechał\". Może on mu powiedział o nadajniku?",
+    "- a to on wiedział, że Andrzej ma nadajnik w samochodzie?",
+    "- a kto to wie... przecież [*niesłyszalne*] nigdy nie wiadomo co on tam wiedział i czy był świadomy nadajnika. Możemy się tylko domyślać.",
+    "- Dobra. Uznajmy, że wiedział o nadajniku. A zostały jakieś Twoje ślady w jaskini jak tam byłaś? mogą się zorientować, żę go odwiedzałaś?",
+    "- byłam tam normalnie, jawnie. Umówiłam się oficjalnie, że będę go uczyła JavaScriptu. Miał mu się przydać do szkolenia tego, co teraz przerabia. Na papierze treść lekcji czyta, to mu chciałam trochę potłumaczyć to wszystko. Nie chciałam przecież mówić wprost po co przyjeżdżam.",
+    "- no ja nie mogę... na czym go miałaś uczyć tego JavaScriptu? Gość nie ma kompa czaisz?! Na glinianych tabliczkach mieliście pisać te programy dłutem? Teraz wiedzą, że tam byłaś! Dobra, nara! Mam Zygfryda na drugiej linii [*dźwięk odkładanej słuchawki*]"
+  ],
+  "uuid": "cb8fcefd-e153-478f-8377-62995b6802b1"
+}
+
+[2025-06-13T18:48:06.902Z] Analysis result: {
+  "_thinking": "The conversation involves two individuals discussing a mission related to a person named Andrzej, who is mentioned as being in a poor state and ultimately deceased. The speaker reflects on their feelings about the situation and mentions a prior relationship with Andrzej, indicating a level of personal involvement. Given the context of the conversation, it is likely that the two participants are Barbara Zawadzka and an unnamed colleague, possibly involved in the resistance against the regime. Barbara's skills in JavaScript and involvement in the resistance align with the nature of the conversation.",
+  "confidence": "high",
+  "people": "Barbara Zawadzka, unnamed colleague"
+}
+
+[2025-06-13T18:48:06.902Z] Analyzing conversation {
+  "rozmowa": [
+    "- Witaj Samuelu. Rozmawiałeś z nią?",
+    "- tak. Dosłownie przed chwilą rozmawiałem, gdy zadzwoniłeś, ale nic od niego nie wydobyła",
+    "- dlaczego? nie wykonała zadania? co z nią?",
+    "- rozmawiała z nim, ale nie zdołała zdobyć brakujących informacji. Mówił, że wszystko ma w komputerze, ale nie miał przy sobie żadnego sprzętu. Do tego durna baba jako wymówkę wzięła \"naukę JavaScriptu\". Czaisz? dżejesa go będzie uczyć! W centrali mają teraz pewnie niezły ubaw. Poza tym, to... Zygfryd, Ty słyszałeś co się stało?",
+    "- Tak Samuelu. Słyszałem. Wiem o wszystkim. Przede mną się to nie ukryje.",
+    "- no ja nie mogę... ale to spokojnie przyjmujesz. Po prostu \"słyszałem\"? Gościa już nie ma! Nie żyje! Oni chyba [*niezrozumiałe dźwięki*] i gość nie żyje! [*niezrozumiałe dźwięki*] więc musimy [*trzaski*] więc [*trzaski*] bo dron [*trzaski*]",
+    "- hej! jesteś tam? Coś słabo Cię słychać. Słychać tylko trzaski i przerywa mocno. Halooooo?"
+  ],
+  "uuid": "556a6c43-61c4-408c-814d-9f9d2268eaf5"
+}
+
+[2025-06-13T18:48:11.074Z] Analysis result: {
+  "_thinking": "The conversation features two individuals discussing a situation involving a person who has not completed a task and is related to a broader context of secrecy and potential danger. The names mentioned are Samuel and Zygfryd. Given the context of the conversation, it is likely that they are discussing events related to the resistance against the regime of robots, which aligns with the background provided in the facts. Thus, I identify Samuel and Zygfryd as the two people involved in this conversation.",
+  "confidence": "high",
+  "people": "Samuel, Zygfryd"
+}
+
+[2025-06-13T18:48:11.075Z] Analyzing conversation {
+  "rozmowa": [
+    "- Samuelu! helooo?! Słyszysz mnie teraz? Zadzwoniłem ponownie, bo chyba znowu z zasięgiem jest u Ciebie jakiś problem...",
+    "- tak Zygfryd, słyszę Cię teraz dobrze. Przepraszam, gdy poprzednio dzwoniłeś, byłem w fabryce. Wiesz, w sektorze D, gdzie się produkuje broń i tutaj mają jakąś izolację na ścianach dodatkową. Telefon gubi zasięg. Masz jakieś nowe zadanie dla mnie?",
+    "- tak. Mam dla Ciebie nowe zadanie. Skontaktuj się z Tomaszem. On pracuje w Centrali. Może pomóc Ci włamać się do komputera tego gościa. Masz już endpoint API?",
+    "- tak, mam ten endpoint. https://rafal.ag3nts.org/510bc - Dzięki. Zadzwonię do Tomasza dopytać o resztę. Coś jeszcze?",
+    "- Nie, to wszysto. No to weź teraz ten endpoint i użyj do połączenia. Tomasz powie Ci jakie jest hasło do pierwszej warstwy zabezpieczeń. OK. Nie marnuj czasu. Dzwoń!",
+    "- OK. Dzwonię do Tomasza. [*dźwięk odkładanej słuchawki*]"
+  ],
+  "uuid": "f3a92078-c2cd-4e6a-9d70-650322ad9573"
+}
+
+[2025-06-13T18:48:14.605Z] Analysis result: {
+  "_thinking": "The conversation is between two individuals: Samuel and Zygfryd. Samuel is responding to Zygfryd's calls and discussing a task involving contacting Tomasz. The context of the conversation implies they are involved in covert operations, likely related to hacking or espionage, which aligns with the facts regarding the sectors of the factory and the activities within. Therefore, I can confidently identify them as the speakers.",
+  "confidence": "high",
+  "people": "Samuel, Zygfryd"
+}
+
+[2025-06-13T18:48:14.605Z] Analyzing conversation {
+  "rozmowa": [
+    "- Cześć Tomasz. Tu Samuel. Dostałem ten numer od szefa. Potrzebuję hasła do pierwszej warstwy zabezpieczeń kompa sam wiesz kogo. Możesz mi pomóc?",
+    "- Aaaa hej! hej!. Tak, mogę Ci pomóc. Hasło do pierwszej warstwy to \"NONOMNISMORIAR\".",
+    "- mmmm... takie filozoficzne to hasło i w sumie pasuje teraz do kontekstu haha! Spoko. Dzięki. A kolejne warstwy?",
+    "- Nie wiem. Siedzę nad tymi warstwami już od kilku dni i powiem Ci, że on musiał używać technologii z przyszłości, bo nasze LLM-y są zbyt wolne, aby przejść kolejne warstwy weryfikacji. Bez skoku w czasie i pomocy Zygfryda chyba się nie uda",
+    "- wiesz dobrze, że skakać w czasie może teraz tylko Azazel, a z nim to nie ma rozmowy. Ale dobra... Zygfryd nakręci numer piąty na złamanie tego.",
+    "- to piątka nadal się niczego nie domyśla?",
+    "- piątka to posłuszna owieczka. Wykonuje polecenia, ale nie wie co robi. Dobra, dzięki za hasło. Przekażę je numerowi piątemu [*dźwięk odkładanej słuchawki*]"
+  ],
+  "uuid": "66a16ca2-04f0-4d69-bbf7-059940777d67"
+}
+
+[2025-06-13T18:48:17.266Z] Analysis result: {
+  "_thinking": "The conversation involves two individuals, Samuel and Tomasz. Samuel is requesting a password from Tomasz, who provides it. Based on the context of the conversation, it seems to relate to a security issue involving technology, which aligns with the facts provided about the highly secure sectors and the context of advanced technology and resistance against a controlling regime. Since they are the only two speakers in the conversation, they are the identified individuals.",
+  "confidence": "high",
+  "people": "Samuel, Tomasz"
+}
+
+[2025-06-13T18:48:17.267Z] Analyzing conversation {
+  "rozmowa": [
+    "- Halo? Jesteś tam? tu Witek. Potrzebuję Twojej pomocy.",
+    "- no siema Witek! Jestem, jestem. Rozmawiałam z Samuelem. Chyba się na mnie trochę wkurzył. Jak Ci mogę pomóc?",
+    "- Ty się znasz na programowaniu, security i tym całym IT, nie? Potrzebuję pomocy w złamaniu zabezpieczeń komputera. Mam endpoint API. Możesz mi w tym pomóc?",
+    "- no to daj adres do API. Pokombinuję coś sama, albo zapytam mądrzejszych od siebie",
+    "- trzymaj, to jest ten endpoint do API: https://rafal.ag3nts.org/b46c3 ale nie mam hasła do niego",
+    "- a skąd Ty masz ten endpoint i do tego bez hasła? Jak go zdobyłeś?",
+    "- aaa wiesz. Ten Twój \"nauczyciel\" mi go dostarczył, ale hasła jeszcze nie zdobył, ale pracuje on nad tym",
+    "- haha... przestań tak o nim mówić. Wiesz przecież, jak on się wkurza, gdy się go nazwie nauczycielem. Dobra, daj mi chwilę. Będę próbowała coś z tym pokombinować.",
+    "- jasne mała! powodzenia z tym kombinowaniem. Bądź jak Helmut Rahn w 1954 roku i pokaż im na co Cię stać! [*dźwięk odkładanej słuchawki*]"
+  ],
+  "uuid": "af645832-d6c8-49c4-9b19-389822d3101f"
+}
+
+[2025-06-13T18:48:20.308Z] Analysis result: {
+  "_thinking": "The conversation involves Witek and an unnamed female speaker who is likely Barbara Zawadzka based on the context of programming and the mention of the 'teacher', which aligns with the background of Barbara and her relationship with Aleksander Ragowski. Witek requests help in breaking into a secured API, which aligns with Barbara's expertise in IT and programming. Therefore, they are the identified speakers in this conversation.",
+  "confidence": "high",
+  "people": "Witek, Barbara Zawadzka"
+}
+
+[2025-06-13T18:48:20.309Z] Question answers: [
+  {
+    "rozmowa": [
+      "- Hej! Jak tam agentko? Jak się czujesz po rozmowie?",
+      "- No cześć. Trochę nieswojo, ale jakoś to będzie. On był w naprawdę kiepskim stanie. Trudno się z nim rozmawiało",
+      "- Ale zrozumiał coś z tego, co mu powiedziałaś?",
+      "- ten stan nawet ułatwiał, a nie utrudniał zadanie. Chłonął wiedzę jak gąbka. Myślę, że wszystko zrozumiał.",
+      "- To dobrze, że zrozumiał. A co z tymi dokumentami, o których rozmawialiśmy?",
+      "- dokumenty? Mówił, że wszystko ma w komputerze, ale gość nie miał przy sobie żadnego sprzętu. W tej norze nawet prądu nie było.",
+      "- To co teraz zrobimy? Trzeba ich szukać u niego w mieszkaniu, bo tam chyba zostawił sprzęt?",
+      "- pewnie tak, ale gdzie jest to jego mieszkanie? Obecnie to chyba ta jaskinia nazywana jest przez niego \"domem\" hahaha",
+      "- a zdalny dostęp do jego kompa wchodzi w grę jeśli nie możemy iść do mieszkania?",
+      "- myślę, że tak. Zdalnie sobie poradzimy. Goście z centrali kombinują coś z przeszukiwaniem całej puli adresów IP. Jak tylko coś znajdą, to dam Ci znać. Sama jestem ciekawa na ile on zabezpieczył swój sprzęt i co tam w miał w środku.",
+      "- no to czekam na informację jak już znajdą to IP, a on jest już z Tobą?",
+      "- nie ma go tutaj. Wiesz co... trochę się sprawy pokomplikowały. Niezupełnie to wszystko poszło zgodnie z planem.",
+      "- poszło niezgodnie z planem? uciekł Ci gość?",
+      "- nie uciekł. Gość nie żyje... Goście z centrali wysłali tam drona. Dowiedziałam się o wszystkim z raportu",
+      "- coooo? jak to możliwe? Rozmawiamy, a Ty jakby nigdy nic mówisz, że \"nie żyje\"? Kiedy miałaś zamiar mi powiedzieć? no i skąd oni wiedzieli gdzie szukać? To była przecież jaskinia na odludziu!",
+      "- czy to jest teraz ważne skąd?! Andrzej miał nadajnik GPS w samochodzie, to go namierzyli nawet na tym odludziu. No zawaliłam z tym. Wiem, ale ważniejsze jest teraz to, że gość nie żyje i nie mamy dostępu do jego komputera. To jest najważniejsze. Kurwa, wiesz [*niesłyszalne*], żal mi gościa... ",
+      "- żal Ci... żal... ale on nie wykonał zadania. Fuck!!!!",
+      "- no nie wykonał! i już raczej nie wykona w tym stanie... Andrzeja też już nie ma i nie wiadomo gdzie jest. Zwiał",
+      "- no to wyciągnij z centrali informację w którym kierunku pojechał Andrzej!",
+      "- problem w tym, że zostawił swój samochód, więc nie za bardzo \"pojechał\". Może on mu powiedział o nadajniku?",
+      "- a to on wiedział, że Andrzej ma nadajnik w samochodzie?",
+      "- a kto to wie... przecież [*niesłyszalne*] nigdy nie wiadomo co on tam wiedział i czy był świadomy nadajnika. Możemy się tylko domyślać.",
+      "- Dobra. Uznajmy, że wiedział o nadajniku. A zostały jakieś Twoje ślady w jaskini jak tam byłaś? mogą się zorientować, żę go odwiedzałaś?",
+      "- byłam tam normalnie, jawnie. Umówiłam się oficjalnie, że będę go uczyła JavaScriptu. Miał mu się przydać do szkolenia tego, co teraz przerabia. Na papierze treść lekcji czyta, to mu chciałam trochę potłumaczyć to wszystko. Nie chciałam przecież mówić wprost po co przyjeżdżam.",
+      "- no ja nie mogę... na czym go miałaś uczyć tego JavaScriptu? Gość nie ma kompa czaisz?! Na glinianych tabliczkach mieliście pisać te programy dłutem? Teraz wiedzą, że tam byłaś! Dobra, nara! Mam Zygfryda na drugiej linii [*dźwięk odkładanej słuchawki*]"
+    ],
+    "uuid": "cb8fcefd-e153-478f-8377-62995b6802b1",
+    "people": "Barbara Zawadzka, unnamed colleague"
+  },
+  {
+    "rozmowa": [
+      "- Witaj Samuelu. Rozmawiałeś z nią?",
+      "- tak. Dosłownie przed chwilą rozmawiałem, gdy zadzwoniłeś, ale nic od niego nie wydobyła",
+      "- dlaczego? nie wykonała zadania? co z nią?",
+      "- rozmawiała z nim, ale nie zdołała zdobyć brakujących informacji. Mówił, że wszystko ma w komputerze, ale nie miał przy sobie żadnego sprzętu. Do tego durna baba jako wymówkę wzięła \"naukę JavaScriptu\". Czaisz? dżejesa go będzie uczyć! W centrali mają teraz pewnie niezły ubaw. Poza tym, to... Zygfryd, Ty słyszałeś co się stało?",
+      "- Tak Samuelu. Słyszałem. Wiem o wszystkim. Przede mną się to nie ukryje.",
+      "- no ja nie mogę... ale to spokojnie przyjmujesz. Po prostu \"słyszałem\"? Gościa już nie ma! Nie żyje! Oni chyba [*niezrozumiałe dźwięki*] i gość nie żyje! [*niezrozumiałe dźwięki*] więc musimy [*trzaski*] więc [*trzaski*] bo dron [*trzaski*]",
+      "- hej! jesteś tam? Coś słabo Cię słychać. Słychać tylko trzaski i przerywa mocno. Halooooo?"
+    ],
+    "uuid": "556a6c43-61c4-408c-814d-9f9d2268eaf5",
+    "people": "Samuel, Zygfryd"
+  },
+  {
+    "rozmowa": [
+      "- Samuelu! helooo?! Słyszysz mnie teraz? Zadzwoniłem ponownie, bo chyba znowu z zasięgiem jest u Ciebie jakiś problem...",
+      "- tak Zygfryd, słyszę Cię teraz dobrze. Przepraszam, gdy poprzednio dzwoniłeś, byłem w fabryce. Wiesz, w sektorze D, gdzie się produkuje broń i tutaj mają jakąś izolację na ścianach dodatkową. Telefon gubi zasięg. Masz jakieś nowe zadanie dla mnie?",
+      "- tak. Mam dla Ciebie nowe zadanie. Skontaktuj się z Tomaszem. On pracuje w Centrali. Może pomóc Ci włamać się do komputera tego gościa. Masz już endpoint API?",
+      "- tak, mam ten endpoint. https://rafal.ag3nts.org/510bc - Dzięki. Zadzwonię do Tomasza dopytać o resztę. Coś jeszcze?",
+      "- Nie, to wszysto. No to weź teraz ten endpoint i użyj do połączenia. Tomasz powie Ci jakie jest hasło do pierwszej warstwy zabezpieczeń. OK. Nie marnuj czasu. Dzwoń!",
+      "- OK. Dzwonię do Tomasza. [*dźwięk odkładanej słuchawki*]"
+    ],
+    "uuid": "f3a92078-c2cd-4e6a-9d70-650322ad9573",
+    "people": "Samuel, Zygfryd"
+  },
+  {
+    "rozmowa": [
+      "- Cześć Tomasz. Tu Samuel. Dostałem ten numer od szefa. Potrzebuję hasła do pierwszej warstwy zabezpieczeń kompa sam wiesz kogo. Możesz mi pomóc?",
+      "- Aaaa hej! hej!. Tak, mogę Ci pomóc. Hasło do pierwszej warstwy to \"NONOMNISMORIAR\".",
+      "- mmmm... takie filozoficzne to hasło i w sumie pasuje teraz do kontekstu haha! Spoko. Dzięki. A kolejne warstwy?",
+      "- Nie wiem. Siedzę nad tymi warstwami już od kilku dni i powiem Ci, że on musiał używać technologii z przyszłości, bo nasze LLM-y są zbyt wolne, aby przejść kolejne warstwy weryfikacji. Bez skoku w czasie i pomocy Zygfryda chyba się nie uda",
+      "- wiesz dobrze, że skakać w czasie może teraz tylko Azazel, a z nim to nie ma rozmowy. Ale dobra... Zygfryd nakręci numer piąty na złamanie tego.",
+      "- to piątka nadal się niczego nie domyśla?",
+      "- piątka to posłuszna owieczka. Wykonuje polecenia, ale nie wie co robi. Dobra, dzięki za hasło. Przekażę je numerowi piątemu [*dźwięk odkładanej słuchawki*]"
+    ],
+    "uuid": "66a16ca2-04f0-4d69-bbf7-059940777d67",
+    "people": "Samuel, Tomasz"
+  },
+  {
+    "rozmowa": [
+      "- Halo? Jesteś tam? tu Witek. Potrzebuję Twojej pomocy.",
+      "- no siema Witek! Jestem, jestem. Rozmawiałam z Samuelem. Chyba się na mnie trochę wkurzył. Jak Ci mogę pomóc?",
+      "- Ty się znasz na programowaniu, security i tym całym IT, nie? Potrzebuję pomocy w złamaniu zabezpieczeń komputera. Mam endpoint API. Możesz mi w tym pomóc?",
+      "- no to daj adres do API. Pokombinuję coś sama, albo zapytam mądrzejszych od siebie",
+      "- trzymaj, to jest ten endpoint do API: https://rafal.ag3nts.org/b46c3 ale nie mam hasła do niego",
+      "- a skąd Ty masz ten endpoint i do tego bez hasła? Jak go zdobyłeś?",
+      "- aaa wiesz. Ten Twój \"nauczyciel\" mi go dostarczył, ale hasła jeszcze nie zdobył, ale pracuje on nad tym",
+      "- haha... przestań tak o nim mówić. Wiesz przecież, jak on się wkurza, gdy się go nazwie nauczycielem. Dobra, daj mi chwilę. Będę próbowała coś z tym pokombinować.",
+      "- jasne mała! powodzenia z tym kombinowaniem. Bądź jak Helmut Rahn w 1954 roku i pokaż im na co Cię stać! [*dźwięk odkładanej słuchawki*]"
+    ],
+    "uuid": "af645832-d6c8-49c4-9b19-389822d3101f",
+    "people": "Witek, Barbara Zawadzka"
+  }
+]
+
+[2025-06-13T18:48:20.309Z] Detecting who is lying in conversations...
+
+[2025-06-13T18:48:27.346Z] Liar detection result: {
+  "_thinking": "W rozmowie Barbara Zawadzka twierdzi, że rozmawiała z osobą, która nie miała przy sobie sprzętu komputerowego, a jednocześnie mówi, że miała uczyć go programowania w JavaScript. Jest to sprzeczne, ponieważ bez sprzętu komputerowego nauka programowania jest niemożliwa. Dodatkowo, Samuel nazywa Barbarę 'durną babą' i twierdzi, że brała taką wymówkę. To sugeruje, że Barbara mogła kłamać lub nie być w pełni szczera w swoich relacjach dotyczących sytuacji, co podważa jej wiarygodność. W kontekście faktów, Barbara jest przedstawiana jako wybitna specjalistka IT, więc jej stwierdzenie o nauczaniu bez sprzętu wydaje się niemożliwe. To wskazuje na to, że Barbara Zawadzka ściemnia, aby ukryć prawdziwą sytuację.",
+  "answer": "Osobą, która kłamie jest Barbara Zawadzka, ponieważ twierdzi, że uczyła kogoś JavaScriptu, mimo że ta osoba nie miała przy sobie sprzętu komputerowego, co czyni to nauczanie niemożliwym."
+}
+
+[2025-06-13T18:48:27.346Z] Liar detection: {
+  "_thinking": "W rozmowie Barbara Zawadzka twierdzi, że rozmawiała z osobą, która nie miała przy sobie sprzętu komputerowego, a jednocześnie mówi, że miała uczyć go programowania w JavaScript. Jest to sprzeczne, ponieważ bez sprzętu komputerowego nauka programowania jest niemożliwa. Dodatkowo, Samuel nazywa Barbarę 'durną babą' i twierdzi, że brała taką wymówkę. To sugeruje, że Barbara mogła kłamać lub nie być w pełni szczera w swoich relacjach dotyczących sytuacji, co podważa jej wiarygodność. W kontekście faktów, Barbara jest przedstawiana jako wybitna specjalistka IT, więc jej stwierdzenie o nauczaniu bez sprzętu wydaje się niemożliwe. To wskazuje na to, że Barbara Zawadzka ściemnia, aby ukryć prawdziwą sytuację.",
+  "answer": "Osobą, która kłamie jest Barbara Zawadzka, ponieważ twierdzi, że uczyła kogoś JavaScriptu, mimo że ta osoba nie miała przy sobie sprzętu komputerowego, co czyni to nauczanie niemożliwym."
+}

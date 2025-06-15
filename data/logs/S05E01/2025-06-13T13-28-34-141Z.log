@@ -1,0 +1,61 @@
+Log file created at 2025-06-13T13:28:34.143Z
+--------------------------------------------
+[2025-06-13T13:28:34.146Z] Reading cached questions from /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S05/E01/phone_questions.json
+
+[2025-06-13T13:28:34.147Z] Starting to build conversations...
+
+[2025-06-13T13:28:34.147Z] Processing conversation with UUID: 29e2243e-5fb2-44bd-96d5-f4d6629075e8
+
+[2025-06-13T13:28:34.147Z] Generated system prompt
+
+[2025-06-13T13:28:34.161Z] Processing message 1 of 4
+
+[2025-06-13T13:28:34.161Z] Generated user prompt
+
+[2025-06-13T13:28:34.169Z] Retrieved message history
+
+[2025-06-13T13:28:40.482Z] Received response from OpenAI: {"_thinking":"Rozmowa koncentruje się na potrzebie uzyskania hasła do pierwszej warstwy zabezpieczeń komputera. W kontekście całej rozmowy, kluczowym punktem jest prośba o pomoc oraz odniesienie do endpointu API. Z dostępnych wiadomości, opcja 12 ('tak. Mam dla Ciebie nowe zadanie. Skontaktuj się z Tomaszem. On pracuje w Centrali. Może pomóc Ci włamać się do komputera tego gościa. Masz już endpoint API?') jest najbardziej odpowiednia, ponieważ bezpośrednio odnosi się do sytuacji, w której rozmówca potrzebuje wsparcia w uzyskaniu dostępu do komputera. Pozostałe wiadomości nie odnoszą się bezpośrednio do tego tematu ani nie są związane z prośbą o pomoc. Dlatego wybieram ID 12.","id":12}
+
+[2025-06-13T13:28:40.493Z] Parsed message ID: 12
+
+[2025-06-13T13:28:40.493Z] Added message to conversation: - tak. Mam dla Ciebie nowe zadanie. Skontaktuj się z Tomaszem. On pracuje w Centrali. Może pomóc Ci włamać się do komputera tego gościa. Masz już endpoint API?
+
+[2025-06-13T13:28:40.494Z] Processing message 2 of 4
+
+[2025-06-13T13:28:40.494Z] Generated user prompt
+
+[2025-06-13T13:28:40.502Z] Retrieved message history
+
+[2025-06-13T13:28:42.683Z] Received response from OpenAI: {"_thinking":"Rozmowa koncentruje się na potrzebie uzyskania hasła do pierwszej warstwy zabezpieczeń komputera, co jest bezpośrednio związane z prośbą o pomoc. Z dostępnych opcji, najlepszym dopasowaniem jest wiadomość 12 ('tak. Mam dla Ciebie nowe zadanie. Skontaktuj się z Tomaszem. On pracuje w Centrali. Może pomóc Ci włamać się do komputera tego gościa. Masz już endpoint API?'), ponieważ bezpośrednio odnosi się do sytuacji, w której rozmówca potrzebuje wsparcia w uzyskaniu dostępu do komputera oraz wspomina o endpoint API, co jest kluczowe dla kontekstu rozmowy. Pozostałe wiadomości nie odpowiadają na potrzebę uzyskania hasła ani nie dostarczają relevantnych informacji. Wybieram ID 12 jako najbardziej odpowiednie.","id":12}
+
+[2025-06-13T13:28:42.696Z] Parsed message ID: 12
+
+🚨 Message with ID 12 not found in availableMessages
+
+[2025-06-13T13:28:42.697Z] Processing message 3 of 4
+
+[2025-06-13T13:28:42.697Z] Generated user prompt
+
+[2025-06-13T13:28:42.704Z] Retrieved message history
+
+[2025-06-13T13:28:48.799Z] Received response from OpenAI: {"_thinking":"W kontekście rozmowy, główna potrzeba dotyczy uzyskania hasła do pierwszej warstwy zabezpieczeń komputera, a także kontaktu z osobą, która może w tym pomóc. Z dostępnych wiadomości, najlepszym dopasowaniem jest wiadomość 20 ('Nie, to wszysto. No to weź teraz ten endpoint i użyj do połączenia. Tomasz powie Ci jakie jest hasło do pierwszej warstwy zabezpieczeń. OK. Nie marnuj czasu. Dzwoń!'), ponieważ odnosi się bezpośrednio do potrzeb związanych z uzyskaniem hasła i użyciem endpointu, co jest kluczowe w kontekście tej rozmowy. Pozostałe wiadomości nie dostarczają odpowiednich informacji ani nie są związane z aktualnymi potrzebami rozmówcy. Wybieram ID 20 jako najbardziej odpowiednie.","id":20}
+
+[2025-06-13T13:28:48.915Z] Parsed message ID: 20
+
+[2025-06-13T13:28:48.916Z] Added message to conversation: - Nie, to wszysto. No to weź teraz ten endpoint i użyj do połączenia. Tomasz powie Ci jakie jest hasło do pierwszej warstwy zabezpieczeń. OK. Nie marnuj czasu. Dzwoń!
+
+[2025-06-13T13:28:48.916Z] Processing message 4 of 4
+
+[2025-06-13T13:28:48.916Z] Generated user prompt
+
+[2025-06-13T13:28:48.923Z] Retrieved message history
+
+[2025-06-13T13:28:55.316Z] Received response from OpenAI: {"_thinking":"Rozmowa koncentruje się na potrzebie uzyskania hasła do pierwszej warstwy zabezpieczeń komputera oraz na wykorzystaniu endpointu API. Z dostępnych wiadomości, najlepszym dopasowaniem jest wiadomość 20 ('Nie, to wszysto. No to weź teraz ten endpoint i użyj do połączenia. Tomasz powie Ci jakie jest hasło do pierwszej warstwy zabezpieczeń. OK. Nie marnuj czasu. Dzwoń!'), ponieważ bezpośrednio odnosi się do sytuacji, w której rozmówca potrzebuje pomocy w dostępie do komputera i wskazuje na konkretne działania, które należy podjąć. Ta wiadomość idealnie pasuje do kontekstu rozmowy i odpowiada na potrzebę. Wiadomość 12 również dotyczy podobnego tematu, ale nie jest tak bezpośrednia jak ID 20. W związku z tym wybieram ID 20 jako najbardziej odpowiednie.","id":20}
+
+[2025-06-13T13:28:55.328Z] Parsed message ID: 20
+
+🚨 Message with ID 20 not found in availableMessages
+
+[2025-06-13T13:28:55.329Z] Finished building conversations
+
+[2025-06-13T13:28:55.329Z] Processed 5 conversations and 42 rest messages

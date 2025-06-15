@@ -1,0 +1,5 @@
+Log file created at 2025-06-11T10:41:22.015Z
+--------------------------------------------
+🚨 Failed to extract page 19 as image: --- The first argument must be of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received undefined
+
+🚨 Error in main function: --- The first argument must be of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received undefined

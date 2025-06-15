@@ -1,0 +1,6 @@
+Log file created at 2025-06-13T19:02:41.246Z
+--------------------------------------------
+[2025-06-13T19:02:41.528Z] Centrala response: {
+  "code": -340,
+  "message": "You sent STRING, but it should be obiect with 6 values!"
+}

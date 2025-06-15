@@ -1,0 +1,27 @@
+Log file created at 2025-06-11T14:46:35.744Z
+--------------------------------------------
+[2025-06-11T14:46:35.746Z] Reading cached notatki from /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/E05/notatki_rafala.txt
+
+[2025-06-11T14:46:35.747Z] Processing question 01: Do którego roku przeniósł się Rafał
+
+[2025-06-11T14:46:36.995Z] Answer for question 01: Rafał przeniósł się do 20... roku, jednak dokładny rok nie został podany w jego notatkach.
+
+[2025-06-11T14:46:36.995Z] Processing question 02: Kto wpadł na pomysł, aby Rafał przeniósł się w czasie?
+
+[2025-06-11T14:46:37.916Z] Answer for question 02: Adam wpadł na pomysł, aby Rafał przeniósł się w czasie, ponieważ według jego wyliczeń, ten rok był odpowiedni do rozpoczęcia pracy nad technologią LLM.
+
+[2025-06-11T14:46:37.916Z] Processing question 03: Gdzie znalazł schronienie Rafał? Nazwij krótko to miejsce
+
+[2025-06-11T14:46:39.206Z] Answer for question 03: Rafał znalazł schronienie w miejscu oddalonym od miasta, w którym spędził ostatnie lata, w otoczeniu lasu, skał i śniegu.
+
+[2025-06-11T14:46:39.206Z] Processing question 04: Którego dnia Rafał ma spotkanie z Andrzejem? (format: YYYY-MM-DD)
+
+[2025-06-11T14:46:39.811Z] Answer for question 04: 2024-11-11
+
+[2025-06-11T14:46:39.811Z] Processing question 05: Gdzie się chce dostać Rafał po spotkaniu z Andrzejem?
+
+[2025-06-11T14:46:40.576Z] Answer for question 05: Rafał chce się dostać do Lunary, która graniczy z miejscem, w którym się ukrywa.
+
+[2025-06-11T14:46:40.576Z] Final answers:
+
+[2025-06-11T14:46:40.684Z] Centrala response: {"code":-999,"message":"no answer provided"}

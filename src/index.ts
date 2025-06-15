@@ -9,6 +9,7 @@ export { VectorService } from './functions/VectorService';
 export { MessageManager } from './functions/MessageManager';
 export { Logger } from './functions/Logger';
 export { PdfProcessor } from './functions/PdfProcessor';
+export { DatabaseService } from './functions/DatabaseService';
 export { startApi } from './agent/api';
 
 export type { Report } from './functions/VectorService';

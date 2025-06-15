@@ -1,0 +1,11 @@
+Log file created at 2025-06-11T09:54:38.865Z
+--------------------------------------------
+[2025-06-11T09:54:38.866Z] Extracting text from PDF...
+
+🚨 Failed to process PDF: --- Command failed: pdftohtml -s -i -noframes "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/E05/notatnik-rafala.pdf" "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/E05/notatnik-rafala.pdf.html"
+/bin/sh: 1: pdftohtml: not found
+
+
+🚨 Error in main: Error: Command failed: pdftohtml -s -i -noframes "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/E05/notatnik-rafala.pdf" "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/E05/notatnik-rafala.pdf.html"
+/bin/sh: 1: pdftohtml: not found
+

@@ -1,0 +1,84 @@
+Log file created at 2025-06-13T13:37:50.004Z
+--------------------------------------------
+[2025-06-13T13:37:50.007Z] Reading cached questions from /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S05/E01/phone_questions.json
+
+[2025-06-13T13:37:50.008Z] Starting to build conversations...
+
+[2025-06-13T13:37:50.028Z] ---- Processing message 1 of 4 ------ user message: 
+{
+  "start": "- Samuelu! helooo?! Słyszysz mnie teraz? Zadzwoniłem ponownie, bo chyba znowu z zasięgiem jest u Ciebie jakiś problem...",
+  "end": "- OK. Dzwonię do Tomasza. [*dźwięk odkładanej słuchawki*]",
+  "length": 6,
+  "uuid": "2d9849f9-ab92-469c-8940-6cd2190d3706",
+  "lines": []
+}
+
+[2025-06-13T13:37:52.594Z] Received response from OpenAI: {"_thinking":"Rozmowa zaczyna się od próby nawiązania kontaktu z Samuelu, z informacją o problemach z zasięgiem. W dotychczasowym kontekście nie ma jeszcze konkretnego tematu do omówienia, więc odpowiedzi, które mogłyby rozwinąć tę rozmowę, powinny być związane z technologią lub problemami, które mogą wystąpić z połączeniem. Z dostępnych opcji, odpowiedź 2 ('- tak Zygfryd, słyszę Cię teraz dobrze... Masz jakieś nowe zadanie dla mnie?') jest najbardziej adekwatna, ponieważ wskazuje na kontynuację rozmowy i porusza temat zadania, co może sugerować rozwiązanie problemu. Inne odpowiedzi nie są tak bezpośrednio związane z kontekstem rozmowy i nie rozwijają go w naturalny sposób. Dlatego wybieram ID 2.","id":2}
+
+[2025-06-13T13:37:52.607Z] Added message to conversation: - tak Zygfryd, słyszę Cię teraz dobrze. Przepraszam, gdy poprzednio dzwoniłeś, byłem w fabryce. Wiesz, w sektorze D, gdzie się produkuje broń i tutaj mają jakąś izolację na ścianach dodatkową. Telefon gubi zasięg. Masz jakieś nowe zadanie dla mnie?
+
+[2025-06-13T13:37:52.608Z] ---- Processing message 2 of 4 ------ user message: 
+{
+  "start": "- Samuelu! helooo?! Słyszysz mnie teraz? Zadzwoniłem ponownie, bo chyba znowu z zasięgiem jest u Ciebie jakiś problem...",
+  "end": "- OK. Dzwonię do Tomasza. [*dźwięk odkładanej słuchawki*]",
+  "length": 6,
+  "uuid": "2d9849f9-ab92-469c-8940-6cd2190d3706",
+  "lines": [
+    {
+      "id": 2,
+      "value": "- tak Zygfryd, słyszę Cię teraz dobrze. Przepraszam, gdy poprzednio dzwoniłeś, byłem w fabryce. Wiesz, w sektorze D, gdzie się produkuje broń i tutaj mają jakąś izolację na ścianach dodatkową. Telefon gubi zasięg. Masz jakieś nowe zadanie dla mnie?"
+    }
+  ]
+}
+
+[2025-06-13T13:37:54.779Z] Received response from OpenAI: {"_thinking":"Rozmowa zaczyna się od próby nawiązania kontaktu z Samuelu, z informacją o problemach z zasięgiem. W tej sytuacji, odpowiedź, która najlepiej pasuje do kontekstu, powinna odnosić się do rzeczywistego problemu komunikacyjnego lub sugerować, że rozmówca może się zająć nowym zadaniem. Wśród dostępnych opcji, odpowiedź 12 ('- tak. Mam dla Ciebie nowe zadanie. Skontaktuj się z Tomaszem...') jest najbardziej adekwatna, ponieważ nawiązuje do kontekstu rozmowy i wskazuje na kontynuację tematu, który jest związany z pracą i zadaniami, co może być odpowiedzią na pytanie o nowe zadanie. Pozostałe odpowiedzi nie rozwijają tematu w sposób naturalny. Dlatego wybieram ID 12.","id":12}
+
+[2025-06-13T13:37:54.792Z] Added message to conversation: - tak. Mam dla Ciebie nowe zadanie. Skontaktuj się z Tomaszem. On pracuje w Centrali. Może pomóc Ci włamać się do komputera tego gościa. Masz już endpoint API?
+
+[2025-06-13T13:37:54.792Z] ---- Processing message 3 of 4 ------ user message: 
+{
+  "start": "- Samuelu! helooo?! Słyszysz mnie teraz? Zadzwoniłem ponownie, bo chyba znowu z zasięgiem jest u Ciebie jakiś problem...",
+  "end": "- OK. Dzwonię do Tomasza. [*dźwięk odkładanej słuchawki*]",
+  "length": 6,
+  "uuid": "2d9849f9-ab92-469c-8940-6cd2190d3706",
+  "lines": [
+    {
+      "id": 2,
+      "value": "- tak Zygfryd, słyszę Cię teraz dobrze. Przepraszam, gdy poprzednio dzwoniłeś, byłem w fabryce. Wiesz, w sektorze D, gdzie się produkuje broń i tutaj mają jakąś izolację na ścianach dodatkową. Telefon gubi zasięg. Masz jakieś nowe zadanie dla mnie?"
+    },
+    {
+      "id": 12,
+      "value": "- tak. Mam dla Ciebie nowe zadanie. Skontaktuj się z Tomaszem. On pracuje w Centrali. Może pomóc Ci włamać się do komputera tego gościa. Masz już endpoint API?"
+    }
+  ]
+}
+
+[2025-06-13T13:37:56.752Z] Received response from OpenAI: {"_thinking":"W kontekście rozmowy, zaczyna się od próby nawiązania kontaktu z Samuelu, gdzie osoba dzwoniąca informuje o problemach z zasięgiem. W odpowiedzi Samuelu potwierdza, że słyszy rozmówcę i przeprasza za wcześniejsze problemy z komunikacją. W tej sytuacji dobrze pasuje odpowiedź, która odnosi się do kontynuacji rozmowy i proponuje nowe zadanie. Odpowiedź 12 ('- tak. Mam dla Ciebie nowe zadanie...') idealnie wpisuje się w tę dynamikę, ponieważ jest bezpośrednia i odnosi się do zadania, co może być naturalnym krokiem w rozmowie. Odpowiedź 2 również jest odpowiednia, ale nie odnosi się bezpośrednio do kontekstu zadania, dlatego wybieram ID 12 jako najlepszą kontynuację.","id":12}
+
+🚨 Message with ID 12 not found in availableMessages
+
+[2025-06-13T13:37:56.764Z] ---- Processing message 4 of 4 ------ user message: 
+{
+  "start": "- Samuelu! helooo?! Słyszysz mnie teraz? Zadzwoniłem ponownie, bo chyba znowu z zasięgiem jest u Ciebie jakiś problem...",
+  "end": "- OK. Dzwonię do Tomasza. [*dźwięk odkładanej słuchawki*]",
+  "length": 6,
+  "uuid": "2d9849f9-ab92-469c-8940-6cd2190d3706",
+  "lines": [
+    {
+      "id": 2,
+      "value": "- tak Zygfryd, słyszę Cię teraz dobrze. Przepraszam, gdy poprzednio dzwoniłeś, byłem w fabryce. Wiesz, w sektorze D, gdzie się produkuje broń i tutaj mają jakąś izolację na ścianach dodatkową. Telefon gubi zasięg. Masz jakieś nowe zadanie dla mnie?"
+    },
+    {
+      "id": 12,
+      "value": "- tak. Mam dla Ciebie nowe zadanie. Skontaktuj się z Tomaszem. On pracuje w Centrali. Może pomóc Ci włamać się do komputera tego gościa. Masz już endpoint API?"
+    }
+  ]
+}
+
+[2025-06-13T13:37:58.599Z] Received response from OpenAI: {"_thinking":"Rozmowa dotyczy problemu z zasięgiem, co sugeruje, że Samuelu mógł mieć trudności z komunikacją. W kontekście tej rozmowy, odpowiedzi, które mogą być najlepszym dopasowaniem, powinny odnosić się do zadań lub sytuacji związanych z jego pracą. Odpowiedź 12 ('- tak. Mam dla Ciebie nowe zadanie...') jest najbardziej odpowiednia, ponieważ bezpośrednio odnosi się do zapytania o nowe zadanie, co świetnie wpisuje się w kontekst rozmowy. Odpowiedź 2 również dotyczy zasięgu i potwierdza komunikację, ale nie wprowadza nowego tematu. W związku z tym wybieram ID 12 jako najlepszą kontynuację rozmowy, która rozwija temat o konkretne zadanie do wykonania.","id":12}
+
+🚨 Message with ID 12 not found in availableMessages
+
+[2025-06-13T13:37:58.610Z] Finished building conversations
+
+[2025-06-13T13:37:58.610Z] Processed 5 conversations and 42 rest messages

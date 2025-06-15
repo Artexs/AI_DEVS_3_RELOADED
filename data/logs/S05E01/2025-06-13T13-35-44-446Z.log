@@ -1,0 +1,37 @@
+Log file created at 2025-06-13T13:35:44.448Z
+--------------------------------------------
+[2025-06-13T13:35:44.451Z] Reading cached questions from /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S05/E01/phone_questions.json
+
+[2025-06-13T13:35:44.452Z] Starting to build conversations...
+
+[2025-06-13T13:35:44.472Z] ---- Processing message 1 of 4 ------ user message: 
+                    [object Object]
+
+[2025-06-13T13:35:46.436Z] Received response from OpenAI: {"_thinking":"Rozmowa dotyczy problemów z zasięgiem i komunikacją. W kontekście ostatniej wypowiedzi, kończącej rozmowę, naturalnym krokiem byłoby nawiązanie do tego, co Samuel mógłby zrobić, aby rozwiązać problem. Z dostępnych odpowiedzi, opcja 2 ('- tak Zygfryd, słyszę Cię teraz dobrze... Masz jakieś nowe zadanie dla mnie?') jest najlepsza, ponieważ odnosi się do wcześniejszej kwestii zasięgu i przejmuje ton rozmowy. Pozostałe odpowiedzi nie są związane z tematem komunikacji i nie pasują do kontekstu końcówki rozmowy. Dlatego wybieram ID 2.","id":2}
+
+[2025-06-13T13:35:46.449Z] Added message to conversation: - tak Zygfryd, słyszę Cię teraz dobrze. Przepraszam, gdy poprzednio dzwoniłeś, byłem w fabryce. Wiesz, w sektorze D, gdzie się produkuje broń i tutaj mają jakąś izolację na ścianach dodatkową. Telefon gubi zasięg. Masz jakieś nowe zadanie dla mnie?
+
+[2025-06-13T13:35:46.449Z] ---- Processing message 2 of 4 ------ user message: 
+                    [object Object]
+
+[2025-06-13T13:35:49.093Z] Received response from OpenAI: {"_thinking":"Rozmowa dotyczy problemów z komunikacją, co jest kluczowym tematem w kontekście wypowiedzi. W ostatniej linijce rozmowy osoba prosi o potwierdzenie słyszenia, co wskazuje na potrzebę uzyskania informacji lub pomocy. Spośród dostępnych wiadomości, najlepszą odpowiedzią jest ID 6 ('- Tak Samuelu. Słyszałem. Wiem o wszystkim. Przede mną się to nie ukryje.'), ponieważ bezpośrednio odnosi się do wcześniejszego pytania o słyszenie i potwierdza, że rozmówca jest w stanie przekazać istotne informacje. Pozostałe opcje nie są tak bezpośrednie ani nie odnoszą się do aktualnych potrzeb komunikacyjnych. Wybieram ID 6.","id":6}
+
+[2025-06-13T13:35:49.104Z] Added message to conversation: - Tak Samuelu. Słyszałem. Wiem o wszystkim. Przede mną się to nie ukryje.
+
+[2025-06-13T13:35:49.104Z] ---- Processing message 3 of 4 ------ user message: 
+                    [object Object]
+
+[2025-06-13T13:35:51.307Z] Received response from OpenAI: {"_thinking":"W kontekście rozmowy, w której Samuel prosi o potwierdzenie, czy rozmówca go słyszy, najlepszym wyborem jest wiadomość, która odpowiada na to pytanie, a także potwierdza, że rozmówca ma wiedzę na temat sytuacji. Z dostępnych wiadomości, ID 6 ('- Tak Samuelu. Słyszałem. Wiem o wszystkim. Przede mną się to nie ukryje.') najlepiej pasuje, ponieważ nie tylko potwierdza, że Samuel jest słyszany, ale również wskazuje na to, że rozmówca ma pełną świadomość sytuacji, co jest kluczowe w tym kontekście. ID 2, choć również potwierdzające, nie odnosi się bezpośrednio do pytania o zasięg. Dlatego wybieram ID 6 jako najbardziej trafne w tej sytuacji.","id":6}
+
+🚨 Message with ID 6 not found in availableMessages
+
+[2025-06-13T13:35:51.320Z] ---- Processing message 4 of 4 ------ user message: 
+                    [object Object]
+
+[2025-06-13T13:35:53.705Z] Received response from OpenAI: {"_thinking":"W kontekście rozmowy, Samuel pyta, czy rozmówca go słyszy, co sugeruje, że ma problemy z zasięgiem. Odpowiedzi, które najlepiej pasują do tej sytuacji, to te, które potwierdzają, że Samuel jest słyszany i wskazują na dalszy rozwój rozmowy. Spośród dostępnych opcji, ID 6 ('- Tak Samuelu. Słyszałem. Wiem o wszystkim. Przede mną się to nie ukryje.') jest najbardziej odpowiednia, ponieważ bezpośrednio odpowiada na pytanie o słyszenie i dodaje, że rozmówca ma wiedzę o sytuacji, co jest istotne w kontekście dalszej rozmowy. Odpowiedź ID 2, choć również potwierdzająca, nie odnosi się bezpośrednio do pytania, a bardziej do kontekstu wcześniejszej rozmowy. Dlatego wybieram ID 6 jako najlepszą opcję.","id":6}
+
+🚨 Message with ID 6 not found in availableMessages
+
+[2025-06-13T13:35:53.718Z] Finished building conversations
+
+[2025-06-13T13:35:53.718Z] Processed 5 conversations and 42 rest messages

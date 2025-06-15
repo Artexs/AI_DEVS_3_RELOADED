@@ -1,0 +1,39 @@
+Log file created at 2025-06-12T10:29:47.501Z
+--------------------------------------------
+[2025-06-12T10:29:47.505Z] Processing question 01: Do którego roku przeniósł się Rafał
+
+[2025-06-12T10:29:51.595Z] Response from llm {"_thinking":"Pytanie wymaga analizy notatek Rafała w celu znalezienia odpowiedzi. W notatkach Rafała znajduje się fragment mówiący o podróży w czasie i o tym, że Rafał nie może uwierzyć, iż znajduje się w roku 20... Jest to jedyna bezpośrednia informacja dotycząca roku, do którego przeniósł się Rafał. Szczegóły tej informacji są jednak niekompletne, ale wskazują na fakt przeniesienia się do jakiegoś roku w XXI wieku.","answer":"Rafał przeniósł się do roku 20... (dalsze cyfry są niewyraźne w notatkach)."}
+
+[2025-06-12T10:29:51.596Z] Answer for question 01: Rafał przeniósł się do roku 20... (dalsze cyfry są niewyraźne w notatkach).
+
+[2025-06-12T10:29:51.596Z] Processing question 02: Kto wpadł na pomysł, aby Rafał przeniósł się w czasie?
+
+[2025-06-12T10:29:54.871Z] Response from llm {"_thinking":"The user's query does not provide a specific question related to Rafał's notes or events. However, the task is to ensure that any response is derived from the content in Rafał's notes. Therefore, it is essential to focus on extracting relevant information based on the user's request and context provided. Nonetheless, the core guidelines emphasize providing a structured JSON response even when the query is general or lacks specificity.","answer":"Proszę zadać konkretne pytanie dotyczące notatek Rafała, a postaram się znaleźć odpowiedź w dostępnych materiałach."}
+
+[2025-06-12T10:29:54.871Z] Answer for question 02: Proszę zadać konkretne pytanie dotyczące notatek Rafała, a postaram się znaleźć odpowiedź w dostępnych materiałach.
+
+[2025-06-12T10:29:54.871Z] Processing question 03: Gdzie znalazł schronienie Rafał? Nazwij krótko to miejsce
+
+[2025-06-12T10:29:57.697Z] Response from llm {"_thinking":"W notatkach Rafała znajduje się wpis, w którym wspomina o znalezieniu miejsca schronienia. Rafał pisze, że 'znalazłem miejsce schronienia. Tutaj nikt mnie nie znajdzie. To miejsce nie jest szczególnie oddalone od miasta, w którym spędziłem ostatnie lata.' Chociaż Rafał nie nazywa tego miejsca wprost, to opisuje je jako schronienie, które jest bezpieczne, zimne i ciemne.","answer":"Rafał znalazł schronienie w miejscu, które opisuje jako bezpieczne, zimne i ciemne, niedaleko miasta, w którym spędził ostatnie lata."}
+
+[2025-06-12T10:29:57.697Z] Answer for question 03: Rafał znalazł schronienie w miejscu, które opisuje jako bezpieczne, zimne i ciemne, niedaleko miasta, w którym spędził ostatnie lata.
+
+[2025-06-12T10:29:57.697Z] Processing question 04: Którego dnia Rafał ma spotkanie z Andrzejem? (format: YYYY-MM-DD)
+
+[2025-06-12T10:30:00.575Z] Response from llm {"_thinking":"Pytanie użytkownika dotyczy daty spotkania Rafała z Andrzejem. Analizując notatki Rafała, znajduję wpis, który bezpośrednio odnosi się do tego spotkania: 'Andrzejek... Andrzejek... słyszę w głowie Twoje kroki i czekam na Ciebie. To już jutro. Kiedyś ja pomogłem Tobie, a dziś Ty pomożesz światu. Trzeba wszystko odwrócić. 11 listopada 2024'. Z tego fragmentu wynika, że spotkanie z Andrzejem ma się odbyć 11 listopada 2024 roku.","answer":"Rafał ma spotkanie z Andrzejem 11 listopada 2024 roku."}
+
+[2025-06-12T10:30:00.575Z] Answer for question 04: Rafał ma spotkanie z Andrzejem 11 listopada 2024 roku.
+
+[2025-06-12T10:30:00.576Z] Processing question 05: Gdzie się chce dostać Rafał po spotkaniu z Andrzejem?
+
+[2025-06-12T10:30:03.990Z] Response from llm {"_thinking":"W notatkach Rafała znajduję wzmiankę o tym, że po spotkaniu z Andrzejem Rafał planuje udać się do miejsca o nazwie 'Lunary'. Jest to miejsce, które graniczy z czernią, w której Rafał ukrył swoją zmarłą rękę. Rafał wspomina także o potrzebie dostarczenia dużej ilości paliwa przez Andrzeja, co sugeruje, że podróż do 'Lunary' jest jego celem po spotkaniu.","answer":"Rafał po spotkaniu z Andrzejem chce dostać się do miejsca o nazwie 'Lunary'."}
+
+[2025-06-12T10:30:03.990Z] Answer for question 05: Rafał po spotkaniu z Andrzejem chce dostać się do miejsca o nazwie 'Lunary'.
+
+[2025-06-12T10:30:03.990Z] Iteration 1 of Centrala processing
+
+[2025-06-12T10:30:04.241Z] Centrala response: {"code":-340,"message":"Answer for question 01 is incorrect","hint":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń","debug":"You sent: Rafał przeniósł się do roku 20... (dalsze cyfry są niewyraźne w notatkach)."}
+
+[2025-06-12T10:30:04.725Z] LLM decision to fix question number: 1
+
+🚨 Error in main function: --- undefined is not an object (evaluating 'messageManager.addMessage')

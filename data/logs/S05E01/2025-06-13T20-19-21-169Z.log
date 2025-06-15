@@ -1,0 +1,34 @@
+Log file created at 2025-06-13T20:19:21.171Z
+--------------------------------------------
+[2025-06-13T20:19:21.174Z] Reading cached questions from /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S05/E01/phone_questions.json
+
+[2025-06-13T20:19:21.175Z] Analyzing conversation {
+  "rozmowa": [
+    "- Hej! Jak tam agentko? Jak się czujesz po rozmowie?",
+    "- No cześć. Trochę nieswojo, ale jakoś to będzie. On był w naprawdę kiepskim stanie. Trudno się z nim rozmawiało",
+    "- Ale zrozumiał coś z tego, co mu powiedziałaś?",
+    "- ten stan nawet ułatwiał, a nie utrudniał zadanie. Chłonął wiedzę jak gąbka. Myślę, że wszystko zrozumiał.",
+    "- To dobrze, że zrozumiał. A co z tymi dokumentami, o których rozmawialiśmy?",
+    "- dokumenty? Mówił, że wszystko ma w komputerze, ale gość nie miał przy sobie żadnego sprzętu. W tej norze nawet prądu nie było.",
+    "- To co teraz zrobimy? Trzeba ich szukać u niego w mieszkaniu, bo tam chyba zostawił sprzęt?",
+    "- pewnie tak, ale gdzie jest to jego mieszkanie? Obecnie to chyba ta jaskinia nazywana jest przez niego \"domem\" hahaha",
+    "- a zdalny dostęp do jego kompa wchodzi w grę jeśli nie możemy iść do mieszkania?",
+    "- myślę, że tak. Zdalnie sobie poradzimy. Goście z centrali kombinują coś z przeszukiwaniem całej puli adresów IP. Jak tylko coś znajdą, to dam Ci znać. Sama jestem ciekawa na ile on zabezpieczył swój sprzęt i co tam w miał w środku.",
+    "- no to czekam na informację jak już znajdą to IP, a on jest już z Tobą?",
+    "- nie ma go tutaj. Wiesz co... trochę się sprawy pokomplikowały. Niezupełnie to wszystko poszło zgodnie z planem.",
+    "- poszło niezgodnie z planem? uciekł Ci gość?",
+    "- nie uciekł. Gość nie żyje... Goście z centrali wysłali tam drona. Dowiedziałam się o wszystkim z raportu",
+    "- coooo? jak to możliwe? Rozmawiamy, a Ty jakby nigdy nic mówisz, że \"nie żyje\"? Kiedy miałaś zamiar mi powiedzieć? no i skąd oni wiedzieli gdzie szukać? To była przecież jaskinia na odludziu!",
+    "- czy to jest teraz ważne skąd?! Andrzej miał nadajnik GPS w samochodzie, to go namierzyli nawet na tym odludziu. No zawaliłam z tym. Wiem, ale ważniejsze jest teraz to, że gość nie żyje i nie mamy dostępu do jego komputera. To jest najważniejsze. Kurwa, wiesz [*niesłyszalne*], żal mi gościa... ",
+    "- żal Ci... żal... ale on nie wykonał zadania. Fuck!!!!",
+    "- no nie wykonał! i już raczej nie wykona w tym stanie... Andrzeja też już nie ma i nie wiadomo gdzie jest. Zwiał",
+    "- no to wyciągnij z centrali informację w którym kierunku pojechał Andrzej!",
+    "- problem w tym, że zostawił swój samochód, więc nie za bardzo \"pojechał\". Może on mu powiedział o nadajniku?",
+    "- a to on wiedział, że Andrzej ma nadajnik w samochodzie?",
+    "- a kto to wie... przecież [*niesłyszalne*] nigdy nie wiadomo co on tam wiedział i czy był świadomy nadajnika. Możemy się tylko domyślać.",
+    "- Dobra. Uznajmy, że wiedział o nadajniku. A zostały jakieś Twoje ślady w jaskini jak tam byłaś? mogą się zorientować, żę go odwiedzałaś?",
+    "- byłam tam normalnie, jawnie. Umówiłam się oficjalnie, że będę go uczyła JavaScriptu. Miał mu się przydać do szkolenia tego, co teraz przerabia. Na papierze treść lekcji czyta, to mu chciałam trochę potłumaczyć to wszystko. Nie chciałam przecież mówić wprost po co przyjeżdżam.",
+    "- no ja nie mogę... na czym go miałaś uczyć tego JavaScriptu? Gość nie ma kompa czaisz?! Na glinianych tabliczkach mieliście pisać te programy dłutem? Teraz wiedzą, że tam byłaś! Dobra, nara! Mam Zygfryda na drugiej linii [*dźwięk odkładanej słuchawki*]"
+  ],
+  "uuid": "9d38c30b-4ec4-466a-8a65-1d55d18853e3"
+}

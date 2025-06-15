@@ -1,0 +1,11 @@
+Log file created at 2025-06-11T14:49:44.729Z
+--------------------------------------------
+[2025-06-11T14:49:44.731Z] Reading cached notatki from /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S04/E05/notatki_rafala.txt
+
+[2025-06-11T14:49:44.732Z] Processing question 01: Do którego roku przeniósł się Rafał
+
+[2025-06-11T14:49:46.180Z] Answer for question 01: Rafał przeniósł się do roku 20..., co sugeruje, że dokładny rok nie został w pełni ujawniony w jego notatkach.
+
+[2025-06-11T14:49:46.180Z] Final answers:
+
+[2025-06-11T14:49:46.328Z] Centrala response: {"code":-340,"message":"Please send simple, 5 element array in JSON"}

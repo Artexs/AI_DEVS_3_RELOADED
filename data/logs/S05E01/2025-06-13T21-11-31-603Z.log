@@ -1,0 +1,17 @@
+Log file created at 2025-06-13T21:11:31.606Z
+--------------------------------------------
+[2025-06-13T21:11:31.796Z] API Response message: 13ba8223bb2f36ac72d3e4b0207808bf
+
+[2025-06-13T21:11:31.796Z] Sending answers to Centrala: {
+  "01": "Samuel",
+  "02": "https://rafal.ag3nts.org/b46c3",
+  "03": "Przezwisko Aleksandra to nauczyciel.",
+  "04": "Barbara Zawadzka, Samuel",
+  "05": "13ba8223bb2f36ac72d3e4b0207808bf",
+  "06": "Witek"
+}
+
+[2025-06-13T21:11:31.980Z] Centrala response: {
+  "code": -350,
+  "message": "Answer for question 06 is incorrect"
+}

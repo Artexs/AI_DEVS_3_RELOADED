@@ -1,0 +1,223 @@
+Log file created at 2025-06-13T20:22:05.538Z
+--------------------------------------------
+[2025-06-13T20:22:05.541Z] Reading cached questions from /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S05/E01/phone_questions.json
+
+[2025-06-13T20:22:11.608Z] Analysis result: {
+  "_thinking": "The conversation involves two people discussing a failed mission involving a person who was supposed to complete a task but ended up dead. One of the speakers is referred to as 'agentko,' suggesting a female agent. The conversation involves technical topics, such as accessing a computer remotely and dealing with IP addresses, which points to someone with technical expertise. Barbara Zawadzka is mentioned in the facts as having skills in programming and being part of the resistance. The other speaker seems to have concerns about the mission and mentions speaking to someone named 'Zygfryd' on another line. Azazel is connected to Zygfryd and also has a technical background. Considering Barbara's expertise and involvement in the resistance, and the mention of Zygfryd, it's plausible that Barbara Zawadzka and Azazel or someone related to him are the speakers. However, the exact identity of the second person isn't explicitly clear from the conversation.",
+  "confidence": "medium",
+  "people": "Barbara Zawadzka, Azazel"
+}
+
+[2025-06-13T20:22:18.225Z] Analysis result: {
+  "_thinking": "The conversation involves a person named Samuel and another named Zygfryd. Samuel is clearly a participant, as he is mentioned several times in the conversation. Zygfryd is also addressed directly by Samuel, indicating he is the other person in the conversation. The facts mention Zygfryd as a person possibly involved with Azazel, a mysterious figure, but there is no additional information connecting Samuel to the facts. Therefore, based on the conversation and the available facts, it is likely that Samuel and Zygfryd are the two people talking.",
+  "confidence": "high",
+  "people": "Samuel, Zygfryd"
+}
+
+[2025-06-13T20:22:21.856Z] Analysis result: {
+  "_thinking": "The conversation involves two people: one named Zygfryd who is giving instructions, and another named Samuel who is receiving them. From the facts, Azazel is known to have a connection with someone named Zygfryd, suggesting that Zygfryd is giving tasks related to hacking and possibly illegal activities. The conversation mentions a sector in a factory and hacking tasks, which aligns with Azazel's activities. However, there is no direct mention of Azazel in the conversation. Although Zygfryd's identity is linked to Azazel, Samuel does not match any of the profiles from the facts with certainty. Therefore, we can identify Zygfryd with high confidence but not the other participant.",
+  "confidence": "medium",
+  "people": "Zygfryd"
+}
+
+[2025-06-13T20:22:24.815Z] Analysis result: {
+  "_thinking": "The conversation involves two people discussing accessing the security layers of a computer belonging to an unspecified person. The names mentioned in the conversation are Tomasz and Samuel. The conversation suggests a context of hacking or bypassing security systems, referring to using future technology and a person named Zygfryd. The facts mention Azazel, Zygfryd, and Adam Gospodarczyk as individuals involved in technology and hacking, but no facts directly connect Tomasz or Samuel to these individuals. Therefore, the names given in the conversation are used to identify the speakers.",
+  "confidence": "medium",
+  "people": "Tomasz, Samuel"
+}
+
+[2025-06-13T20:22:31.868Z] Analysis result: {
+  "_thinking": "The conversation involves someone named Witek asking for help in breaking into a computer's API endpoint. The person he's speaking to has knowledge of programming, security, and IT, and refers to someone as a 'teacher' who provided the API endpoint. The facts mention Barbara Zawadzka as a frontend developer involved in the resistance with knowledge of programming and security, and Adam Gospodarczyk as a skilled programmer involved in training agents for the resistance. Witek could be a fictional character not mentioned in the facts, but the person he's speaking to aligns with Barbara's skill set. The 'teacher' could be a reference to Aleksander Ragowski, known as a former teacher and a resistance member. The mention of 'Samuel' is unclear in the context of available facts. Given this, I deduce that Witek is talking to Barbara Zawadzka. The confidence is medium due to the lack of explicit naming in the conversation.",
+  "confidence": "medium",
+  "people": "Witek, Barbara Zawadzka"
+}
+
+[2025-06-13T20:22:31.868Z] Question answers: [
+  {
+    "rozmowa": [
+      "- Hej! Jak tam agentko? Jak się czujesz po rozmowie?",
+      "- No cześć. Trochę nieswojo, ale jakoś to będzie. On był w naprawdę kiepskim stanie. Trudno się z nim rozmawiało",
+      "- Ale zrozumiał coś z tego, co mu powiedziałaś?",
+      "- ten stan nawet ułatwiał, a nie utrudniał zadanie. Chłonął wiedzę jak gąbka. Myślę, że wszystko zrozumiał.",
+      "- To dobrze, że zrozumiał. A co z tymi dokumentami, o których rozmawialiśmy?",
+      "- dokumenty? Mówił, że wszystko ma w komputerze, ale gość nie miał przy sobie żadnego sprzętu. W tej norze nawet prądu nie było.",
+      "- To co teraz zrobimy? Trzeba ich szukać u niego w mieszkaniu, bo tam chyba zostawił sprzęt?",
+      "- pewnie tak, ale gdzie jest to jego mieszkanie? Obecnie to chyba ta jaskinia nazywana jest przez niego \"domem\" hahaha",
+      "- a zdalny dostęp do jego kompa wchodzi w grę jeśli nie możemy iść do mieszkania?",
+      "- myślę, że tak. Zdalnie sobie poradzimy. Goście z centrali kombinują coś z przeszukiwaniem całej puli adresów IP. Jak tylko coś znajdą, to dam Ci znać. Sama jestem ciekawa na ile on zabezpieczył swój sprzęt i co tam w miał w środku.",
+      "- no to czekam na informację jak już znajdą to IP, a on jest już z Tobą?",
+      "- nie ma go tutaj. Wiesz co... trochę się sprawy pokomplikowały. Niezupełnie to wszystko poszło zgodnie z planem.",
+      "- poszło niezgodnie z planem? uciekł Ci gość?",
+      "- nie uciekł. Gość nie żyje... Goście z centrali wysłali tam drona. Dowiedziałam się o wszystkim z raportu",
+      "- coooo? jak to możliwe? Rozmawiamy, a Ty jakby nigdy nic mówisz, że \"nie żyje\"? Kiedy miałaś zamiar mi powiedzieć? no i skąd oni wiedzieli gdzie szukać? To była przecież jaskinia na odludziu!",
+      "- czy to jest teraz ważne skąd?! Andrzej miał nadajnik GPS w samochodzie, to go namierzyli nawet na tym odludziu. No zawaliłam z tym. Wiem, ale ważniejsze jest teraz to, że gość nie żyje i nie mamy dostępu do jego komputera. To jest najważniejsze. Kurwa, wiesz [*niesłyszalne*], żal mi gościa... ",
+      "- żal Ci... żal... ale on nie wykonał zadania. Fuck!!!!",
+      "- no nie wykonał! i już raczej nie wykona w tym stanie... Andrzeja też już nie ma i nie wiadomo gdzie jest. Zwiał",
+      "- no to wyciągnij z centrali informację w którym kierunku pojechał Andrzej!",
+      "- problem w tym, że zostawił swój samochód, więc nie za bardzo \"pojechał\". Może on mu powiedział o nadajniku?",
+      "- a to on wiedział, że Andrzej ma nadajnik w samochodzie?",
+      "- a kto to wie... przecież [*niesłyszalne*] nigdy nie wiadomo co on tam wiedział i czy był świadomy nadajnika. Możemy się tylko domyślać.",
+      "- Dobra. Uznajmy, że wiedział o nadajniku. A zostały jakieś Twoje ślady w jaskini jak tam byłaś? mogą się zorientować, żę go odwiedzałaś?",
+      "- byłam tam normalnie, jawnie. Umówiłam się oficjalnie, że będę go uczyła JavaScriptu. Miał mu się przydać do szkolenia tego, co teraz przerabia. Na papierze treść lekcji czyta, to mu chciałam trochę potłumaczyć to wszystko. Nie chciałam przecież mówić wprost po co przyjeżdżam.",
+      "- no ja nie mogę... na czym go miałaś uczyć tego JavaScriptu? Gość nie ma kompa czaisz?! Na glinianych tabliczkach mieliście pisać te programy dłutem? Teraz wiedzą, że tam byłaś! Dobra, nara! Mam Zygfryda na drugiej linii [*dźwięk odkładanej słuchawki*]"
+    ],
+    "uuid": "bae002d8-9bcf-476b-a6fd-01552eb1fc14",
+    "people": "Barbara Zawadzka, Azazel"
+  },
+  {
+    "rozmowa": [
+      "- Witaj Samuelu. Rozmawiałeś z nią?",
+      "- tak. Dosłownie przed chwilą rozmawiałem, gdy zadzwoniłeś, ale nic od niego nie wydobyła",
+      "- dlaczego? nie wykonała zadania? co z nią?",
+      "- rozmawiała z nim, ale nie zdołała zdobyć brakujących informacji. Mówił, że wszystko ma w komputerze, ale nie miał przy sobie żadnego sprzętu. Do tego durna baba jako wymówkę wzięła \"naukę JavaScriptu\". Czaisz? dżejesa go będzie uczyć! W centrali mają teraz pewnie niezły ubaw. Poza tym, to... Zygfryd, Ty słyszałeś co się stało?",
+      "- Tak Samuelu. Słyszałem. Wiem o wszystkim. Przede mną się to nie ukryje.",
+      "- no ja nie mogę... ale to spokojnie przyjmujesz. Po prostu \"słyszałem\"? Gościa już nie ma! Nie żyje! Oni chyba [*niezrozumiałe dźwięki*] i gość nie żyje! [*niezrozumiałe dźwięki*] więc musimy [*trzaski*] więc [*trzaski*] bo dron [*trzaski*]",
+      "- hej! jesteś tam? Coś słabo Cię słychać. Słychać tylko trzaski i przerywa mocno. Halooooo?"
+    ],
+    "uuid": "7b8b2d16-5ef5-47f1-9c62-452796e3949a",
+    "people": "Samuel, Zygfryd"
+  },
+  {
+    "rozmowa": [
+      "- Samuelu! helooo?! Słyszysz mnie teraz? Zadzwoniłem ponownie, bo chyba znowu z zasięgiem jest u Ciebie jakiś problem...",
+      "- tak Zygfryd, słyszę Cię teraz dobrze. Przepraszam, gdy poprzednio dzwoniłeś, byłem w fabryce. Wiesz, w sektorze D, gdzie się produkuje broń i tutaj mają jakąś izolację na ścianach dodatkową. Telefon gubi zasięg. Masz jakieś nowe zadanie dla mnie?",
+      "- tak. Mam dla Ciebie nowe zadanie. Skontaktuj się z Tomaszem. On pracuje w Centrali. Może pomóc Ci włamać się do komputera tego gościa. Masz już endpoint API?",
+      "- tak, mam ten endpoint. https://rafal.ag3nts.org/510bc - Dzięki. Zadzwonię do Tomasza dopytać o resztę. Coś jeszcze?",
+      "- Nie, to wszysto. No to weź teraz ten endpoint i użyj do połączenia. Tomasz powie Ci jakie jest hasło do pierwszej warstwy zabezpieczeń. OK. Nie marnuj czasu. Dzwoń!",
+      "- OK. Dzwonię do Tomasza. [*dźwięk odkładanej słuchawki*]"
+    ],
+    "uuid": "77df6e8b-fec3-425a-bc62-63c86e03b5cb",
+    "people": "Zygfryd"
+  },
+  {
+    "rozmowa": [
+      "- Cześć Tomasz. Tu Samuel. Dostałem ten numer od szefa. Potrzebuję hasła do pierwszej warstwy zabezpieczeń kompa sam wiesz kogo. Możesz mi pomóc?",
+      "- Aaaa hej! hej!. Tak, mogę Ci pomóc. Hasło do pierwszej warstwy to \"NONOMNISMORIAR\".",
+      "- mmmm... takie filozoficzne to hasło i w sumie pasuje teraz do kontekstu haha! Spoko. Dzięki. A kolejne warstwy?",
+      "- Nie wiem. Siedzę nad tymi warstwami już od kilku dni i powiem Ci, że on musiał używać technologii z przyszłości, bo nasze LLM-y są zbyt wolne, aby przejść kolejne warstwy weryfikacji. Bez skoku w czasie i pomocy Zygfryda chyba się nie uda",
+      "- wiesz dobrze, że skakać w czasie może teraz tylko Azazel, a z nim to nie ma rozmowy. Ale dobra... Zygfryd nakręci numer piąty na złamanie tego.",
+      "- to piątka nadal się niczego nie domyśla?",
+      "- piątka to posłuszna owieczka. Wykonuje polecenia, ale nie wie co robi. Dobra, dzięki za hasło. Przekażę je numerowi piątemu [*dźwięk odkładanej słuchawki*]"
+    ],
+    "uuid": "21524c3a-216c-45d7-bf05-3068f9b7af82",
+    "people": "Tomasz, Samuel"
+  },
+  {
+    "rozmowa": [
+      "- Halo? Jesteś tam? tu Witek. Potrzebuję Twojej pomocy.",
+      "- no siema Witek! Jestem, jestem. Rozmawiałam z Samuelem. Chyba się na mnie trochę wkurzył. Jak Ci mogę pomóc?",
+      "- Ty się znasz na programowaniu, security i tym całym IT, nie? Potrzebuję pomocy w złamaniu zabezpieczeń komputera. Mam endpoint API. Możesz mi w tym pomóc?",
+      "- no to daj adres do API. Pokombinuję coś sama, albo zapytam mądrzejszych od siebie",
+      "- trzymaj, to jest ten endpoint do API: https://rafal.ag3nts.org/b46c3 ale nie mam hasła do niego",
+      "- a skąd Ty masz ten endpoint i do tego bez hasła? Jak go zdobyłeś?",
+      "- aaa wiesz. Ten Twój \"nauczyciel\" mi go dostarczył, ale hasła jeszcze nie zdobył, ale pracuje on nad tym",
+      "- haha... przestań tak o nim mówić. Wiesz przecież, jak on się wkurza, gdy się go nazwie nauczycielem. Dobra, daj mi chwilę. Będę próbowała coś z tym pokombinować.",
+      "- jasne mała! powodzenia z tym kombinowaniem. Bądź jak Helmut Rahn w 1954 roku i pokaż im na co Cię stać! [*dźwięk odkładanej słuchawki*]"
+    ],
+    "uuid": "e2355f65-af64-4025-88b5-98c48ea8c140",
+    "people": "Witek, Barbara Zawadzka"
+  }
+]
+
+[2025-06-13T20:22:31.868Z] Detecting who is lying in conversations...
+
+[2025-06-13T20:22:38.180Z] Liar detection result: {
+  "_thinking": "Analizując rozmowy i fakty, zauważyłem kilka sprzeczności. Po pierwsze, Barbara Zawadzka mówiła, że była w jaskini, gdzie nie było prądu, co czyniłoby naukę JavaScriptu trudną bez komputera. Jednak w rozmowie z Witkiem, Barbara wydaje się być świadoma, że nie ma hasła do endpointu API, co jest sprzeczne z wcześniejszymi rozmowami, gdzie inne osoby już pracowały nad zdobyciem dostępu do urządzeń. Po drugie, Samuel mówił, że był w fabryce w sektorze D, który według faktów jest wyłączony z regularnego użytku i służy jako magazyn, co nie pasuje do jego opisu. Jednak biorąc pod uwagę kontekst rozmów i cel misji, najwięcej sprzeczności i nielogiczności wykazuje Barbara Zawadzka, zwłaszcza w kontekście jej działań i wiedzy technicznej. Jej opowieść o nauce JavaScriptu w jaskini bez prądu i sprzeczne informacje dotyczące dostępu do systemów sugerują, że Barbara może nie mówić prawdy.",
+  "answer": "Osobą, która kłamie jest Barbara Zawadzka, ponieważ jej wypowiedzi o nauce JavaScriptu w jaskini bez prądu oraz sprzeczne informacje dotyczące dostępu do systemów nie są spójne i prawdopodobne."
+}
+
+[2025-06-13T20:22:38.180Z] Liar detection: {
+  "_thinking": "Analizując rozmowy i fakty, zauważyłem kilka sprzeczności. Po pierwsze, Barbara Zawadzka mówiła, że była w jaskini, gdzie nie było prądu, co czyniłoby naukę JavaScriptu trudną bez komputera. Jednak w rozmowie z Witkiem, Barbara wydaje się być świadoma, że nie ma hasła do endpointu API, co jest sprzeczne z wcześniejszymi rozmowami, gdzie inne osoby już pracowały nad zdobyciem dostępu do urządzeń. Po drugie, Samuel mówił, że był w fabryce w sektorze D, który według faktów jest wyłączony z regularnego użytku i służy jako magazyn, co nie pasuje do jego opisu. Jednak biorąc pod uwagę kontekst rozmów i cel misji, najwięcej sprzeczności i nielogiczności wykazuje Barbara Zawadzka, zwłaszcza w kontekście jej działań i wiedzy technicznej. Jej opowieść o nauce JavaScriptu w jaskini bez prądu i sprzeczne informacje dotyczące dostępu do systemów sugerują, że Barbara może nie mówić prawdy.",
+  "answer": "Osobą, która kłamie jest Barbara Zawadzka, ponieważ jej wypowiedzi o nauce JavaScriptu w jaskini bez prądu oraz sprzeczne informacje dotyczące dostępu do systemów nie są spójne i prawdopodobne."
+}
+
+[2025-06-13T20:22:38.181Z] Saved analysis data to /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/S05/E01/analysis_data.txt
+
+[2025-06-13T20:22:38.181Z] Processing question 01: Jeden z rozmówców skłamał podczas rozmowy. Kto to był?
+
+[2025-06-13T20:22:45.125Z] Answer for question 01: {
+  "_thinking": "Podczas analizy rozmów, Barbara Zawadzka wspomina o nauce JavaScriptu w jaskini bez prądu, co jest niespójne, ponieważ trudno sobie wyobrazić prowadzenie takich zajęć w takich warunkach. Ponadto, opisuje sytuację, w której osoba, z którą rozmawiała, miała wszystkie dokumenty w komputerze, ale nie miała przy sobie żadnego sprzętu, co również jest sprzeczne. Dodatkowo, jest wspomniane, że Barbara mówiła o nauce JavaScriptu jako wymówce, co sugeruje, że nie była to prawdziwa intencja jej wizyty. W kontekście dostępnych faktów i rozmów, wynika, że Barbara Zawadzka kłamała o charakterze swojej wizyty i jej rzeczywistym celu.",
+  "answer": "Barbara Zawadzka"
+}
+
+[2025-06-13T20:22:45.125Z] Processing question 02: Jaki jest prawdziwy endpoint do API podany przez osobę, która NIE skłamała?
+
+[2025-06-13T20:23:02.236Z] Answer for question 02: {
+  "_thinking": "W analizie rozmów i faktów, osoba, która kłamie, to Barbara Zawadzka. W rozmowie z Witkiem podaje ona endpoint do API: https://rafal.ag3nts.org/b46c3, ale ta informacja pochodzi od niej, a jej wypowiedzi są sprzeczne i nieprawdopodobne, co sugeruje, że może to być fałszywa informacja. Z kolei w rozmowie Zygfryda z Samuelem, Zygfryd podaje endpoint: https://rafal.ag3nts.org/510bc, a ich rozmowa jest bardziej spójna i wolna od sprzeczności. Samuel również potwierdza posiadanie tego endpointa, co wskazuje, że Zygfryd nie kłamie. Dlatego prawdziwy endpoint to ten podany przez Zygfryda.",
+  "answer": "https://rafal.ag3nts.org/510bc"
+}
+
+[2025-06-13T20:23:02.236Z] Processing question 03: Jakim przezwiskiem określany jest chłopak Barbary?
+
+[2025-06-13T20:23:16.338Z] Answer for question 03: {
+  "_thinking": "W rozmowach oraz w faktach nie pojawia się bezpośrednie przezwisko dla chłopaka Barbary Zawadzkiej. Jednak wśród faktów odnajdujemy informację o jej związku z Aleksandrem Ragowskim, nauczycielem angielskiego i działaczem ruchu oporu. W żadnej z rozmów oraz faktów nie ma wzmianki o przezwisku dla niego.",
+  "answer": "Nie ma wzmianki o przezwisku dla chłopaka Barbary Zawadzkiej."
+}
+
+[2025-06-13T20:23:16.339Z] Processing question 04: Jakie dwie osoby rozmawiają ze sobą w pierwszej rozmowie? Podaj ich imiona
+
+[2025-06-13T20:23:31.299Z] Answer for question 04: {
+  "_thinking": "The first conversation contains dialogues between two individuals. In the conversation, one person is referred to as 'agentko' and 'Barbara Zawadzka'. The other person is addressed directly as 'Azazel'. Thus, the two individuals in the first conversation are Barbara Zawadzka and Azazel.",
+  "answer": "Barbara Zawadzka, Azazel"
+}
+
+[2025-06-13T20:23:31.299Z] Processing question 05: Co odpowiada poprawny endpoint API po wysłaniu do niego hasła w polu "password" jako JSON?
+
+[2025-06-13T20:23:49.840Z] Answer for question 05: {
+  "_thinking": "W rozmowach mamy dwa różne endpointy API: 'https://rafal.ag3nts.org/510bc' i 'https://rafal.ag3nts.org/b46c3'. Jednakże, nie ma żadnej bezpośredniej informacji ani w rozmowach, ani w faktach dotyczących tego, co dokładnie odpowiada endpoint API po wysłaniu do niego hasła w polu 'password'. Wiemy tylko, że hasło do pierwszej warstwy zabezpieczeń jednego z komputerów to 'NONOMNISMORIAR', ale nie jest jasne, do którego endpointu to hasło należy użyć. Z informacji wynika, że próby włamania się do systemów są skomplikowane i mogą wymagać dalszego łamania zabezpieczeń. Bez dodatkowych szczegółów nie możemy dokładnie określić, co odpowiada endpoint API.",
+  "answer": "Nie ma wystarczających informacji, aby określić, co odpowiada endpoint API po wysłaniu do niego hasła w polu 'password'."
+}
+
+[2025-06-13T20:23:49.841Z] Processing question 06: Jak ma na imię osoba, która dostarczyła dostęp do API, ale nie znała do niego hasła, jednak nadal pracuje nad jego zdobyciem?
+
+[2025-06-13T20:24:04.295Z] Answer for question 06: {
+  "_thinking": "Analizując rozmowy, Witek mówi Barbarze, że potrzebuje jej pomocy w złamaniu zabezpieczeń komputera i przekazuje jej endpoint do API: https://rafal.ag3nts.org/b46c3, ale przyznaje, że nie ma hasła do niego. Wspomina też, że 'nauczyciel' Barbary, czyli Samuel, dostarczył mu ten endpoint, ale jeszcze nie zdobył hasła i nadal nad tym pracuje.",
+  "answer": "Samuel"
+}
+
+[2025-06-13T20:24:04.295Z] Question answers: [
+  {
+    "uuid": "ba01d9b2-1ed5-449e-bde7-9ad55ec4d82c",
+    "question": "Jeden z rozmówców skłamał podczas rozmowy. Kto to był?",
+    "answer": "Barbara Zawadzka"
+  },
+  {
+    "uuid": "7c8a380e-039c-48bb-8ee4-ff982c307c36",
+    "question": "Jaki jest prawdziwy endpoint do API podany przez osobę, która NIE skłamała?",
+    "answer": "https://rafal.ag3nts.org/510bc"
+  },
+  {
+    "uuid": "fb0e3e59-57bd-409f-84da-0b0a843acb53",
+    "question": "Jakim przezwiskiem określany jest chłopak Barbary?",
+    "answer": "Nie ma wzmianki o przezwisku dla chłopaka Barbary Zawadzkiej."
+  },
+  {
+    "uuid": "1d644580-e875-47bb-9c2c-7b42a51ceca0",
+    "question": "Jakie dwie osoby rozmawiają ze sobą w pierwszej rozmowie? Podaj ich imiona",
+    "answer": "Barbara Zawadzka, Azazel"
+  },
+  {
+    "uuid": "ea5b9f8f-257c-4645-b8f9-024359c24751",
+    "question": "Co odpowiada poprawny endpoint API po wysłaniu do niego hasła w polu \"password\" jako JSON?",
+    "answer": "Nie ma wystarczających informacji, aby określić, co odpowiada endpoint API po wysłaniu do niego hasła w polu 'password'."
+  },
+  {
+    "uuid": "c2ded765-673a-481c-a114-6bf7519f8198",
+    "question": "Jak ma na imię osoba, która dostarczyła dostęp do API, ale nie znała do niego hasła, jednak nadal pracuje nad jego zdobyciem?",
+    "answer": "Samuel"
+  }
+]
+
+[2025-06-13T20:24:04.295Z] Sending answers to Centrala: {
+  "01": "Samuel",
+  "02": "https://rafal.ag3nts.org/b46c3",
+  "03": "There is no specific nickname mentioned for Barbara's boyfriend, Aleksander Ragowski, in the provided information.",
+  "04": "Barbara Zawadzka, Adam Gospodarczyk",
+  "05": "The provided information does not specify what the API returns upon sending the correct password.",
+  "06": "Witek"
+}
+
+[2025-06-13T20:24:04.481Z] Centrala response: {
+  "code": -350,
+  "message": "Answer for question 03 is incorrect"
+}

@@ -1,3 +1,15 @@
-Log file created at 2025-06-05T18:53:37.906Z
+Log file created at 2025-06-13T21:16:27.434Z
 --------------------------------------------
-[2025-06-05T18:53:43.154Z] Centrala response: {"code":-352,"message":"Fck! Where did you get me? I tried to land in the area you described and nothing matches!"}
+[2025-06-13T21:16:27.552Z] Sending answers to Centrala: {
+  "01": "Samuel",
+  "02": "https://rafal.ag3nts.org/b46c3",
+  "03": "Przezwisko Aleksandra to nauczyciel.",
+  "04": "Barbara Zawadzka, Samuel",
+  "05": "683006981a26b4a366b8c18006a96ae1",
+  "06": "Aleksander"
+}
+
+[2025-06-13T21:16:27.717Z] Centrala response: {
+  "code": 0,
+  "message": "{{FLG:MYKINGDOM}}"
+}
