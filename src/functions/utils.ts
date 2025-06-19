@@ -44,6 +44,7 @@ export class Utils {
     }
 
     private async makeRequest(url: string, data?: object): Promise<string> {
+        console.log(`TEST TEST TEST 123 ${url}, ${JSON.stringify(data)} `)
         const response = await fetch(url, {
             method: data ? 'POST' : 'GET',
             headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
@@ -77,7 +78,7 @@ export class Utils {
         );
     }
 
-    async getQuestionsFromCentrala(filename: string, fileLocation: string): Promise<any> {
+    async getFileFromCentrala(filename: string, fileLocation: string): Promise<any> {
         const dataDir = join(process.cwd(), fileLocation);
         const dataFile = join(dataDir, filename);
 
@@ -98,22 +99,27 @@ export class Utils {
 
         // If file doesn't exist or loading failed, fetch from Centrala
         try {
+            console.log(`file doesnt exist, downloading... ${filename}`)
             const apiKey = this.config.poligonApiKey;
             if (!apiKey) {
                 throw new Error('API key not found in environment variables');
             }
 
             const url = `https://c3ntrala.ag3nts.org/data/${apiKey}/${filename}`;
+            console.log(`file doesnt exist, downloading... from... ${url}`)
             const response = await fetch(url);
             
             if (!response.ok) {
                 throw new Error(`Failed to fetch data: ${response.statusText}`);
             }
 
-            const data = await response.json();
+            console.log(`file doesnt exist, downloading... result... ${response}`)
+            const data = await response.text();
+            // const data = await response.json();
 
             // Save to file
             await fs.writeFile(dataFile, JSON.stringify(data, null, 2));
+            console.log(`file doesnt exist, downloading... from... ${data}`)
             return data;
         } catch (error) {
             console.error('Failed to fetch data from Centrala:', error);

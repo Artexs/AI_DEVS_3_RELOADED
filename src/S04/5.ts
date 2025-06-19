@@ -145,7 +145,7 @@ async function main() {
         const notatkiRafala = await getNotatkiRafala(pdfPath, outputPath, outputPathText, notatkiRafalaPath);
         
         // Get questions from Centrala
-        const questions = await utils.getQuestionsFromCentrala('notes.json', 'data/S04/E05') as Record<string, string>;
+        const questions = await utils.getFileFromCentrala('notes.json', 'data/S04/E05') as Record<string, string>;
         
         // Create message managers for each question
         const messageManagers = new Map<string, MessageManager>();

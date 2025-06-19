@@ -77,7 +77,7 @@ class PhoneAnalyzer {
 
         // Download and save data
         await this.logger.log(`Downloading ${sorted ? 'sorted' : 'unsorted'} phone data...`);
-        const data = await this.utils.getQuestionsFromCentrala(
+        const data = await this.utils.getFileFromCentrala(
             sorted ? 'phone_sorted.json' : 'phone.json', 
             'data/S05/E01'
         );
@@ -106,7 +106,7 @@ class PhoneAnalyzer {
 
         // Download and save questions
         await this.logger.log('Downloading questions...');
-        const questions = await this.utils.getQuestionsFromCentrala('phone_questions.json', 'data/S05/E01');
+        const questions = await this.utils.getFileFromCentrala('phone_questions.json', 'data/S05/E01');
         
         // Save to cache
         writeFileSync(questionsPath, JSON.stringify(questions, null, 2), 'utf-8');

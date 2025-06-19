@@ -1,0 +1,68 @@
+Log file created at 2025-06-19T10:25:50.950Z
+--------------------------------------------
+[2025-06-19T10:25:54.817Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"The user's request is to find a text file with a name similar to 'extrcted_t3xt' and return its contents. Using the file_operations tool is appropriate here as it allows for file searching and reading operations, which are necessary to fulfill the user's request.","tool":"file_operations","query":"Search for a file with a name similar to 'extrcted_t3xt' in the current directory and return its contents if found."}
+
+[2025-06-19T10:25:56.008Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "list",
+  "path": "."
+}
+
+[2025-06-19T10:25:56.008Z] FILE_OPERATIONS_TOOL --- params: {"operation":"list","path":"."}
+
+[2025-06-19T10:25:56.008Z] FILE_OPERATIONS_TOOL --- listing directory: . -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3
+
+[2025-06-19T10:25:56.009Z] FILE_OPERATIONS_TOOL --- processed 1 directories
+
+[2025-06-19T10:25:59.629Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"The user has requested the contents of a text file with a name similar to 'extrcted_t3xt'. There is no file with a name that closely matches this in the list retrieved from the current directory. Therefore, the next logical step is to explore the 'data' directory (or possibly others like 'src') where the named file might be located. Searching through more directories for the relevant file will help move towards fulfilling the user's request.","tool":"file_operations","query":"{\"operation\":\"list\",\"path\":\"./data\"}"}
+
+[2025-06-19T10:26:00.583Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "list",
+  "path": "./data"
+}
+
+[2025-06-19T10:26:00.583Z] FILE_OPERATIONS_TOOL --- params: {"operation":"list","path":"./data"}
+
+[2025-06-19T10:26:00.583Z] FILE_OPERATIONS_TOOL --- listing directory: ./data -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data
+
+[2025-06-19T10:26:00.583Z] FILE_OPERATIONS_TOOL --- processed 1 directories
+
+[2025-06-19T10:26:03.537Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"The next step is to search for the file with a name similar to 'extrcted_t3xt' as requested by the user. Since we've listed the directories and files in the current and 'data' directories, we should now search in one of these directories for any text files that match that pattern and then retrieve its content.","tool":"file_operations","query":"Search for a file with a name containing 'extrcted_t3xt' within the './data' directory and read its contents if found."}
+
+[2025-06-19T10:26:04.699Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "list",
+  "path": "./data"
+}
+
+[2025-06-19T10:26:04.699Z] FILE_OPERATIONS_TOOL --- params: {"operation":"list","path":"./data"}
+
+[2025-06-19T10:26:04.699Z] FILE_OPERATIONS_TOOL --- listing directory: ./data -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data
+
+[2025-06-19T10:26:04.700Z] FILE_OPERATIONS_TOOL --- processed 1 directories
+
+[2025-06-19T10:26:08.405Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"The requested file name 'extrcted_t3xt' was not found in the previously listed directories. To be thorough, additional search in directory './data/pliki_z_fabryki' might be valuable since it's specifically mentioned to contain files from the factory.","tool":"file_operations","query":"{\"operation\":\"list\",\"path\":\"./data/pliki_z_fabryki\"}"}
+
+[2025-06-19T10:26:09.257Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "list",
+  "path": "./data/pliki_z_fabryki"
+}
+
+[2025-06-19T10:26:09.258Z] FILE_OPERATIONS_TOOL --- params: {"operation":"list","path":"./data/pliki_z_fabryki"}
+
+[2025-06-19T10:26:09.258Z] FILE_OPERATIONS_TOOL --- listing directory: ./data/pliki_z_fabryki -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/pliki_z_fabryki
+
+[2025-06-19T10:26:09.258Z] FILE_OPERATIONS_TOOL --- processed 1 directories
+
+[2025-06-19T10:26:17.865Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"Since the last request was to find a text file with a similar name to 'extrcted_t3xt', and none such file name was directly found in the listings. The next step is to search within the subdirectory that might contain extracted contents with a potentially misspelled name, such as 'extracted'. This is a logical place to continue the search.","tool":"file_operations","query":"list the contents of the './data/pliki_z_fabryki/extracted' directory to find a text file with a name similar to 'extrcted_t3xt'"}
+
+[2025-06-19T10:26:18.814Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "list",
+  "path": "./data/pliki_z_fabryki/extracted"
+}
+
+[2025-06-19T10:26:18.814Z] FILE_OPERATIONS_TOOL --- params: {"operation":"list","path":"./data/pliki_z_fabryki/extracted"}
+
+[2025-06-19T10:26:18.814Z] FILE_OPERATIONS_TOOL --- listing directory: ./data/pliki_z_fabryki/extracted -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/pliki_z_fabryki/extracted
+
+[2025-06-19T10:26:18.815Z] FILE_OPERATIONS_TOOL --- processed 1 directories
+
+[2025-06-19T10:26:20.906Z] ODPOWIEDZ +++ Nie znalazłem pliku tekstowego o nazwie podobnej do "extrcted_t3xt" w katalogu `./data/pliki_z_fabryki/extracted`.

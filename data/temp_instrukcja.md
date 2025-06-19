@@ -1,30 +1,22 @@
-Zdobyliśmy mapę okolic Grudziądza, gdzie prawdopodobnie ukrywa się profesor Maj, a przynajmniej tam znaleziono jego samochód. Pomóż naszemu pilotowi drona zbadać ten teren i podpowiedz mu, co znajduje się pod nim, podczas gdy on będzie latał po okolicy.
+Zdobyliśmy transkrypcję nagrań z kilku rozmów, które mogą być dla nas interesujące. Wszystkie pośrednio lub bezpośrednio dotyczą Rafała. Niestety dane, które posiadamy, są dosłownie poszatkowane. Wiemy, że wszystkich rozmów było 5 sztuk. Wiemy także z logów, jakim zdaniem rozpoczyna i kończy się każda rozmowa. Dodatkowo dowiedzieliśmy się, że podczas rozmowy padają pewne sprzeczne ze sobą informacje. Trzeba zweryfikować, który z rozmówców jest kłamcą i wykluczyć jego wersję podawanych nam danych. Mając zgromadzoną wszelką potrzebną wiedzę, pozostaje nam jedynie udzielenie odpowiedzi na pytania od Centrali. Być może przydadzą Ci się dane z folderu z taktami (”facts”) z poprzednich zadań. Nazwa zadania to “phone”.
 
-Oto zdobyta mapa - pilot każdy lot zaczyna od punktu startowego w lewym górnym rogu mapy.
+Oto dane, na których pracujemy:
 
+https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/phone.json
 
+Lista pytań od centrali:
 
-Musisz przygotować API działające po protokole HTTPS, a następnie wysłać do centrali URL do tego API jako odpowiedź na zadanie o nazwie webhook.
+https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/phone_questions.json
 
-Pracownik centrali wyśle na Twoje API metodą POST dane w formacie JSON w formie jak poniżej:
-
-{
-"instruction":"tutaj instrukcja gdzie poleciał dron"
-}
-
-
-Opis lotu drona może być w dowolnej formie i jest to tekst w języku naturalnym, np. “poleciałem jedno pole w prawo, a później na sam dół”. Twoim zadaniem jest odpowiedzenie w maksymalnie dwóch słowach, co tam się znajduje. W naszym przykładzie odpowiedzią byłyby np. “skały”.
-
-Centrala wyśle do Twojego API kilka takich opisów lotów. Jeden po drugim. Każdy w oddzielnym zapytaniu. Zadanie uznawane jest za zaliczone, gdy wszystkie loty skończą się sukcesem. Przekazanie pilotowi nieprawdziwych informacji nawigacyjnych kończy się rozbiciem drona.
-
-W tym zadaniu możesz wykorzystać hosting na Azylu, jeśli masz na to ochotę (nie ma obowiązku tego robić!). Możesz także wykorzystać np. usługę ngrok, aby wystawić nam swoją lokalną aplikację wprost z Twojego dysku.
-
-Jak wysłać URL do API do centrali?
+Oczekiwany format odpowiedzi do centrali
 
 {
- "apikey":"TWOJ-KLUCZ",
- "answer":"https://azyl-12345.ag3nts.org/moje_api",
- "task":"webhook"
+  "01":"zwięzła odpowiedź",
+  "02":"zwięzła odpowiedź",
+  "03":"zwięzła odpowiedź",
+  "04":"zwięzła odpowiedź",
+  "05":"zwięzła odpowiedź",
+  "06":"zwięzła odpowiedź",
 }
 
 
@@ -34,160 +26,35 @@ Co należy zrobić w zadaniu?
 
 
 
-Zrozum mapę i przygotuj jej opis dla LLM:
+Pobierz JSON-a z transkrypcją rozmów i odbuduj strukturę każdej z konwersacji
 
-* Masz obrazek mapy 4x4. Twoim zadaniem jest przetłumaczenie tej wizualnej informacji na format zrozumiały dla modelu językowego (LLM).
 
-* Nie używaj modeli do rozpoznawania obrazów. Opisz mapę tekstowo. Pomyśl, jak przedstawić siatkę i co znajduje się na każdym polu.
 
-* Dron zawsze zaczyna w lewym górnym rogu.
+Możesz spróbować wywnioskować, jak mają na imię poszczególne postacie. Przyda Ci się to przy odpowiadaniu na pytania
 
 
 
-Stwórz API (Webhook): Twoja aplikacja musi udostępniać endpoint działający po HTTPS, Endpoint musi akceptować żądania metodą POST.
+Niektóre osoby odwołują się do pewnych faktów, ale jedna osoba ściemnia — która? Konieczne tutaj będzie odwołanie się albo do wiedzy powszechnej, albo do folderu z faktami
 
-* Centrala wyśle na ten endpoint dane w formacie JSON:
 
-        {
 
-          "instruction": "tutaj instrukcja gdzie poleciał dron, np. poleciałem jedno pole w prawo"
+Pobierz listę pytań z centrali i spróbuj na nie odpowiedzieć.
 
-        }
 
-* Twoje API musi przetworzyć tę instrukcję (używając LLM i opisu mapy), aby określić końcową pozycję drona.
 
-* Następnie, Twoje API musi odpowiedzieć (również w formacie JSON) co znajduje się na tym polu. Odpowiedź musi zawierać klucz `description`:
+Jedno z pytań wymaga porozmawiania z API, pobrania odpowiedzi i wrzucenia jej do jednego z pól w answer.
 
-        {
 
-          "description": "opis miejsca"
 
-        }
+Gdy wszystkie dane będą już skompletowane, odeślij je do centrali jako zadanie “phone”
 
-         `opis miejsca` to maksymalnie dwa słowa w języku polskim (np. "skały", "dwa drzewa").
 
-* Twój JSON odpowiedzi może zawierać inne pola (przydatne do debugowania), ale tylko `description` jest oceniane.
 
-* Ważne: Twoje API musi być bezstanowe. Każde zapytanie od Centrali traktuj jako nowy lot, zaczynający się od punktu startowego (lewy górny róg mapy). Nie zapamiętuj poprzedniej pozycji drona. 
+Jeśli odpowiedzi będą poprawne, otrzymasz flagę w odpowiedzi od centrali
 
 
 
-Wystaw API na świat: Możesz użyć hostingu na Azylu, ngrok, lub dowolnej innej usługi, która pozwoli wystawić Twoją lokalną aplikację pod publicznym adresem HTTPS.
+🚨 UWAGA 🚨: nie wszystkie informacje podane są w tekście. Niektóre należy uzyskać z “faktów” z poprzednich zadań. W każdej rozmowie uczestniczą tylko dwie osoby, które wypowiadają się naprzemiennie. Imiona rozmówców są unikalne, więc jeśli np. Stefan pojawia się w pierwszej i piątej rozmowie, to jest to ten sam Stefan.
 
+To zadanie (jak wszystkie inne) można wykonać na wiele różnych sposobów. Ideałem byłoby napisanie takiego kodu i takiego zbioru promptów, aby napisana przez Ciebie aplikacja samodzielnie była w stanie odpowiedzieć na pytania centrali, samodzielnie pozyskać potrzebne fakty, samodzielnie ocenić prawdziwość napotkanych informacji oraz samodzielnie porozmawiać w odpowiedni sposób z podanym API. To jest oczywiście wersja “MAX”. Początkowo sugerujemy zrobienie wersji, która po prostu działa.
 
-
-Zgłoś URL swojego API do Centrali:
-
-* Wyślij żądanie POST na adres `https://c3ntrala.ag3nts.org/report` z następującym JSON-em w ciele:
-
-        {
-
-          "task": "webhook",
-
-          "apikey": "TWOJ_KLUCZ_API",
-
-          "answer": "https://twoj-publiczny-url.com/endpoint_drona"
-
-        }
-
-* Zastąp `TWOJ_KLUCZ_API` swoim rzeczywistym kluczem API.
-
-* Zastąp `https://twoj-publiczny-url.com/endpoint_drona` pełnym, publicznym adresem URL Twojego API.
-
-
-
-Oczekuj na flagę:
-
-* Centrala wyśle serię zapytań (opisów lotów) na podany przez Ciebie URL.
-
-* Jeśli Twoje API poprawnie odpowie na trzy kolejne zapytania o lot, zadanie zostanie zaliczone.
-
-* Flaga zostanie przesłana w odpowiedzi na Twoje zgłoszenie z punktu 4 (czyli na żądanie, w którym wysłałeś URL swojego API). To żądanie "zawiśnie" na czas testowania Twojego webhooka.
-
-
-
-Wskazówki
-
-
-
-
-
-Zacznij od serwera: Upewnij się, że Twoje API działa lokalnie i jest dostępne pod publicznym adresem URL (np. przez ngrok/Azyl) zanim zgłosisz jego adres do Centrali. Centrala odpytuje niemal natychmiast.
-
-
-
-Testuj lokalnie: Użyj narzędzi jak Postman lub `curl` do testowania swojego API zanim zgłosisz je do Centrali. Wysyłaj przykładowe JSON-y z poleceniem `instruction` i sprawdzaj, czy API zwraca poprawny `description`.
-
-
-
-Loguj wszystko: Loguj przychodzące żądania (nagłówki i ciało) oraz odpowiedzi, które wysyła Twoje API. To nieocenione przy debugowaniu.
-
-
-
-Opis mapy dla LLM: To jest kluczowy element! Poświęć czas na stworzenie jednoznacznego opisu mapy 4x4. Pamiętaj, że dron zawsze startuje z lewego górnego rogu.
-
-
-
-Twoje API (Webhook):
-
-
-
-
-
-Format odpowiedzi API: Twoje API MUSI zwracać JSON z kluczem `description` i wartością będącą stringiem, np. `{"description": "skały"}`. Błąd `There is no "description" field in your API response or it's not a string` oznacza problem właśnie z tym. Czasem pomaga zwracanie tylko tego jednego pola.
-
-
-
-Kodowanie: Upewnij się, że odpowiedź jest kodowana w UTF-8, jeśli używasz polskich znaków w opisie danego pola.
-
-
-
-Status HTTP: Centrala oczekuje statusu HTTP 200 OK. Jeśli używasz np. NestJS, domyślnie dla POST zwraca on 201 Created. Użyj dekoratora `@HttpCode(200)`.
-
-
-
-Obsługa danych wejściowych: Centrala wysyła dane jako `application/json` w ciele żądania POST. Upewnij się, że Twój framework/biblioteka poprawnie je interpretuje
-
-
-
-Puste instrukcje: Choć nie powinno się zdarzyć, zaloguj dokładnie co dostajesz. Jeśli `instruction` jest puste, zdecyduj jak na to zareagować (np. "punkt startowy"), ale upewnij się, że ZAWSZE zwracasz `{"description": "jakiś tekst"}`.
-
-
-
-Wystawianie API i Komunikacja z Centralą:
-
-
-
-
-
-HTTPS: Jest wymagane. Jeśli używasz ngrok lub tunelu SSH przez Azyl, te narzędzia dodają warstwę HTTPS za Ciebie.
-
-
-
-Pełny URL: Zgłaszając URL do Centrali, podaj pełny adres, włącznie ze ścieżką do endpointu, np. https://azyl-50005.ag3nts.org/api/dron
-
-
-
-Ukośnik na końcu URL-a: Niektóre serwery/frameworki przekierowują (HTTP 301/302) jeśli URL nie ma (lub ma) ukośnika na końcu. Centrala nie podąża za przekierowaniami. 
-
-
-
-Timeout (15 sekund): Twoje API musi odpowiedzieć w ciągu 15 sekund. Jeśli LLM działa zbyt wolno lub masz skomplikowaną logikę, możesz przekroczyć ten limit.
-
-
-
-Właściwa kolejność uruchamiania procesów 
-
-
-
-
-
-Centrala zaczyna odpytywać Twój serwer natychmiast jak tylko wyślesz jego URL.
-
-
-
-Uruchom serwer najpierw, upewnij się że działa, dopiero wtedy wysyłaj jego URL do Centrali
-
-
-
-Nie uruchamiaj serwera i nie wysyłaj URL w ramach tego samego procesu. Wysyłka URL do Centrali “zawiesza” proces do momentu kiedy Centrala nie przetestuje Twojego webhooka i odsyła w ramach tego samego requestu uzyskaną flagę, jeśli test się powiedzie. Najlepiej mieć dwa osobne skrypty - jeden do uruchamiania serwera, drugi do wysyłania URL. Można w tym celu użyć też dokumentacji Swagger (wysłać URL za jej pomocą)

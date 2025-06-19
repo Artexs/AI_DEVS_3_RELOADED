@@ -43,6 +43,11 @@ export class Logger {
         await this.appendToBothFiles(content);
     }
 
+    public async logJson(message: string, jsonObject: any): Promise<void> {
+        const formattedJson = JSON.stringify(jsonObject, null, 2);
+        await this.log(`${message}\n${formattedJson}`);
+    }
+
     public async error(message: string, error?: any): Promise<void> {
         const errorMessage = error ? `${message} --- ${error.message || error}` : message;
         const content = `\n🚨 ${errorMessage}\n`;
