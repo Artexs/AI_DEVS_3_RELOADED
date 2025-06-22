@@ -2,9 +2,9 @@ import { v4 as uuidv4 } from "uuid";
 import { IDoc } from "../types/types";
 import type { State } from "../types/agent";
 import type { ChatCompletionMessageParam } from "openai/resources/chat/completions";
-import { OpenAIService, MessageManager, Logger } from "../index";
+import { OpenAIService, MessageManager, Logger, LangfuseService } from "../index";
 import { answerPrompt } from "./prompts/answer";
-import { DownloaderTool, DescribeImageTool, ContactCentralaTool, FileOperationsTool } from "./tools/internal-index";
+import { DownloaderTool, DescribeImageTool, ContactCentralaTool, FileOperationsTool, WebSearchTool } from "./tools/internal-index";
 import { contextSelectionPrompt } from "./prompts/agent-service/context-selection";
 
 type ToolFunction = (params: Record<string, any>, conversation_uuid: string) => Promise<IDoc | IDoc[]>;
@@ -13,30 +13,35 @@ type ToolMap = Record<string, ToolFunction>;
 export class Agent {
   private state: State;
   private openaiService: OpenAIService;
+  private langfuseService: LangfuseService;
   private messageManager: MessageManager;
   private downloaderTool: DownloaderTool;
   private logger: Logger;
   private contactCentralaTool: ContactCentralaTool;
   private describeImageTool: DescribeImageTool;
   private fileOperationsTool: FileOperationsTool;
+  private webSearchTool: WebSearchTool;
 
   private readonly toolMap: ToolMap;
 
-  constructor(state: State, logger: Logger) {
+  constructor(state: State, logger: Logger, langfuseService: LangfuseService) {
     this.state = state;
     this.openaiService = new OpenAIService();
+    this.langfuseService = langfuseService;
     this.messageManager = new MessageManager();
     this.downloaderTool = new DownloaderTool(logger);
     this.logger = logger;
     this.contactCentralaTool = new ContactCentralaTool(logger);
     this.describeImageTool = new DescribeImageTool(logger);
     this.fileOperationsTool = new FileOperationsTool(logger);
+    this.webSearchTool = new WebSearchTool(langfuseService);
 
     this.toolMap = {
       download_files: (params, uuid) => this.downloaderTool.getDataFromCentrala(params.url, uuid),
       send_answer_to_centrala: (params, uuid) => this.contactCentralaTool.sendAnswer(params, uuid),
       describe_image: (params, uuid) => this.describeImageTool.describeImage(params, uuid),
-      file_operations: (params, uuid) => this.fileOperationsTool.fileOperations(params, uuid)
+      file_operations: (params, uuid) => this.fileOperationsTool.fileOperations(params, uuid),
+      web_search: (params, uuid) => this.webSearchTool.search(params.query, uuid)
     };
   }
 
@@ -99,7 +104,8 @@ If you have sufficient information to provide a final answer or need user input,
     };
 
     // this.logger.log(`wypisz prompta do planowania ------- ${systemMessage.content as string}`);
-    const result = await this.openaiService.processTextAsJson(
+    const result = await this.langfuseService.llmRequestAsJson(
+      'Plan',
       [systemMessage],
       '4o'
     );
@@ -133,7 +139,8 @@ Respond with ONLY a JSON object matching the tool's parameter structure provided
 ${this.state.tools.map(tool => `Example for ${tool.name}: ${tool.parameters}`).join('\n')}`,
     };
     // await this.logger.logJson(`DESCRIBE ---- system PROMPT --- `, systemMessage)
-    const result = await this.openaiService.processTextAsJson(
+    const result = await this.langfuseService.llmRequestAsJson(
+      `Describe - parameters for: ${tool}`,
       [systemMessage],
       '4o'
     );
@@ -161,7 +168,8 @@ ${this.state.tools.map(tool => `Example for ${tool.name}: ${tool.parameters}`).j
     const context = this.state.actions.flatMap((action) => action.results);
     const query = this.state.config.active_step?.query;
 
-    const answer = await this.openaiService.processText(
+    const answer = await this.langfuseService.llmRequest(
+      'Generate final answer',
       [
         {
           role: "system",
@@ -209,7 +217,8 @@ ${JSON.stringify(this.state.documents, null, 2)}
       role: "user",
       content: promptContent,
     } as ChatCompletionMessageParam;
-    const llmResponse = await this.openaiService.processTextAsJson(
+    const llmResponse = await this.langfuseService.llmRequestAsJson(
+      `Prepare context for: ${nextMove.tool}`,
       [systemMessage, userMessage],
       'mini'
     );

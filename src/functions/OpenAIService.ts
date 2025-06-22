@@ -2,7 +2,7 @@ import OpenAI from "openai";
 import type { ChatCompletion } from "openai/resources/chat/completions";
 import { MessageArray } from "../index";
 
-const MODELS = {
+export const MODELS = {
     'mini': "gpt-4o-mini",
     '4o': "gpt-4o",
     '41': "gpt-4.1",

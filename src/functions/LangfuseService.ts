@@ -1,13 +1,13 @@
 import { Langfuse, LangfuseTraceClient, LangfuseSpanClient, LangfuseGenerationClient } from 'langfuse';
 import type { LangfusePromptClient } from "langfuse-core";
-import { OpenAIService } from './OpenAIService';
-import { MessageManager } from './MessageManager';
+import { OpenAIService, MODELS } from '../index';
 import type { 
   Message, 
   MessageArray, 
   MessageRole
 } from "../index";
 import type { ChatCompletionMessageParam } from "openai/resources/chat/completions";
+import { v4 as uuidv4 } from 'uuid';
 
 export interface ProcessOptions {
   model?: 'mini' | '4o';
@@ -24,10 +24,8 @@ export class LangfuseService {
   private langfuse: Langfuse;
   private openai: OpenAIService;
   private trace!: LangfuseTraceClient;
-  private promptName: string;
 
-  constructor(promptName: string) {
-    this.promptName = promptName;
+  constructor() {
     this.langfuse = new Langfuse({
       secretKey: process.env.LANGFUSE_SECRET_KEY,
       publicKey: process.env.LANGFUSE_PUBLIC_KEY,
@@ -41,7 +39,7 @@ export class LangfuseService {
   }
 
   private async getPrompt(
-    name: string = this.promptName,
+    name: string,
     version?: number,
     options?: {
       label?: string;
@@ -56,7 +54,7 @@ export class LangfuseService {
   }
 
   async getCompiledPrompt(
-    name: string = this.promptName,
+    name: string,
     compilationValues?: Record<string, any>,
     version?: number
   ): Promise<string> {
@@ -88,53 +86,78 @@ export class LangfuseService {
   }
 
   async llmRequest(
-    messages: MessageArray,
-    model: 'mini' | '4o' = 'mini',
-    temperature?: number
+    langfuseSpanName: string,
+    messages: ChatCompletionMessageParam[],
+    model: keyof typeof MODELS = 'mini',
+    temperature?: number,
+    jsonMode: boolean = false,  // change to undefined when dealing with BIELIK
   ): Promise<string> {
-    let generation;
+    let span;
     try {
-      const prompt = await this.getPrompt(this.promptName);
-      
-      generation = this.trace.generation({
-        name: this.promptName,
-        input: messages,
-        prompt
+      // this.trace.generation
+      span = this.trace.span({
+        name: langfuseSpanName,
+        input: messages
       });
 
       const response = await this.openai.processText(
         messages,
         model,
-        temperature
+        temperature,
+        jsonMode
       );
 
-      messages.push({ role: 'assistant', content: response });
-
-      generation.update({
-        output: messages,
-        model,
+      // Create generation within span
+      const generation = span.generation({
+        name: langfuseSpanName,
+        model: MODELS[model],
+        modelParameters: {
+          temperature: temperature || 0.7,
+        },
+        input: messages,
+        output: response,
+        // usage: {
+        //   promptTokens: output.usage?.prompt_tokens,
+        //   completionTokens: output.usage?.completion_tokens,
+        //   totalTokens: output.usage?.total_tokens,
+        // },
       });
       generation.end();
+      span.end();
 
       return response;
     } catch (error) {
-      if (generation) {
-        generation.update({
+      if (span) {
+        span.update({
           output: { error: error instanceof Error ? error.message : String(error) },
-          model: 'unknown'
+          metadata: { model: 'unknown' }
         });
-        generation.end();
+        span.end();
       }
-      console.error(`Error processing prompt ${this.promptName}:`, error);
+      console.error(`Error processing prompt ${langfuseSpanName}:`, error);
       throw error;
     }
   }
 
-  public async generateTrace(): Promise<void> {
+  async llmRequestAsJson(
+    langfuseSpanName: string,
+    messages: ChatCompletionMessageParam[],
+    model: keyof typeof MODELS = 'mini',
+    temperature?: number
+  ): Promise<Record<string, any>> {
+    const response = await this.llmRequest(langfuseSpanName, messages, model, temperature, true);
+    const parsed = JSON.parse(response);
+    if (typeof parsed !== 'object' || parsed === null) {
+      throw new Error(`Response from LLM is not a valid JSON object --- object: ${response}`);
+    }
+    return parsed;
+  }
+
+  public async generateTrace(name: string, sessionId: string): Promise<void> {
     this.trace = this.langfuse.trace({
-      id: `${this.promptName}-${Date.now()}`,
-      name: this.promptName,
-      sessionId: `${this.promptName}-session`
+      id: `${Date.now()}-${uuidv4()}`,
+      name,
+      sessionId
     });
 
     this.langfuse.on("error", (error: Error) => {
@@ -146,10 +169,11 @@ export class LangfuseService {
     if (!this.trace) {
       throw new Error('No active trace found. Call generateTrace first.');
     }
-    
+    const userMessage = messages.find(m => m.role === 'user');
+    const assistantMessages = messages.filter(m => m.role === 'assistant');
     await this.trace.update({ 
-      input: messages,
-      output: { messages }
+      input: userMessage,
+      output: { assistantMessages }
     });
     await this.langfuse.flushAsync();
     await this.langfuse.shutdownAsync();

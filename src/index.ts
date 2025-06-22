@@ -2,7 +2,7 @@ export { Utils } from './functions/utils';
 export { ImageProcessor } from './functions/imageProcessor';
 export { TranscribeProcessor } from './functions/transcribeProcessor';
 export { FileReader } from './functions/readFiles';
-export { OpenAIService } from './functions/OpenAIService';
+export { OpenAIService, MODELS } from './functions/OpenAIService';
 export { LangfuseService } from './functions/LangfuseService';
 export { TextSplitter } from './functions/TextService';
 export { VectorService } from './functions/VectorService';

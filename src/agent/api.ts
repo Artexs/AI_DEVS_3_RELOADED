@@ -12,16 +12,22 @@ import {
     VectorService,
     MessageManager,
     Agent,
-    Logger
+    Logger,
+    LangfuseService
 } from '../index';
-import { LangfuseService } from '../functions/LangfuseService';
-import { downloadFilesInstruction, sendAnswerToCentralaInstruction, describeImageInstruction, fileOperationsInstruction } from './prompts/toolsInstructions/internal-index';
+import { 
+  downloadFilesInstruction, 
+  sendAnswerToCentralaInstruction, 
+  describeImageInstruction, 
+  fileOperationsInstruction, 
+  webInstruction 
+} from './prompts/toolsInstructions/internal-index';
 
 const state: State = {
     config: { max_steps: 10, current_step: 0, active_step: null },
     messages: [],
     tools: [
-    {
+      {
         uuid: uuidv4(),
         name: "download_files",
         description: "Use this tool to download file from provided url from c3ntrala",
@@ -64,6 +70,15 @@ const state: State = {
       },
       {
         uuid: uuidv4(),
+        name: "web_search",
+        description: "Use this to search the web for external information",
+        instruction: webInstruction,
+        parameters: JSON.stringify({
+          query: `Command to the web search tool, including the search query and all important details, keywords and urls from the avilable context`
+        }),
+      },
+      {
+        uuid: uuidv4(),
         name: "final_answer",
         description: "Use this tool to write a message to the user",
         instruction: "...",
@@ -76,7 +91,10 @@ const state: State = {
 
 export async function runAgent(messages: ChatCompletionMessageParam[], conversation_uuid: string) {
     const logger = new Logger('agent');
-    const agent = new Agent(state, logger);
+    const langfuse = new LangfuseService();
+    const agent = new Agent(state, logger, langfuse);
+    const currentDate = new Date().toISOString().split('T')[0];
+    await langfuse.generateTrace(`agent---${currentDate}`, conversation_uuid);
 
     state.messages =
       messages.length === 1 ? [...state.messages, ...messages.filter((m: ChatCompletionMessageParam) => m.role !== "system")] : messages.filter((m: ChatCompletionMessageParam) => m.role !== "system");
@@ -105,13 +123,15 @@ export async function runAgent(messages: ChatCompletionMessageParam[], conversat
     const answer = await agent.generateAnswer();
     state.messages = [...state.messages, answer as unknown as ChatCompletionMessageParam];  //////// TODO: change it, unify to the same property type
     await logger.log(`ODPOWIEDZ +++ ${answer}`)
+    await langfuse.finalizeTrace(state.messages);
     return answer;
 }
 
 const messageManager = new MessageManager();
 messageManager.addMessage('user', 
-    `poszukaj pliku tekstowego z nazwą brzmiącą podobnie do extrcted_t3xt. Powinien znajdować się gdzieś w folderze data/agent. użyj zawartości tego pliku jako kontekst przy następnym zapytaniu do obróbki obrazu.
-    co się znajduje na obrazku z pliku ..../data/S04/E05/page19.png. Zwróć mi pełny i dokładny tekst, który się tam znajduje.`);
+  'wczytaj plik /data/agent/notatki_rafala.txt oraz pytania z centrali z: *   Listę pytań (JSON): https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/notes.json');
+    // `wczytaj plik /data/agent/extracted_text.txt. użyj zawartości tego pliku jako kontekst przy odczytywaniu tekstu z następującego obrazu.
+    // ..../data/S04/E05/page19.png. Zwróć mi pełny i dokładny tekst, który się tam znajduje.`);
 // messageManager.addMessage('user',
 // `
 // Twoim zadaniem jest rozwiązanie poniższego zadania. Gdy już posiadasz odpowiedź, wyślij ją do centrali. Poniżej masz instrukcję / wskazówki które mogą się przydać podczas rozwiązywania zadania. użyj 'send_answer_to_centrala' tool żeby wysłać wiadomość do centrali z przygotowanymi danymi. Zwróć uwagę, że to narzędzie wymaga podania nazwy taska, oraz nazwy parametru wraz z odpowiedzią 'answer: ......", zwróć uwagę, aby podać poprawny url do tego narzędzia.
