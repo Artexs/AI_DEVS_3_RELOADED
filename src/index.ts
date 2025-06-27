@@ -1,4 +1,4 @@
-export { Utils } from './functions/utils';
+export { Centrala, Centrala as Utils } from './functions/CentralaService';
 export { ImageProcessor } from './functions/imageProcessor';
 export { TranscribeProcessor } from './functions/transcribeProcessor';
 export { FileReader } from './functions/readFiles';

@@ -6,7 +6,7 @@
     "scripts": {
         "build": "tsc",
         "api": "bun src/agent/api.ts",
-        "start": "bun src/agent/logic.ts"
+        "start": "bun src/agent/test.ts"
     },
     "dependencies": {
         "@langchain/openai": "^0.0.14",
