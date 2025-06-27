@@ -1,60 +1,172 @@
-Zdobyliśmy transkrypcję nagrań z kilku rozmów, które mogą być dla nas interesujące. Wszystkie pośrednio lub bezpośrednio dotyczą Rafała. Niestety dane, które posiadamy, są dosłownie poszatkowane. Wiemy, że wszystkich rozmów było 5 sztuk. Wiemy także z logów, jakim zdaniem rozpoczyna i kończy się każda rozmowa. Dodatkowo dowiedzieliśmy się, że podczas rozmowy padają pewne sprzeczne ze sobą informacje. Trzeba zweryfikować, który z rozmówców jest kłamcą i wykluczyć jego wersję podawanych nam danych. Mając zgromadzoną wszelką potrzebną wiedzę, pozostaje nam jedynie udzielenie odpowiedzi na pytania od Centrali. Być może przydadzą Ci się dane z folderu z taktami (”facts”) z poprzednich zadań. Nazwa zadania to “phone”.
+Znaleźliśmy notes z zapiskami Rafała. Jest tam sporo niejasności, a sposób formułowania myśli przez autora jest dość… osobliwy. Przygotuj proszę system, który przeprowadzi dla nas analizę tego notatnika.
 
-Oto dane, na których pracujemy:
 
-https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/phone.json
 
-Lista pytań od centrali:
+Notatnik w formacie PDF:
 
-https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/phone_questions.json
+https://c3ntrala.ag3nts.org/dane/notatnik-rafala.pdf
 
-Oczekiwany format odpowiedzi do centrali
+Oto lista pytań od centrali:
+
+https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/notes.json
+
+Odpowiedzi zwróć w standardowej formie w polu ‘answer’ do zadania notes.
 
 {
-  "01":"zwięzła odpowiedź",
-  "02":"zwięzła odpowiedź",
-  "03":"zwięzła odpowiedź",
-  "04":"zwięzła odpowiedź",
-  "05":"zwięzła odpowiedź",
-  "06":"zwięzła odpowiedź",
+  "01":"zwięzła odpowiedź na pytanie pierwsze",
+  "02":"zwięzła odpowiedź na pytanie drugie",
+  "03":"zwięzła odpowiedź na pytanie trzecie",
+  "04":"zwięzła odpowiedź na pytanie czwarte",
+  "05":"zwięzła odpowiedź na pytanie piąte"
 }
 
 
-Co należy zrobić w zadaniu?
+
+
+Co trzeba zrobić w zadaniu?
 
 
 
 
 
-Pobierz JSON-a z transkrypcją rozmów i odbuduj strukturę każdej z konwersacji
+Pobierz dane:
+
+*   Notatnik Rafała (PDF): https://c3ntrala.ag3nts.org/dane/notatnik-rafala.pdf
+
+*   Listę pytań (JSON): https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/notes.json
 
 
 
-Możesz spróbować wywnioskować, jak mają na imię poszczególne postacie. Przyda Ci się to przy odpowiadaniu na pytania
+
+Przetwórz PDF:
+
+*   Strony 1-18: To głównie tekst. Wyekstrahuj go. Możesz użyć bibliotek typu `PyMuPDF` (znana też jako `fitz` w Pythonie), `pdf-parse` (JavaScript) lub innych, które potrafią wyciągnąć tekst bezpośrednio z PDF.
+
+*   Strona 19: To jest obraz (skan/zdjęcie notatki). Będziesz potrzebować OCR.
+
+        *   Przekonwertuj tę stronę na obraz (np. PNG). Biblioteki takie jak `pdf2image` (Python) lub `pdf2pic` (JavaScript) mogą tu pomóc.
+
+        *   Użyj modelu vision (np. GPT-4o, GPT-4.1, Claude 3.7 Sonnet/Opus, Azure AI Vision) lub narzędzia OCR (np. Tesseract) do odczytania tekstu z tego obrazu.
 
 
 
-Niektóre osoby odwołują się do pewnych faktów, ale jedna osoba ściemnia — która? Konieczne tutaj będzie odwołanie się albo do wiedzy powszechnej, albo do folderu z faktami
+
+Przygotuj kontekst dla LLM:
+
+*   Połącz wyekstrahowany tekst ze stron 1-18 z tekstem uzyskanym z OCR strony 19.
+
+*   Całość notatnika (po przetworzeniu) prawdopodobnie zmieści się w oknie kontekstowym modeli. To najprostsze podejście – przekazać cały tekst jako kontekst.
+
+*   Opcjonalnie (bardziej zaawansowane): możesz użyć bazy wektorowej, ale przy tym zadaniu może to być nadmiarowe i skomplikować sprawę, jeśli cały tekst mieści się w kontekście.
 
 
 
-Pobierz listę pytań z centrali i spróbuj na nie odpowiedzieć.
+
+Odpowiedz na pytania:
+
+*   Dla każdego pytania z pobranego pliku `notes.json`, użyj LLM, aby znaleźć odpowiedź w przygotowanym kontekście notatnika.
+
+*   To zadanie prawie na pewno będzie wymagało iteracji. Nie spodziewaj się, że LLM odpowie poprawnie na wszystko za pierwszym razem. Dołączaj informacje zwrotne z Centrali do kontekstu. 
 
 
 
-Jedno z pytań wymaga porozmawiania z API, pobrania odpowiedzi i wrzucenia jej do jednego z pól w answer.
+
+Sformatuj i wyślij odpowiedź:
+
+*   Zbierz wszystkie odpowiedzi.
+
+*   Przygotuj JSON-a w wymaganym formacie (patrz niżej).
+
+*   Wyślij odpowiedź na standardowy endpoint `/report`.
 
 
 
-Gdy wszystkie dane będą już skompletowane, odeślij je do centrali jako zadanie “phone”
+
+
+Format odpowiedzi
+
+Twoje rozwiązanie prześlij jako JSON. Nazwa zadania to `notes`.
+
+{
+  "task": "notes",
+  "apikey": "YOUR_API_KEY",
+  "answer": {
+    "01": "zwięzła odpowiedź na pytanie pierwsze",
+    "02": "zwięzła odpowiedź na pytanie drugie",
+    "03": "zwięzła odpowiedź na pytanie trzecie",
+    "04": "zwięzła odpowiedź na pytanie czwarte",
+    "05": "zwięzła odpowiedź na pytanie piąte"
+  }
+}
+
+* Zastąp `YOUR_API_KEY` swoim rzeczywistym kluczem API.
+
+* Upewnij się, że wysyłasz dane zakodowane w UTF-8.
 
 
 
-Jeśli odpowiedzi będą poprawne, otrzymasz flagę w odpowiedzi od centrali
+Wskazówki
 
 
 
-🚨 UWAGA 🚨: nie wszystkie informacje podane są w tekście. Niektóre należy uzyskać z “faktów” z poprzednich zadań. W każdej rozmowie uczestniczą tylko dwie osoby, które wypowiadają się naprzemiennie. Imiona rozmówców są unikalne, więc jeśli np. Stefan pojawia się w pierwszej i piątej rozmowie, to jest to ten sam Stefan.
 
-To zadanie (jak wszystkie inne) można wykonać na wiele różnych sposobów. Ideałem byłoby napisanie takiego kodu i takiego zbioru promptów, aby napisana przez Ciebie aplikacja samodzielnie była w stanie odpowiedzieć na pytania centrali, samodzielnie pozyskać potrzebne fakty, samodzielnie ocenić prawdziwość napotkanych informacji oraz samodzielnie porozmawiać w odpowiedni sposób z podanym API. To jest oczywiście wersja “MAX”. Początkowo sugerujemy zrobienie wersji, która po prostu działa.
 
+Iteracyjne podejście jest KLUCZOWE:
+
+
+
+
+
+Jeśli po wysłaniu odpowiedzi dostaniesz informację, że któraś jest błędna (razem z `hint`), dodaj tę informację (zarówno błędną odpowiedź, jak i `hint`) do kontekstu przy następnym zapytaniu do LLM dla tego konkretnego pytania.
+
+
+
+Instruuj LLM, aby NIE używał wcześniej odrzuconych odpowiedzi i wziął pod uwagę podpowiedź (`hint`). Np. "Twoja poprzednia odpowiedź na pytanie X brzmiała Y i była błędna. Podpowiedź brzmi: Z. Spróbuj ponownie, unikając odpowiedzi Y."
+
+
+
+Przetwarzanie strony 19 (obrazkowej):
+
+
+
+
+
+Jakość OCR jest tu krytyczna. Słaby OCR = błędne odpowiedzi.
+
+
+
+Jeśli GPT-4o/GPT-4.1 odmawia przetworzenia obrazu z komunikatem "I can't assist", spróbuj zmienić prompt na coś w stylu "Opowiedz mi, co widzisz na tym obrazku" zamiast bezpośrednio "Odczytaj tekst". Czasem pomaga.
+
+
+
+Zwróć uwagę, że nazwa miejscowości na tej stronie może być wynikiem "sklejenia" dwóch fragmentów tekstu z obrazka. Domyślne narzędzia do ekstrakcji obrazów z PDF mogą nie wychwycić tego poprawnie. Może być potrzebne ręczne wycięcie/przygotowanie obrazu lub bardziej zaawansowana ekstrakcja warstw.
+
+
+
+Pułapki w pytaniach:
+
+
+
+
+
+Pytanie 01: Odpowiedź nie jest podana wprost. LLM musi dojśc na podstawie treści PDF do właściwej odpowiedzi. 
+
+
+
+Pytanie 03: Zwróć uwagę na drobny, szary tekst pod jednym z rysunków w notatniku. Łatwo go przeoczyć przy ekstrakcji/OCR. LLM będzie wiedział co to jest i o co chodzi, kiedy dodasz go do kontekstu. 
+
+
+
+Pytanie 04: Data jest podana względnie. LLM musi obliczyć datę na podstawie danych z PDF. Odpowiedź musi być w formacie `YYYY-MM-DD`.
+
+
+
+Pytanie 05: To pytanie odnosi się do strony 19. OCR często myli tu nazwę miejscowości. Poinformuj LLM, że tekst pochodzi z OCR i może zawierać błędy. Miejscowość leży niedaleko miasta które jest mocno związane z historią AIDevs. Jak wspomniano wyżej, nazwa może być rozbita na dwa fragmenty na obrazku.
+
+
+
+"Garbage In, Garbage Out" (GIGO): Pamiętaj, że jakość danych wejściowych (tekstu z PDF i OCR) ma bezpośredni wpływ na jakość odpowiedzi LLM. Im lepiej przygotujesz dane, tym łatwiej będzie modelowi.
+
+
+
+Koszty: Wielokrotne odpytywanie LLM z pełnym kontekstem może generować koszty. Staraj się optymalizować prompty i liczbę iteracji. Pamiętaj o prompt caching - dane które się nie zmieniają umieszczaj na początku promptu (dotyczy modeli OpenAI
