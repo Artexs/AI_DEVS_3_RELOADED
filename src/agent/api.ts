@@ -20,7 +20,8 @@ import {
   sendAnswerToCentralaInstruction, 
   describeImageInstruction, 
   fileOperationsInstruction, 
-  webInstruction 
+  webInstruction,
+  generateAnswerForQuestionInstruction
 } from './prompts/toolsInstructions/internal-index';
 
 const state: State = {
@@ -79,6 +80,16 @@ const state: State = {
       },
       {
         uuid: uuidv4(),
+        name: "generate_answer_for_question",
+        description: "Use this tool to generate answers for questions from centrala based on context from notatki_rafala.txt",
+        instruction: generateAnswerForQuestionInstruction,
+        parameters: JSON.stringify({
+          questionsfromcentrala: "Questions data from centrala",
+          lastresponsefromcentrala: "Optional: Previous response from centrala if available"
+        }),
+      },
+      {
+        uuid: uuidv4(),
         name: "final_answer",
         description: "Use this tool to write a message to the user",
         instruction: "...",
@@ -127,9 +138,18 @@ export async function runAgent(messages: ChatCompletionMessageParam[], conversat
     return answer;
 }
 
+const prompt = `
+your job is to get questions from centrala ( https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/notes.json)
+then using file_operation tool to load /data/agent/notatki_rafala.txt. this is important, because you will answer questions mostly based on this context - notatki_rafala. remember to pass it to each query that will generate response for questions. 
+then your main loop will be to generate answer for question (use tool generate_answer_for_question) then send it to centrala. wait for answer and loop it until you get response from centrala with positive answer (there should be something like {{FLG:....}} in response), otherwise repeat generating new answer, and contacting with centrala after each answer.
+
+use tool final_answer when you get positive answer from centrala (described above), then return answer from centrala.
+`;
+
+
 const messageManager = new MessageManager();
-messageManager.addMessage('user', 
-  'wczytaj plik /data/agent/notatki_rafala.txt oraz pytania z centrali z: *   Listę pytań (JSON): https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/notes.json');
+messageManager.addMessage('user', prompt);
+  // 'wczytaj plik /data/agent/notatki_rafala.txt oraz pytania z centrali z: *   Listę pytań (JSON): https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/notes.json');
     // `wczytaj plik /data/agent/extracted_text.txt. użyj zawartości tego pliku jako kontekst przy odczytywaniu tekstu z następującego obrazu.
     // ..../data/S04/E05/page19.png. Zwróć mi pełny i dokładny tekst, który się tam znajduje.`);
 // messageManager.addMessage('user',

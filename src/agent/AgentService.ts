@@ -4,7 +4,7 @@ import type { State } from "../types/agent";
 import type { ChatCompletionMessageParam } from "openai/resources/chat/completions";
 import { OpenAIService, MessageManager, Logger, LangfuseService } from "../index";
 import { answerPrompt } from "./prompts/answer";
-import { DownloaderTool, DescribeImageTool, ContactCentralaTool, FileOperationsTool, WebSearchTool } from "./tools/internal-index";
+import { DownloaderTool, DescribeImageTool, ContactCentralaTool, FileOperationsTool, WebSearchTool, GenerateAnswerForQuestionTool } from "./tools/internal-index";
 import { contextSelectionPrompt } from "./prompts/agent-service/context-selection";
 
 type ToolFunction = (params: Record<string, any>, conversation_uuid: string) => Promise<IDoc | IDoc[]>;
@@ -21,6 +21,7 @@ export class Agent {
   private describeImageTool: DescribeImageTool;
   private fileOperationsTool: FileOperationsTool;
   private webSearchTool: WebSearchTool;
+  private generateAnswerForQuestionTool: GenerateAnswerForQuestionTool;
 
   private readonly toolMap: ToolMap;
 
@@ -35,13 +36,15 @@ export class Agent {
     this.describeImageTool = new DescribeImageTool(logger);
     this.fileOperationsTool = new FileOperationsTool(logger);
     this.webSearchTool = new WebSearchTool(langfuseService);
+    this.generateAnswerForQuestionTool = new GenerateAnswerForQuestionTool(logger, langfuseService);
 
     this.toolMap = {
       download_files: (params, uuid) => this.downloaderTool.getDataFromCentrala(params.url, uuid),
       send_answer_to_centrala: (params, uuid) => this.contactCentralaTool.sendAnswer(params, uuid),
       describe_image: (params, uuid) => this.describeImageTool.describeImage(params, uuid),
       file_operations: (params, uuid) => this.fileOperationsTool.fileOperations(params, uuid),
-      web_search: (params, uuid) => this.webSearchTool.search(params.query, uuid)
+      web_search: (params, uuid) => this.webSearchTool.search(params.query, uuid),
+      generate_answer_for_question: (params, uuid) => this.generateAnswerForQuestionTool.generateAnswerForQuestion(params, uuid)
     };
   }
 
