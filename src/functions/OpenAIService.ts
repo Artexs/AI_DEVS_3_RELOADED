@@ -34,7 +34,7 @@ export class OpenAIService {
             ...(temperature !== undefined && { temperature }),
             ...(jsonMode !== undefined && { response_format: { type: jsonMode ? "json_object" : "text" } })
         });
-        console.log("response", response)
+        // console.log("response", response)
         const content = response.choices[0].message.content;
         if (!content) {
             throw new Error('No response content received from LLM');

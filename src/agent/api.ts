@@ -49,45 +49,72 @@ const state: State = {
             url: 'verify'
         })
       },
+      // {
+      //   uuid: uuidv4(),
+      //   name: "describe_image",
+      //   description: "Use this tool to analyze images and extract text or provide descriptions when text extraction is not possible",
+      //   instruction: describeImageInstruction,
+      //   parameters: JSON.stringify({
+      //       filePath: "path to the image", 
+      //       context: "any information that can help with detecting text on image, that can make context or suggest key points"
+      //   })
+      // },
+      // {
+      //   uuid: uuidv4(),
+      //   name: "file_operations",
+      //   description: "Use this tool to list directories/files or read file contents from the file system",
+      //   instruction: fileOperationsInstruction,
+      //   parameters: JSON.stringify({
+      //       operation: "list or read",
+      //       path: "relative path from project root"
+      //   })
+      // },
+      // {
+      //   uuid: uuidv4(),
+      //   name: "web_search",
+      //   description: "Use this to search the web for external information",
+      //   instruction: webInstruction,
+      //   parameters: JSON.stringify({
+      //     query: `Command to the web search tool, including the search query and all important details, keywords and urls from the avilable context`
+      //   }),
+      // },
+      // {
+      //   uuid: uuidv4(),
+      //   name: "generate_answer_for_question",
+      //   description: "Use this tool to generate answers for questions from centrala based on context from notatki_rafala.txt",
+      //   instruction: generateAnswerForQuestionInstruction,
+      //   parameters: JSON.stringify({
+      //     questionsfromcentrala: "Questions data from centrala",
+      //     lastresponsefromcentrala: "Optional: Previous response from centrala if available"
+      //   }),
+      // },
       {
         uuid: uuidv4(),
-        name: "describe_image",
-        description: "Use this tool to analyze images and extract text or provide descriptions when text extraction is not possible",
-        instruction: describeImageInstruction,
+        name: "getCoordinates",
+        description: "Use this to find people in provided city and get coordinates of them, then send it to centrala",
+        instruction: 'provide single string with city name from which it will extract people, then associated coordinatees, and send answer to centrala',
         parameters: JSON.stringify({
-            filePath: "path to the image", 
-            context: "any information that can help with detecting text on image, that can make context or suggest key points"
-        })
-      },
-      {
-        uuid: uuidv4(),
-        name: "file_operations",
-        description: "Use this tool to list directories/files or read file contents from the file system",
-        instruction: fileOperationsInstruction,
-        parameters: JSON.stringify({
-            operation: "list or read",
-            path: "relative path from project root"
-        })
-      },
-      {
-        uuid: uuidv4(),
-        name: "web_search",
-        description: "Use this to search the web for external information",
-        instruction: webInstruction,
-        parameters: JSON.stringify({
-          query: `Command to the web search tool, including the search query and all important details, keywords and urls from the avilable context`
+          cityName: `City / place name`
         }),
       },
-      {
-        uuid: uuidv4(),
-        name: "generate_answer_for_question",
-        description: "Use this tool to generate answers for questions from centrala based on context from notatki_rafala.txt",
-        instruction: generateAnswerForQuestionInstruction,
-        parameters: JSON.stringify({
-          questionsfromcentrala: "Questions data from centrala",
-          lastresponsefromcentrala: "Optional: Previous response from centrala if available"
-        }),
-      },
+      // {
+      //   uuid: uuidv4(),
+      //   name: "gps",
+      //   description: "Use this to get gps coordinates based on userID",
+      //   instruction: 'provide array of userIDs to get gps coordinates of them all',
+      //   parameters: JSON.stringify({
+      //     userID: ["98", "54", "63", "54"]
+      //   }),
+      // },
+      // {
+      //   uuid: uuidv4(),
+      //   name: "database_id",
+      //   description: "Use this tool to get userID associated with their names",
+      //   instruction: "provide array of usernames, so this tool will return array of associated userIDs",
+      //   parameters: JSON.stringify({
+      //     users: ["USER1", "USER2", "USER3"]
+      //   }),
+      // },
       {
         uuid: uuidv4(),
         name: "final_answer",
@@ -138,14 +165,14 @@ export async function runAgent(messages: ChatCompletionMessageParam[], conversat
     return answer;
 }
 
-const prompt = `
-your job is to get questions from centrala ( https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/notes.json)
-then using file_operation tool to load /data/agent/notatki_rafala.txt. this is important, because you will answer questions mostly based on this context - notatki_rafala. remember to pass it to each query that will generate response for questions. 
-then your main loop will be to generate answer for question (use tool generate_answer_for_question) then send it to centrala. wait for answer and loop it until you get response from centrala with positive answer (there should be something like {{FLG:....}} in response), otherwise repeat generating new answer, and contacting with centrala after each answer.
+// const prompt = `
+// your job is to get questions from centrala ( https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/notes.json)
+// then using file_operation tool to load /data/agent/notatki_rafala.txt. this is important, because you will answer questions mostly based on this context - notatki_rafala. remember to pass it to each query that will generate response for questions. 
+// then your main loop will be to generate answer for question (use tool generate_answer_for_question) then send it to centrala. wait for answer and loop it until you get response from centrala with positive answer (there should be something like {{FLG:....}} in response), otherwise repeat generating new answer, and contacting with centrala after each answer.
 
-use tool final_answer when you get positive answer from centrala (described above), then return answer from centrala.
-`;
-
+// use tool final_answer when you get positive answer from centrala (described above), then return answer from centrala.
+// `;
+const prompt = 'pobierz i zapisz plik https://c3ntrala.ag3nts.org/data/TUTAJ-KLUCZ/gps_question.json, na podstawie pytania w nim zawartego uruchom narzędzie getCoordinates. Gdy zadanie zostanie zakończone, a centrala odpowie poprawną odpowiedzią, zakończ działanie agenta używając final_answer. in final answer there should be response from Centrala (getCoordinates task)';
 
 const messageManager = new MessageManager();
 messageManager.addMessage('user', prompt);

@@ -4,7 +4,15 @@ import type { State } from "../types/agent";
 import type { ChatCompletionMessageParam } from "openai/resources/chat/completions";
 import { OpenAIService, MessageManager, Logger, LangfuseService } from "../index";
 import { answerPrompt } from "./prompts/answer";
-import { DownloaderTool, DescribeImageTool, ContactCentralaTool, FileOperationsTool, WebSearchTool, GenerateAnswerForQuestionTool } from "./tools/internal-index";
+import { 
+  DownloaderTool, 
+  DescribeImageTool, 
+  ContactCentralaTool, 
+  FileOperationsTool, 
+  WebSearchTool, 
+  GenerateAnswerForQuestionTool, 
+  GpsTool 
+} from "./tools/internal-index";
 import { contextSelectionPrompt } from "./prompts/agent-service/context-selection";
 
 type ToolFunction = (params: Record<string, any>, conversation_uuid: string) => Promise<IDoc | IDoc[]>;
@@ -22,6 +30,7 @@ export class Agent {
   private fileOperationsTool: FileOperationsTool;
   private webSearchTool: WebSearchTool;
   private generateAnswerForQuestionTool: GenerateAnswerForQuestionTool;
+  private gpsTool: GpsTool;
 
   private readonly toolMap: ToolMap;
 
@@ -37,6 +46,7 @@ export class Agent {
     this.fileOperationsTool = new FileOperationsTool(logger);
     this.webSearchTool = new WebSearchTool(langfuseService);
     this.generateAnswerForQuestionTool = new GenerateAnswerForQuestionTool(logger, langfuseService);
+    this.gpsTool = new GpsTool(logger);
 
     this.toolMap = {
       download_files: (params, uuid) => this.downloaderTool.getDataFromCentrala(params.url, uuid),
@@ -44,7 +54,11 @@ export class Agent {
       describe_image: (params, uuid) => this.describeImageTool.describeImage(params, uuid),
       file_operations: (params, uuid) => this.fileOperationsTool.fileOperations(params, uuid),
       web_search: (params, uuid) => this.webSearchTool.search(params.query, uuid),
-      generate_answer_for_question: (params, uuid) => this.generateAnswerForQuestionTool.generateAnswerForQuestion(params, uuid)
+      generate_answer_for_question: (params, uuid) => this.generateAnswerForQuestionTool.generateAnswerForQuestion(params, uuid),
+      getCoordinates: (params, uuid) => this.gpsTool.main(params.cityName, uuid)
+      // people: (params, uuid) => this.gpsTool.people(params, uuid),
+      // gps: (params, uuid) => this.gpsTool.gps(params, uuid),
+      // database_id: (params, uuid) => this.gpsTool.databaseId(params, uuid)
     };
   }
 

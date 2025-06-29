@@ -138,7 +138,7 @@ export class Centrala {
     }
 
     private async makeRequest(url: string, data?: object): Promise<string> {
-        // console.log(`TEST TEST TEST 123 ${url}, ${JSON.stringify(data)} `)
+        console.log(`TEST TEST TEST 123 ${url}, ${JSON.stringify(data)} `)
         const response = await fetch(url, {
             method: data ? 'POST' : 'GET',
             headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
@@ -157,7 +157,7 @@ export class Centrala {
         return text ? JSON.parse(text) : null;
     }
 
-    async sendToCentrala(task: string, answer: string): Promise<string> {
+    async sendToCentrala(task: string, answer: string | object): Promise<string> {
         return this.sendToCentralaGlobal(task, {answer}, 'verify');
     }
 
