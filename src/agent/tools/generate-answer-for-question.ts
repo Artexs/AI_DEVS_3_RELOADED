@@ -4,6 +4,7 @@ import { document } from '../metadata';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import { loadAnswers, updateAnswers, type AnswersFile } from './contact-centrala';
+import { systemPromptNotatkiRafala } from '../../../data/S04/E05/prompts/systemPromptNotatkiRafala';
 
 export class GenerateAnswerForQuestionTool {
     private readonly utils: Utils;
@@ -20,22 +21,16 @@ export class GenerateAnswerForQuestionTool {
 
     private async LlmRequest(
         context: string, 
-        responseFromCentrala: string | undefined, 
+        responseFromCentrala: string, 
         question: string,
         questionNumber: number
     ): Promise<{ _thinking: string; answer: string }> {
         // Prepare system prompt with context and last response from centrala
-        let systemPrompt = context;
-        if (responseFromCentrala) {
-            systemPrompt += `
-            ----------
-            Last response from centrala: 
-            ${responseFromCentrala}
-            `;
-        }
+        let systemPrompt = systemPromptNotatkiRafala(context, responseFromCentrala);
 
         // Prepare user prompt with the question
         const userPrompt = `Question ${questionNumber}: ${question}`;
+        await this.logger.log(`GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call`);
 
         // Call LLM through LangfuseService
         const llmResponse = await this.langfuseService.llmRequestAsJson(
@@ -44,7 +39,8 @@ export class GenerateAnswerForQuestionTool {
                 { role: 'system', content: systemPrompt },
                 { role: 'user', content: userPrompt }
             ],
-            '4o'
+            '41',
+            0.2
         );
 
         await this.logger.log(`GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: ${JSON.stringify(llmResponse)}`);
@@ -78,6 +74,7 @@ export class GenerateAnswerForQuestionTool {
         const answersData: AnswersFile = await loadAnswers();
         await this.logger.log(`GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: ${JSON.stringify(answersData)}`);
 
+        const responsefromcentrala = answersData.centralaResponse;
         // Get current question number
         const currentQuestionNumber = answersData.questionNumber;
         await this.logger.log(`GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: ${currentQuestionNumber}`);
@@ -117,7 +114,7 @@ export class GenerateAnswerForQuestionTool {
         // Generate answer using LLM
         const llmResponse = await this.LlmRequest(
             contextContent,
-            lastresponsefromcentrala,
+            responsefromcentrala,
             currentQuestion,
             currentQuestionNumber
         );

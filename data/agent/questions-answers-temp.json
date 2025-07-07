@@ -1,10 +1,11 @@
 {
-  "questionNumber": 1,
+  "questionNumber": 5,
   "answers": {
-    "01": "placeholder",
-    "02": "placeholder",
-    "03": "placeholder",
-    "04": "placeholder",
-    "05": "placeholder"
-  }
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "Jaskinia",
+    "04": "2024-11-12",
+    "05": "Po spotkaniu z Andrzejem Rafał chce dostać się do Lubawy koło Grudziądza."
+  },
+  "centralaResponse": "Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"
 }

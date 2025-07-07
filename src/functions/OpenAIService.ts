@@ -4,6 +4,7 @@ import { MessageArray } from "../index";
 
 export const MODELS = {
     'mini': "gpt-4o-mini",
+    // 'o3': "o3",
     '4o': "gpt-4o",
     '41': "gpt-4.1",
     // 'bielik': "bielik-11b-v2.3-instruct",

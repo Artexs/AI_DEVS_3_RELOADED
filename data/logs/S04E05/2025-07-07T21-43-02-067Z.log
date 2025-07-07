@@ -1,0 +1,37 @@
+Log file created at 2025-07-07T21:43:02.069Z
+--------------------------------------------
+[2025-07-07T21:43:02.072Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do roku, który zaczyna się na '20', ale dokładna data nie jest podana w notatkach.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":""}
+
+[2025-07-07T21:43:02.072Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T21:43:02.072Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T21:43:02.072Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T21:43:02.072Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T21:43:07.059Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment, w którym wspomina, że nie może uwierzyć, że jest w '20... roku'. To sugeruje, że Rafał przeniósł się do jakiegoś roku w XXI wieku, ale dokładna data nie jest podana. Jednakże, w innym miejscu notatek Rafał wspomina o dronach nad miastem po 2024 roku, co może sugerować, że przeniósł się do okresu po tej dacie. Dodatkowo, Rafał wspomina o wydarzeniach związanych z GPT-2 i GPT-3, które miały miejsce w latach 2019-2020, co może sugerować, że przeniósł się do okresu po 2020 roku. Ostatecznie, Rafał wspomina o 11 listopada 2024 roku jako o ważnej dacie, co może sugerować, że przeniósł się do roku 2024.","answer":"Rafał przeniósł się do roku 2024."}
+
+[2025-07-07T21:43:07.059Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T21:43:07.060Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2024.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T21:43:07.173Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 01 is incorrect",
+  "hint": "uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń",
+  "debug": "You sent: Rafał przeniósł się do roku 2024."
+}

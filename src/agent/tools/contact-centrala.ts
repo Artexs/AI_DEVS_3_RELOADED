@@ -13,6 +13,7 @@ export type AnswersFile = {
     "04": string;
     "05": string;
   };
+  centralaResponse: string;
 };
 
 const defaultAnswers: AnswersFile = {
@@ -24,6 +25,7 @@ const defaultAnswers: AnswersFile = {
     "04": 'placeholder',
     "05": 'placeholder',
   },
+  centralaResponse: '',
 };
 
 const ANSWERS_FILE_PATH = path.join(process.cwd(), 'data', 'agent', 'questions-answers-temp.json');
@@ -66,7 +68,7 @@ export class ContactCentralaTool {
                 ? url.split('/').pop() 
                 : url;
         const centralaAnswerJSON = await this.utils.sendToCentralaGlobal(task, { [paramName]: response }, urlSuffix);
-        const centralaAnswer = JSON.stringify(centralaAnswerJSON);
+        const centralaAnswer = JSON.stringify(centralaAnswerJSON, null, 2);
         await this.logger.logJson('response from contact centrala processing...', centralaAnswerJSON)
 
         const respose = document(centralaAnswer, 'gpt-4o', {

@@ -1,0 +1,37 @@
+Log file created at 2025-07-07T21:00:02.439Z
+--------------------------------------------
+[2025-07-07T21:00:02.444Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do roku po 2024.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":""}
+
+[2025-07-07T21:00:02.444Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T21:00:02.444Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T21:00:02.445Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T21:00:02.445Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T21:00:11.759Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment, w którym Rafał wspomina, że nie może uwierzyć, że jest w 20... roku. To sugeruje, że przeniósł się do roku, którego pełna nazwa nie jest podana, ale z kontekstu wynika, że jest to rok z XXI wieku. Dodatkowo, w innym fragmencie Rafał wspomina o dronach nad miastem po 2024 roku, co może sugerować, że przeniósł się do okresu po tej dacie. Jednakże, nie ma dokładnej informacji o konkretnym roku, do którego się przeniósł.","answer":"Rafał przeniósł się do roku z XXI wieku, prawdopodobnie po 2024 roku, ale dokładny rok nie jest podany w notatkach."}
+
+[2025-07-07T21:00:11.759Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T21:00:11.760Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku z XXI wieku, prawdopodobnie po 2024 roku, ale dokładny rok nie jest podany w notatkach.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T21:00:11.861Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 01 is incorrect",
+  "hint": "uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń",
+  "debug": "You sent: Rafał przeniósł się do roku z XXI wieku, prawdopodobnie po 2024 roku, ale dokładny rok nie jest podany w notatkach."
+}

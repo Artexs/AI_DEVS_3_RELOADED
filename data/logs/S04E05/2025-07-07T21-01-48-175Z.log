@@ -1,0 +1,37 @@
+Log file created at 2025-07-07T21:01:48.178Z
+--------------------------------------------
+[2025-07-07T21:01:48.183Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do roku z XXI wieku, prawdopodobnie po 2024 roku, ale dokładny rok nie jest podany w notatkach.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":""}
+
+[2025-07-07T21:01:48.183Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T21:01:48.183Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T21:01:48.183Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T21:01:48.183Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T21:01:54.578Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment, w którym Rafał wspomina, że nie może uwierzyć, że jest w 20... roku. To sugeruje, że przeniósł się do jakiegoś roku w XXI wieku, ale dokładna data nie jest podana. Jednakże, z kontekstu innych notatek, w szczególności tych dotyczących technologii LLM i GPT-2, można wywnioskować, że Rafał przeniósł się do okresu, w którym te technologie były rozwijane, co sugeruje lata 2020-2024. Dodatkowo, wspomina o dronach nad miastem po 2024 roku, co może sugerować, że przeniósł się do okresu przed tym rokiem.","answer":"Rafał przeniósł się do roku w XXI wieku, prawdopodobnie między 2020 a 2024."}
+
+[2025-07-07T21:01:54.579Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T21:01:54.579Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku w XXI wieku, prawdopodobnie między 2020 a 2024.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T21:01:54.702Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 01 is incorrect",
+  "hint": "uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń",
+  "debug": "You sent: Rafał przeniósł się do roku w XXI wieku, prawdopodobnie między 2020 a 2024."
+}

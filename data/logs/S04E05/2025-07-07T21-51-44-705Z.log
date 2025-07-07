@@ -1,0 +1,37 @@
+Log file created at 2025-07-07T21:51:44.708Z
+--------------------------------------------
+[2025-07-07T21:51:44.713Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do jakiegoś roku w XXI wieku, ale dokładny rok nie jest podany w notatkach.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}
+
+[2025-07-07T21:51:44.713Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T21:51:44.714Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T21:51:44.714Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T21:51:44.714Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T21:51:50.023Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment, w którym wspomina, że nie może uwierzyć, że jest w 20... roku. To wskazuje, że Rafał przeniósł się do jakiegoś roku w XXI wieku, ale dokładna data nie jest podana. Jednakże, z kontekstu innych notatek, można wywnioskować, że Rafał przeniósł się do roku 2024, ponieważ wspomina o wydarzeniach związanych z tym rokiem, takich jak drony nad miastem po 2024 roku oraz planowane działania na 11 listopada 2024 roku.","answer":"Rafał przeniósł się do roku 2024."}
+
+[2025-07-07T21:51:50.024Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T21:51:50.024Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2024.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T21:51:50.152Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 01 is incorrect",
+  "hint": "uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń",
+  "debug": "You sent: Rafał przeniósł się do roku 2024."
+}

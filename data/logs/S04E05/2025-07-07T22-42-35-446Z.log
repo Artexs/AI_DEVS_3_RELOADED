@@ -1,0 +1,189 @@
+Log file created at 2025-07-07T22:42:35.449Z
+--------------------------------------------
+[2025-07-07T22:42:35.451Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do początku lat 2020-tych.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}
+
+[2025-07-07T22:42:35.452Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T22:42:35.452Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T22:42:35.452Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:42:35.452Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:42:39.204Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Z jednej strony wiedziałem, czego się spodziewać i wiedziałem, że ta maszyna może przenosić w czasie, a z drugiej strony do dziś dnia nie mogę uwierzyć, że jestem w 20... roku.' Chociaż liczba jest niepełna, dalsze notatki zawierają konkretne odniesienia do wydarzeń i dat, np. 'On mówił, że po 2024 roku tak będzie wyglądać codzienność.' oraz '11 listopada 2024'. Rafał opisuje swoje działania i refleksje w kontekście wydarzeń z roku 2024, a także odnosi się do przyszłości względem tego roku. Wszystkie opisywane wydarzenia i spotkania mają miejsce w tym okresie. Z tego wynika jednoznacznie, że Rafał przeniósł się do roku 2024.","answer":"Rafał przeniósł się do roku 2024."}
+
+[2025-07-07T22:42:39.204Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:42:39.205Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2024.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:42:39.337Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 01 is incorrect",
+  "hint": "uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń",
+  "debug": "You sent: Rafał przeniósł się do roku 2024."
+}
+
+[2025-07-07T22:42:39.338Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":1,"answers":{"01":"Rafał przeniósł się do początku lat 2020-tych.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}}
+
+[2025-07-07T22:42:39.338Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do roku 2024.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}
+
+[2025-07-07T22:42:39.338Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T22:42:39.338Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T22:42:39.338Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:42:39.338Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:42:48.779Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Z jednej strony wiedziałem, czego się spodziewać i wiedziałem, że ta maszyna może przenosić w czasie, a z drugiej strony do dziś dnia nie mogę uwierzyć, że jestem w 20... roku.' Chociaż Rafał nie podaje pełnej liczby, w dalszej części notatek pojawia się odniesienie do wydarzeń po 2024 roku ('On mówił, że po 2024 roku tak będzie wyglądać codzienność'), a także do przyszłości, w której 'władza robotów w 2238 nie nastąpi.' Jednak kluczowy jest fragment, w którym Rafał pisze: 'Nie mogę uwierzyć, że jestem w 20... roku.' Oznacza to, że Rafał przeniósł się do jakiegoś roku z XXI wieku, a kontekst wskazuje, że jest to okres po 2024 roku, ale nie tak odległy jak 2238. Dodatkowo, Rafał wspomina o wydarzeniach związanych z rozwojem technologii LLM, GPT-2 i GPT-3, które miały miejsce w latach 2019-2020. Jednak najbardziej precyzyjną wskazówką jest fragment o dronach nad miastem po 2024 roku oraz data 11 listopada 2024, która pojawia się w kontekście kluczowego wydarzenia. To sugeruje, że Rafał przeniósł się właśnie do roku 2024.","answer":"Rafał przeniósł się do roku 2024."}
+
+[2025-07-07T22:42:48.779Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:42:48.779Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2024.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:42:48.839Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 01 is incorrect",
+  "hint": "uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń",
+  "debug": "You sent: Rafał przeniósł się do roku 2024."
+}
+
+[2025-07-07T22:42:48.839Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":1,"answers":{"01":"Rafał przeniósł się do początku lat 2020-tych.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}}
+
+[2025-07-07T22:42:48.840Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do roku 2024.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}
+
+[2025-07-07T22:42:48.840Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T22:42:48.840Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T22:42:48.840Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:42:48.840Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:42:54.239Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Z jednej strony wiedziałem, czego się spodziewać i wiedziałem, że ta maszyna może przenosić w czasie, a z drugiej strony do dziś dnia nie mogę uwierzyć, że jestem w 20... roku. To nienormalne!' oraz inne wzmianki o wydarzeniach, które mają miejsce po 2024 roku, np. 'On mówił, że po 2024 roku tak będzie wyglądać codzienność.' Jednak kluczowa jest informacja, że Rafał nie może uwierzyć, że jest w '20... roku', co sugeruje, że przeniósł się do jakiegoś roku z XXI wieku. Dodatkowo, pojawia się wzmianka o tym, że 'No i powstało GPT-2', co historycznie miało miejsce w 2019 roku, a także o planach dotyczących GPT-3 i wydarzeniach związanych z początkiem prac nad technologią LLM. Jednak najbardziej jednoznaczny trop to fragment, w którym Rafał pisze: 'Nie mogę uwierzyć, że jestem w 20... roku', co oznacza, że przeniósł się do jakiegoś roku z XXI wieku, ale nie podaje dokładnej liczby. Jednak w dalszej części notatek pojawia się data: '11 listopada 2024', która jest powiązana z kluczowym wydarzeniem ('To już jutro. Kiedyś ja pomogłem Tobie, a dziś Ty pomożesz światu. Trzeba wszystko odwrócić. 11 listopada 2024'). To wskazuje, że Rafał przeniósł się do roku 2024, ponieważ wszystkie wydarzenia, które opisuje, rozgrywają się wokół tej daty.","answer":"Rafał przeniósł się do roku 2024."}
+
+[2025-07-07T22:42:54.239Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:42:54.240Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2024.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:42:54.295Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 01 is incorrect",
+  "hint": "uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń",
+  "debug": "You sent: Rafał przeniósł się do roku 2024."
+}
+
+[2025-07-07T22:42:54.295Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":1,"answers":{"01":"Rafał przeniósł się do początku lat 2020-tych.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}}
+
+[2025-07-07T22:42:54.295Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do roku 2024.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}
+
+[2025-07-07T22:42:54.295Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T22:42:54.296Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T22:42:54.296Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:42:54.296Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:42:57.759Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Z jednej strony wiedziałem, czego się spodziewać i wiedziałem, że ta maszyna może przenosić w czasie, a z drugiej strony do dziś dnia nie mogę uwierzyć, że jestem w 20... roku.' Chociaż liczba jest niepełna, dalej pojawia się informacja o śnie z dronami nad miastem, które według Adama mają być codziennością po 2024 roku. Rafał wspomina też o wydarzeniach związanych z powstaniem GPT-2 i GPT-3, które miały miejsce w latach 2019-2020, oraz o planach na przyszłość. Jednak kluczowe jest stwierdzenie: 'nie mogę uwierzyć, że jestem w 20... roku', co sugeruje, że Rafał przeniósł się do jakiegoś roku z XXI wieku. Najbardziej precyzyjna wskazówka to odniesienie do roku 2024 i wydarzeń po nim, a także data 11 listopada 2024, która pojawia się w kontekście kluczowego wydarzenia. Wszystko to wskazuje, że Rafał przeniósł się do roku 2024.","answer":"Rafał przeniósł się do roku 2024."}
+
+[2025-07-07T22:42:57.759Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:42:57.759Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2024.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:42:57.837Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 01 is incorrect",
+  "hint": "uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń",
+  "debug": "You sent: Rafał przeniósł się do roku 2024."
+}
+
+[2025-07-07T22:42:57.837Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":1,"answers":{"01":"Rafał przeniósł się do początku lat 2020-tych.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}}
+
+[2025-07-07T22:42:57.837Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do roku 2024.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}
+
+[2025-07-07T22:42:57.837Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T22:42:57.837Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T22:42:57.838Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:42:57.838Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:43:11.532Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Z jednej strony wiedziałem, czego się spodziewać i wiedziałem, że ta maszyna może przenosić w czasie, a z drugiej strony do dziś dnia nie mogę uwierzyć, że jestem w 20... roku.' Chociaż nie jest podana pełna liczba, w dalszej części notatek Rafał wspomina o wydarzeniach związanych z powstaniem GPT-2 i GPT-3, które historycznie miały miejsce odpowiednio w 2019 i 2020 roku. Dodatkowo, Rafał pisze o tym, że śniły mu się drony nad miastem, które według Adama mają być codziennością po 2024 roku, ale to jest odniesienie do przyszłości, nie do czasu, w którym się znajduje. Najbardziej precyzyjną wskazówką jest fragment: 'Nie mogę uwierzyć, że jestem w 20... roku', co sugeruje, że Rafał przeniósł się do początku XXI wieku, a konkretnie do roku, w którym powstaje GPT-2, czyli 2019. Potwierdza to również fragment: 'No i powstało GPT-2. Słyszałem w wiadomościach, a to wszystko dzięki badaniom, które dostarczyłem.' Oznacza to, że Rafał przeniósł się do roku 2019.","answer":"Rafał przeniósł się do roku 2019."}
+
+[2025-07-07T22:43:11.532Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:43:11.532Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:43:11.594Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 02 is incorrect",
+  "hint": "to imię pada w dokumencie wiele razy",
+  "debug": "You sent: placeholder"
+}

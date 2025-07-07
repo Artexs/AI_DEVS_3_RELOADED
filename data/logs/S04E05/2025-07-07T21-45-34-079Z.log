@@ -1,0 +1,37 @@
+Log file created at 2025-07-07T21:45:34.081Z
+--------------------------------------------
+[2025-07-07T21:45:34.086Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do roku 2023.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":""}
+
+[2025-07-07T21:45:34.087Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T21:45:34.087Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T21:45:34.087Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T21:45:34.087Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T21:45:39.088Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała jest fragment, w którym wspomina, że nie może uwierzyć, że jest w 20... roku. To sugeruje, że przeniósł się do jakiegoś roku w XXI wieku, ale konkretna data nie jest podana wprost. Jednakże, z kontekstu innych notatek, gdzie wspomina o wydarzeniach związanych z technologią LLM i GPT-2, można wywnioskować, że mógł przenieść się do okresu, kiedy te technologie były rozwijane, czyli około 2020 roku.","answer":"Rafał przeniósł się do roku około 2020."}
+
+[2025-07-07T21:45:39.088Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T21:45:39.089Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku około 2020.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T21:45:39.213Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 01 is incorrect",
+  "hint": "uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń",
+  "debug": "You sent: Rafał przeniósł się do roku około 2020."
+}

@@ -1,0 +1,29 @@
+Log file created at 2025-07-07T20:57:16.918Z
+--------------------------------------------
+[2025-07-07T20:57:16.922Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"01":"Rafał przeniósł się do jakiegoś roku w XXI wieku, prawdopodobnie po 2024 roku, ale dokładna data nie jest podana w notatkach.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":""}
+
+[2025-07-07T20:57:16.922Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-07T20:57:16.923Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-07T20:57:16.923Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T20:57:16.923Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T20:57:22.698Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment, w którym wspomina, że nie może uwierzyć, iż jest w 20... roku. To sugeruje, że Rafał przeniósł się do jakiegoś roku w XXI wieku, ale dokładna data jest niekompletna w notatkach. Jednakże, z kontekstu innych wydarzeń, takich jak wspomnienie o dronach po 2024 roku, można przypuszczać, że Rafał przeniósł się do roku po 2024. Nie ma jednak bezpośredniej informacji o dokładnym roku, do którego się przeniósł.","answer":"Rafał przeniósł się do roku po 2024, ale dokładny rok nie jest bezpośrednio podany w notatkach."}
+
+[2025-07-07T20:57:22.698Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T20:57:22.699Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": "{\"questionNumber\":1,\"answers\":{\"01\":\"Rafał przeniósł się do roku po 2024, ale dokładny rok nie jest bezpośrednio podany w notatkach.\",\"02\":\"placeholder\",\"03\":\"placeholder\",\"04\":\"placeholder\",\"05\":\"placeholder\"},\"centralaResponse\":\"\"}",
+  "url": "verify"
+}
+
+[2025-07-07T20:57:22.852Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Please send simple, 5 element array in JSON"
+}

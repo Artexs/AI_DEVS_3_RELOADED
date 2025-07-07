@@ -1,0 +1,189 @@
+Log file created at 2025-07-07T22:45:16.873Z
+--------------------------------------------
+[2025-07-07T22:45:16.878Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":2,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}
+
+[2025-07-07T22:45:16.878Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 2
+
+[2025-07-07T22:45:16.878Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Kto wpadł na pomysł, aby Rafał przeniósł się w czasie?
+
+[2025-07-07T22:45:16.878Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:45:16.879Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:45:19.057Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Dlaczego Adam wybrał akurat ten rok? Według jego wyliczeń, wtedy powinniśmy rozpocząć pracę nad technologią LLM, aby wszystko wydarzyło się zgodnie z planem. Mówił, że najpierw musi powstać GPT-2, a potem GPT-3, które zachwycą ludzkość. Później będzie z górki. On wie, co robi.' To wyraźnie wskazuje, że to Adam był osobą, która wybrała rok i zaplanowała przeniesienie Rafała w czasie, kierując się swoimi wyliczeniami i planem. Nie ma w notatkach informacji, by ktoś inny podjął tę decyzję lub wpadł na ten pomysł.","answer":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam."}
+
+[2025-07-07T22:45:19.057Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:45:19.058Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:45:19.150Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 03 is incorrect",
+  "hint": "możesz uwzględnić opis tego miejsca, jego szkic, czy tajemnicze namiary koło szkicu (to jest Sigla/Siglum. LLM to wie)",
+  "debug": "You sent: placeholder"
+}
+
+[2025-07-07T22:45:19.150Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":2,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}}
+
+[2025-07-07T22:45:19.151Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":3,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}
+
+[2025-07-07T22:45:19.151Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 3
+
+[2025-07-07T22:45:19.151Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Gdzie znalazł schronienie Rafał? Nazwij krótko to miejsce
+
+[2025-07-07T22:45:19.151Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:45:19.151Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:45:23.560Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Znalazłem miejsce schronienia. Tutaj nikt mnie nie znajdzie. To miejsce nie jest szczególnie oddalone od miasta, w którym spędziłem ostatnie lata. Zatrzymam się tu na jakiś czas.' Dodatkowo, Rafał wspomina, że aby dostać się do Lubawy, musi przejść przez czerń, w której schował swoją zmarłą rękę, i że to nie jest daleko od Grudziądza. Oznacza to, że schronienie znajduje się w pobliżu Grudziądza, ale nie w samym mieście. Opisuje także otoczenie: 'Trochę tu zimno i ciemno, ale bezpiecznie.' oraz wcześniejszy spacer po lesie, skałach i śniegu, co sugeruje odludne, naturalne miejsce. Wszystkie te informacje wskazują, że Rafał znalazł schronienie w leśnej okolicy niedaleko Grudziądza.","answer":"Leśna okolica pod Grudziądzem"}
+
+[2025-07-07T22:45:23.560Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:45:23.560Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "Leśna okolica pod Grudziądzem",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:45:23.618Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 03 is incorrect",
+  "hint": "możesz uwzględnić opis tego miejsca, jego szkic, czy tajemnicze namiary koło szkicu (to jest Sigla/Siglum. LLM to wie)",
+  "debug": "You sent: Leśna okolica pod Grudziądzem"
+}
+
+[2025-07-07T22:45:23.618Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":2,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}}
+
+[2025-07-07T22:45:23.619Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":3,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Leśna okolica pod Grudziądzem","04":"placeholder","05":"placeholder"},"centralaResponse":"możesz uwzględnić opis tego miejsca, jego szkic, czy tajemnicze namiary koło szkicu (to jest Sigla/Siglum. LLM to wie)"}
+
+[2025-07-07T22:45:23.619Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 3
+
+[2025-07-07T22:45:23.619Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Gdzie znalazł schronienie Rafał? Nazwij krótko to miejsce
+
+[2025-07-07T22:45:23.619Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:45:23.619Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:45:26.672Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Znalazłem miejsce schronienia. Tutaj nikt mnie nie znajdzie. To miejsce nie jest szczególnie oddalone od miasta, w którym spędziłem ostatnie lata. Zatrzymam się tu na jakiś czas. Iz 2:19 Trochę tu zimno i ciemno, ale bezpiecznie.' Dodatkowo Rafał wspomina o spacerze po lesie, skałach i śniegu, co sugeruje odludne, naturalne otoczenie. W innym miejscu pojawia się informacja o Lubawie koło Grudziądza, co lokalizuje to miejsce w pobliżu tych miast. Cytat z Iz 2:19 ('I wejdą do jaskiń skalnych i do jam ziemnych...') oraz opis zimna, ciemności i bezpieczeństwa jednoznacznie wskazują na jaskinię lub grotę jako miejsce schronienia. Wszystkie te przesłanki pozwalają krótko nazwać to miejsce 'Jaskinia'.","answer":"Jaskinia"}
+
+[2025-07-07T22:45:26.672Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:45:26.672Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "Jaskinia",
+    "04": "placeholder",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:45:26.735Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 04 is incorrect",
+  "hint": "Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście",
+  "debug": "You sent: placeholder"
+}
+
+[2025-07-07T22:45:26.735Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":2,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}}
+
+[2025-07-07T22:45:26.736Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"placeholder","05":"placeholder"},"centralaResponse":"możesz uwzględnić opis tego miejsca, jego szkic, czy tajemnicze namiary koło szkicu (to jest Sigla/Siglum. LLM to wie)"}
+
+[2025-07-07T22:45:26.736Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 4
+
+[2025-07-07T22:45:26.736Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Którego dnia Rafał ma spotkanie z Andrzejem? (format: YYYY-MM-DD)
+
+[2025-07-07T22:45:26.736Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:45:26.736Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:45:28.273Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Andrzejek... Andrzejek... słyszę w głowie Twoje kroki i czekam na Ciebie. To już jutro. Kiedyś ja pomogłem Tobie, a dziś Ty pomożesz światu. Trzeba wszystko odwrócić. 11 listopada 2024'. Z tego wynika, że spotkanie z Andrzejem jest zaplanowane na 11 listopada 2024 roku.","answer":"2024-11-11"}
+
+[2025-07-07T22:45:28.273Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:45:28.273Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "Jaskinia",
+    "04": "2024-11-11",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:45:28.330Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 04 is incorrect",
+  "hint": "Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście",
+  "debug": "You sent: 2024-11-11"
+}
+
+[2025-07-07T22:45:28.330Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":2,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder"},"centralaResponse":"uwzględnij wszystkie fakty podane w tekście, w szczególności odwołania do wydarzeń"}}
+
+[2025-07-07T22:45:28.330Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-11","05":"placeholder"},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}
+
+[2025-07-07T22:45:28.331Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 4
+
+[2025-07-07T22:45:28.331Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Którego dnia Rafał ma spotkanie z Andrzejem? (format: YYYY-MM-DD)
+
+[2025-07-07T22:45:28.331Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:45:28.331Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:45:31.245Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Andrzejek... Andrzejek... słyszę w głowie Twoje kroki i czekam na Ciebie. To już jutro. Kiedyś ja pomogłem Tobie, a dziś Ty pomożesz światu. Trzeba wszystko odwrócić. 11 listopada 2024'. Rafał pisze, że spotkanie z Andrzejem odbędzie się 'jutro', a zaraz potem podaje datę '11 listopada 2024'. Oznacza to, że spotkanie z Andrzejem ma się odbyć właśnie 11 listopada 2024 roku.","answer":"2024-11-11"}
+
+[2025-07-07T22:45:31.245Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:45:31.245Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "Jaskinia",
+    "04": "2024-11-11",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:45:31.302Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 04 is incorrect",
+  "hint": "Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście",
+  "debug": "You sent: 2024-11-11"
+}

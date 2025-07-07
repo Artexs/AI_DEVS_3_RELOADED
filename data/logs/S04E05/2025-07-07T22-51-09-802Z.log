@@ -1,0 +1,189 @@
+Log file created at 2025-07-07T22:51:09.805Z
+--------------------------------------------
+[2025-07-07T22:51:09.808Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-11","05":"placeholder"},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}
+
+[2025-07-07T22:51:09.808Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 4
+
+[2025-07-07T22:51:09.808Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Którego dnia Rafał ma spotkanie z Andrzejem? (format: YYYY-MM-DD)
+
+[2025-07-07T22:51:09.808Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:51:09.808Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:51:11.984Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Andrzejek... Andrzejek... słyszę w głowie Twoje kroki i czekam na Ciebie. To już jutro. Kiedyś ja pomogłem Tobie, a dziś Ty pomożesz światu. Trzeba wszystko odwrócić. 11 listopada 2024'. Rafał pisze, że spotkanie ma być 'jutro', a tuż obok tej wzmianki pojawia się data 11 listopada 2024. To oznacza, że spotkanie z Andrzejem odbędzie się właśnie tego dnia.","answer":"2024-11-11"}
+
+[2025-07-07T22:51:11.984Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:51:11.985Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "Jaskinia",
+    "04": "2024-11-11",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:51:12.115Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 04 is incorrect",
+  "hint": "Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście",
+  "debug": "You sent: 2024-11-11"
+}
+
+[2025-07-07T22:51:12.115Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-11","05":"placeholder"},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}}
+
+[2025-07-07T22:51:12.115Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-11","05":"placeholder"},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}
+
+[2025-07-07T22:51:12.115Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 4
+
+[2025-07-07T22:51:12.115Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Którego dnia Rafał ma spotkanie z Andrzejem? (format: YYYY-MM-DD)
+
+[2025-07-07T22:51:12.116Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:51:12.116Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:51:14.553Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała pojawia się fragment: 'Andrzejek... Andrzejek... słyszę w głowie Twoje kroki i czekam na Ciebie. To już jutro. Kiedyś ja pomogłem Tobie, a dziś Ty pomożesz światu. Trzeba wszystko odwrócić. 11 listopada 2024'. Z tego wynika, że Rafał oczekuje spotkania z Andrzejem na następny dzień, a podana data to 11 listopada 2024, co oznacza, że spotkanie odbędzie się właśnie 11 listopada 2024 roku.","answer":"2024-11-11"}
+
+[2025-07-07T22:51:14.553Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:51:14.553Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "Jaskinia",
+    "04": "2024-11-11",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:51:14.615Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 04 is incorrect",
+  "hint": "Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście",
+  "debug": "You sent: 2024-11-11"
+}
+
+[2025-07-07T22:51:14.615Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-11","05":"placeholder"},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}}
+
+[2025-07-07T22:51:14.615Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-11","05":"placeholder"},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}
+
+[2025-07-07T22:51:14.615Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 4
+
+[2025-07-07T22:51:14.615Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Którego dnia Rafał ma spotkanie z Andrzejem? (format: YYYY-MM-DD)
+
+[2025-07-07T22:51:14.615Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:51:14.615Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:51:17.107Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"Analizując notatki Rafała, odnajduję fragment: 'Andrzejek... Andrzejek... słyszę w głowie Twoje kroki i czekam na Ciebie. To już jutro. Kiedyś ja pomogłem Tobie, a dziś Ty pomożesz światu. Trzeba wszystko odwrócić. 11 listopada 2024'. Rafał pisze, że spotkanie z Andrzejem będzie 'jutro', a bezpośrednio po tym podaje datę '11 listopada 2024'. To oznacza, że spotkanie z Andrzejem przypada na 11 listopada 2024 roku.","answer":"2024-11-11"}
+
+[2025-07-07T22:51:17.107Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:51:17.107Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "Jaskinia",
+    "04": "2024-11-11",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:51:17.228Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 04 is incorrect",
+  "hint": "Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście",
+  "debug": "You sent: 2024-11-11"
+}
+
+[2025-07-07T22:51:17.228Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-11","05":"placeholder"},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}}
+
+[2025-07-07T22:51:17.228Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-11","05":"placeholder"},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}
+
+[2025-07-07T22:51:17.228Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 4
+
+[2025-07-07T22:51:17.229Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Którego dnia Rafał ma spotkanie z Andrzejem? (format: YYYY-MM-DD)
+
+[2025-07-07T22:51:17.229Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:51:17.229Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:51:19.293Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Andrzejek... Andrzejek... słyszę w głowie Twoje kroki i czekam na Ciebie. To już jutro. Kiedyś ja pomogłem Tobie, a dziś Ty pomożesz światu. Trzeba wszystko odwrócić. 11 listopada 2024'. Sformułowanie 'To już jutro' oraz wskazanie daty '11 listopada 2024' jednoznacznie oznacza, że spotkanie z Andrzejem ma się odbyć 11 listopada 2024 roku.","answer":"2024-11-11"}
+
+[2025-07-07T22:51:19.293Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:51:19.294Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "Jaskinia",
+    "04": "2024-11-11",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:51:19.360Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 04 is incorrect",
+  "hint": "Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście",
+  "debug": "You sent: 2024-11-11"
+}
+
+[2025-07-07T22:51:19.360Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-11","05":"placeholder"},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}}
+
+[2025-07-07T22:51:19.360Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":4,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-11","05":"placeholder"},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}
+
+[2025-07-07T22:51:19.360Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 4
+
+[2025-07-07T22:51:19.360Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Którego dnia Rafał ma spotkanie z Andrzejem? (format: YYYY-MM-DD)
+
+[2025-07-07T22:51:19.361Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-07T22:51:19.361Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-07T22:51:21.284Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduję fragment: 'Andrzejek... Andrzejek... słyszę w głowie Twoje kroki i czekam na Ciebie. To już jutro. Kiedyś ja pomogłem Tobie, a dziś Ty pomożesz światu. Trzeba wszystko odwrócić. 11 listopada 2024'. Rafał mówi, że spotkanie z Andrzejem będzie 'jutro', a bezpośrednio po tym wpisuje datę 11 listopada 2024, co oznacza, że spotkanie odbędzie się właśnie tego dnia.","answer":"2024-11-11"}
+
+[2025-07-07T22:51:21.284Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-07T22:51:21.284Z] sendAnswer from contact centrala processing...
+{
+  "task": "notes",
+  "paramName": "answer",
+  "response": {
+    "01": "Rafał przeniósł się do roku 2019.",
+    "02": "Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.",
+    "03": "Jaskinia",
+    "04": "2024-11-11",
+    "05": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-07T22:51:21.397Z] response from contact centrala processing...
+{
+  "code": -340,
+  "message": "Answer for question 04 is incorrect",
+  "hint": "Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście",
+  "debug": "You sent: 2024-11-11"
+}
