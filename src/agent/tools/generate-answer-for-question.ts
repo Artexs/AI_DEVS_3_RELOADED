@@ -18,7 +18,7 @@ export class GenerateAnswerForQuestionTool {
         this.langfuseService = langfuseService;
     }
 
-    private async generateAnswerWithLLM(
+    private async LlmRequest(
         context: string, 
         responseFromCentrala: string | undefined, 
         question: string,
@@ -27,7 +27,11 @@ export class GenerateAnswerForQuestionTool {
         // Prepare system prompt with context and last response from centrala
         let systemPrompt = context;
         if (responseFromCentrala) {
-            systemPrompt += `\n\nLast response from centrala: ${responseFromCentrala}`;
+            systemPrompt += `
+            ----------
+            Last response from centrala: 
+            ${responseFromCentrala}
+            `;
         }
 
         // Prepare user prompt with the question
@@ -111,7 +115,7 @@ export class GenerateAnswerForQuestionTool {
         await this.logger.log(`GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: ${contextFilePath}`);
 
         // Generate answer using LLM
-        const llmResponse = await this.generateAnswerWithLLM(
+        const llmResponse = await this.LlmRequest(
             contextContent,
             lastresponsefromcentrala,
             currentQuestion,

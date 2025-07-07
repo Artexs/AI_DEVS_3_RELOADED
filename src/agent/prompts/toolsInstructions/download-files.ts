@@ -11,6 +11,7 @@ export const downloadFilesInstruction = `Extract all URLs from the provided text
 - Handle URLs with special characters and encoding
 - Consider both absolute and relative URLs
 - Validate URL structure before extraction
+- URLs can point to any file on the internet, not just c3ntrala (support for all valid internet URLs)
 </rules>
 
 <examples>
@@ -25,4 +26,7 @@ AI: {"url": ["https://api.service.com/v1/users"]}
 
 User: Links: example.com/path and https://secure.site.com
 AI: {"url": ["example.com/path", "https://secure.site.com"]}
+
+User: Download the file from https://c3ntrala.ag3nts.org/data/KEY/file.txt and also from https://files.example.org/data.zip
+AI: {"url": ["https://c3ntrala.ag3nts.org/data/KEY/file.txt", "https://files.example.org/data.zip"]}
 </examples>`

@@ -1,0 +1,4 @@
+{
+    "_thinking": "The image showcases a stunning landscape with a lake reflecting the surrounding mountains and a clear blue sky. There is no visible text in the image to extract.",
+    "answer": "The image contains a landscape of a mountain range, forest, and a lake. No text is present."
+}

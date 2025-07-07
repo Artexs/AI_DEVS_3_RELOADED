@@ -1,0 +1,5 @@
+Log file created at 2025-07-01T13:43:51.257Z
+--------------------------------------------
+[2025-07-01T13:43:55.343Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"There is insufficient information to ascertain the user's intent or needs from the last message 'test'. To proceed, it's appropriate to engage the user for further clarification or instructions.","tool":"final_answer","query":"Please provide more details or specify how I can assist you further with your query."}
+
+[2025-07-01T13:43:57.166Z] ODPOWIEDZ +++ No documents or uploads available. Please provide a document or specify an action for results.

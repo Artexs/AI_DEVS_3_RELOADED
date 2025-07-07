@@ -11,9 +11,11 @@ import {
   FileOperationsTool, 
   WebSearchTool, 
   GenerateAnswerForQuestionTool, 
-  GpsTool 
+  GpsTool,
+  AudioProcessTool 
 } from "./tools/internal-index";
 import { contextSelectionPrompt } from "./prompts/agent-service/context-selection";
+import { fastPrompt } from './prompts/agent-service/fastTrack';
 
 type ToolFunction = (params: Record<string, any>, conversation_uuid: string) => Promise<IDoc | IDoc[]>;
 type ToolMap = Record<string, ToolFunction>;
@@ -31,6 +33,7 @@ export class Agent {
   private webSearchTool: WebSearchTool;
   private generateAnswerForQuestionTool: GenerateAnswerForQuestionTool;
   private gpsTool: GpsTool;
+  private audioProcessTool: AudioProcessTool;
 
   private readonly toolMap: ToolMap;
 
@@ -47,6 +50,7 @@ export class Agent {
     this.webSearchTool = new WebSearchTool(langfuseService);
     this.generateAnswerForQuestionTool = new GenerateAnswerForQuestionTool(logger, langfuseService);
     this.gpsTool = new GpsTool(logger);
+    this.audioProcessTool = new AudioProcessTool(logger);
 
     this.toolMap = {
       download_files: (params, uuid) => this.downloaderTool.getDataFromCentrala(params.url, uuid),
@@ -55,11 +59,34 @@ export class Agent {
       file_operations: (params, uuid) => this.fileOperationsTool.fileOperations(params, uuid),
       web_search: (params, uuid) => this.webSearchTool.search(params.query, uuid),
       generate_answer_for_question: (params, uuid) => this.generateAnswerForQuestionTool.generateAnswerForQuestion(params, uuid),
-      getCoordinates: (params, uuid) => this.gpsTool.main(params.cityName, uuid)
+      getCoordinates: (params, uuid) => this.gpsTool.main(params.cityName, uuid),
+      audio_process: (params, uuid) => this.audioProcessTool.processAudio(params, uuid),
       // people: (params, uuid) => this.gpsTool.people(params, uuid),
       // gps: (params, uuid) => this.gpsTool.gps(params, uuid),
       // database_id: (params, uuid) => this.gpsTool.databaseId(params, uuid)
     };
+  }
+
+  async fastTrack(): Promise<void> {
+        try {
+      const lastThree = this.state.messages.filter(m => m.role === 'user' || m.role === 'assistant');
+
+      const fastTrackMessages = [
+        { role: 'system', content: fastPrompt(this.state) },
+        ...lastThree
+      ];
+      const result = await this.openaiService.processTextAsJson(fastTrackMessages, '4o', 0);
+      this.state.config.fastTrack = !!result.result;
+      if (this.state.config.fastTrack) {
+        console.log('fastTrack - ENABLED');
+      } else {
+        console.log('standard route')
+      }
+      return
+    } catch (err) {
+      this.state.config.fastTrack = false;
+      return;
+    }
   }
 
   async plan() {
@@ -69,6 +96,7 @@ export class Agent {
 
 <prompt_objective>
 Determine the single most effective next action based on the current context, user needs, and overall progress. Return the decision as a concise JSON object.
+If you have a URL provided with a file name, your first step should be to download this file. After downloading, process it according to its type (e.g., audio or image processing).
 </prompt_objective>
 
 <prompt_rules>
@@ -184,13 +212,20 @@ ${this.state.tools.map(tool => `Example for ${tool.name}: ${tool.parameters}`).j
   async generateAnswer() {
     const context = this.state.actions.flatMap((action) => action.results);
     const query = this.state.config.active_step?.query;
-
+    const userMessage = this.state.userMessage
+    // console.log("final prompt -------- ",       [
+    //   {
+    //     role: "system",
+    //     content: answerPrompt({ context, query }),
+    //   },
+    //   ...this.state.messages,
+    // ])
     const answer = await this.langfuseService.llmRequest(
       'Generate final answer',
       [
         {
           role: "system",
-          content: answerPrompt({ context, query }),
+          content: answerPrompt({ context, query, userMessage }),
         },
         ...this.state.messages,
       ],

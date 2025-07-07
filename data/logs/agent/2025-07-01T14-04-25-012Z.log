@@ -1,0 +1,251 @@
+Log file created at 2025-07-01T14:04:25.014Z
+--------------------------------------------
+[2025-07-01T14:04:27.634Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"The user has requested a specific value associated with a variable 'klucz123'. Since there are no prior actions indicating where this value might be stored, the next logical step is to search for it within any accessible files or documents. Using the 'file_operations' tool could help locate and retrieve the required information.","tool":"file_operations","query":"Search for the value assigned to the variable 'klucz123' in any accessible files or databases."}
+
+[2025-07-01T14:04:29.525Z] AGENT_SERVICE - GET_CONTEXT --- LLM selected document uuids: []
+
+[2025-07-01T14:04:29.525Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "list",
+  "path": ".",
+  "contextDocs": []
+}
+
+[2025-07-01T14:04:29.526Z] FILE_OPERATIONS_TOOL --- params: {"operation":"list","path":".","contextDocs":[]}
+
+[2025-07-01T14:04:29.526Z] FILE_OPERATIONS_TOOL --- listing directory: . -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3
+
+[2025-07-01T14:04:29.532Z] FILE_OPERATIONS_TOOL --- processed 1 directories
+
+[2025-07-01T14:04:31.992Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"The user is asking for the value assigned to the variable 'klucz123'. Since there is a .env file present, it is a likely place to store such variables. Reading the contents of the .env file should provide the necessary information.","tool":"file_operations","query":"{\"operation\":\"read\",\"path\":\".env\",\"contextDocs\":[]}"}
+
+[2025-07-01T14:04:35.628Z] AGENT_SERVICE - GET_CONTEXT --- LLM selected document uuids: ["7590e53a-48c1-4b32-956b-7a6f5dac714e"]
+
+[2025-07-01T14:04:35.628Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "read",
+  "path": ".env",
+  "contextDocs": [
+    {
+      "text": "[\n  {\n    \"name\": \".aider.input.history\",\n    \"type\": \"file\",\n    \"size\": 1207,\n    \"modified\": \"2025-05-13T13:40:43.502Z\"\n  },\n  {\n    \"name\": \"package-lock.json\",\n    \"type\": \"file\",\n    \"size\": 280099,\n    \"modified\": \"2025-06-11T10:20:15.334Z\"\n  },\n  {\n    \"name\": \"src\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T20:37:13.973Z\"\n  },\n  {\n    \"name\": \"tsconfig.json\",\n    \"type\": \"file\",\n    \"size\": 385,\n    \"modified\": \"2025-06-05T12:38:21.761Z\"\n  },\n  {\n    \"name\": \"node_modules\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-11T10:37:43.862Z\"\n  },\n  {\n    \"name\": \"package.json\",\n    \"type\": \"file\",\n    \"size\": 1176,\n    \"modified\": \"2025-07-01T08:32:27.732Z\"\n  },\n  {\n    \"name\": \".gitignore\",\n    \"type\": \"file\",\n    \"size\": 53,\n    \"modified\": \"2025-05-27T15:13:20.374Z\"\n  },\n  {\n    \"name\": \".aider.chat.history.md\",\n    \"type\": \"file\",\n    \"size\": 16836,\n    \"modified\": \"2025-05-13T13:41:10.301Z\"\n  },\n  {\n    \"name\": \".env\",\n    \"type\": \"file\",\n    \"size\": 1071,\n    \"modified\": \"2025-06-01T21:36:33.879Z\"\n  },\n  {\n    \"name\": \"data\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T18:58:53.936Z\"\n  },\n  {\n    \"name\": \".git\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T21:53:38.419Z\"\n  },\n  {\n    \"name\": \".aider.tags.cache.v4\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-13T09:14:39.218Z\"\n  },\n  {\n    \"name\": \"bun.lock\",\n    \"type\": \"file\",\n    \"size\": 48394,\n    \"modified\": \"2025-06-04T17:47:08.906Z\"\n  }\n]",
+      "metadata": {
+        "uuid": "7590e53a-48c1-4b32-956b-7a6f5dac714e",
+        "source_uuid": "1622000f-f982-4b90-96da-486fe6068c9c",
+        "conversation_uuid": "87cdac28-121c-4746-a70b-cbb046a606f6",
+        "source": "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3",
+        "name": ".",
+        "mimeType": "text/plain",
+        "description": "Directory listing for: .",
+        "content_type": "complete"
+      }
+    }
+  ]
+}
+
+[2025-07-01T14:04:35.628Z] FILE_OPERATIONS_TOOL --- params: {"operation":"read","path":".env","contextDocs":[{"text":"[\n  {\n    \"name\": \".aider.input.history\",\n    \"type\": \"file\",\n    \"size\": 1207,\n    \"modified\": \"2025-05-13T13:40:43.502Z\"\n  },\n  {\n    \"name\": \"package-lock.json\",\n    \"type\": \"file\",\n    \"size\": 280099,\n    \"modified\": \"2025-06-11T10:20:15.334Z\"\n  },\n  {\n    \"name\": \"src\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T20:37:13.973Z\"\n  },\n  {\n    \"name\": \"tsconfig.json\",\n    \"type\": \"file\",\n    \"size\": 385,\n    \"modified\": \"2025-06-05T12:38:21.761Z\"\n  },\n  {\n    \"name\": \"node_modules\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-11T10:37:43.862Z\"\n  },\n  {\n    \"name\": \"package.json\",\n    \"type\": \"file\",\n    \"size\": 1176,\n    \"modified\": \"2025-07-01T08:32:27.732Z\"\n  },\n  {\n    \"name\": \".gitignore\",\n    \"type\": \"file\",\n    \"size\": 53,\n    \"modified\": \"2025-05-27T15:13:20.374Z\"\n  },\n  {\n    \"name\": \".aider.chat.history.md\",\n    \"type\": \"file\",\n    \"size\": 16836,\n    \"modified\": \"2025-05-13T13:41:10.301Z\"\n  },\n  {\n    \"name\": \".env\",\n    \"type\": \"file\",\n    \"size\": 1071,\n    \"modified\": \"2025-06-01T21:36:33.879Z\"\n  },\n  {\n    \"name\": \"data\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T18:58:53.936Z\"\n  },\n  {\n    \"name\": \".git\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T21:53:38.419Z\"\n  },\n  {\n    \"name\": \".aider.tags.cache.v4\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-13T09:14:39.218Z\"\n  },\n  {\n    \"name\": \"bun.lock\",\n    \"type\": \"file\",\n    \"size\": 48394,\n    \"modified\": \"2025-06-04T17:47:08.906Z\"\n  }\n]","metadata":{"uuid":"7590e53a-48c1-4b32-956b-7a6f5dac714e","source_uuid":"1622000f-f982-4b90-96da-486fe6068c9c","conversation_uuid":"87cdac28-121c-4746-a70b-cbb046a606f6","source":"/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3","name":".","mimeType":"text/plain","description":"Directory listing for: .","content_type":"complete"}}]}
+
+[2025-07-01T14:04:35.628Z] FILE_OPERATIONS_TOOL --- reading file: .env -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/.env
+
+[2025-07-01T14:04:35.629Z] FILE_OPERATIONS_TOOL --- processed 1 files
+
+[2025-07-01T14:04:40.059Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"The variable 'klucz123' is not present in the .env file, which suggests it might be found in other files or defined elsewhere in the project. The next logical step is to search through the source code in the 'src' directory, as it is likely to contain variable definitions or references.","tool":"file_operations","query":"Search for the keyword 'klucz123' within the 'src' directory to locate the value assigned to the variable 'klucz123'."}
+
+[2025-07-01T14:04:43.691Z] AGENT_SERVICE - GET_CONTEXT --- LLM selected document uuids: ["b5e72bc3-ce63-48d3-b80a-d9ee1502a6b6","7590e53a-48c1-4b32-956b-7a6f5dac714e"]
+
+[2025-07-01T14:04:43.691Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "read",
+  "path": "src",
+  "contextDocs": [
+    {
+      "text": "[\n  {\n    \"name\": \".aider.input.history\",\n    \"type\": \"file\",\n    \"size\": 1207,\n    \"modified\": \"2025-05-13T13:40:43.502Z\"\n  },\n  {\n    \"name\": \"package-lock.json\",\n    \"type\": \"file\",\n    \"size\": 280099,\n    \"modified\": \"2025-06-11T10:20:15.334Z\"\n  },\n  {\n    \"name\": \"src\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T20:37:13.973Z\"\n  },\n  {\n    \"name\": \"tsconfig.json\",\n    \"type\": \"file\",\n    \"size\": 385,\n    \"modified\": \"2025-06-05T12:38:21.761Z\"\n  },\n  {\n    \"name\": \"node_modules\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-11T10:37:43.862Z\"\n  },\n  {\n    \"name\": \"package.json\",\n    \"type\": \"file\",\n    \"size\": 1176,\n    \"modified\": \"2025-07-01T08:32:27.732Z\"\n  },\n  {\n    \"name\": \".gitignore\",\n    \"type\": \"file\",\n    \"size\": 53,\n    \"modified\": \"2025-05-27T15:13:20.374Z\"\n  },\n  {\n    \"name\": \".aider.chat.history.md\",\n    \"type\": \"file\",\n    \"size\": 16836,\n    \"modified\": \"2025-05-13T13:41:10.301Z\"\n  },\n  {\n    \"name\": \".env\",\n    \"type\": \"file\",\n    \"size\": 1071,\n    \"modified\": \"2025-06-01T21:36:33.879Z\"\n  },\n  {\n    \"name\": \"data\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T18:58:53.936Z\"\n  },\n  {\n    \"name\": \".git\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T21:53:38.419Z\"\n  },\n  {\n    \"name\": \".aider.tags.cache.v4\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-13T09:14:39.218Z\"\n  },\n  {\n    \"name\": \"bun.lock\",\n    \"type\": \"file\",\n    \"size\": 48394,\n    \"modified\": \"2025-06-04T17:47:08.906Z\"\n  }\n]",
+      "metadata": {
+        "uuid": "7590e53a-48c1-4b32-956b-7a6f5dac714e",
+        "source_uuid": "1622000f-f982-4b90-96da-486fe6068c9c",
+        "conversation_uuid": "87cdac28-121c-4746-a70b-cbb046a606f6",
+        "source": "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3",
+        "name": ".",
+        "mimeType": "text/plain",
+        "description": "Directory listing for: .",
+        "content_type": "complete"
+      }
+    },
+    {
+      "text": "POLIGON_API_KEY=70fd6eae-ed0c-4b81-a6d1-eb65fb4aa611\r\nPOLIGON_URL=https://poligon.aidevs.pl\r\nCENTRALA_URL=https://c3ntrala.ag3nts.org\r\nROBOT_URL=https://xyz.ag3nts.org\r\n\r\nOPENAI_API_KEY=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\r\n\r\nFIRECRAWL_API_KEY=fc-a6442746f3454a0186feecc1a3b7f526\r\n\r\nELEVENLABS_API_KEY=sk_4ebf21565fc30c6e9c2a4544692d87f75749217e370cd9ec\r\n\r\nGROQ_API_KEY=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\r\n\r\nLANGFUSE_SECRET_KEY=sk-lf-9131bd00-3fad-44bc-bc01-ad6bca0e8f4a\r\nLANGFUSE_PUBLIC_KEY=pk-lf-98527807-9766-42fb-8e0a-ee038c47d51c\r\nLANGFUSE_HOST=https://cloud.langfuse.com\r\n\r\nQDRANT_URL=https://507fa727-f029-4056-a6de-ec80ed0ebb50.eu-central-1-0.aws.cloud.qdrant.io:6333\r\nQDRANT_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.li8aiECRAa74FWvCaWfBObks5rwDwHcPBcU0DbB0-BQ\r\n\r\nNEO4J_URI=neo4j+s://b7b851ef.databases.neo4j.io\r\nNEO4J_USER=neo4j\r\nNEO4J_PASSWORD=Fd2XlmDQsAo5zjnlqLSBTCPgNaBiDQla_rFcxtsM3Mc",
+      "metadata": {
+        "uuid": "b5e72bc3-ce63-48d3-b80a-d9ee1502a6b6",
+        "source_uuid": "f4de1dbb-f078-4056-a1e7-7cc038020fb7",
+        "conversation_uuid": "87cdac28-121c-4746-a70b-cbb046a606f6",
+        "source": "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/.env",
+        "name": ".env",
+        "mimeType": "text/plain",
+        "description": "File content for: .env",
+        "content_type": "complete"
+      }
+    }
+  ]
+}
+
+[2025-07-01T14:04:43.691Z] FILE_OPERATIONS_TOOL --- params: {"operation":"read","path":"src","contextDocs":[{"text":"[\n  {\n    \"name\": \".aider.input.history\",\n    \"type\": \"file\",\n    \"size\": 1207,\n    \"modified\": \"2025-05-13T13:40:43.502Z\"\n  },\n  {\n    \"name\": \"package-lock.json\",\n    \"type\": \"file\",\n    \"size\": 280099,\n    \"modified\": \"2025-06-11T10:20:15.334Z\"\n  },\n  {\n    \"name\": \"src\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T20:37:13.973Z\"\n  },\n  {\n    \"name\": \"tsconfig.json\",\n    \"type\": \"file\",\n    \"size\": 385,\n    \"modified\": \"2025-06-05T12:38:21.761Z\"\n  },\n  {\n    \"name\": \"node_modules\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-11T10:37:43.862Z\"\n  },\n  {\n    \"name\": \"package.json\",\n    \"type\": \"file\",\n    \"size\": 1176,\n    \"modified\": \"2025-07-01T08:32:27.732Z\"\n  },\n  {\n    \"name\": \".gitignore\",\n    \"type\": \"file\",\n    \"size\": 53,\n    \"modified\": \"2025-05-27T15:13:20.374Z\"\n  },\n  {\n    \"name\": \".aider.chat.history.md\",\n    \"type\": \"file\",\n    \"size\": 16836,\n    \"modified\": \"2025-05-13T13:41:10.301Z\"\n  },\n  {\n    \"name\": \".env\",\n    \"type\": \"file\",\n    \"size\": 1071,\n    \"modified\": \"2025-06-01T21:36:33.879Z\"\n  },\n  {\n    \"name\": \"data\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T18:58:53.936Z\"\n  },\n  {\n    \"name\": \".git\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T21:53:38.419Z\"\n  },\n  {\n    \"name\": \".aider.tags.cache.v4\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-13T09:14:39.218Z\"\n  },\n  {\n    \"name\": \"bun.lock\",\n    \"type\": \"file\",\n    \"size\": 48394,\n    \"modified\": \"2025-06-04T17:47:08.906Z\"\n  }\n]","metadata":{"uuid":"7590e53a-48c1-4b32-956b-7a6f5dac714e","source_uuid":"1622000f-f982-4b90-96da-486fe6068c9c","conversation_uuid":"87cdac28-121c-4746-a70b-cbb046a606f6","source":"/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3","name":".","mimeType":"text/plain","description":"Directory listing for: .","content_type":"complete"}},{"text":"POLIGON_API_KEY=70fd6eae-ed0c-4b81-a6d1-eb65fb4aa611\r\nPOLIGON_URL=https://poligon.aidevs.pl\r\nCENTRALA_URL=https://c3ntrala.ag3nts.org\r\nROBOT_URL=https://xyz.ag3nts.org\r\n\r\nOPENAI_API_KEY=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\r\n\r\nFIRECRAWL_API_KEY=fc-a6442746f3454a0186feecc1a3b7f526\r\n\r\nELEVENLABS_API_KEY=sk_4ebf21565fc30c6e9c2a4544692d87f75749217e370cd9ec\r\n\r\nGROQ_API_KEY=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\r\n\r\nLANGFUSE_SECRET_KEY=sk-lf-9131bd00-3fad-44bc-bc01-ad6bca0e8f4a\r\nLANGFUSE_PUBLIC_KEY=pk-lf-98527807-9766-42fb-8e0a-ee038c47d51c\r\nLANGFUSE_HOST=https://cloud.langfuse.com\r\n\r\nQDRANT_URL=https://507fa727-f029-4056-a6de-ec80ed0ebb50.eu-central-1-0.aws.cloud.qdrant.io:6333\r\nQDRANT_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.li8aiECRAa74FWvCaWfBObks5rwDwHcPBcU0DbB0-BQ\r\n\r\nNEO4J_URI=neo4j+s://b7b851ef.databases.neo4j.io\r\nNEO4J_USER=neo4j\r\nNEO4J_PASSWORD=Fd2XlmDQsAo5zjnlqLSBTCPgNaBiDQla_rFcxtsM3Mc","metadata":{"uuid":"b5e72bc3-ce63-48d3-b80a-d9ee1502a6b6","source_uuid":"f4de1dbb-f078-4056-a1e7-7cc038020fb7","conversation_uuid":"87cdac28-121c-4746-a70b-cbb046a606f6","source":"/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/.env","name":".env","mimeType":"text/plain","description":"File content for: .env","content_type":"complete"}}]}
+
+[2025-07-01T14:04:43.691Z] FILE_OPERATIONS_TOOL --- reading file: src -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src
+
+[2025-07-01T14:04:43.691Z] FILE_OPERATIONS_TOOL --- processed 1 files
+
+[2025-07-01T14:04:49.043Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"Since the specific value for 'klucz123' was not found in the .env file or indicated in any read operations so far, the next logical step is to search within other files or directories that might contain this information. The 'src' directory could potentially hold relevant code or configuration files that define or assign values to such variables.","tool":"file_operations","query":"Explore the 'src' directory to locate files that may contain the assignment for the variable 'klucz123'."}
+
+[2025-07-01T14:04:53.640Z] AGENT_SERVICE - GET_CONTEXT --- LLM selected document uuids: ["7590e53a-48c1-4b32-956b-7a6f5dac714e","b5e72bc3-ce63-48d3-b80a-d9ee1502a6b6"]
+
+[2025-07-01T14:04:53.640Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "list",
+  "path": "src",
+  "contextDocs": [
+    {
+      "text": "[\n  {\n    \"name\": \".aider.input.history\",\n    \"type\": \"file\",\n    \"size\": 1207,\n    \"modified\": \"2025-05-13T13:40:43.502Z\"\n  },\n  {\n    \"name\": \"package-lock.json\",\n    \"type\": \"file\",\n    \"size\": 280099,\n    \"modified\": \"2025-06-11T10:20:15.334Z\"\n  },\n  {\n    \"name\": \"src\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T20:37:13.973Z\"\n  },\n  {\n    \"name\": \"tsconfig.json\",\n    \"type\": \"file\",\n    \"size\": 385,\n    \"modified\": \"2025-06-05T12:38:21.761Z\"\n  },\n  {\n    \"name\": \"node_modules\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-11T10:37:43.862Z\"\n  },\n  {\n    \"name\": \"package.json\",\n    \"type\": \"file\",\n    \"size\": 1176,\n    \"modified\": \"2025-07-01T08:32:27.732Z\"\n  },\n  {\n    \"name\": \".gitignore\",\n    \"type\": \"file\",\n    \"size\": 53,\n    \"modified\": \"2025-05-27T15:13:20.374Z\"\n  },\n  {\n    \"name\": \".aider.chat.history.md\",\n    \"type\": \"file\",\n    \"size\": 16836,\n    \"modified\": \"2025-05-13T13:41:10.301Z\"\n  },\n  {\n    \"name\": \".env\",\n    \"type\": \"file\",\n    \"size\": 1071,\n    \"modified\": \"2025-06-01T21:36:33.879Z\"\n  },\n  {\n    \"name\": \"data\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T18:58:53.936Z\"\n  },\n  {\n    \"name\": \".git\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T21:53:38.419Z\"\n  },\n  {\n    \"name\": \".aider.tags.cache.v4\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-13T09:14:39.218Z\"\n  },\n  {\n    \"name\": \"bun.lock\",\n    \"type\": \"file\",\n    \"size\": 48394,\n    \"modified\": \"2025-06-04T17:47:08.906Z\"\n  }\n]",
+      "metadata": {
+        "uuid": "7590e53a-48c1-4b32-956b-7a6f5dac714e",
+        "source_uuid": "1622000f-f982-4b90-96da-486fe6068c9c",
+        "conversation_uuid": "87cdac28-121c-4746-a70b-cbb046a606f6",
+        "source": "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3",
+        "name": ".",
+        "mimeType": "text/plain",
+        "description": "Directory listing for: .",
+        "content_type": "complete"
+      }
+    },
+    {
+      "text": "POLIGON_API_KEY=70fd6eae-ed0c-4b81-a6d1-eb65fb4aa611\r\nPOLIGON_URL=https://poligon.aidevs.pl\r\nCENTRALA_URL=https://c3ntrala.ag3nts.org\r\nROBOT_URL=https://xyz.ag3nts.org\r\n\r\nOPENAI_API_KEY=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\r\n\r\nFIRECRAWL_API_KEY=fc-a6442746f3454a0186feecc1a3b7f526\r\n\r\nELEVENLABS_API_KEY=sk_4ebf21565fc30c6e9c2a4544692d87f75749217e370cd9ec\r\n\r\nGROQ_API_KEY=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\r\n\r\nLANGFUSE_SECRET_KEY=sk-lf-9131bd00-3fad-44bc-bc01-ad6bca0e8f4a\r\nLANGFUSE_PUBLIC_KEY=pk-lf-98527807-9766-42fb-8e0a-ee038c47d51c\r\nLANGFUSE_HOST=https://cloud.langfuse.com\r\n\r\nQDRANT_URL=https://507fa727-f029-4056-a6de-ec80ed0ebb50.eu-central-1-0.aws.cloud.qdrant.io:6333\r\nQDRANT_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.li8aiECRAa74FWvCaWfBObks5rwDwHcPBcU0DbB0-BQ\r\n\r\nNEO4J_URI=neo4j+s://b7b851ef.databases.neo4j.io\r\nNEO4J_USER=neo4j\r\nNEO4J_PASSWORD=Fd2XlmDQsAo5zjnlqLSBTCPgNaBiDQla_rFcxtsM3Mc",
+      "metadata": {
+        "uuid": "b5e72bc3-ce63-48d3-b80a-d9ee1502a6b6",
+        "source_uuid": "f4de1dbb-f078-4056-a1e7-7cc038020fb7",
+        "conversation_uuid": "87cdac28-121c-4746-a70b-cbb046a606f6",
+        "source": "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/.env",
+        "name": ".env",
+        "mimeType": "text/plain",
+        "description": "File content for: .env",
+        "content_type": "complete"
+      }
+    }
+  ]
+}
+
+[2025-07-01T14:04:53.640Z] FILE_OPERATIONS_TOOL --- params: {"operation":"list","path":"src","contextDocs":[{"text":"[\n  {\n    \"name\": \".aider.input.history\",\n    \"type\": \"file\",\n    \"size\": 1207,\n    \"modified\": \"2025-05-13T13:40:43.502Z\"\n  },\n  {\n    \"name\": \"package-lock.json\",\n    \"type\": \"file\",\n    \"size\": 280099,\n    \"modified\": \"2025-06-11T10:20:15.334Z\"\n  },\n  {\n    \"name\": \"src\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T20:37:13.973Z\"\n  },\n  {\n    \"name\": \"tsconfig.json\",\n    \"type\": \"file\",\n    \"size\": 385,\n    \"modified\": \"2025-06-05T12:38:21.761Z\"\n  },\n  {\n    \"name\": \"node_modules\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-11T10:37:43.862Z\"\n  },\n  {\n    \"name\": \"package.json\",\n    \"type\": \"file\",\n    \"size\": 1176,\n    \"modified\": \"2025-07-01T08:32:27.732Z\"\n  },\n  {\n    \"name\": \".gitignore\",\n    \"type\": \"file\",\n    \"size\": 53,\n    \"modified\": \"2025-05-27T15:13:20.374Z\"\n  },\n  {\n    \"name\": \".aider.chat.history.md\",\n    \"type\": \"file\",\n    \"size\": 16836,\n    \"modified\": \"2025-05-13T13:41:10.301Z\"\n  },\n  {\n    \"name\": \".env\",\n    \"type\": \"file\",\n    \"size\": 1071,\n    \"modified\": \"2025-06-01T21:36:33.879Z\"\n  },\n  {\n    \"name\": \"data\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T18:58:53.936Z\"\n  },\n  {\n    \"name\": \".git\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T21:53:38.419Z\"\n  },\n  {\n    \"name\": \".aider.tags.cache.v4\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-13T09:14:39.218Z\"\n  },\n  {\n    \"name\": \"bun.lock\",\n    \"type\": \"file\",\n    \"size\": 48394,\n    \"modified\": \"2025-06-04T17:47:08.906Z\"\n  }\n]","metadata":{"uuid":"7590e53a-48c1-4b32-956b-7a6f5dac714e","source_uuid":"1622000f-f982-4b90-96da-486fe6068c9c","conversation_uuid":"87cdac28-121c-4746-a70b-cbb046a606f6","source":"/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3","name":".","mimeType":"text/plain","description":"Directory listing for: .","content_type":"complete"}},{"text":"POLIGON_API_KEY=70fd6eae-ed0c-4b81-a6d1-eb65fb4aa611\r\nPOLIGON_URL=https://poligon.aidevs.pl\r\nCENTRALA_URL=https://c3ntrala.ag3nts.org\r\nROBOT_URL=https://xyz.ag3nts.org\r\n\r\nOPENAI_API_KEY=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\r\n\r\nFIRECRAWL_API_KEY=fc-a6442746f3454a0186feecc1a3b7f526\r\n\r\nELEVENLABS_API_KEY=sk_4ebf21565fc30c6e9c2a4544692d87f75749217e370cd9ec\r\n\r\nGROQ_API_KEY=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\r\n\r\nLANGFUSE_SECRET_KEY=sk-lf-9131bd00-3fad-44bc-bc01-ad6bca0e8f4a\r\nLANGFUSE_PUBLIC_KEY=pk-lf-98527807-9766-42fb-8e0a-ee038c47d51c\r\nLANGFUSE_HOST=https://cloud.langfuse.com\r\n\r\nQDRANT_URL=https://507fa727-f029-4056-a6de-ec80ed0ebb50.eu-central-1-0.aws.cloud.qdrant.io:6333\r\nQDRANT_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.li8aiECRAa74FWvCaWfBObks5rwDwHcPBcU0DbB0-BQ\r\n\r\nNEO4J_URI=neo4j+s://b7b851ef.databases.neo4j.io\r\nNEO4J_USER=neo4j\r\nNEO4J_PASSWORD=Fd2XlmDQsAo5zjnlqLSBTCPgNaBiDQla_rFcxtsM3Mc","metadata":{"uuid":"b5e72bc3-ce63-48d3-b80a-d9ee1502a6b6","source_uuid":"f4de1dbb-f078-4056-a1e7-7cc038020fb7","conversation_uuid":"87cdac28-121c-4746-a70b-cbb046a606f6","source":"/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/.env","name":".env","mimeType":"text/plain","description":"File content for: .env","content_type":"complete"}}]}
+
+[2025-07-01T14:04:53.640Z] FILE_OPERATIONS_TOOL --- listing directory: src -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src
+
+[2025-07-01T14:04:53.640Z] FILE_OPERATIONS_TOOL --- processed 1 directories
+
+[2025-07-01T14:04:59.694Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"The user has asked for the value assigned to a variable named 'klucz123'. Since we have already checked the .env file and did not find such a variable there, the next step is to search the available source code files in the 'src' directory for any assignments to 'klucz123'. This could be in any of the files or subdirectories within 'src'.","tool":"file_operations","query":"Search for the variable 'klucz123' in the files within the 'src' directory to find its assigned value."}
+
+[2025-07-01T14:05:03.168Z] AGENT_SERVICE - GET_CONTEXT --- LLM selected document uuids: ["fb547afd-d2f8-4a51-bf4c-f60f3a29fe71","fade5eb5-42d0-449f-a533-198ea79bc285"]
+
+[2025-07-01T14:05:03.168Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "read",
+  "path": "src",
+  "contextDocs": [
+    {
+      "text": "Path is not a file: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src",
+      "metadata": {
+        "uuid": "fade5eb5-42d0-449f-a533-198ea79bc285",
+        "source_uuid": "8f756caa-4f71-471d-94b4-da51b3be5add",
+        "conversation_uuid": "87cdac28-121c-4746-a70b-cbb046a606f6",
+        "source": "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src",
+        "name": "src",
+        "mimeType": "text/plain",
+        "description": "Not a file error",
+        "content_type": "error"
+      }
+    },
+    {
+      "text": "[\n  {\n    \"name\": \"index.ts\",\n    \"type\": \"file\",\n    \"size\": 1466,\n    \"modified\": \"2025-06-27T20:37:15.537Z\"\n  },\n  {\n    \"name\": \"promptGenerator\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-22T10:30:53.419Z\"\n  },\n  {\n    \"name\": \"test.ts\",\n    \"type\": \"file\",\n    \"size\": 753,\n    \"modified\": \"2025-05-27T09:22:02.679Z\"\n  },\n  {\n    \"name\": \"agent\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T13:23:17.237Z\"\n  },\n  {\n    \"name\": \"S04\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-10T19:57:40.899Z\"\n  },\n  {\n    \"name\": \"steps.md\",\n    \"type\": \"file\",\n    \"size\": 2667,\n    \"modified\": \"2025-05-23T18:21:07.652Z\"\n  },\n  {\n    \"name\": \"S05\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T19:29:14.467Z\"\n  },\n  {\n    \"name\": \"S03\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-01T21:19:50.547Z\"\n  },\n  {\n    \"name\": \"types\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-21T23:11:13.285Z\"\n  },\n  {\n    \"name\": \"S02\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-31T18:00:50.566Z\"\n  },\n  {\n    \"name\": \"functions\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T10:05:30.451Z\"\n  },\n  {\n    \"name\": \"S01\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-16T05:57:01.897Z\"\n  }\n]",
+      "metadata": {
+        "uuid": "fb547afd-d2f8-4a51-bf4c-f60f3a29fe71",
+        "source_uuid": "3be69189-820f-43ad-8478-a5c8c9e1828b",
+        "conversation_uuid": "87cdac28-121c-4746-a70b-cbb046a606f6",
+        "source": "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src",
+        "name": "src",
+        "mimeType": "text/plain",
+        "description": "Directory listing for: src",
+        "content_type": "complete"
+      }
+    }
+  ]
+}
+
+[2025-07-01T14:05:03.169Z] FILE_OPERATIONS_TOOL --- params: {"operation":"read","path":"src","contextDocs":[{"text":"Path is not a file: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src","metadata":{"uuid":"fade5eb5-42d0-449f-a533-198ea79bc285","source_uuid":"8f756caa-4f71-471d-94b4-da51b3be5add","conversation_uuid":"87cdac28-121c-4746-a70b-cbb046a606f6","source":"/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src","name":"src","mimeType":"text/plain","description":"Not a file error","content_type":"error"}},{"text":"[\n  {\n    \"name\": \"index.ts\",\n    \"type\": \"file\",\n    \"size\": 1466,\n    \"modified\": \"2025-06-27T20:37:15.537Z\"\n  },\n  {\n    \"name\": \"promptGenerator\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-22T10:30:53.419Z\"\n  },\n  {\n    \"name\": \"test.ts\",\n    \"type\": \"file\",\n    \"size\": 753,\n    \"modified\": \"2025-05-27T09:22:02.679Z\"\n  },\n  {\n    \"name\": \"agent\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T13:23:17.237Z\"\n  },\n  {\n    \"name\": \"S04\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-10T19:57:40.899Z\"\n  },\n  {\n    \"name\": \"steps.md\",\n    \"type\": \"file\",\n    \"size\": 2667,\n    \"modified\": \"2025-05-23T18:21:07.652Z\"\n  },\n  {\n    \"name\": \"S05\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T19:29:14.467Z\"\n  },\n  {\n    \"name\": \"S03\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-01T21:19:50.547Z\"\n  },\n  {\n    \"name\": \"types\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-21T23:11:13.285Z\"\n  },\n  {\n    \"name\": \"S02\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-31T18:00:50.566Z\"\n  },\n  {\n    \"name\": \"functions\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T10:05:30.451Z\"\n  },\n  {\n    \"name\": \"S01\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-16T05:57:01.897Z\"\n  }\n]","metadata":{"uuid":"fb547afd-d2f8-4a51-bf4c-f60f3a29fe71","source_uuid":"3be69189-820f-43ad-8478-a5c8c9e1828b","conversation_uuid":"87cdac28-121c-4746-a70b-cbb046a606f6","source":"/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src","name":"src","mimeType":"text/plain","description":"Directory listing for: src","content_type":"complete"}}]}
+
+[2025-07-01T14:05:03.169Z] FILE_OPERATIONS_TOOL --- reading file: src -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src
+
+[2025-07-01T14:05:03.169Z] FILE_OPERATIONS_TOOL --- processed 1 files
+
+[2025-07-01T14:05:12.064Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"The objective is to find the value assigned to 'klucz123', which implies checking for variable definitions in files. We have not yet checked inside the 'index.ts' which could contain this variable definition.","tool":"file_operations","query":"Read the file 'src/index.ts' to search for the variable 'klucz123' and its value."}
+
+[2025-07-01T14:05:17.440Z] AGENT_SERVICE - GET_CONTEXT --- LLM selected document uuids: ["fb547afd-d2f8-4a51-bf4c-f60f3a29fe71","7590e53a-48c1-4b32-956b-7a6f5dac714e"]
+
+[2025-07-01T14:05:17.440Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "read",
+  "path": "src/index.ts",
+  "contextDocs": [
+    {
+      "text": "[\n  {\n    \"name\": \".aider.input.history\",\n    \"type\": \"file\",\n    \"size\": 1207,\n    \"modified\": \"2025-05-13T13:40:43.502Z\"\n  },\n  {\n    \"name\": \"package-lock.json\",\n    \"type\": \"file\",\n    \"size\": 280099,\n    \"modified\": \"2025-06-11T10:20:15.334Z\"\n  },\n  {\n    \"name\": \"src\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T20:37:13.973Z\"\n  },\n  {\n    \"name\": \"tsconfig.json\",\n    \"type\": \"file\",\n    \"size\": 385,\n    \"modified\": \"2025-06-05T12:38:21.761Z\"\n  },\n  {\n    \"name\": \"node_modules\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-11T10:37:43.862Z\"\n  },\n  {\n    \"name\": \"package.json\",\n    \"type\": \"file\",\n    \"size\": 1176,\n    \"modified\": \"2025-07-01T08:32:27.732Z\"\n  },\n  {\n    \"name\": \".gitignore\",\n    \"type\": \"file\",\n    \"size\": 53,\n    \"modified\": \"2025-05-27T15:13:20.374Z\"\n  },\n  {\n    \"name\": \".aider.chat.history.md\",\n    \"type\": \"file\",\n    \"size\": 16836,\n    \"modified\": \"2025-05-13T13:41:10.301Z\"\n  },\n  {\n    \"name\": \".env\",\n    \"type\": \"file\",\n    \"size\": 1071,\n    \"modified\": \"2025-06-01T21:36:33.879Z\"\n  },\n  {\n    \"name\": \"data\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T18:58:53.936Z\"\n  },\n  {\n    \"name\": \".git\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T21:53:38.419Z\"\n  },\n  {\n    \"name\": \".aider.tags.cache.v4\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-13T09:14:39.218Z\"\n  },\n  {\n    \"name\": \"bun.lock\",\n    \"type\": \"file\",\n    \"size\": 48394,\n    \"modified\": \"2025-06-04T17:47:08.906Z\"\n  }\n]",
+      "metadata": {
+        "uuid": "7590e53a-48c1-4b32-956b-7a6f5dac714e",
+        "source_uuid": "1622000f-f982-4b90-96da-486fe6068c9c",
+        "conversation_uuid": "87cdac28-121c-4746-a70b-cbb046a606f6",
+        "source": "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3",
+        "name": ".",
+        "mimeType": "text/plain",
+        "description": "Directory listing for: .",
+        "content_type": "complete"
+      }
+    },
+    {
+      "text": "[\n  {\n    \"name\": \"index.ts\",\n    \"type\": \"file\",\n    \"size\": 1466,\n    \"modified\": \"2025-06-27T20:37:15.537Z\"\n  },\n  {\n    \"name\": \"promptGenerator\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-22T10:30:53.419Z\"\n  },\n  {\n    \"name\": \"test.ts\",\n    \"type\": \"file\",\n    \"size\": 753,\n    \"modified\": \"2025-05-27T09:22:02.679Z\"\n  },\n  {\n    \"name\": \"agent\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T13:23:17.237Z\"\n  },\n  {\n    \"name\": \"S04\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-10T19:57:40.899Z\"\n  },\n  {\n    \"name\": \"steps.md\",\n    \"type\": \"file\",\n    \"size\": 2667,\n    \"modified\": \"2025-05-23T18:21:07.652Z\"\n  },\n  {\n    \"name\": \"S05\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T19:29:14.467Z\"\n  },\n  {\n    \"name\": \"S03\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-01T21:19:50.547Z\"\n  },\n  {\n    \"name\": \"types\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-21T23:11:13.285Z\"\n  },\n  {\n    \"name\": \"S02\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-31T18:00:50.566Z\"\n  },\n  {\n    \"name\": \"functions\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T10:05:30.451Z\"\n  },\n  {\n    \"name\": \"S01\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-16T05:57:01.897Z\"\n  }\n]",
+      "metadata": {
+        "uuid": "fb547afd-d2f8-4a51-bf4c-f60f3a29fe71",
+        "source_uuid": "3be69189-820f-43ad-8478-a5c8c9e1828b",
+        "conversation_uuid": "87cdac28-121c-4746-a70b-cbb046a606f6",
+        "source": "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src",
+        "name": "src",
+        "mimeType": "text/plain",
+        "description": "Directory listing for: src",
+        "content_type": "complete"
+      }
+    }
+  ]
+}
+
+[2025-07-01T14:05:17.440Z] FILE_OPERATIONS_TOOL --- params: {"operation":"read","path":"src/index.ts","contextDocs":[{"text":"[\n  {\n    \"name\": \".aider.input.history\",\n    \"type\": \"file\",\n    \"size\": 1207,\n    \"modified\": \"2025-05-13T13:40:43.502Z\"\n  },\n  {\n    \"name\": \"package-lock.json\",\n    \"type\": \"file\",\n    \"size\": 280099,\n    \"modified\": \"2025-06-11T10:20:15.334Z\"\n  },\n  {\n    \"name\": \"src\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T20:37:13.973Z\"\n  },\n  {\n    \"name\": \"tsconfig.json\",\n    \"type\": \"file\",\n    \"size\": 385,\n    \"modified\": \"2025-06-05T12:38:21.761Z\"\n  },\n  {\n    \"name\": \"node_modules\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-11T10:37:43.862Z\"\n  },\n  {\n    \"name\": \"package.json\",\n    \"type\": \"file\",\n    \"size\": 1176,\n    \"modified\": \"2025-07-01T08:32:27.732Z\"\n  },\n  {\n    \"name\": \".gitignore\",\n    \"type\": \"file\",\n    \"size\": 53,\n    \"modified\": \"2025-05-27T15:13:20.374Z\"\n  },\n  {\n    \"name\": \".aider.chat.history.md\",\n    \"type\": \"file\",\n    \"size\": 16836,\n    \"modified\": \"2025-05-13T13:41:10.301Z\"\n  },\n  {\n    \"name\": \".env\",\n    \"type\": \"file\",\n    \"size\": 1071,\n    \"modified\": \"2025-06-01T21:36:33.879Z\"\n  },\n  {\n    \"name\": \"data\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T18:58:53.936Z\"\n  },\n  {\n    \"name\": \".git\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T21:53:38.419Z\"\n  },\n  {\n    \"name\": \".aider.tags.cache.v4\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-13T09:14:39.218Z\"\n  },\n  {\n    \"name\": \"bun.lock\",\n    \"type\": \"file\",\n    \"size\": 48394,\n    \"modified\": \"2025-06-04T17:47:08.906Z\"\n  }\n]","metadata":{"uuid":"7590e53a-48c1-4b32-956b-7a6f5dac714e","source_uuid":"1622000f-f982-4b90-96da-486fe6068c9c","conversation_uuid":"87cdac28-121c-4746-a70b-cbb046a606f6","source":"/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3","name":".","mimeType":"text/plain","description":"Directory listing for: .","content_type":"complete"}},{"text":"[\n  {\n    \"name\": \"index.ts\",\n    \"type\": \"file\",\n    \"size\": 1466,\n    \"modified\": \"2025-06-27T20:37:15.537Z\"\n  },\n  {\n    \"name\": \"promptGenerator\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-22T10:30:53.419Z\"\n  },\n  {\n    \"name\": \"test.ts\",\n    \"type\": \"file\",\n    \"size\": 753,\n    \"modified\": \"2025-05-27T09:22:02.679Z\"\n  },\n  {\n    \"name\": \"agent\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T13:23:17.237Z\"\n  },\n  {\n    \"name\": \"S04\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-10T19:57:40.899Z\"\n  },\n  {\n    \"name\": \"steps.md\",\n    \"type\": \"file\",\n    \"size\": 2667,\n    \"modified\": \"2025-05-23T18:21:07.652Z\"\n  },\n  {\n    \"name\": \"S05\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-29T19:29:14.467Z\"\n  },\n  {\n    \"name\": \"S03\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-01T21:19:50.547Z\"\n  },\n  {\n    \"name\": \"types\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-21T23:11:13.285Z\"\n  },\n  {\n    \"name\": \"S02\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-31T18:00:50.566Z\"\n  },\n  {\n    \"name\": \"functions\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-06-27T10:05:30.451Z\"\n  },\n  {\n    \"name\": \"S01\",\n    \"type\": \"directory\",\n    \"size\": null,\n    \"modified\": \"2025-05-16T05:57:01.897Z\"\n  }\n]","metadata":{"uuid":"fb547afd-d2f8-4a51-bf4c-f60f3a29fe71","source_uuid":"3be69189-820f-43ad-8478-a5c8c9e1828b","conversation_uuid":"87cdac28-121c-4746-a70b-cbb046a606f6","source":"/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src","name":"src","mimeType":"text/plain","description":"Directory listing for: src","content_type":"complete"}}]}
+
+[2025-07-01T14:05:17.440Z] FILE_OPERATIONS_TOOL --- reading file: src/index.ts -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src/index.ts
+
+[2025-07-01T14:05:17.441Z] FILE_OPERATIONS_TOOL --- processed 1 files
+
+[2025-07-01T14:05:22.075Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"The 'zmienna klucz123' seems to likely be a variable that may be defined in one of the files within the 'src' directory. Since we have not found it in the '.env' file or the 'index.ts' file, it would be logical to search for 'klucz123' in other files within the 'src' directory to locate its value.","tool":"file_operations","query":{"operation":"search","path":"src","keyword":"klucz123","contextDocs":[]}}
+
+[2025-07-01T14:05:25.034Z] AGENT_SERVICE - GET_CONTEXT --- LLM selected document uuids: ["b98df34f-aeea-4682-bc8c-880d1f092ab1"]
+
+[2025-07-01T14:05:25.034Z] AGENT_SERVICE - USE_TOOL --- using tool _file_operations_ with params:   {
+  "operation": "read",
+  "path": "src/index.ts",
+  "contextDocs": [
+    {
+      "text": "export { Centrala, Centrala as Utils } from './functions/CentralaService';\nexport { ImageProcessor } from './functions/imageProcessor';\nexport { TranscribeProcessor } from './functions/transcribeProcessor';\nexport { FileReader } from './functions/readFiles';\nexport { OpenAIService, MODELS } from './functions/OpenAIService';\nexport { LangfuseService } from './functions/LangfuseService';\nexport { TextSplitter } from './functions/TextService';\nexport { VectorService } from './functions/VectorService';\nexport { MessageManager } from './functions/MessageManager';\nexport { Logger } from './functions/Logger';\nexport { PdfProcessor } from './functions/PdfProcessor';\nexport { DatabaseService } from './functions/DatabaseService';\nexport { Agent } from './agent/AgentService';\n// export { startApi } from './agent/api';\n\nexport type { Report } from './functions/VectorService';\n\nexport type {\n    ResizedImageMetadata,\n    ImageMessage,\n    TextMessage,\n    ProcessImageOptions,\n    ProcessedImageResult\n} from './types/imageProcessor.d';\n\nexport type {\n    LLMResponse\n} from './types/openAiService.d';\n\nexport type {\n    ProcessOptions,\n    UsageStats\n} from './functions/LangfuseService';\n\nexport type {\n    Message,\n    MessageArray,\n    MessageRole,\n    ChatCompletionUserMessageParam,\n    ChatCompletionAssistantMessageParam,\n    ChatCompletionSystemMessageParam,\n    ChatCompletionContentPartImage,\n    ChatCompletionContentPartText\n} from './types/messages';\n",
+      "metadata": {
+        "uuid": "b98df34f-aeea-4682-bc8c-880d1f092ab1",
+        "source_uuid": "6df504dc-c6ab-4bf7-8afc-b31c39060baf",
+        "conversation_uuid": "87cdac28-121c-4746-a70b-cbb046a606f6",
+        "source": "/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src/index.ts",
+        "name": "src/index.ts",
+        "mimeType": "text/plain",
+        "description": "File content for: src/index.ts",
+        "content_type": "complete"
+      }
+    }
+  ]
+}
+
+[2025-07-01T14:05:25.034Z] FILE_OPERATIONS_TOOL --- params: {"operation":"read","path":"src/index.ts","contextDocs":[{"text":"export { Centrala, Centrala as Utils } from './functions/CentralaService';\nexport { ImageProcessor } from './functions/imageProcessor';\nexport { TranscribeProcessor } from './functions/transcribeProcessor';\nexport { FileReader } from './functions/readFiles';\nexport { OpenAIService, MODELS } from './functions/OpenAIService';\nexport { LangfuseService } from './functions/LangfuseService';\nexport { TextSplitter } from './functions/TextService';\nexport { VectorService } from './functions/VectorService';\nexport { MessageManager } from './functions/MessageManager';\nexport { Logger } from './functions/Logger';\nexport { PdfProcessor } from './functions/PdfProcessor';\nexport { DatabaseService } from './functions/DatabaseService';\nexport { Agent } from './agent/AgentService';\n// export { startApi } from './agent/api';\n\nexport type { Report } from './functions/VectorService';\n\nexport type {\n    ResizedImageMetadata,\n    ImageMessage,\n    TextMessage,\n    ProcessImageOptions,\n    ProcessedImageResult\n} from './types/imageProcessor.d';\n\nexport type {\n    LLMResponse\n} from './types/openAiService.d';\n\nexport type {\n    ProcessOptions,\n    UsageStats\n} from './functions/LangfuseService';\n\nexport type {\n    Message,\n    MessageArray,\n    MessageRole,\n    ChatCompletionUserMessageParam,\n    ChatCompletionAssistantMessageParam,\n    ChatCompletionSystemMessageParam,\n    ChatCompletionContentPartImage,\n    ChatCompletionContentPartText\n} from './types/messages';\n","metadata":{"uuid":"b98df34f-aeea-4682-bc8c-880d1f092ab1","source_uuid":"6df504dc-c6ab-4bf7-8afc-b31c39060baf","conversation_uuid":"87cdac28-121c-4746-a70b-cbb046a606f6","source":"/home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src/index.ts","name":"src/index.ts","mimeType":"text/plain","description":"File content for: src/index.ts","content_type":"complete"}}]}
+
+[2025-07-01T14:05:25.035Z] FILE_OPERATIONS_TOOL --- reading file: src/index.ts -> /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/src/index.ts
+
+[2025-07-01T14:05:25.035Z] FILE_OPERATIONS_TOOL --- processed 1 files
+
+[2025-07-01T14:05:39.680Z] RUN_AGENT___PLAN ---- Thinking... {"_reasoning":"Since the required variable 'klucz123' was not found in the '.env' file, the next logical step is to explore more files that might contain variable definitions or configurations. The 'src/index.ts' file was checked, which primarily contains export statements and doesn't hold variable definitions directly. Therefore, it would be efficient to explore the 'package.json' file for any potential scripts or definitions that may indirectly point to variable assignments.","tool":"file_operations","query":"{\"operation\":\"read\",\"path\":\"package.json\",\"contextDocs\":[]}"}

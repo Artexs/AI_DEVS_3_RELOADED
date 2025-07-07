@@ -33,5 +33,7 @@ export interface State {
     current_step: number;
     current_tool?: Tool;
     active_step?: Step | null;
+    fastTrack: boolean;
   };
+  userMessage: string;
 }
