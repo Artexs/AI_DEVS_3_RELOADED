@@ -3,9 +3,9 @@ import { writeFileSync, existsSync, readFileSync } from 'fs';
 import { PdfProcessor, Logger, Utils, ImageProcessor, OpenAIService, MessageManager } from '../index';
 import { systemPromptNotatkiRafala } from '../../data/S04/E05/prompts/systemPromptNotatkiRafala';
 import { v4 as uuidv4 } from 'uuid';
-import { GenerateAnswerForQuestionTool } from '../agent/tools/generate-answer-for-question';
+import { GenerateAnswerForQuestionTool } from '../agent/tools/task_generate-answer-for-question';
 import { LangfuseService } from '../index';
-import { updateAnswers, loadAnswers, ContactCentralaTool } from '../agent/tools/contact-centrala';
+import { updateAnswers, loadAnswers, ContactCentralaTool } from '../agent/tools/task_contact-centrala';
 
 const logger = new Logger('S04E05');
 const centralaTool = new ContactCentralaTool(logger);

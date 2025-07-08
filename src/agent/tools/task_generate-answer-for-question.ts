@@ -3,7 +3,7 @@ import { IDoc } from '../../types/types';
 import { document } from '../metadata';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import { loadAnswers, updateAnswers, type AnswersFile } from './contact-centrala';
+import { loadAnswers, updateAnswers, type AnswersFile } from './task_contact-centrala';
 import { systemPromptNotatkiRafala } from '../../../data/S04/E05/prompts/systemPromptNotatkiRafala';
 
 export class GenerateAnswerForQuestionTool {
