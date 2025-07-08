@@ -6,3 +6,4 @@ export { WebSearchTool } from './web-search';
 export { GenerateAnswerForQuestionTool } from './task_generate-answer-for-question';
 export { GpsTool } from './task_gps';
 export { AudioProcessTool } from './describe-audio';
+export { DatabaseTool } from './DatabaseTool';

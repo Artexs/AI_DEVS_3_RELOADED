@@ -19,6 +19,12 @@ const messages = sqliteTable('messages', {
   content: text('content').notNull(),
 });
 
+const documents = sqliteTable('documents', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  text: text('text').notNull(),
+  keywords: text('keywords').notNull(),
+});
+
 export class DatabaseService {
   private db;
 
@@ -53,6 +59,14 @@ export class DatabaseService {
         llmRole TEXT NOT NULL CHECK (llmRole IN ('system', 'user', 'assistant')),
         content TEXT NOT NULL,
         FOREIGN KEY (conversation_uuid) REFERENCES conversations(uuid)
+      )
+    `);
+
+    this.db.run(sql`
+      CREATE TABLE IF NOT EXISTS documents (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        text TEXT NOT NULL,
+        keywords TEXT NOT NULL
       )
     `);
   }
@@ -105,5 +119,24 @@ export class DatabaseService {
       .select()
       .from(messages)
       .all();
+  }
+
+  async addDocument(text: string, keywords: string): Promise<void> {
+    await this.db
+      .insert(documents)
+      .values({ text, keywords })
+      .run();
+  }
+
+  async getDocumentsByKeywords(keywords: string[]): Promise<string[]> {
+    if (!keywords || keywords.length === 0) return [];
+    // Build OR conditions for each keyword
+    const conditions = keywords.map(k => sql`keywords LIKE ${'%' + k + '%'}`);
+    const query = this.db
+      .select({ text: documents.text })
+      .from(documents)
+      .where(sql.join(conditions, sql` OR `));
+    const rows = await query.all();
+    return rows.map((r: { text: string }) => r.text);
   }
 } 

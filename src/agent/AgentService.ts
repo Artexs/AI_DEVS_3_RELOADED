@@ -12,7 +12,8 @@ import {
   WebSearchTool, 
   GenerateAnswerForQuestionTool, 
   GpsTool,
-  AudioProcessTool 
+  AudioProcessTool,
+  DatabaseTool
 } from "./tools/internal-index";
 import { contextSelectionPrompt } from "./prompts/agent-service/context-selection";
 import { fastPrompt } from './prompts/agent-service/fastTrack';
@@ -34,6 +35,7 @@ export class Agent {
   private generateAnswerForQuestionTool: GenerateAnswerForQuestionTool;
   private gpsTool: GpsTool;
   private audioProcessTool: AudioProcessTool;
+  private databaseTool: DatabaseTool;
 
   private readonly toolMap: ToolMap;
 
@@ -51,6 +53,7 @@ export class Agent {
     this.generateAnswerForQuestionTool = new GenerateAnswerForQuestionTool(logger, langfuseService);
     this.gpsTool = new GpsTool(logger);
     this.audioProcessTool = new AudioProcessTool(logger);
+    this.databaseTool = new DatabaseTool(logger);
 
     this.toolMap = {
       download_files: (params, uuid) => this.downloaderTool.getDataFromCentrala(params.url, uuid),
@@ -61,9 +64,7 @@ export class Agent {
       generate_answer_for_question: (params, uuid) => this.generateAnswerForQuestionTool.generateAnswerForQuestion(params, uuid),
       getCoordinates: (params, uuid) => this.gpsTool.main(params.cityName, uuid),
       audio_process: (params, uuid) => this.audioProcessTool.processAudio(params, uuid),
-      // people: (params, uuid) => this.gpsTool.people(params, uuid),
-      // gps: (params, uuid) => this.gpsTool.gps(params, uuid),
-      // database_id: (params, uuid) => this.gpsTool.databaseId(params, uuid)
+      database_search: (params, uuid) => this.databaseTool.searchDatabase(params, uuid)
     };
   }
 

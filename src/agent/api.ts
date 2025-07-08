@@ -22,7 +22,8 @@ import {
   fileOperationsInstruction, 
   webInstruction,
   generateAnswerForQuestionInstruction,
-  audioProcessInstruction
+  audioProcessInstruction,
+  databaseInstruction
 } from './prompts/toolsInstructions/internal-index';
 
 const state: State = {
@@ -72,16 +73,16 @@ const state: State = {
             contextDocs: 'additional context documents (optional)'
         })
       },
-      // {
-      //   uuid: uuidv4(),
-      //   name: "file_operations",
-      //   description: "Use this tool to list directories/files or read file contents from the file system",
-      //   instruction: fileOperationsInstruction,
-      //   parameters: JSON.stringify({
-      //       operation: "list or read",
-      //       path: "relative path from project root"
-      //   })
-      // },
+      {
+        uuid: uuidv4(),
+        name: "file_operations",
+        description: "Use this tool to list directories/files or read file contents from the file system",
+        instruction: fileOperationsInstruction,
+        parameters: JSON.stringify({
+            operation: "list or read",
+            path: "relative path from project root"
+        })
+      },
       {
         uuid: uuidv4(),
         name: "web_search",
@@ -90,6 +91,15 @@ const state: State = {
         parameters: JSON.stringify({
           query: `Command to the web search tool, including the search query and all important details, keywords and urls from the avilable context`
         }),
+      },
+      {
+        uuid: uuidv4(),
+        name: "database_search",
+        description: "Use this tool to search and retrieve data from a database by providing a list of relevant keywords.",
+        instruction: databaseInstruction,
+        parameters: JSON.stringify({
+          keywords: ["list", "of", "relevant", "keywords", "for", "the", "database", "search"]
+        })
       },
       // {
       //   uuid: uuidv4(),
@@ -197,7 +207,13 @@ export const startApi = async () => {
 
     const postHandler: RequestHandler = async (req: Request, res: Response, next: Function) => {
         try {
-            const lastMessage = req.body.messages[req.body.messages.length -1].content[0].text;
+            let lastMessage;
+            console.warn("FINAL RESPONSE FROM AGENT !!!@!@!@!@!#@ # @!#!")
+            if (typeof req.body === "string") {
+                lastMessage = req.body;
+            } else {
+                lastMessage = req.body.messages[req.body.messages.length - 1].content[0].text;
+            }
             console.log(lastMessage)
             messageManager2.addMessage('user', lastMessage);
 
