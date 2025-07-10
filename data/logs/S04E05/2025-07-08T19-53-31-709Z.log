@@ -1,0 +1,82 @@
+Log file created at 2025-07-08T19:53:31.711Z
+--------------------------------------------
+[2025-07-08T19:53:31.715Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"10":"placeholder","11":"placeholder","12":"placeholder","13":"placeholder","14":"placeholder","15":"placeholder","16":"placeholder","17":"placeholder","18":"placeholder","19":"placeholder","20":"placeholder","21":"placeholder","22":"placeholder","23":"placeholder","24":"placeholder","01":"Zygfryd znajduje się w roku 2238, skąd wysłał 'numer piąty' w przeszłość.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder","06":"placeholder","07":"placeholder","08":"placeholder","09":"placeholder"},"centralaResponse":"placeholder"}
+
+[2025-07-08T19:53:31.715Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-08T19:53:31.715Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: W którym roku znajduje się Zygfryd, który wysłał "numer piąty" w przeszłość?
+
+[2025-07-08T19:53:31.715Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-08T19:53:31.715Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-08T19:53:36.031Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała nie ma bezpośredniej wzmianki o Zygfrydzie wysyłającym 'numer piąty' w przeszłość, ale można wywnioskować kontekst czasowy na podstawie innych wydarzeń. Rafał opisuje, że znalazł się w roku 20... (cyfra niepełna, ale sugeruje XXI wiek), a także wspomina o wydarzeniach związanych z rozwojem technologii LLM, powstaniem GPT-2 i GPT-3, które miały miejsce odpowiednio w 2019 i 2020 roku. Wspomina także o przyszłości po 2024 roku, a więc akcja rozgrywa się w tych latach. Ponadto, Rafał pisze o spotkaniu z Azazelem, który twierdzi, że jest z przyszłości, oraz o przekazaniu badań, które umożliwiły powstanie GPT-2. Wszystko to wskazuje, że kluczowe wydarzenia mają miejsce w okolicach 2019-2020 roku. Skoro Zygfryd wysłał 'numer piąty' w przeszłość, a Rafał obserwuje efekty tych działań w czasie powstawania GPT-2, logiczne jest, że Zygfryd znajduje się w roku 2020.","answer":"Zygfryd znajduje się w roku 2020."}
+
+[2025-07-08T19:53:36.032Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-08T19:53:36.032Z] sendAnswer from contact centrala processing...
+{
+  "task": "story",
+  "paramName": "answer",
+  "response": {
+    "10": "placeholder",
+    "11": "placeholder",
+    "12": "placeholder",
+    "13": "placeholder",
+    "14": "placeholder",
+    "15": "placeholder",
+    "16": "placeholder",
+    "17": "placeholder",
+    "18": "placeholder",
+    "19": "placeholder",
+    "20": "placeholder",
+    "21": "placeholder",
+    "22": "placeholder",
+    "23": "placeholder",
+    "24": "placeholder",
+    "01": "Zygfryd znajduje się w roku 2020.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder",
+    "06": "placeholder",
+    "07": "placeholder",
+    "08": "placeholder",
+    "09": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-08T19:53:36.156Z] response from contact centrala processing...
+{
+  "code": -342,
+  "message": "Some answers are incorrect - please check 'failed' field ",
+  "ok": [
+    "index[24] = placeholder",
+    "index[01] = Zygfryd znajduje się w roku 2020.",
+    "index[02] = placeholder",
+    "index[03] = placeholder",
+    "index[04] = placeholder",
+    "index[05] = placeholder",
+    "index[06] = placeholder",
+    "index[07] = placeholder",
+    "index[08] = placeholder",
+    "index[09] = placeholder"
+  ],
+  "failed": [
+    "index[10] = placeholder",
+    "index[11] = placeholder",
+    "index[12] = placeholder",
+    "index[13] = placeholder",
+    "index[14] = placeholder",
+    "index[15] = placeholder",
+    "index[16] = placeholder",
+    "index[17] = placeholder",
+    "index[18] = placeholder",
+    "index[19] = placeholder",
+    "index[20] = placeholder",
+    "index[21] = placeholder",
+    "index[22] = placeholder",
+    "index[23] = placeholder"
+  ]
+}

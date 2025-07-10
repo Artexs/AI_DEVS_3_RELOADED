@@ -139,4 +139,12 @@ export class DatabaseService {
     const rows = await query.all();
     return rows.map((r: { text: string }) => r.text);
   }
+
+  async getAllDocumentsText(): Promise<string[]> {
+    const rows = await this.db
+      .select({ text: documents.text })
+      .from(documents)
+      .all();
+    return rows.map((r: { text: string }) => r.text);
+  }
 } 

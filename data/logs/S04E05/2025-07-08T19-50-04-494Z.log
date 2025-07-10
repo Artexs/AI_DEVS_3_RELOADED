@@ -1,0 +1,82 @@
+Log file created at 2025-07-08T19:50:04.497Z
+--------------------------------------------
+[2025-07-08T19:50:04.500Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"10":"placeholder","11":"placeholder","12":"placeholder","13":"placeholder","14":"placeholder","15":"placeholder","16":"placeholder","17":"placeholder","18":"placeholder","19":"placeholder","20":"placeholder","21":"placeholder","22":"placeholder","23":"placeholder","24":"placeholder","01":"placeholder","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder","06":"placeholder","07":"placeholder","08":"placeholder","09":"placeholder"},"centralaResponse":"placeholder"}
+
+[2025-07-08T19:50:04.500Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-08T19:50:04.500Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku przeniósł się Rafał
+
+[2025-07-08T19:50:04.500Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-08T19:50:04.501Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-08T19:50:10.299Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała znajduje się fragment: 'Z jednej strony wiedziałem, czego się spodziewać i wiedziałem, że ta maszyna może przenosić w czasie, a z drugiej strony do dziś dnia nie mogę uwierzyć, że jestem w 20... roku.' Chociaż Rafał nie podaje pełnej daty, w dalszej części notatek pojawia się odniesienie do wydarzeń po 2024 roku, a także do technologii GPT-2 i GPT-3, które historycznie powstały odpowiednio w 2019 i 2020 roku. Rafał wspomina również o śnie z dronami nad miastem, które według Adama mają być codziennością po 2024 roku. Jednak kluczowy jest fragment, w którym Rafał pisze: 'Nie mogę uwierzyć, że jestem w 20... roku.' oraz inne odniesienia do wydarzeń z lat 2019-2024. Najbardziej precyzyjną wskazówką jest jednak fragment: '11 listopada 2024', który Rafał podaje jako datę kluczowego wydarzenia. Oznacza to, że Rafał przeniósł się do roku 2024.","answer":"Rafał przeniósł się do roku 2024."}
+
+[2025-07-08T19:50:10.299Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-08T19:50:10.300Z] sendAnswer from contact centrala processing...
+{
+  "task": "story",
+  "paramName": "answer",
+  "response": {
+    "10": "placeholder",
+    "11": "placeholder",
+    "12": "placeholder",
+    "13": "placeholder",
+    "14": "placeholder",
+    "15": "placeholder",
+    "16": "placeholder",
+    "17": "placeholder",
+    "18": "placeholder",
+    "19": "placeholder",
+    "20": "placeholder",
+    "21": "placeholder",
+    "22": "placeholder",
+    "23": "placeholder",
+    "24": "placeholder",
+    "01": "Rafał przeniósł się do roku 2024.",
+    "02": "placeholder",
+    "03": "placeholder",
+    "04": "placeholder",
+    "05": "placeholder",
+    "06": "placeholder",
+    "07": "placeholder",
+    "08": "placeholder",
+    "09": "placeholder"
+  },
+  "url": "verify"
+}
+
+[2025-07-08T19:50:10.465Z] response from contact centrala processing...
+{
+  "code": -342,
+  "message": "Some answers are incorrect - please check 'failed' field ",
+  "ok": [
+    "index[24] = placeholder",
+    "index[01] = Rafał przeniósł się do roku 2024.",
+    "index[02] = placeholder",
+    "index[03] = placeholder",
+    "index[04] = placeholder",
+    "index[05] = placeholder",
+    "index[06] = placeholder",
+    "index[07] = placeholder",
+    "index[08] = placeholder",
+    "index[09] = placeholder"
+  ],
+  "failed": [
+    "index[10] = placeholder",
+    "index[11] = placeholder",
+    "index[12] = placeholder",
+    "index[13] = placeholder",
+    "index[14] = placeholder",
+    "index[15] = placeholder",
+    "index[16] = placeholder",
+    "index[17] = placeholder",
+    "index[18] = placeholder",
+    "index[19] = placeholder",
+    "index[20] = placeholder",
+    "index[21] = placeholder",
+    "index[22] = placeholder",
+    "index[23] = placeholder"
+  ]
+}

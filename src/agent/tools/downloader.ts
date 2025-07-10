@@ -19,7 +19,7 @@ export class DownloaderTool {
         console.log(`TEST TEST TEST FROM getDataFromCentrala with urls ${urls}`)
         const docs = await Promise.all(urls.map(async (url) => {
             // Determine if URL is for centrala
-            const isCentrala = url.includes('c3ntrala.ag3nts.org');
+            const isCentrala = url.includes('ag3nts.org');
             let suffix = url.includes('/') ? url.split('/').pop() : url;
             if (!suffix) {
                 throw new Error(`Invalid URL or suffix provided: ${url}`);
@@ -30,6 +30,7 @@ export class DownloaderTool {
             const filePath = path.join(dataDir, suffix);
             if (isCentrala) {
                 // Use existing centrala logic
+                await this.logger.log(`downloading file from c3ntrala with ${suffix}`);
                 const contentJSON = await this.utils.getFileFromCentrala(suffix, 'data/agent/');
                 content = JSON.stringify(contentJSON);
             } else {

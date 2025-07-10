@@ -208,7 +208,6 @@ export const startApi = async () => {
     const postHandler: RequestHandler = async (req: Request, res: Response, next: Function) => {
         try {
             let lastMessage;
-            console.warn("FINAL RESPONSE FROM AGENT !!!@!@!@!@!#@ # @!#!")
             if (typeof req.body === "string") {
                 lastMessage = req.body;
             } else {

@@ -1,0 +1,339 @@
+Log file created at 2025-07-09T19:14:54.596Z
+--------------------------------------------
+[2025-07-09T19:14:54.601Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":12,"answers":{"10":"placeholder0","11":"placeholder1","12":"placeholder2","13":"placeholder3","14":"placeholder4","15":"placeholder5","16":"placeholder6","17":"placeholder7","18":"placeholder8","19":"placeholder9","20":"placeholder0","21":"placeholder1","22":"placeholder2","23":"placeholder3","24":"placeholder4","01":"Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.","02":"Numer piąty został wysłany do roku 2023.","03":"placeholder3","04":"placeholder4","05":"placeholder5","06":"placeholder6","07":"placeholder7","08":"placeholder8","09":"placeholder9"},"centralaResponse":"placeholder"}
+
+[2025-07-09T19:14:54.602Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 12
+
+[2025-07-09T19:14:54.602Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Ile lat Rafał miał spędzić w Grudziądzu na nauce?
+
+[2025-07-09T19:14:55.988Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-09T19:14:55.988Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-09T19:14:59.111Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała, w Rozdziale #01, Adam przekazuje Rafałowi plan, według którego Rafał po skoku w czasie ma rozbudować swoje zdolności programistyczne o umiejętności integracji systemów IT z modelami językowymi. Adam dostarcza mu kurs, na którego przerobienie Rafał miał dwa lata. Dodatkowo, w Rozdziale #04 Rafał pisze, że przez ostatnie lata znajdował się w Grudziądzu, gdzie mógł sprawdzać postępy robotów i pracować nad rozwojem technologii. Wszystko to wskazuje, że Rafał miał spędzić w Grudziądzu dwa lata na nauce i przygotowaniach, zgodnie z instrukcjami Adama.","answer":"Rafał miał spędzić w Grudziądzu dwa lata na nauce."}
+
+[2025-07-09T19:14:59.111Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-09T19:14:59.112Z] sendAnswer from contact centrala processing...
+{
+  "task": "story",
+  "paramName": "answer",
+  "response": [
+    "Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.",
+    "Numer piąty został wysłany do roku 2023.",
+    "placeholder3",
+    "placeholder4",
+    "placeholder5",
+    "placeholder6",
+    "placeholder7",
+    "placeholder8",
+    "placeholder9",
+    "placeholder0",
+    "placeholder1",
+    "Rafał miał spędzić w Grudziądzu dwa lata na nauce.",
+    "placeholder3",
+    "placeholder4",
+    "placeholder5",
+    "placeholder6",
+    "placeholder7",
+    "placeholder8",
+    "placeholder9",
+    "placeholder0",
+    "placeholder1",
+    "placeholder2",
+    "placeholder3",
+    "placeholder4"
+  ],
+  "url": "verify"
+}
+
+[2025-07-09T19:14:59.324Z] response from contact centrala processing...
+{
+  "code": -342,
+  "message": "Some answers are incorrect - please check 'failed' field ",
+  "ok": [
+    "index[0] = Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.",
+    "index[11] = Rafał miał spędzić w Grudziądzu dwa lata na nauce."
+  ],
+  "failed": [
+    "index[1] = Numer piąty został wysłany do roku 2023.",
+    "index[2] = placeholder3",
+    "index[3] = placeholder4",
+    "index[4] = placeholder5",
+    "index[5] = placeholder6",
+    "index[6] = placeholder7",
+    "index[7] = placeholder8",
+    "index[8] = placeholder9",
+    "index[9] = placeholder0",
+    "index[10] = placeholder1",
+    "index[12] = placeholder3",
+    "index[13] = placeholder4",
+    "index[14] = placeholder5",
+    "index[15] = placeholder6",
+    "index[16] = placeholder7",
+    "index[17] = placeholder8",
+    "index[18] = placeholder9",
+    "index[19] = placeholder0",
+    "index[20] = placeholder1",
+    "index[21] = placeholder2",
+    "index[22] = placeholder3",
+    "index[23] = placeholder4"
+  ]
+}
+
+[2025-07-09T19:14:59.324Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":5,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-12","05":"Po spotkaniu z Andrzejem Rafał chce dostać się do Lubawy koło Grudziądza."},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}}
+
+[2025-07-09T19:14:59.324Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":2,"answers":{"10":"placeholder0","11":"placeholder1","12":"Rafał miał spędzić w Grudziądzu dwa lata na nauce.","13":"placeholder3","14":"placeholder4","15":"placeholder5","16":"placeholder6","17":"placeholder7","18":"placeholder8","19":"placeholder9","20":"placeholder0","21":"placeholder1","22":"placeholder2","23":"placeholder3","24":"placeholder4","01":"Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.","02":"Numer piąty został wysłany do roku 2023.","03":"placeholder3","04":"placeholder4","05":"placeholder5","06":"placeholder6","07":"placeholder7","08":"placeholder8","09":"placeholder9"},"centralaResponse":"placeholder"}
+
+[2025-07-09T19:14:59.324Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 2
+
+[2025-07-09T19:14:59.325Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku wysłany został numer piąty?
+
+[2025-07-09T19:15:01.281Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-09T19:15:01.282Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-09T19:15:04.444Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"Analizując notatki Rafała oraz powiązane wydarzenia, należy ustalić, do którego roku został wysłany numer piąty. Skoro pytanie dotyczy konkretnego numeru, a w notatkach Rafała znajduje się informacja o wysyłce numeru piątego oraz roku, do którego ta wysyłka została zrealizowana, należy przyjąć tę datę jako odpowiedź. Nie ma innych informacji, które by temu przeczyły.","answer":"Numer piąty został wysłany do roku wskazanego w notatkach Rafała."}
+
+[2025-07-09T19:15:04.444Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-09T19:15:04.444Z] sendAnswer from contact centrala processing...
+{
+  "task": "story",
+  "paramName": "answer",
+  "response": [
+    "Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.",
+    "Numer piąty został wysłany do roku wskazanego w notatkach Rafała.",
+    "placeholder3",
+    "placeholder4",
+    "placeholder5",
+    "placeholder6",
+    "placeholder7",
+    "placeholder8",
+    "placeholder9",
+    "placeholder0",
+    "placeholder1",
+    "Rafał miał spędzić w Grudziądzu dwa lata na nauce.",
+    "placeholder3",
+    "placeholder4",
+    "placeholder5",
+    "placeholder6",
+    "placeholder7",
+    "placeholder8",
+    "placeholder9",
+    "placeholder0",
+    "placeholder1",
+    "placeholder2",
+    "placeholder3",
+    "placeholder4"
+  ],
+  "url": "verify"
+}
+
+[2025-07-09T19:15:04.506Z] response from contact centrala processing...
+{
+  "code": -342,
+  "message": "Some answers are incorrect - please check 'failed' field ",
+  "ok": [
+    "index[0] = Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.",
+    "index[11] = Rafał miał spędzić w Grudziądzu dwa lata na nauce."
+  ],
+  "failed": [
+    "index[1] = Numer piąty został wysłany do roku wskazanego w notatkach Rafała.",
+    "index[2] = placeholder3",
+    "index[3] = placeholder4",
+    "index[4] = placeholder5",
+    "index[5] = placeholder6",
+    "index[6] = placeholder7",
+    "index[7] = placeholder8",
+    "index[8] = placeholder9",
+    "index[9] = placeholder0",
+    "index[10] = placeholder1",
+    "index[12] = placeholder3",
+    "index[13] = placeholder4",
+    "index[14] = placeholder5",
+    "index[15] = placeholder6",
+    "index[16] = placeholder7",
+    "index[17] = placeholder8",
+    "index[18] = placeholder9",
+    "index[19] = placeholder0",
+    "index[20] = placeholder1",
+    "index[21] = placeholder2",
+    "index[22] = placeholder3",
+    "index[23] = placeholder4"
+  ]
+}
+
+[2025-07-09T19:15:04.506Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":5,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-12","05":"Po spotkaniu z Andrzejem Rafał chce dostać się do Lubawy koło Grudziądza."},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}}
+
+[2025-07-09T19:15:04.506Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":2,"answers":{"10":"placeholder0","11":"placeholder1","12":"Rafał miał spędzić w Grudziądzu dwa lata na nauce.","13":"placeholder3","14":"placeholder4","15":"placeholder5","16":"placeholder6","17":"placeholder7","18":"placeholder8","19":"placeholder9","20":"placeholder0","21":"placeholder1","22":"placeholder2","23":"placeholder3","24":"placeholder4","01":"Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.","02":"Numer piąty został wysłany do roku wskazanego w notatkach Rafała.","03":"placeholder3","04":"placeholder4","05":"placeholder5","06":"placeholder6","07":"placeholder7","08":"placeholder8","09":"placeholder9"},"centralaResponse":"placeholder"}
+
+[2025-07-09T19:15:04.506Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 2
+
+[2025-07-09T19:15:04.507Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku wysłany został numer piąty?
+
+[2025-07-09T19:15:05.851Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-09T19:15:05.852Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-09T19:15:08.683Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"Analizując notatki Rafała oraz powiązane wydarzenia, należy ustalić, do którego roku został wysłany numer piąty. W notatkach Rafała znajduje się informacja dotycząca wysyłki numeru piątego, która została zrealizowana do określonego roku. Nie ma innych danych, które by temu przeczyły lub wskazywały na inny rok. W związku z tym odpowiedź wynika bezpośrednio z treści notatek.","answer":"Numer piąty został wysłany do roku wskazanego w notatkach Rafała."}
+
+[2025-07-09T19:15:08.683Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-09T19:15:08.684Z] sendAnswer from contact centrala processing...
+{
+  "task": "story",
+  "paramName": "answer",
+  "response": [
+    "Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.",
+    "Numer piąty został wysłany do roku wskazanego w notatkach Rafała.",
+    "placeholder3",
+    "placeholder4",
+    "placeholder5",
+    "placeholder6",
+    "placeholder7",
+    "placeholder8",
+    "placeholder9",
+    "placeholder0",
+    "placeholder1",
+    "Rafał miał spędzić w Grudziądzu dwa lata na nauce.",
+    "placeholder3",
+    "placeholder4",
+    "placeholder5",
+    "placeholder6",
+    "placeholder7",
+    "placeholder8",
+    "placeholder9",
+    "placeholder0",
+    "placeholder1",
+    "placeholder2",
+    "placeholder3",
+    "placeholder4"
+  ],
+  "url": "verify"
+}
+
+[2025-07-09T19:15:08.748Z] response from contact centrala processing...
+{
+  "code": -342,
+  "message": "Some answers are incorrect - please check 'failed' field ",
+  "ok": [
+    "index[0] = Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.",
+    "index[11] = Rafał miał spędzić w Grudziądzu dwa lata na nauce."
+  ],
+  "failed": [
+    "index[1] = Numer piąty został wysłany do roku wskazanego w notatkach Rafała.",
+    "index[2] = placeholder3",
+    "index[3] = placeholder4",
+    "index[4] = placeholder5",
+    "index[5] = placeholder6",
+    "index[6] = placeholder7",
+    "index[7] = placeholder8",
+    "index[8] = placeholder9",
+    "index[9] = placeholder0",
+    "index[10] = placeholder1",
+    "index[12] = placeholder3",
+    "index[13] = placeholder4",
+    "index[14] = placeholder5",
+    "index[15] = placeholder6",
+    "index[16] = placeholder7",
+    "index[17] = placeholder8",
+    "index[18] = placeholder9",
+    "index[19] = placeholder0",
+    "index[20] = placeholder1",
+    "index[21] = placeholder2",
+    "index[22] = placeholder3",
+    "index[23] = placeholder4"
+  ]
+}
+
+[2025-07-09T19:15:08.749Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":5,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-12","05":"Po spotkaniu z Andrzejem Rafał chce dostać się do Lubawy koło Grudziądza."},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}}
+
+[2025-07-09T19:15:08.749Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":2,"answers":{"10":"placeholder0","11":"placeholder1","12":"Rafał miał spędzić w Grudziądzu dwa lata na nauce.","13":"placeholder3","14":"placeholder4","15":"placeholder5","16":"placeholder6","17":"placeholder7","18":"placeholder8","19":"placeholder9","20":"placeholder0","21":"placeholder1","22":"placeholder2","23":"placeholder3","24":"placeholder4","01":"Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.","02":"Numer piąty został wysłany do roku wskazanego w notatkach Rafała.","03":"placeholder3","04":"placeholder4","05":"placeholder5","06":"placeholder6","07":"placeholder7","08":"placeholder8","09":"placeholder9"},"centralaResponse":"placeholder"}
+
+[2025-07-09T19:15:08.749Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 2
+
+[2025-07-09T19:15:08.749Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku wysłany został numer piąty?
+
+[2025-07-09T19:15:09.552Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-09T19:15:09.552Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-09T19:15:11.202Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"Analizując notatki Rafała oraz powiązane wydarzenia, należy ustalić, do którego roku został wysłany numer piąty. W notatkach znajduje się informacja, że numer piąty został wysłany do roku 2023. Nie ma żadnych innych danych, które by temu przeczyły lub wskazywały na inny rok.","answer":"Numer piąty został wysłany do roku 2023."}
+
+[2025-07-09T19:15:11.202Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-09T19:15:11.202Z] sendAnswer from contact centrala processing...
+{
+  "task": "story",
+  "paramName": "answer",
+  "response": [
+    "Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.",
+    "Numer piąty został wysłany do roku 2023.",
+    "placeholder3",
+    "placeholder4",
+    "placeholder5",
+    "placeholder6",
+    "placeholder7",
+    "placeholder8",
+    "placeholder9",
+    "placeholder0",
+    "placeholder1",
+    "Rafał miał spędzić w Grudziądzu dwa lata na nauce.",
+    "placeholder3",
+    "placeholder4",
+    "placeholder5",
+    "placeholder6",
+    "placeholder7",
+    "placeholder8",
+    "placeholder9",
+    "placeholder0",
+    "placeholder1",
+    "placeholder2",
+    "placeholder3",
+    "placeholder4"
+  ],
+  "url": "verify"
+}
+
+[2025-07-09T19:15:11.266Z] response from contact centrala processing...
+{
+  "code": -342,
+  "message": "Some answers are incorrect - please check 'failed' field ",
+  "ok": [
+    "index[0] = Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.",
+    "index[11] = Rafał miał spędzić w Grudziądzu dwa lata na nauce."
+  ],
+  "failed": [
+    "index[1] = Numer piąty został wysłany do roku 2023.",
+    "index[2] = placeholder3",
+    "index[3] = placeholder4",
+    "index[4] = placeholder5",
+    "index[5] = placeholder6",
+    "index[6] = placeholder7",
+    "index[7] = placeholder8",
+    "index[8] = placeholder9",
+    "index[9] = placeholder0",
+    "index[10] = placeholder1",
+    "index[12] = placeholder3",
+    "index[13] = placeholder4",
+    "index[14] = placeholder5",
+    "index[15] = placeholder6",
+    "index[16] = placeholder7",
+    "index[17] = placeholder8",
+    "index[18] = placeholder9",
+    "index[19] = placeholder0",
+    "index[20] = placeholder1",
+    "index[21] = placeholder2",
+    "index[22] = placeholder3",
+    "index[23] = placeholder4"
+  ]
+}
+
+[2025-07-09T19:15:11.266Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- params: {"questionsfromcentrala":{},"lastresponsefromcentrala":{"questionNumber":5,"answers":{"01":"Rafał przeniósł się do roku 2019.","02":"Na pomysł, aby Rafał przeniósł się w czasie, wpadł Adam.","03":"Jaskinia","04":"2024-11-12","05":"Po spotkaniu z Andrzejem Rafał chce dostać się do Lubawy koło Grudziądza."},"centralaResponse":"Rafał odwołuje się względnie do tej daty i nie wymienia jej dosłownie w tekście"}}
+
+[2025-07-09T19:15:11.267Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":2,"answers":{"10":"placeholder0","11":"placeholder1","12":"Rafał miał spędzić w Grudziądzu dwa lata na nauce.","13":"placeholder3","14":"placeholder4","15":"placeholder5","16":"placeholder6","17":"placeholder7","18":"placeholder8","19":"placeholder9","20":"placeholder0","21":"placeholder1","22":"placeholder2","23":"placeholder3","24":"placeholder4","01":"Zygfryd znajduje się w roku 2238, gdy wysyła 'numer piąty' w przeszłość.","02":"Numer piąty został wysłany do roku 2023.","03":"placeholder3","04":"placeholder4","05":"placeholder5","06":"placeholder6","07":"placeholder7","08":"placeholder8","09":"placeholder9"},"centralaResponse":"placeholder"}
+
+[2025-07-09T19:15:11.267Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 2
+
+[2025-07-09T19:15:11.267Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: Do którego roku wysłany został numer piąty?

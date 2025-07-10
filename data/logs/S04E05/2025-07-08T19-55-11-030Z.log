@@ -1,0 +1,81 @@
+Log file created at 2025-07-08T19:55:11.033Z
+--------------------------------------------
+[2025-07-08T19:55:11.039Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Loaded answers data: {"questionNumber":1,"answers":{"10":"placeholder","11":"placeholder","12":"placeholder","13":"placeholder","14":"placeholder","15":"placeholder","16":"placeholder","17":"placeholder","18":"placeholder","19":"placeholder","20":"placeholder","21":"placeholder","22":"placeholder","23":"placeholder","24":"placeholder","01":"Zygfryd znajduje się w roku 2238, kiedy wysyła 'numer piąty' w przeszłość.","02":"placeholder","03":"placeholder","04":"placeholder","05":"placeholder","06":"placeholder","07":"placeholder","08":"placeholder","09":"placeholder"},"centralaResponse":"placeholder"}
+
+[2025-07-08T19:55:11.039Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: 1
+
+[2025-07-08T19:55:11.039Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question: W którym roku znajduje się Zygfryd, który wysłał "numer piąty" w przeszłość?
+
+[2025-07-08T19:55:11.039Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: /home/artek/Desktop/AI_DEVS_3_RELOADED/AI_DEVS_3/data/agent/notatki_rafala.txt
+
+[2025-07-08T19:55:11.040Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- right before llm call
+
+[2025-07-08T19:55:17.840Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- LLM response: {"_thinking":"W notatkach Rafała nie pojawia się bezpośrednio postać Zygfryda ani wzmianka o 'numerze piątym' wysłanym w przeszłość. Jednak analizując całość notatek, można zauważyć, że Rafał opisuje podróże w czasie, eksperymenty z maszyną do przenoszenia w czasie oraz wydarzenia związane z przekazywaniem badań i wpływem na przyszłość (np. powstanie GPT-2, GPT-3). Wspomina też o osobach z przyszłości i o tym, że ktoś (Azazel) przybył z przyszłości. Rafał sam zastanawia się, w którym roku się znajduje, pisząc 'Który mamy rok? When am I?'. Jednak kluczowe jest, że w notatkach pojawia się data 11 listopada 2024 oraz odniesienia do wydarzeń po 2024 roku (np. drony nad miastem po 2024 roku). Z kontekstu wynika, że akcja związana z podróżami w czasie, wysyłaniem informacji i eksperymentami rozgrywa się w okolicach roku 2024. Skoro Zygfryd wysłał 'numer piąty' w przeszłość, to musiał znajdować się w przyszłości względem tego, co wysłał. Najbardziej logiczne jest więc, że Zygfryd znajduje się w roku 2024, bo to ten rok jest kluczowy dla wydarzeń związanych z podróżami w czasie i eksperymentami opisanymi w notatkach.","answer":"Zygfryd znajduje się w roku 2024, kiedy wysłał 'numer piąty' w przeszłość."}
+
+[2025-07-08T19:55:17.840Z] GENERATE_ANSWER_FOR_QUESTION_TOOL --- Updated answers saved
+
+[2025-07-08T19:55:17.841Z] sendAnswer from contact centrala processing...
+{
+  "task": "story",
+  "paramName": "answer",
+  "response": [
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "Zygfryd znajduje się w roku 2024, kiedy wysłał 'numer piąty' w przeszłość.",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder",
+    "placeholder"
+  ],
+  "url": "verify"
+}
+
+[2025-07-08T19:55:17.995Z] response from contact centrala processing...
+{
+  "code": -342,
+  "message": "Some answers are incorrect - please check 'failed' field ",
+  "ok": [],
+  "failed": [
+    "index[0] = placeholder",
+    "index[1] = placeholder",
+    "index[2] = placeholder",
+    "index[3] = placeholder",
+    "index[4] = placeholder",
+    "index[5] = placeholder",
+    "index[6] = placeholder",
+    "index[7] = placeholder",
+    "index[8] = placeholder",
+    "index[9] = placeholder",
+    "index[10] = placeholder",
+    "index[11] = placeholder",
+    "index[12] = placeholder",
+    "index[13] = placeholder",
+    "index[14] = placeholder",
+    "index[15] = Zygfryd znajduje się w roku 2024, kiedy wysłał 'numer piąty' w przeszłość.",
+    "index[16] = placeholder",
+    "index[17] = placeholder",
+    "index[18] = placeholder",
+    "index[19] = placeholder",
+    "index[20] = placeholder",
+    "index[21] = placeholder",
+    "index[22] = placeholder",
+    "index[23] = placeholder"
+  ]
+}

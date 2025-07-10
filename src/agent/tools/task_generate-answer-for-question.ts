@@ -1,10 +1,66 @@
-import { Utils, Logger, OpenAIService, MessageManager, LangfuseService } from '../../index';
+import { Utils, Logger, OpenAIService, MessageManager, LangfuseService, DatabaseService } from '../../index';
 import { IDoc } from '../../types/types';
 import { document } from '../metadata';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import { loadAnswers, updateAnswers, type AnswersFile } from './task_contact-centrala';
 import { systemPromptNotatkiRafala } from '../../../data/S04/E05/prompts/systemPromptNotatkiRafala';
+import { databaseInstruction } from '../prompts/toolsInstructions/database';
+import type { MessageArray } from '../../index';
+
+// Async function to get context for a given question using LLM keyword extraction and DB lookup
+async function getContextForQuestionAsync_old(currentQuestion: string): Promise<string> {
+    try {
+        // 1. Prepare LLM prompt for keyword extraction
+        const openAIService = new OpenAIService();
+        const messages: MessageArray = [
+            { role: 'system', content: databaseInstruction },
+            { role: 'user', content: currentQuestion }
+        ];
+        // 2. Call LLM to extract keywords (expects { keywords: [...] })
+        const result = await openAIService.processTextAsJson(messages, '4o', 0.2);
+        if (!result.keywords || !Array.isArray(result.keywords) || result.keywords.length === 0) {
+            throw new Error(`No keywords extracted for question '${currentQuestion}'. LLM result: ${JSON.stringify(result)}`);
+        }
+        // 3. Query DB for documents by keywords
+        const dbService = new DatabaseService();
+        const docs = await dbService.getDocumentsByKeywords(result.keywords);
+        // if (!docs || docs.length === 0) {
+        //     throw new Error(`No documents found for keywords: ${result.keywords.join(', ')}`);
+        // }
+        // 4. Return concatenated docs as context
+        return docs.join('\n\n---\n\n');
+    } catch (error) {
+        throw new Error(`Failed to load context for question '${currentQuestion}' using LLM+DB: ${error}`);
+    }
+}
+
+async function getContextForQuestionAsync(currentQuestion: string): Promise<string> {
+  const dbService = new DatabaseService();
+  const openAIService = new OpenAIService();
+  const instruction = `You are an expert assistant. Analyze the user's question and the attached document. If the document contains any valuable information that can help answer the question, respond with json object { \"_thinking\": \"your reasoning\", \"result\": true }. Otherwise, respond with { \"_thinking\": \"your reasoning\", \"result\": false }.`;
+
+  const allDocs = await dbService.getAllDocumentsText();
+
+  const results = await Promise.all(
+    allDocs.map(async (doc) => {
+        const systemPrompt = `${instruction}\n\n<document>\n${doc}\n</document>`;
+        const messages: MessageArray = [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: currentQuestion }
+        ];
+        const result = await openAIService.processTextAsJson(messages, 'mini', 0.2);
+        if (result && typeof result.result === 'boolean' && result.result === true) {
+            return doc;
+        }
+        return null;
+    })
+  );
+  console.log(`    number of documents retrieved from database: ${results.length} ------`)
+
+  const relevantDocs = results.filter(Boolean) as string[];
+  return relevantDocs.join('\n\n---\n\n');
+}
 
 export class GenerateAnswerForQuestionTool {
     private readonly utils: Utils;
@@ -80,7 +136,7 @@ export class GenerateAnswerForQuestionTool {
         await this.logger.log(`GENERATE_ANSWER_FOR_QUESTION_TOOL --- Current question number: ${currentQuestionNumber}`);
 
         // Load questions from questions.json
-        const questionsFilePath = join(__dirname, '../../../data/S04/E05/questions.json');
+        const questionsFilePath = join(__dirname, '../../../data/S05/E05/story.json');
         if (!existsSync(questionsFilePath)) {
             return document(`Questions file does not exist: ${questionsFilePath}`, 'gpt-4o', {
                 name: 'questions.json',
@@ -108,7 +164,8 @@ export class GenerateAnswerForQuestionTool {
             });
         }
 
-        const contextContent = readFileSync(contextFilePath, 'utf-8');
+        // const contextContent = readFileSync(contextFilePath, 'utf-8');
+        const contextContent = await getContextForQuestionAsync(currentQuestion);
         await this.logger.log(`GENERATE_ANSWER_FOR_QUESTION_TOOL --- Context content loaded from: ${contextFilePath}`);
 
         // Generate answer using LLM
@@ -119,6 +176,7 @@ export class GenerateAnswerForQuestionTool {
             currentQuestionNumber
         );
 
+        console.log("ANSWER -+_+_+_+_+_ -- ", llmResponse)
         // Extract answer from LLM response
         const answer = llmResponse.answer;
         if (!answer) {

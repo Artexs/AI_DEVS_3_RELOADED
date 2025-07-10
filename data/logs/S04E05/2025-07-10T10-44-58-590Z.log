@@ -1,6 +1,6 @@
-Log file created at 2025-07-10T10:45:07.606Z
+Log file created at 2025-07-10T10:44:58.592Z
 --------------------------------------------
-[2025-07-10T10:45:07.612Z] sendAnswer from contact centrala processing...
+[2025-07-10T10:44:58.597Z] sendAnswer from contact centrala processing...
 {
   "task": "story",
   "paramName": "answer",
@@ -33,7 +33,7 @@ Log file created at 2025-07-10T10:45:07.606Z
   "url": "verify"
 }
 
-[2025-07-10T10:45:07.733Z] response from contact centrala processing...
+[2025-07-10T10:44:58.743Z] response from contact centrala processing...
 {
   "code": 0,
   "message": "{{FLG:ENDOFSTORY}}"
