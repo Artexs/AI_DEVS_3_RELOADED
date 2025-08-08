@@ -1,9 +1,0 @@
-Log file created at 2025-06-05T18:35:30.825Z
---------------------------------------------
-[2025-06-05T18:35:38.736Z] Instruction: prawo 2 dol 3 
-
-[2025-06-05T18:35:38.736Z] Response: {"_thinking":"Startuję z 1,4. Przesuwam się w prawo o 2 (na 3,4), następnie w dół o 3 (na 3,1). Sprawdzam co jest na 3,1.","coords":"3,1","answer":"samochód"}
-
-[2025-06-05T18:36:11.378Z] Instruction: prawo 2 dol 3 
-
-[2025-06-05T18:36:11.378Z] Response: {"_thinking":"Startuję z 1,4. Przesuwam się w prawo o 2 (na 3,4), następnie w dół o 3 (na 3,1). Sprawdzam co jest na 3,1.","coords":"3,1","answer":"samochód"}
